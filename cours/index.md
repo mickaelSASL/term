@@ -1,4 +1,10 @@
-# **NSI TERMINALE**
+---
+hide:
+  - navigation
+  - toc
+---
+
+# **NSI TERMINALE** 
 
 ## Structures de données
 > - ✔️ [SD1 : structure de données abstraites](SD/SD1/)
