@@ -1,10 +1,9 @@
 ---
 hide:
   - navigation
-  - toc
 ---
 
-# **NSI TERMINALE** 
+# **Liste des Chapitres** 
 
 ## Structures de données
 > - ✔️ [SD1 : structure de données abstraites](SD/SD1/)
@@ -40,6 +39,5 @@ hide:
 > - ✔️ [A3 : Méthode « diviser pour régner »](A/A3/)   
 > - A4 : Programmation dynamique 🐌  
 > - A5 : Recherche textuelle. : Boyer Moore 🐌
-
 
 🐌 : Chapitres non évalués lors de l'épreuve finale du bac

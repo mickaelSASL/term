@@ -1,4 +1,5 @@
-# **AMSER1 - Composants intégrés d’un système sur puce (SOC)**
+
+# AMSER1 - Composants intégrés d’un système sur puce (SOC)
 
 <center><img src="https://files.realpython.com/media/Getting-Started-With-Python-on-Raspberry-Pi_Watermarked.be0a53816c48.jpg" width="75%"></center>
 

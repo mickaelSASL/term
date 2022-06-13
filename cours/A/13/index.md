@@ -1,4 +1,4 @@
-# **Algorithme des K plus proches voisins**
+## **Algorithme des K plus proches voisins**
 
 ## Recherche par apprentissage
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EUD07IiviJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Le Machine Learning</iframe>

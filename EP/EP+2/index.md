@@ -1,7 +1,7 @@
 ---
 hide:
   - navigation
-  - toc
+
 ---
 # **Epreuves Pratiques**
 ## SUJET +2
