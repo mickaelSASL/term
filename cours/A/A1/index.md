@@ -9,123 +9,128 @@
 
 [Implémentation en Python](Algo_arbres.py)
 
-```Python
-from binarytree import tree, Node
+===! "Algo à compléter"
+      ```Python
+      from binarytree import tree, Node
 
-def hauteur(T: tree):
+      def hauteur(T: tree):
 
-    
-def taille(T: tree):
- 
+      
+      def taille(T: tree):
+      
 
-def ParcoursLargeur(T: tree):
- 
-        
+      def ParcoursLargeur(T: tree):
+      
+            
 
-def ParcoursPrefixe(T: tree):
-
-
-def ParcoursInfixe(T: tree):
+      def ParcoursPrefixe(T: tree):
 
 
-def ParcoursSuffixe(T: tree):
- 
-def ArbreRecherche(T: tree, k: int):
- 
+      def ParcoursInfixe(T: tree):
 
 
-def ArbreInsertion(T: tree, y: Node):
+      def ParcoursSuffixe(T: tree):
+      
+      def ArbreRecherche(T: tree, k: int):
+      
 
 
-def ArbreInsertion_recursif(T: tree, y: Node):
+      def ArbreInsertion(T: tree, y: Node):
 
 
-# Arbre pour tester
-A = Node(23)
-B = Node(14)
-C = Node(3)
-D = Node(22)
-E = Node(1)
-F = Node(0)
-G = Node(86)
-H = Node(57)
-I = Node(0)
-J = Node(5)
-K = Node(1)
-L = Node(8)
-M = Node(0)
-N = Node(3)
-O = Node(14)
-P = Node(1)
-Q = Node(34)
-R = Node(27)
-S = Node(1)
-T = Node(64)
+      def ArbreInsertion_recursif(T: tree, y: Node):
 
-A.left = B
-A.right = N
-B.left = C
-B.right = J
-C.left = D
-C.right = H
-D.left = E
-D.right = G
-E.left = F
-H.left = I
-J.left = K
-J.right = M
-K.left = L
-N.left = O
-N.right = S
-O.left = P
-O.right = R
-P.left = Q
-S.left = T
 
-```
+      # Arbre pour tester
+      A = Node(23)
+      B = Node(14)
+      C = Node(3)
+      D = Node(22)
+      E = Node(1)
+      F = Node(0)
+      G = Node(86)
+      H = Node(57)
+      I = Node(0)
+      J = Node(5)
+      K = Node(1)
+      L = Node(8)
+      M = Node(0)
+      N = Node(3)
+      O = Node(14)
+      P = Node(1)
+      Q = Node(34)
+      R = Node(27)
+      S = Node(1)
+      T = Node(64)
 
-Exemple d'exécution
+      A.left = B
+      A.right = N
+      B.left = C
+      B.right = J
+      C.left = D
+      C.right = H
+      D.left = E
+      D.right = G
+      E.left = F
+      H.left = I
+      J.left = K
+      J.right = M
+      K.left = L
+      N.left = O
+      N.right = S
+      O.left = P
+      O.right = R
+      P.left = Q
+      S.left = T
 
-```Python
->>> print(A)
+      ```
+=== "Algo complété"
+      ```py
+      ```
 
-                  _________23___________
-                  /                      \
-            _____14____               ____3___
-           /           \             /        \
-      ____3__           5           14        _1
-     /       \         / \         /  \      /
-    22        57      1   0      _1    27   64
-   /  \      /       /          /
-  1    86   0       8          34
- /
-0
+=== "Exemple d'exécution"
 
->>> hauteur(A)
-6
-    
->>> taille(A)
-20
- 
->>> ParcoursLargeur(A)
-23
-14
-3
-3
-5
-14
-1
-22
-57
-1
-0
-1
-27
-64
-1
-86
-0
-8
-34
-0
-```
+      ``` pycon
+       >>> print(A)
+
+
+                        _________23___________
+                       /                      \
+                 _____14____               ____3___
+                /           \             /        \
+           ____3__           5           14        _1
+          /       \         / \         /  \      /
+         22        57      1   0      _1    27   64
+        /  \      /       /          /
+       1    86   0       8          34
+      /
+     0
+
+      >>> hauteur(A)
+      6
+      
+      >>> taille(A)
+      20
+      
+      >>> ParcoursLargeur(A)
+      23
+      14
+      3
+      3
+      5
+      14
+      1
+      22
+      57
+      1
+      0
+      1
+      27
+      64
+      1
+      86
+      0
+      8
+      34
+      0
+      ```

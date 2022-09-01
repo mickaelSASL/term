@@ -1,0 +1,151 @@
+<head>
+    <link href="frise.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- THE CHALLENGE: -->
+<!-- 1. recreate version 3 (https://codepen.io/cjl750/pen/mXbMyo) with no javascript whatsoever
+     2. make code as abstract as possible (e.g., trying to calc positions that would work with any number of dots instead of hard-coding the container width as we do in our media queries)
+     3. highest browser support possible -->
+<!-- Bonus points: turn v3's pseudo content into actual element content, so it's accessible to screen readers, search engines, etc. -->
+
+<div class="flex-parent">
+	<div class="input-flex-container">
+    <input type="radio" name="timeline-dot" data-description="1906">
+		<div class="dot-info" data-description="1906">
+			<span class="year">1906</span>
+			<span class="label">Lampes</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1944">
+		<div class="dot-info" data-description="1944">
+			<span class="year">1944</span>
+			<span class="label">ENIAC</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1946">
+		<div class="dot-info" data-description="1946">
+			<span class="year">1946</span>
+			<span class="label">EDVAC</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1947" checked>
+		<div class="dot-info" data-description="1947">
+			<span class="year">1947</span>
+			<span class="label">Transistor</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1960">
+		<div class="dot-info" data-description="1960">
+			<span class="year">1960</span>
+			<span class="label">AGC</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1970">
+		<div class="dot-info" data-description="1970">
+			<span class="year">1970</span>
+			<span class="label">1er OS (UNIX)</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1971">
+		<div class="dot-info" data-description="1971">
+			<span class="year">1971</span>
+			<span class="label">1er MicroProcesseur</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1975">
+		<div class="dot-info" data-description="1975">
+			<span class="year">1975</span>
+			<span class="label">1er PC APPLE</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1976">
+		<div class="dot-info" data-description="1976">
+			<span class="year">1976</span>
+			<span class="label">µP intel 8086</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1981">
+		<div class="dot-info" data-description="1981">
+			<span class="year">1981</span>
+			<span class="label">1er PC IBM</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1989">
+		<div class="dot-info" data-description="1989">
+			<span class="year">1989</span>
+			<span class="label">µP Intel 80486</span>
+		</div>
+    <input type="radio" name="timeline-dot" data-description="1990">
+		<div class="dot-info" data-description="1990">
+			<span class="year">1990</span>
+			<span class="label">Micro-Informatique</span>
+		</div>
+    <input type="radio" name="timeline-dot" data-description="1993">
+		<div class="dot-info" data-description="1993">
+			<span class="year">1993</span>
+			<span class="label">µP Intel Pentium</span>
+		</div>
+    <input type="radio" name="timeline-dot" data-description="2000">
+		<div class="dot-info" data-description="2000">
+			<span class="year">2000</span>
+			<span class="label">Nano-Informatique</span>
+		</div>
+    <input type="radio" name="timeline-dot" data-description="2014">
+		<div class="dot-info" data-description="2014">
+			<span class="year">2014</span>
+			<span class="label">µP Intel Core i7</span>
+		</div>
+		<div id="timeline-descriptions-wrapper">
+			<p data-description="1906"> 
+				<img src="Triode_tube_1906_audion.jpg" width="50%"><br>
+				La véritable naissance de l’électronique appliquée, fut la réalisation par l’Américain L. de Forest de la triode ou « audion ». 
+				En ajoutant en 1906 une simple grille à la diode de Fleming (1904), L. de Forest ouvrit un large champ de nouvelles potentialités. 
+				La triode devient la base de l’électronique de la première moitié du xxe siècle à mesure que l’on découvre ses propriétés. 
+				Elle peut détecter et émettre les ondes radio, les modules, et surtout permet l’amplification des signaux. 
+				AT&T est d’ailleurs la première entreprise à l’utiliser à grande échelle après avoir racheté les droits de ses brevets à De Forest.
+			</p>
+			<p data-description="1944"> 
+				Invention du premier ordinateur entièrement électronique, l’ENIAC, 
+				conçu par l’armée américaine pour calculer la trajectoire des tirs d’artillerie. 
+				Pesant 30 tonnes, de la taille d’une grande pièce, il utilisait 19 000 lampes. 
+			</p>
+			<p data-description="1946">
+				Alors que l’ENIAC n’était programmable que manuellement, l’EDVAC
+				permet la mémorisation.
+				C’est une réelle innovation en 1946, puisqu’il permet de mémoriser
+				1024 mots en mémoire centrale et 20 000 en mémoire magnétique.
+				L’apparition du transistor en 1948 révolutionne l’informatique,
+				permettant ainsi de fabriquer des ordinateurs moins encombrants et
+				qui consomment moins d’électricité.
+			</p>
+			<p data-description="1947">
+				invention du premier transistor dans les laboratoires Bell par les Américains 
+				John Bardeen, William Shockley et Walter Brattain qui ont reçu le prix Nobel 
+				de physique en 1956. Il est dix fois plus petit que les lampes. 
+			</p>
+			<p data-description="1960">
+				
+			</p>
+			<p data-description="1970">
+				
+			</p>
+			<p data-description="1971">
+				
+			</p>
+			<p data-description="1975">
+				
+			</p>
+			<p data-description="1976">
+				
+			</p>
+			<p data-description="1981">
+				
+			</p>
+			<p data-description="1989">
+
+			</p>
+			<p data-description="1990">
+
+			</p>
+			<p data-description="1993">
+
+			</p>
+			<p data-description="2000">
+
+			</p>
+			<p data-description="2014">
+
+			</p>
+		</div>
+	</div>
+</div>

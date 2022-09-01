@@ -1,0 +1,11 @@
+/* Tab style starts here */
+.tabbed-set {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    border-radius: 0.1rem;
+    border: solid;
+  }
+  

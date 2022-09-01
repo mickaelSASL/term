@@ -7,7 +7,7 @@ hide:
 # **NSI TERMINALE**
 
 ## Période 1 (7 semaines)
-> - [AMSER1 : Composants intégrés d’un système sur puce](../AMSER/AMSER1)  
+> - [AMSER1 : SOC- Composants intégrés d’un système sur puce](../AMSER/AMSER1)  
 > - [LP5 : Mise au point des programmes. Gestion des bugs](../LP/LP5/)  
 > - Projet 1  
 > - [SD1 : structure de données abstraites](../SD/SD1/)
@@ -44,15 +44,14 @@ hide:
 ## Période 5 (6 semaines)
 > - [SD5 : Graphes](../SD/SD5/) 🐌
 > - [AMSER4 : Sécurisation des communications](../AMSER/AMSER4) 🐌
-> - [K plus proches voisins](../A/13/) (Chapitre de 1ère)
 > - LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité 🐌  
 > - LP4 : Paradigmes de programmation 🐌  
 > - [A2 : Algorithmes sur les graphes](../A/A2/) 🐌  
 > - [BDD3 : système de gestion de BDD, requêtes, sécurisation](../BDD/BDD2/) 🐌  
 > - A4 : Programmation dynamique 🐌  
 > - A5 : Recherche textuelle. : Boyer Moore 🐌
+> - [K plus proches voisins](../A/13/) (Chapitre de 1ère)
 
 ## <span style="background-color: orange;">Grand Oral</span>
 
 🐌 : Chapitres non évalués lors de l'épreuve finale du bac  
-✔️ : Chapitres étudiés

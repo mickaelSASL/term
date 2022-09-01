@@ -1,7 +1,8 @@
 
-# AMSER1 - Composants intégrés d’un système sur puce (SOC)
+# AMSER1 - SOC - Composants intégrés d’un système sur puce (System On Chip)
 
-<center><img src="https://files.realpython.com/media/Getting-Started-With-Python-on-Raspberry-Pi_Watermarked.be0a53816c48.jpg" width="75%"></center>
+<center><img src="https://files.realpython.com/media/Getting-Started-With-Python-on-Raspberry-Pi_Watermarked.be0a53816c48.jpg" width="60%"></center>
+--8<-- "docs/cours/AMSER/AMSER1/frise.html"
 
 ## Des monstres à apprivoiser : les ordinateurs
 
@@ -38,3 +39,5 @@ L'intérieur d'une puce électronique est une chose mystérieuse. Ici, nous zoom
 ![](kaBcxgB.gif)
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ETt7UVOjdRlBnGJcX9K_Sw8BRDJKq9-kRKM1vwRYrNpXkQ?e=hf5sFs
 " target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
+
+

@@ -1,0 +1,78 @@
+{
+    "title": {
+        "media": {
+            "url": "http://emi.re/img/icn/apple-touch-icon.png"
+        },
+        "text": {
+            "headline": "EMI/SNT",
+            "text": "<p>Alexandra Maurer - Denis Weiss</p>"
+        }
+    },
+    "events": [
+        {
+
+            "start_date": {
+                "year": "1690"
+            },
+            "end_date": {
+                "year": "1730"
+            },
+            "text": {
+                "headline": "La Buse",
+                "text": "<p>La Buse, associé au pirate anglais John Taylor, s'est emparé de La Vierge du Cap un riche vaisseau portugais de 72 canons qui cherchait refuge sur l’ile Bourbon.</p>",
+                "media": "http://youtu.be/DiQSHiAYt98"
+
+            }
+        },
+        
+        {
+
+            "start_date": {
+
+                "year": "1882",
+                "month": "02",
+                "day": "20"
+            },
+            "text": {
+                "headline": "Mise en service de la ligne",
+                "text": "Au terme d'importants efforts, c'est une liaison de 126,2 kilomètres qui est mise en service."
+            }
+        },
+        
+        {
+
+            "start_date": {
+                "year": "1987",
+                "month": "01"
+            },
+            "text": {
+                "headline": "Ti Train Lontan",
+                "text": "L'association du Ti Train Lontan voit le jour et s'installe à la gare de la Grande Chaloupe"
+            }
+        },
+        
+        {
+
+            "start_date": {
+                "year": "2013"
+            },
+            "text": {
+                "headline": "Vélo à hydrogène",
+                "text": "Pragma Industries, installée à Biarritz (64), pousse son idée d’un vélo à assistance électrique tirant son énergie d’une pile à combustible H2."
+            }
+        },
+        
+        {
+
+            "start_date": {
+                "year": "2025",
+                "month": "02",
+                "day": "24"
+            },
+            "text": {
+                "headline": "Ile connecté",
+                "text": "Inauguration du projet île connectée avec la mise en service d'une ligne eco-responsable sur l'ancien tracé du Ti train."
+            }
+ }
+]
+}
