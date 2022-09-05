@@ -19,7 +19,7 @@ hide:
 > -  BDD4 : SQL<!--[BDD4 : SQL](BDD/BDD4)-->
 
 ## Architecture matérielle, système d'exploitation et réseau
-> -  AMSER1 : Composants intégrés d’un système sur puce[AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)  
+ > -  <!--AMSER1 : Composants intégrés d’un système sur puce-->[AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)   
 > -  AMSER2 : Gestion des processus et des ressources par un système d’exploitation<!--[AMSER2 : Gestion des processus et des ressources par un système d’exploitation](AMSER/AMSER2)-->  
 > -  AMSER3 : Protocoles de routage<!--[AMSER3 : Protocoles de routage](AMSER/AMSER3)-->
 > -  AMSER4 : Sécurisation des communications<!--[AMSER4 : Sécurisation des communications](AMSER/AMSER4)--> 🐌
