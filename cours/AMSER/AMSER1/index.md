@@ -2,7 +2,7 @@
 # AMSER1 - SOC - Composants intégrés d’un système sur puce (System On Chip)
 
 <center><img src="https://files.realpython.com/media/Getting-Started-With-Python-on-Raspberry-Pi_Watermarked.be0a53816c48.jpg" width="60%"></center>
---8<-- "docs/cours/AMSER/AMSER1/frise.html"
+<!-- --8<-- "docs/cours/AMSER/AMSER1/frise.html" -->
 
 ## Des monstres à apprivoiser : les ordinateurs
 
