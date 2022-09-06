@@ -37,7 +37,15 @@ L'intérieur d'une puce électronique est une chose mystérieuse. Ici, nous zoom
 
 ![](800px-arm1_die_shot_(annotated).png)
 ![](kaBcxgB.gif)
+<br>
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ETt7UVOjdRlBnGJcX9K_Sw8BRDJKq9-kRKM1vwRYrNpXkQ?e=hf5sFs
 " target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
 
+
+<a href="https://python.microbit.org/v/2" target="_blank">IDE microbit en ligne
+![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
+
+
+<a href="https://microbit-micropython.readthedocs.io/fr/latest/" target="_blank">Documentation microPython Microbit
+![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
 
