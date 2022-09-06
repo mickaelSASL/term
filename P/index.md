@@ -1,13 +1,3 @@
 # **Projets**
 
-[P1: Relevé de température 🌡️ (Projet révision de première)](P1)
-
-[P2: Jeu de cartes : la Bataille 🃏♣️♠♥♦ ](P2)
-
-[P3: Utilisation d'un base de données avec Python ](P3)  
-
-
-
-# **👌 Aides supplémentaires**
-
-[Les bases pour créer une interface graphique avec Python et Tkinter](Tuto/tkinter)
+<center><img src="https://files.realpython.com/media/13-Python-Projects-for-Intermediate-Developers_Watermarked.bb98d44bdb10.jpg" width="75%"></center>
