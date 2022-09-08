@@ -41,14 +41,18 @@
     <tr>
       <td>
       Le système peut être amélioré :  <br>
-      * Amélioration 1 : Une seconde carte se charge du relevé de température et la transmet par radio à la première qqui communique avec le PC.<br>
-      * Amélioration 2 : L'ordinateur affiche la température et l'enregistre dans un fichier 'csv' affiche la date et l'heure.
+      <bold>- Amélioration 1</bold> : Une seconde carte se charge du relevé de température et la transmet par radio à la première qqui communique avec le PC.<br>
+      <bold>- Amélioration 2</bold> : L'ordinateur affiche la température et l'enregistre dans un fichier 'csv' affiche la date et l'heure.
     </td>
     </tr>
   </tbody>
 </table>
 
 ___
+
+> **Installer le module _pyserial_**  
+> à exécuter dans la console python : ```pip install pyserial```
+
 
 Exemple d'écriture sur le port série : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EeEU5xTQ82BIgRs76XpQ7VEBtwN90OIwkt-MMshMSTOQxg" target="_blank">`exemple_com-serie_µb.py`
 ![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
