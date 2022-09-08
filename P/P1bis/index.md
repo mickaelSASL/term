@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td>
-      La carte microBit relève la température et la transmet à l'ordinateur par la liaison USB.
+      La carte microBit relève la température et la transmet à l'ordinateur par la liaison USB. <br>
       Le PC (2nd programme python) réceptionne les données et les affiche dans la console python.
     </td>
     </tr>
@@ -40,8 +40,8 @@
   <tbody>
     <tr>
       <td>
-      Le système peut être amélioré :
-      * Amélioration 1 : Une seconde carte se charge du relevé de température et la transmet par radio à la première qqui communique avec le PC.
+      Le système peut être amélioré :  <br>
+      * Amélioration 1 : Une seconde carte se charge du relevé de température et la transmet par radio à la première qqui communique avec le PC.<br>
       * Amélioration 2 : L'ordinateur affiche la température et l'enregistre dans un fichier 'csv' affiche la date et l'heure.
     </td>
     </tr>
