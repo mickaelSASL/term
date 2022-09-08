@@ -829,6 +829,8 @@
 <p><strong>Installer le module <em>pyserial</em></strong><br />
 à exécuter dans la console python : <code>pip install pyserial</code></p>
 </blockquote>
+<hr />
+<p>Exemple de communication radio</p>
 <p>Exemple d'écriture sur le port série : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EeEU5xTQ82BIgRs76XpQ7VEBtwN90OIwkt-MMshMSTOQxg" target="_blank"><code>exemple_com-serie_µb.py</code>
 <img alt="" src="https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png" /></a><br>
 Exemple de lecture sur le port série : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EWn37BtSWGNJvaH1BjiUnWYBlSV1JZ9YsuftKzIax-Azhw" target="_blank"><code>exemple_com-serie_PC.py</code>
@@ -837,6 +839,49 @@ Exemple de lecture sur le port série : <a href="https://sasl56-my.sharepoint.co
 <img alt="" src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png" /></a><br></p>
 <p><a href="https://microbit-micropython.readthedocs.io/fr/latest/" target="_blank">Documentation microPython Microbit
 <img alt="" src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png" /></a></p>
+<hr />
+<h2 id="communication-serie-bit-pc">Communication série µBit &rarr; PC</h2>
+<h3 id="programme-pc">programme PC:</h3>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">serial</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span>
+    <span class="n">port</span><span class="o">=</span><span class="s1">&#39;COM11&#39;</span><span class="p">,</span>\
+    <span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">,</span>\
+    <span class="n">parity</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">PARITY_NONE</span><span class="p">,</span>\
+    <span class="n">stopbits</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">STOPBITS_ONE</span><span class="p">,</span>\
+    <span class="n">bytesize</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">EIGHTBITS</span><span class="p">,</span>\
+        <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;connected to: &quot;</span> <span class="o">+</span> <span class="n">ser</span><span class="o">.</span><span class="n">portstr</span><span class="p">)</span>
+
+<span class="n">msg</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="k">while</span> <span class="n">msg</span><span class="o">!=</span><span class="s2">&quot;$&quot;</span><span class="p">:</span>           <span class="c1">#Lecture du message</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ser</span><span class="o">.</span><span class="n">read</span><span class="p">():</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">break</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fin&quot;</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="programme-bit">Programme µBit</h3>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s1">&#39;Pret&#39;</span><span class="p">)</span>
+
+<span class="n">msg_str</span><span class="o">=</span><span class="s2">&quot;coucou&quot;</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
+    <span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg_str</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>     <span class="c1"># Ecriture du message</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">)</span> 
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;FIN&quot;</span><span class="p">)</span> 
+</code></pre></div>
 
               
     <script src="../../js/ide.js"></script> 
