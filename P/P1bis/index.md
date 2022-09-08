@@ -88,18 +88,16 @@ ser = serial.Serial(
     bytesize=serial.EIGHTBITS,\
         timeout=0)
 
-print("connected to: " + ser.portstr)
-
 msg=""
 
-while msg!="$":           #Lecture du message
-    for c in ser.read():
+while msg!="$":             # Lecture du message
+    for c in ser.read():    # Caractère par caractère
         msg = msg + chr(c)
 
-        if chr(c) == '\n':
-            print(msg)
+        if chr(c) == '\n':  # Si le caractère '\n' (fin de ligne)
+            print(msg)      # Affichage du message
             msg = ""
-            break
+            break           # Stopper boucle FOR
         
 print("fin")
 ser.close()

@@ -852,18 +852,16 @@ Exemple de lecture sur le port série : <a href="https://sasl56-my.sharepoint.co
     <span class="n">bytesize</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">EIGHTBITS</span><span class="p">,</span>\
         <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;connected to: &quot;</span> <span class="o">+</span> <span class="n">ser</span><span class="o">.</span><span class="n">portstr</span><span class="p">)</span>
-
 <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 
-<span class="k">while</span> <span class="n">msg</span><span class="o">!=</span><span class="s2">&quot;$&quot;</span><span class="p">:</span>           <span class="c1">#Lecture du message</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ser</span><span class="o">.</span><span class="n">read</span><span class="p">():</span>
+<span class="k">while</span> <span class="n">msg</span><span class="o">!=</span><span class="s2">&quot;$&quot;</span><span class="p">:</span>             <span class="c1"># Lecture du message</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ser</span><span class="o">.</span><span class="n">read</span><span class="p">():</span>    <span class="c1"># Caractère par caractère</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>  <span class="c1"># Si le caractère &#39;\n&#39; (fin de ligne)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>      <span class="c1"># Affichage du message</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-            <span class="k">break</span>
+            <span class="k">break</span>           <span class="c1"># Stopper boucle FOR</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fin&quot;</span><span class="p">)</span>
 <span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
