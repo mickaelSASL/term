@@ -50,71 +50,11 @@
 
 ___
 
-> **Installer le module _pyserial_**  
-> à exécuter dans la console python : ```pip install pyserial```
-
-___
-
-Exemple de communication radio
-
-
-
-Exemple d'écriture sur le port série : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EeEU5xTQ82BIgRs76XpQ7VEBtwN90OIwkt-MMshMSTOQxg" target="_blank">`exemple_com-serie_µb.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
-Exemple de lecture sur le port série : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EWn37BtSWGNJvaH1BjiUnWYBlSV1JZ9YsuftKzIax-Azhw" target="_blank">`exemple_com-serie_PC.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a>
 
 <a href="https://python.microbit.org/v/2" target="_blank">IDE microbit en ligne
 ![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a><br>
 
-
 <a href="https://microbit-micropython.readthedocs.io/fr/latest/" target="_blank">Documentation microPython Microbit
 ![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
 
-
 ___
-## Communication série µBit --> PC
-
-### programme PC:
-
-```Python
-import serial
-
-ser = serial.Serial(
-    port='COM11',\
-    baudrate=115200,\
-    parity=serial.PARITY_NONE,\
-    stopbits=serial.STOPBITS_ONE,\
-    bytesize=serial.EIGHTBITS,\
-        timeout=0)
-
-msg=""
-
-while msg!="$":             # Lecture du message
-    for c in ser.read():    # Caractère par caractère
-        msg = msg + chr(c)
-
-        if chr(c) == '\n':  # Si le caractère '\n' (fin de ligne)
-            print(msg)      # Affichage du message
-            msg = ""
-            break           # Stopper boucle FOR
-        
-print("fin")
-ser.close()
-```
-
-### Programme µBit
-```Python
-from microbit import *
-uart.init(baudrate=115200)
-display.scroll('Pret')
-
-msg_str="coucou"
-
-while not button_a.was_pressed():
-    uart.write(msg_str + "\n")     # Ecriture du message
-    sleep(1000)
-    
-uart.write("$")	
-display.scroll("FIN") 
-```
