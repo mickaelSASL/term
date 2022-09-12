@@ -11,7 +11,7 @@
 
 ===! "Programme µBit 1"
 
-    ```Python
+    ```{.python .extra-class #id linenums="1"}
     from microbit import *
     uart.init(baudrate=115200)
     display.scroll('Pret')
@@ -30,7 +30,7 @@
 
     La méthode `print()` écrit directement sur le port série de la carte à la vitesse 115200.
 
-    ```Python
+    ```{.python .extra-class #id linenums="1"}
     from microbit import *
     display.scroll('Pret')
 
@@ -48,7 +48,7 @@
 
     > Le module `pyserial` est installé en exécutant dans la console python : ```pip install pyserial```  
 
-    ```Python
+    ```{.python .extra-class #id linenums="1"}
     import serial
 
     ser = serial.Serial(
@@ -79,7 +79,7 @@
 
 ===! "Programme µBit"
 
-    ```Python
+    ```{.python .extra-class #id linenums="1"}
         from microbit import *
         uart.init(baudrate=115200)
         display.scroll('Pret')
@@ -103,7 +103,7 @@
 
     > Le module `pyserial` est installé en exécutant dans la console python : ```pip install pyserial```  
 
-    ```Python
+    ```{.python .extra-class #id linenums="1"}
         import serial  # INSTALLER LE MODULE pyserial ( dans la console python : 'pip install pyserial')
 
         ser = serial.Serial(
