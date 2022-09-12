@@ -806,25 +806,104 @@
 
   <h1>Exemple radio</h1>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">T1</label><label for="__tabbed_1_2">T2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Réception</label><label for="__tabbed_1_2">Emission</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hello_world</span>
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">radio</span>
+
+<span class="n">radio</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>         <span class="c1"># n° Canal de communication</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">power</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>           <span class="c1"># Signal à la puissance maximale</span>
+
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">incoming</span> <span class="o">=</span> <span class="n">radio</span><span class="o">.</span><span class="n">receive</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">incoming</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">incoming</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">YAML</span><pre><span></span><code>
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">radio</span>
+
+<span class="c1">#Renseigner votre identifiant carte</span>
+<span class="n">my_card_identifier</span><span class="o">=</span><span class="s2">&quot;1A&quot;</span>
+
+<span class="n">radio</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>        <span class="c1"># n° Canal de communication</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">power</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>           <span class="c1"># Turn the signal up to full strength</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_serial_number</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="nb">hex</span><span class="p">):</span>
+    <span class="n">NRF_FICR_BASE</span> <span class="o">=</span> <span class="mh">0x10000000</span>
+    <span class="n">DEVICEID_INDEX</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1"># deviceid[1]</span>
+
+    <span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
+    <span class="k">def</span> <span class="nf">reg_read</span><span class="p">(</span><span class="n">r0</span><span class="p">):</span>
+        <span class="n">ldr</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">reg_read</span><span class="p">(</span><span class="n">NRF_FICR_BASE</span> <span class="o">+</span> <span class="p">(</span><span class="n">DEVICEID_INDEX</span><span class="o">*</span><span class="mi">4</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span><span class="p">)</span>        
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&quot;</span><span class="p">)</span>
+        <span class="c1"># Send a message</span>
+        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">my_card_identifier</span><span class="o">+</span><span class="s1">&#39;;&#39;</span><span class="o">+</span><span class="n">get_serial_number</span><span class="p">())</span>   
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
+
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 </div>
 </div>
 </div>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>graph TD
-    A[Hard] --&gt;|Text| B(Round)
-    B --&gt; C{Decision}
-    C --&gt;|One| D[Result 1]
-    C --&gt;|Two| E[Result 2]
-</code></pre></div>
 
               
     <script src="../../../js/ide.js"></script> 
