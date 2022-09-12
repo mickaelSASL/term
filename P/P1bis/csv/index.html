@@ -820,58 +820,89 @@
 
   <h1>Exemple csv</h1>
 
-<p>==! "Lecture fichier csv"</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>```{.python .extra-class #id linenums=&quot;1&quot;}
-    import csv
-    with open(&#39;eggs.csv&#39;, newline=&#39;&#39;) as csvfile:
-        spamreader = csv.reader(csvfile, delimiter=&#39; &#39;, quotechar=&#39;|&#39;)
-        for row in spamreader:
-            print(&#39;, &#39;.join(row))
-    Spam, Spam, Spam, Spam, Spam, Baked Beans
-    Spam, Lovely Spam, Wonderful Spam
-```
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Lecture fichier csv</label><label for="__tabbed_1_2">Ecriture fichier csv</label><label for="__tabbed_1_3">Lecture fichier csv à l'aide d'un dictionnaire</label><label for="__tabbed_1_4">Ecriture fichier csv à l'aide d'un dictionnaire</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">csv</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;eggs.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">spamreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">spamreader</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+    <span class="n">Spam</span><span class="p">,</span> <span class="n">Spam</span><span class="p">,</span> <span class="n">Spam</span><span class="p">,</span> <span class="n">Spam</span><span class="p">,</span> <span class="n">Spam</span><span class="p">,</span> <span class="n">Baked</span> <span class="n">Beans</span>
+    <span class="n">Spam</span><span class="p">,</span> <span class="n">Lovely</span> <span class="n">Spam</span><span class="p">,</span> <span class="n">Wonderful</span> <span class="n">Spam</span>
 </code></pre></div>
-<p>== "Ecriture fichier csv"</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>```{.python .extra-class #id linenums=&quot;1&quot;}
-    import csv
-    with open(&#39;eggs.csv&#39;, &#39;w&#39;, newline=&#39;&#39;) as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=&#39; &#39;,
-                                quotechar=&#39;|&#39;, quoting=csv.QUOTE_MINIMAL)
-        spamwriter.writerow([&#39;Spam&#39;] * 5 + [&#39;Baked Beans&#39;])
-        spamwriter.writerow([&#39;Spam&#39;, &#39;Lovely Spam&#39;, &#39;Wonderful Spam&#39;])
-```
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">csv</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;eggs.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">spamwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span>
+                                <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_MINIMAL</span><span class="p">)</span>
+        <span class="n">spamwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Spam&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Baked Beans&#39;</span><span class="p">])</span>
+        <span class="n">spamwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Spam&#39;</span><span class="p">,</span> <span class="s1">&#39;Lovely Spam&#39;</span><span class="p">,</span> <span class="s1">&#39;Wonderful Spam&#39;</span><span class="p">])</span>
 </code></pre></div>
-<p>== "Lecture fichier csv à l'aide d'un dictionnaire"</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>```{.python .extra-class #id linenums=&quot;1&quot;}
-    import csv
-    with open(&#39;names.csv&#39;, newline=&#39;&#39;) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            print(row[&#39;first_name&#39;], row[&#39;last_name&#39;])
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">csv</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;names.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">])</span>
 
-    Eric Idle
-    John Cleese
-```
-
-```{.python .extra-class #id linenums=&quot;1&quot;}
-    &gt;&gt;&gt; print(row)
-    {&#39;first_name&#39;: &#39;John&#39;, &#39;last_name&#39;: &#39;Cleese&#39;}
-```
+    <span class="n">Eric</span> <span class="n">Idle</span>
+    <span class="n">John</span> <span class="n">Cleese</span>
 </code></pre></div>
-<p>== "Ecriture fichier csv à l'aide d'un dictionnaire"</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>```{.python .extra-class #id linenums=&quot;1&quot;}
-    import csv
-
-    with open(&#39;names.csv&#39;, &#39;w&#39;, newline=&#39;&#39;) as csvfile:
-        fieldnames = [&#39;first_name&#39;, &#39;last_name&#39;]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-        writer.writeheader()
-        writer.writerow({&#39;first_name&#39;: &#39;Baked&#39;, &#39;last_name&#39;: &#39;Beans&#39;})
-        writer.writerow({&#39;first_name&#39;: &#39;Lovely&#39;, &#39;last_name&#39;: &#39;Spam&#39;})
-        writer.writerow({&#39;first_name&#39;: &#39;Wonderful&#39;, &#39;last_name&#39;: &#39;Spam&#39;})
-```
+</td></tr></table>
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Cleese&#39;</span><span class="p">}</span>
 </code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table id="id" class="extra-class highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">🐍 Script Python</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">csv</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;names.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">]</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+
+        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Baked&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Beans&#39;</span><span class="p">})</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lovely&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spam&#39;</span><span class="p">})</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Wonderful&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spam&#39;</span><span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
 <p>Exemples issus de la <a href="https://docs.python.org/fr/3/library/csv.html" target="_blank">documentation python
 <a href="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png">https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png</a>)</a><br></p>
 

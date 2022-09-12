@@ -1,4 +1,4 @@
-==! "Lecture fichier csv"
+===! "Lecture fichier csv"
 
     ```{.python .extra-class #id linenums="1"}
         import csv
@@ -11,7 +11,7 @@
     ```
 
 
-== "Ecriture fichier csv"
+=== "Ecriture fichier csv"
 
     ```{.python .extra-class #id linenums="1"}
         import csv
@@ -22,7 +22,7 @@
             spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
     ```
 
-== "Lecture fichier csv à l'aide d'un dictionnaire"
+=== "Lecture fichier csv à l'aide d'un dictionnaire"
 
     ```{.python .extra-class #id linenums="1"}
         import csv
@@ -40,7 +40,7 @@
         {'first_name': 'John', 'last_name': 'Cleese'}
     ```
 
-== "Ecriture fichier csv à l'aide d'un dictionnaire"
+=== "Ecriture fichier csv à l'aide d'un dictionnaire"
 
     ```{.python .extra-class #id linenums="1"}
         import csv
