@@ -5,7 +5,7 @@
 <!-- [Corrigé](corrige.md) -->
 
 
-**Exercice 1 (4 points)**
+**Exercice 1 (4 points)**  
 On modélise la représentation binaire d'un entier non signé par un tableau d'entiers dont les éléments sont 0 ou 1. Par exemple, le tableau `[1, 0, 1, 0, 0, 1, 1]` représente l'écriture binaire de l'entier dont l'écriture décimale est
 `2**6 + 2**4 + 2**1 + 2**0 = 83`.
 
@@ -28,7 +28,7 @@ Exemple :
 ```
 
 
-**Exercice 2 (4 points)**
+**Exercice 2 (4 points)**  
 
 La fonction tri_insertion suivante prend en argument une liste L et trie cette liste en utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la spécification demandée.
 
