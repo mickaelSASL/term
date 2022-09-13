@@ -2,7 +2,7 @@
 ## SUJET 5
 
 
-[Corrigé](corrige.md)
+<!-- [Corrigé](corrige.md) -->
 
 
 **Exercice 1 (4 points)**

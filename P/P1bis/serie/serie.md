@@ -73,6 +73,19 @@
     print("fin")
     ser.close()
     ```
+=== "Programme PC 2"
+
+    ```{.python .extra-class #id linenums="1"}
+        ser.flushInput()
+        time.sleep(0.1)
+        line = ser.readline().rstrip().decode()
+        tokens = line.split(':')
+        if len(tokens)==2:
+            print(str(count)+":"+tokens[0]+"-->"+tokens[1]+"["+line+"]")
+        count +=1
+    ```
+    
+
 
 ## Communication PC --> µBit
 ![](série2.png)
