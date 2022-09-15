@@ -78,27 +78,25 @@ Dans ce dernier cas, le mot-clé `global` a forcé la variable `x` à être glob
 
 # Le cas des listes
 !!! attention
-    Les exemples de cette partie représentent des absurdités en termes de programmation. Ils sont donnés à titre indicatif pour comprendre ce qui se passe, mais il ne faut surtout pas s'en inspirer !
+    Soyez extrêmement attentifs avec les types modifiables (tels que les listes) car vous pouvez les changer au sein d'une fonction :
 
 
-Soyez extrêmement attentifs avec les types modifiables (tels que les listes) car vous pouvez les changer au sein d'une fonction :
+    >>> def ma_fonction():
+    ...     liste[1] = -127
+    ...
+    >>> liste = [1,2,3]
+    >>> ma_fonction()
+    >>> liste
+    [1, -127, 3]
+    De même, si vous passez une liste en argument, elle est modifiable au sein de la fonction :
 
 
->>> def ma_fonction():
-...     liste[1] = -127
-...
->>> liste = [1,2,3]
->>> ma_fonction()
->>> liste
-[1, -127, 3]
-De même, si vous passez une liste en argument, elle est modifiable au sein de la fonction :
+    >>> def ma_fonction(x):
+    ...     x[1] = -15
+    ...
+    >>> y = [1,2,3]
+    >>> ma_fonction(y)
+    >>> y
+    [1, -15, 3]
 
-
->>> def ma_fonction(x):
-...     x[1] = -15
-...
->>> y = [1,2,3]
->>> ma_fonction(y)
->>> y
-[1, -15, 3]
 Pour bien comprendre l'origine de ce comportement, utilisons à nouveau le site Python Tutor. La figure 3 vous montre le mécanisme à l'oeuvre lorsqu'on passe une liste à une fonction.

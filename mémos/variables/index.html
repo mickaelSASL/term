@@ -1069,8 +1069,6 @@ Dans ce dernier cas, le mot-clé <code>global</code> a forcé la variable <code>
 <h1 id="le-cas-des-listes">Le cas des listes</h1>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Les exemples de cette partie représentent des absurdités en termes de programmation. Ils sont donnés à titre indicatif pour comprendre ce qui se passe, mais il ne faut surtout pas s'en inspirer !</p>
-</div>
 <p>Soyez extrêmement attentifs avec les types modifiables (tels que les listes) car vous pouvez les changer au sein d'une fonction :</p>
 <blockquote>
 <blockquote>
@@ -1089,11 +1087,12 @@ De même, si vous passez une liste en argument, elle est modifiable au sein de l
 y = [1,2,3]
 ma_fonction(y)
 y
-[1, -15, 3]
-Pour bien comprendre l'origine de ce comportement, utilisons à nouveau le site Python Tutor. La figure 3 vous montre le mécanisme à l'oeuvre lorsqu'on passe une liste à une fonction.</p>
+[1, -15, 3]</p>
 </blockquote>
 </blockquote>
 </blockquote>
+</div>
+<p>Pour bien comprendre l'origine de ce comportement, utilisons à nouveau le site Python Tutor. La figure 3 vous montre le mécanisme à l'oeuvre lorsqu'on passe une liste à une fonction.</p>
 
               
     <script src="../../js/ide.js"></script> 
