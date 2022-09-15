@@ -29,7 +29,7 @@ hide:
 > -  LP2 : Récursivité<!--[LP2 : Récursivité](LP/LP2)-->  
 > -  LP3 : Modularité<!--[LP3 : Modularité ](LP/LP3)-->
 > -  LP4 : Paradigmes de programmation 🐌  
-> -  LP5 : Mise au point des programmes. Gestion des bugs<!--[LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)-->  
+> -  LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
 
 
 ## Algorithmique
