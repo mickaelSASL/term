@@ -801,7 +801,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mickaelsasl.github.io/cours/m%C3%A9mos/variables/</loc>
+         <loc>https://mickaelsasl.github.io/m%C3%A9mos/m%C3%A9mo%20python/</loc>
+         <lastmod>2022-09-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mickaelsasl.github.io/m%C3%A9mos/variables/</loc>
          <lastmod>2022-09-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
