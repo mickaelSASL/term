@@ -6,7 +6,7 @@ hide:
 # **Liste des Chapitres** 
 
 ## Structures de données
-> -  SD1 : structure de données abstraites<!--[SD1 : structure de données abstraites](SD/SD1/) -->  
+> -  <!--SD1 : structure de données abstraites -->[SD1 : structure de données abstraites](SD/SD1/)  
 > -  SD2 : programmation objet<!--[SD2 : programmation objet](SD/SD2/)-->  
 > -  SD3 : structures linéaires : listes, piles, files<!--[SD3 : structures linéaires : listes, piles, files](SD/SD3/)-->  
 > -  SD4 : Arbres<!--[SD4 : Arbres](SD/SD4/)-->  
