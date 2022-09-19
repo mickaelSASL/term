@@ -6,7 +6,7 @@ hide:
 # **Liste des Chapitres** 
 
 ## Structures de données
-> -  <!--SD1 : structure de données abstraites -->[SD1 : structure de données abstraites](SD/SD1/)  
+> -  ✔️ <!--SD1 : structure de données abstraites -->[SD1 : structure de données abstraites](SD/SD1/)  
 > -  SD2 : programmation objet<!--[SD2 : programmation objet](SD/SD2/)-->  
 > -  SD3 : structures linéaires : listes, piles, files<!--[SD3 : structures linéaires : listes, piles, files](SD/SD3/)-->  
 > -  SD4 : Arbres<!--[SD4 : Arbres](SD/SD4/)-->  
@@ -19,7 +19,7 @@ hide:
 > -  BDD4 : SQL<!--[BDD4 : SQL](BDD/BDD4)-->
 
 ## Architecture matérielle, système d'exploitation et réseau
- > -  <!--AMSER1 : Composants intégrés d’un système sur puce-->[AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)   
+> -  ✔️ <!--AMSER1 : Composants intégrés d’un système sur puce-->[AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)   
 > -  AMSER2 : Gestion des processus et des ressources par un système d’exploitation<!--[AMSER2 : Gestion des processus et des ressources par un système d’exploitation](AMSER/AMSER2)-->  
 > -  AMSER3 : Protocoles de routage<!--[AMSER3 : Protocoles de routage](AMSER/AMSER3)-->
 > -  AMSER4 : Sécurisation des communications<!--[AMSER4 : Sécurisation des communications](AMSER/AMSER4)--> 🐌
@@ -29,7 +29,7 @@ hide:
 > -  LP2 : Récursivité<!--[LP2 : Récursivité](LP/LP2)-->  
 > -  LP3 : Modularité<!--[LP3 : Modularité ](LP/LP3)-->
 > -  LP4 : Paradigmes de programmation 🐌  
-> -  [LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
+> -  ✔️ <!--LP5 : Mise au point des programmes. Gestion des bugs-->[LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
 
 
 ## Algorithmique
