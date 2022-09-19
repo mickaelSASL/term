@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mickaelsasl.github.io/cours/SD/SD3/SD3%20-%20Exemples%20du%20cours/">
+        <link rel="canonical" href="https://mickaelsasl.github.io/cours/SD/SD3/Palindrome/">
       
       <link rel="icon" href="../../../../dlna">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>SD3 - Structures de données linéaires - NSI Terminale</title>
+        <title>Palindrome (corrigé) - NSI Terminale</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sd3-structures-de-donnees-lineaires" class="md-skip">
+        <a href="#palindrome-corrige" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SD3 - Structures de données linéaires
+              Palindrome (corrigé)
             
           </span>
         </div>
@@ -402,6 +402,124 @@
       <a href="../../SD1/exercices/" class="md-nav__link">
         Exercices
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_2">
+          3. structure de données linéaires : Liste, Pile, File
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. structure de données linéaires : Liste, Pile, File" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          3. structure de données linéaires : Liste, Pile, File
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exemples%20du%20cours/" class="md-nav__link">
+        Exemples du cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Palindrome (corrigé)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Palindrome (corrigé)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tester-un-mot-pour-verifier-sil-sagit-dun-palindrome" class="md-nav__link">
+    Tester un mot pour vérifier s'il s'agit d'un palindrome
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -997,29 +1115,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#b-les-piles-et-les-files" class="md-nav__link">
-    B.   LES PILES ET LES FILES
+  <a href="#tester-un-mot-pour-verifier-sil-sagit-dun-palindrome" class="md-nav__link">
+    Tester un mot pour vérifier s'il s'agit d'un palindrome
   </a>
-  
-    <nav class="md-nav" aria-label="B.   LES PILES ET LES FILES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-les-piles" class="md-nav__link">
-    1.  Les piles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-les-files" class="md-nav__link">
-    2.  Les Files
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2074,7 +2172,40 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="sd3-structures-de-donnees-lineaires">SD3 - Structures de donn&#233;es lin&#233;aires<a class="anchor-link" href="#sd3-structures-de-donnees-lineaires">&#182;</a></h1><h2 id="b-les-piles-et-les-files">B.   LES PILES ET LES FILES<a class="anchor-link" href="#b-les-piles-et-les-files">&#182;</a></h2><h3 id="1-les-piles">1.  Les piles<a class="anchor-link" href="#1-les-piles">&#182;</a></h3>
+<h1 id="palindrome-corrige">Palindrome (corrig&#233;)<a class="anchor-link" href="#palindrome-corrige">&#182;</a></h1><h2 id="tester-un-mot-pour-verifier-sil-sagit-dun-palindrome">Tester un mot pour v&#233;rifier s'il s'agit d'un palindrome<a class="anchor-link" href="#tester-un-mot-pour-verifier-sil-sagit-dun-palindrome">&#182;</a></h2><p><strong>méthode :</strong></p>
+<p>il faut couper le mot en deux et tester les lettres 2 à 2 (en prenant la première et la dernière, ...)
+si tous les couples de lettres sont vérifiés, le mot est un palindrome.</p>
+<hr>
+<p><strong>⚠️ 2 cas peuvent se présenter :</strong></p>
+<ul>
+<li>mot contient un nombre pair de lettres,</li>
+<li>mot contient un nombre impair de lettres.
+dans le cas d'un nombre impair, le découpage de mot doit se faire avec des <strong>nombres entiers</strong> de lettres.</li>
+</ul>
+<hr>
+<p><strong>Algorithme :</strong></p>
+
+<pre><code>mot : le mot à tester
+
+FONCTION palindrome(mot):
+
+    n = longueur de la première moitié de mot
+    m2 = position de la lettre de départ de la seconde moitié de mot
+    est_palindrome = True
+    P1 est une pile
+
+    POUR i allant de 0 à n :
+        empiler dans P1 la lettre de mot à la position i
+
+    POUR i allant de m2 à longueur de mot :
+        dépiler P1
+        SI la lettre dépilée est différent de la lettre de mot à la position i
+        ALORS 
+            est_palindrome = False
+            arrêter la boucle
+
+RETOURNER est_palindrome</code></pre>
+
 </div>
 </div>
 </div>
@@ -2099,160 +2230,99 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">PileVide</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">Pile</span>
+
+<span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    extraction à partir d&#39;une pile vide</span>
+<span class="sd">    Permet de tester si un mot est un palindrome.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mot : string</span>
+<span class="sd">        Le mot à tester.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    est_palindrome : Bool</span>
+<span class="sd">        Vrai si le mot est un palindrome.</span>
+<span class="sd">        Faux si le mot n&#39;est pas un palindrome.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
- 
-<span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">memoire</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="mi">0</span>
-        
-    <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
     
-    <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>               <span class="c1"># la moitié de la longueur du mot</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>         <span class="c1"># début de seconde moitié de la longueur  </span>
+    <span class="n">est_palindrome</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">P1</span> <span class="o">=</span> <span class="n">Pile</span><span class="o">.</span><span class="n">Pile</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">P1</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>          <span class="c1"># empilement de la 1ère moitié du mot</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)):</span>   <span class="c1"># pour chaque caractère de la 2nde moitié</span>
+        <span class="k">if</span> <span class="n">P1</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span> <span class="o">!=</span> <span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>  <span class="c1"># Est-il différent que dans la 1ère</span>
+            <span class="n">est_palindrome</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Donc ce n&#39;est un palindrome</span>
+            <span class="k">break</span>                   <span class="c1"># On peut arrêter le test</span>
+   
+    <span class="k">return</span> <span class="n">est_palindrome</span>           <span class="c1"># On retourne la valeur Vrai ou Faux</span>
 
-        <span class="k">return</span> <span class="kc">None</span>
-    
-    <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">PileVide</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">memoire</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">-=</span> <span class="mi">1</span>
-            <span class="k">return</span> <span class="n">x</span>
+
+<span class="c1">#####################################</span>
+<span class="c1"># </span>
+<span class="c1"># Programme principal de test</span>
+<span class="c1">#</span>
+<span class="c1">#####################################</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donnez votre mot : &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">palindrome</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;est un palindrome&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;n&#39;est pas un palindrome&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">class PileVide(Exception):
+<div id="cell-1" class="clipboard-copy-txt">import Pile
+
+def palindrome(mot):
     """
-    extraction à partir d'une pile vide
+    Permet de tester si un mot est un palindrome.
+
+    Parameters
+    ----------
+    mot : string
+        Le mot à tester.
+
+    Returns
+    -------
+    est_palindrome : Bool
+        Vrai si le mot est un palindrome.
+        Faux si le mot n'est pas un palindrome.
+
     """
-    pass
- 
-class Pile:
-    def __init__(self):
-        self.memoire = []
-        self.taille = 0
-        
-    def estVide(self):
-        return self.taille == 0
     
-    def empiler(self,x):
-        
+    n = len(mot) // 2               # la moitié de la longueur du mot
+    d2 = n + (len(mot) % 2)         # début de seconde moitié de la longueur  
+    est_palindrome = True
+    P1 = Pile.Pile()
+    
+    for i in range(n):
+        P1.empiler(mot[i])          # empilement de la 1ère moitié du mot
+    
+    for i in range(d2, len(mot)):   # pour chaque caractère de la 2nde moitié
+        if P1.depiler() != mot[i]:  # Est-il différent que dans la 1ère
+            est_palindrome = False  # Donc ce n'est un palindrome
+            break                   # On peut arrêter le test
+   
+    return est_palindrome           # On retourne la valeur Vrai ou Faux
 
-        return None
-    
-    def depiler(self):
-        if self.taille == 0:
-            raise PileVide
-        else:
-            x = self.memoire.pop()
-            self.taille -= 1
-            return x
-</div>
-    
-        </div>
-    </div>
 
-</div>
-</div>
+#####################################
+# 
+# Programme principal de test
+#
+#####################################
+a = input("Donnez votre mot : ")
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2-les-files">2.  Les Files<a class="anchor-link" href="#2-les-files">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">FileVide</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    extraction à partir d&#39;une file vide</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
-
-<span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pA</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pB</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
-
-<span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-    
-    
-    <span class="k">return</span> <span class="kc">None</span>
-
-<span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    
-    
-<span class="err">…</span>
-
-            
-    
-    
-    <span class="k">return</span> <span class="n">x</span>
-</pre></div>
-<div id="cell-2" class="clipboard-copy-txt">class FileVide(Exception):
-    """
-    extraction à partir d'une file vide
-    """
-    pass
-
-class File:
-    def __init__(self):
-        self.pA = Pile()
-        self.pB = Pile()
-        self.taille = 0
-
-def estVide(self):
-    return self.taille == 0
-
-def enfiler(self,x):
-    
-    
-    return None
-
-def defiler(self):
-    
-    
-…
-
-            
-    
-    
-    return x
-</div>
+if palindrome(a):
+    print(a, "est un palindrome")
+else:
+    print(a, "n'est pas un palindrome")</div>
     
         </div>
     </div>
