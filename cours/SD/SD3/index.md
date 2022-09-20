@@ -7,14 +7,4 @@
 
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/Ec3ukVqRbaZGpkl3S8E3kUQBHrdoTst5KZksLDxwkf0K4Q?e=opNdTt" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
 
-Exemples du cours
-<a href="https://nbviewer.jupyter.org/urls/mickaelsasl.github.io/T/SD/SD3/SD3%20-%20Exemples%20du%20cours.ipynb" target="_blank"><img src="/images/nbviewer_badge.svg"></a>
-<a href="https://mybinder.org/v2/gh/mickaelSASL/mickaelSASL.github.io/HEAD?filepath=T/SD/SD3/SD3%20-%20Exemples%20du%20cours.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
-
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ERnO2ic8ztJPqxnTv4v_FHIB4aXHbb3dIWDw8ijN6eOlOw?e=2phgyJ" target="_blank">Fiche de révision<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
-
-<a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/EbGPL_X0SxhAsMk28JA7GjABi7f25N-bRrSfBHq2g2OjTQ?e=PR82yu" target="_blank">Exercices<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
-
-Corrigé palindrome
-<a href="https://nbviewer.jupyter.org/urls/mickaelsasl.github.io/T/SD/SD3/SD3%20-%20Palindrome.ipynb" target="_blank"><img src="/images/nbviewer_badge.svg"></a>
-<a href="https://mybinder.org/v2/gh/mickaelSASL/mickaelSASL.github.io/HEAD?filepath=T/SD/SD3/SD3%20-%20Palindrome.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
