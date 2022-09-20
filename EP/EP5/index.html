@@ -1103,18 +1103,18 @@ On modélise la représentation binaire d'un entier non signé par un tableau d'
         <span class="n">e</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
         <span class="n">i</span> <span class="o">=</span> <span class="n">j</span>
 
-    <span class="c1">#   A l&#39;étape j, le sous-tableau L[0,j-1] est trié</span>
-    <span class="c1">#   et on insère L[j] dans ce sous-tableau en déterminant</span>
-    <span class="c1">#   le plus petit i tel que 0 &lt;= i &lt;= j et L[i-1] &gt; L[j]. </span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
-        <span class="n">i</span>   <span class="o">=</span> <span class="o">...</span>
+        <span class="c1">#   A l&#39;étape j, le sous-tableau L[0,j-1] est trié</span>
+        <span class="c1">#   et on insère L[j] dans ce sous-tableau en déterminant</span>
+        <span class="c1">#   le plus petit i tel que 0 &lt;= i &lt;= j et L[i-1] &gt; L[j]. </span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">i</span>   <span class="o">=</span> <span class="o">...</span>
 
-    <span class="c1">#   si i != j, on décale le sous tableau L[i,j-1] d’un cran</span>
-    <span class="c1">#   vers la droite et on place L[j] en position i</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>
-            <span class="n">L</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
-        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="c1">#   si i != j, on décale le sous tableau L[i,j-1] d’un cran</span>
+        <span class="c1">#   vers la droite et on place L[j] en position i</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>
+                <span class="n">L</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">L</span>
 </code></pre></div>
 <p>Exemples :
