@@ -2248,6 +2248,9 @@ Licensed under the Apache License, Version 2.0.
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">memoire</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>
         
     <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
@@ -2275,6 +2278,9 @@ class Pile:
     def __init__(self):
         self.memoire = []
         self.taille = 0
+    
+    def affiche(self):
+        print(self.memoire)
         
     def estVide(self):
         return self.taille == 0
@@ -2394,23 +2400,28 @@ print(p.estVide())      # pile vide ?</div>
         <span class="bp">self</span><span class="o">.</span><span class="n">pB</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pA</span><span class="o">.</span><span class="n">memoire</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">pB</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-    
-    
-    <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
 
-<span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    
-    
-<span class="err">…</span>
+    <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        
+        
+        <span class="k">return</span> <span class="kc">None</span>
 
-            
-    
-    
-    <span class="k">return</span> <span class="n">x</span>
+    <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        
+    <span class="err">…</span>
+
+                
+        
+        
+        <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">class FileVide(Exception):
     """
@@ -2424,23 +2435,28 @@ class File:
         self.pB = Pile()
         self.taille = 0
 
-def estVide(self):
-    return self.taille == 0
+    def affiche(self):
+        a = self.pA.memoire
+        a.reverse()
+        print(a+ self.pB.memoire)
 
-def enfiler(self,x):
-    
-    
-    return None
+    def estVide(self):
+        return self.taille == 0
 
-def defiler(self):
-    
-    
-…
+    def enfiler(self,x):
+        
+        
+        return None
 
-            
-    
-    
-    return x
+    def defiler(self):
+        
+        
+    …
+
+                
+        
+        
+        return x
 </div>
     
         </div>
@@ -2471,27 +2487,27 @@ def defiler(self):
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>              <span class="c1"># Création d&#39;un pile p</span>
-<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># empiler</span>
-<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1">#Afficher le contenue de la pile p</span>
-<span class="n">valeur</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>    <span class="c1"># depiler</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>           <span class="c1"># afficher la valeur dépilée  </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1"># afficher le contenu de la pile p</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
-<span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>             <span class="c1"># dépiler</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>              <span class="c1"># Création d&#39;un file f</span>
+<span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># enfiler</span>
+<span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>             <span class="c1"># Afficher le contenue de la file f</span>
+<span class="n">valeur</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>    <span class="c1"># défiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>           <span class="c1"># afficher la valeur défilée  </span>
+<span class="n">f</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>             <span class="c1"># afficher le contenu de la file f</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># file vide ?</span>
+<span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>             <span class="c1"># défiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># file vide ?</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">p = Pile()              # Création d'un pile p
-p.empiler(3)            # empiler
-p.empiler(5)
-print(p.memoire)        #Afficher le contenue de la pile p
-valeur = p.depiler()    # depiler
-print(valeur)           # afficher la valeur dépilée  
-print(p.memoire)        # afficher le contenu de la pile p
-print(p.estVide())      # pile vide ?
-p.depiler()             # dépiler
-print(p.estVide())      # pile vide ?</div>
+<div id="cell-4" class="clipboard-copy-txt">f = File()              # Création d'un file f
+f.enfiler(3)            # enfiler
+f.enfiler(5)
+f.affiche()             # Afficher le contenue de la file f
+valeur = f.defiler()    # défiler
+print(valeur)           # afficher la valeur défilée  
+f.affiche()             # afficher le contenu de la file f
+print(f.estVide())      # file vide ?
+f.defiler()             # défiler
+print(f.estVide())      # file vide ?</div>
     
         </div>
     </div>
