@@ -2300,6 +2300,56 @@ class Pile:
 </div>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>              <span class="c1"># Création d&#39;un pile p</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># empiler</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1">#Afficher le contenue de la pile p</span>
+<span class="n">valeur</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>    <span class="c1"># depiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>           <span class="c1"># afficher la valeur dépilée  </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1"># afficher le contenu de la pile p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>             <span class="c1"># dépiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
+</pre></div>
+<div id="cell-2" class="clipboard-copy-txt">p = Pile()              # Création d'un pile p
+p.empiler(3)            # empiler
+p.empiler(5)
+print(p.memoire)        #Afficher le contenue de la pile p
+valeur = p.depiler()    # depiler
+print(valeur)           # afficher la valeur dépilée  
+print(p.memoire)        # afficher le contenu de la pile p
+print(p.estVide())      # pile vide ?
+p.depiler()             # dépiler
+print(p.estVide())      # pile vide ?</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -2322,7 +2372,7 @@ class Pile:
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
+            <clipboard-copy for="cell-3">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2362,7 +2412,7 @@ class Pile:
     
     <span class="k">return</span> <span class="n">x</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">class FileVide(Exception):
+<div id="cell-3" class="clipboard-copy-txt">class FileVide(Exception):
     """
     extraction à partir d'une file vide
     """
@@ -2392,6 +2442,56 @@ def defiler(self):
     
     return x
 </div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-4">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>              <span class="c1"># Création d&#39;un pile p</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># empiler</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1">#Afficher le contenue de la pile p</span>
+<span class="n">valeur</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>    <span class="c1"># depiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>           <span class="c1"># afficher la valeur dépilée  </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">memoire</span><span class="p">)</span>        <span class="c1"># afficher le contenu de la pile p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>             <span class="c1"># dépiler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>      <span class="c1"># pile vide ?</span>
+</pre></div>
+<div id="cell-4" class="clipboard-copy-txt">p = Pile()              # Création d'un pile p
+p.empiler(3)            # empiler
+p.empiler(5)
+print(p.memoire)        #Afficher le contenue de la pile p
+valeur = p.depiler()    # depiler
+print(valeur)           # afficher la valeur dépilée  
+print(p.memoire)        # afficher le contenu de la pile p
+print(p.estVide())      # pile vide ?
+p.depiler()             # dépiler
+print(p.estVide())      # pile vide ?</div>
     
         </div>
     </div>

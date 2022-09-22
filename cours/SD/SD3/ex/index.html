@@ -1076,49 +1076,28 @@
 <h1 id="exemples-dutilisation-dune-pile">Exemples d'utilisation d'une pile</h1>
 <h2 id="verification-des-parentheses">Vérification des parenthèses</h2>
 <h3 id="algorithme">Algorithme</h3>
-<p>L\'algorithme vérifiant la correction des parenthèses dans un programme
-utilise une pile.</p>
-<p>+--------+----------------------------------------------------+
-| <strong>1</strong>  | <strong>erreur FAUX</strong>                                    |
-|        |                                                    |
+<p><a class="btn btn-info" href="#">Info</a></p>
+<p>L'algorithme vérifiant la correction des parenthèses dans un programme utilise une pile.</p>
+<p>| <strong>1</strong>  | <strong>erreur FAUX</strong>                                    |
 | <strong>2</strong>  | <strong>P est une pile vide</strong>                            |
-|        |                                                    |
 | <strong>3</strong>  | <strong>i un compteur initialisé à 0</strong>                   |
-|        |                                                    |
 | <strong>4</strong>  | <strong>exp la chaine de caractère à analyser</strong>          |
-|        |                                                    |
 | <strong>5</strong>  | <strong>TANT que erreur est FAUX:</strong>                      |
-|        |                                                    |
 | <strong>6</strong>  | <strong>c exp[i]</strong>                                     |
-|        |                                                    |
 | <strong>7</strong>  | <strong>si c est une parenthèse (, { ou [:</strong>            |
-|        |                                                    |
 | <strong>8</strong>  | <strong>on empile c dans P</strong>                             |
-|        |                                                    |
 | <strong>9</strong>  | <strong>sinon, si c est égal à ), } ou ]</strong>              |
-|        |                                                    |
 | <strong>10</strong> | <strong>si P est vide</strong>                                  |
-|        |                                                    |
 | <strong>11</strong> | <strong>erreur VRAI</strong>                                    |
-|        |                                                    |
 | <strong>12</strong> | <strong>sinon</strong>                                          |
-|        |                                                    |
 | <strong>13</strong> | <strong>on dépile P dans s</strong>                             |
-|        |                                                    |
 | <strong>14</strong> | <strong>si c ne correspond pas à s :</strong>                   |
-|        |                                                    |
 | <strong>15</strong> | <strong>erreur VRAI</strong>                                    |
-|        |                                                    |
 | <strong>16</strong> | <strong>i i+1</strong>                                          |
-|        |                                                    |
 | <strong>17</strong> | <strong>Si erreur est vrai ou P non vide</strong>               |
-|        |                                                    |
 | <strong>18</strong> | <strong>on renvoie FAUX et \"erreur pos.\" i</strong>           |
-|        |                                                    |
 | <strong>19</strong> | <strong>Sinon</strong>                                          |
-|        |                                                    |
-| <strong>20</strong> | <strong>on renvoie VRAI et \"chaine bien parenthésée\"</strong> |
-+--------+----------------------------------------------------+</p>
+| <strong>20</strong> | <strong>on renvoie VRAI et \"chaine bien parenthésée\"</strong> |</p>
 <h3 id="trace-de-cet-algorithme">Trace de cet algorithme</h3>
 <p>Sur CHAINE = \"(3*x+5*[10-x])\"</p>
 <p><strong>C</strong>   <strong>P</strong>   <strong>Erreur</strong></p>

@@ -3,51 +3,31 @@
 ## Vérification des parenthèses
 
 ### Algorithme
+[Info](#){.btn .btn-info}
 
-L\'algorithme vérifiant la correction des parenthèses dans un programme
-utilise une pile.
+L'algorithme vérifiant la correction des parenthèses dans un programme utilise une pile.
 
-+--------+----------------------------------------------------+
 | **1**  | **erreur FAUX**                                    |
-|        |                                                    |
 | **2**  | **P est une pile vide**                            |
-|        |                                                    |
 | **3**  | **i un compteur initialisé à 0**                   |
-|        |                                                    |
 | **4**  | **exp la chaine de caractère à analyser**          |
-|        |                                                    |
 | **5**  | **TANT que erreur est FAUX:**                      |
-|        |                                                    |
 | **6**  | **c exp\[i\]**                                     |
-|        |                                                    |
 | **7**  | **si c est une parenthèse (, { ou \[:**            |
-|        |                                                    |
 | **8**  | **on empile c dans P**                             |
-|        |                                                    |
 | **9**  | **sinon, si c est égal à ), } ou \]**              |
-|        |                                                    |
 | **10** | **si P est vide**                                  |
-|        |                                                    |
 | **11** | **erreur VRAI**                                    |
-|        |                                                    |
 | **12** | **sinon**                                          |
-|        |                                                    |
 | **13** | **on dépile P dans s**                             |
-|        |                                                    |
 | **14** | **si c ne correspond pas à s :**                   |
-|        |                                                    |
 | **15** | **erreur VRAI**                                    |
-|        |                                                    |
 | **16** | **i i+1**                                          |
-|        |                                                    |
 | **17** | **Si erreur est vrai ou P non vide**               |
-|        |                                                    |
 | **18** | **on renvoie FAUX et \"erreur pos.\" i**           |
-|        |                                                    |
 | **19** | **Sinon**                                          |
-|        |                                                    |
 | **20** | **on renvoie VRAI et \"chaine bien parenthésée\"** |
-+--------+----------------------------------------------------+
+
 
 ### Trace de cet algorithme
 
