@@ -1,78 +1,79 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # Exemples d'utilisation d'une pile
 
 ## Vérification des parenthèses
 
 ### Algorithme
-[Info](#){.btn .btn-info}
 
 L'algorithme vérifiant la correction des parenthèses dans un programme utilise une pile.
 
-| **1**  | **erreur FAUX**                                    |
-| **2**  | **P est une pile vide**                            |
-| **3**  | **i un compteur initialisé à 0**                   |
-| **4**  | **exp la chaine de caractère à analyser**          |
-| **5**  | **TANT que erreur est FAUX:**                      |
-| **6**  | **c exp\[i\]**                                     |
-| **7**  | **si c est une parenthèse (, { ou \[:**            |
-| **8**  | **on empile c dans P**                             |
-| **9**  | **sinon, si c est égal à ), } ou \]**              |
-| **10** | **si P est vide**                                  |
-| **11** | **erreur VRAI**                                    |
-| **12** | **sinon**                                          |
-| **13** | **on dépile P dans s**                             |
-| **14** | **si c ne correspond pas à s :**                   |
-| **15** | **erreur VRAI**                                    |
-| **16** | **i i+1**                                          |
-| **17** | **Si erreur est vrai ou P non vide**               |
-| **18** | **on renvoie FAUX et \"erreur pos.\" i**           |
-| **19** | **Sinon**                                          |
-| **20** | **on renvoie VRAI et \"chaine bien parenthésée\"** |
-
+```
+erreur à FAUX
+P est une pile vide
+i un compteur initialisé à 0
+exp la chaine de caractère à analyser
+TANT que erreur est FAUX:
+	c à exp[i]
+	si c est une parenthèse (, { ou [:
+		on empile c dans P
+  	sinon, si c est égal à ), } ou ]
+		si P est vide
+			erreur à VRAI
+		sinon
+			on dépile P dans s
+			si c ne correspond pas à s : 
+				erreur à VRAI
+  i à i+1
+Si erreur est vrai ou P  non vide
+	on renvoie FAUX et "erreur pos." i
+Sinon
+	on renvoie VRAI et "chaine bien parenthésée"
+```
 
 ### Trace de cet algorithme
+===! "Sur CHAINE = $(3x+5x[10-x])$"
 
-Sur CHAINE = \"(3\*x+5\*\[10-x\])\"
+ | **C**  | **P**  | **Erreur**   |
+ |:------:|:------:|:----------- :|
+ | (      | (      |      FAUX    | 
+ | 3      | (      |      FAUX    | 
+ | \*     | (      |      FAUX    | 
+ | X      | (      |      FAUX    | 
+ | \+     | (      |      FAUX    | 
+ | 5      | (      |      FAUX    | 
+ | \*     | (      |      FAUX    | 
+ | \[     | (\[    |      FAUX    | 
+ | 10     | (\[    |      FAUX    | 
+ | \-     | (\[    |      FAUX    | 
+ | X      | (\[    |      FAUX    | 
+ | \]     | (      |      FAUX    | 
+ | )      |        |      FAUX    |  
 
-  **C**   **P**   **Erreur**
-  ------- ------- ------------
-  (       (       FAUX
-  3       (       FAUX
-  \*      (       FAUX
-  X       (       FAUX
-  \+      (       FAUX
-  5       (       FAUX
-  \*      (       FAUX
-  \[      (\[     FAUX
-  10      (\[     FAUX
-  \-      (\[     FAUX
-  X       (\[     FAUX
-  \]      (       FAUX
-  )               FAUX
+=== "Sur CHAINE = $(5-(3×A+2))×3$"
 
-Sur CHAINE = \"(3\*\[x+5\]\*\[10-x)+17\*(x-1)\"
+ | **C**  | **P**  | **Erreur**   |
+ |:------:|:------:|:----------- :|
+ | (      | (      |     FAUX     |
+ | 3      | (      |     FAUX     |
+ | \*     | (      |     FAUX     |
+ | \[     | (\[    |     FAUX     |
+ | X      | (\[    |     FAUX     |
+ | \+     | (\[    |     FAUX     |
+ | 5      | (\[    |     FAUX     |
+ | \]     | (      |     FAUX     |
+ | \*     | (      |     FAUX     |
+ | \[     | (\[    |     FAUX     |
+ | 10     | (\[    |     FAUX     |
+ | \-     | (\[    |     FAUX     |
+ | X      | (\[    |     FAUX     |
+ | )      | (      |     VRAI     |
 
-  **C**   **P**   **Erreur**
-  ------- ------- ------------
-  (       (       FAUX
-  3       (       FAUX
-  \*      (       FAUX
-  \[      (\[     FAUX
-  X       (\[     FAUX
-  \+      (\[     FAUX
-  5       (\[     FAUX
-  \]      (       FAUX
-  \*      (       FAUX
-  \[      (\[     FAUX
-  10      (\[     FAUX
-  \-      (\[     FAUX
-  X       (\[     FAUX
-  )       (       VRAI
 
 ## Evaluation d\'une expression
 
 Comment un programme évalue-t-il une expression du type :
-$\left( \mathbf{5 -}\left( \mathbf{3} \times \mathbf{A + 2} \right) \right)\mathbf{\times}\mathbf{3}$
-?
+$5 -(3 \times A + 2))\  \times \ 3$ ?
 
 ### Notation RPN ou Post Fixée
 
@@ -91,37 +92,22 @@ supprime l\'utilité des parenthèses :
 
 -   **EXP** est l\'expression à analyser, valide
 
-+--------+------------------------------------------------------------+
-| **1**  | **Pour chaque élément E de EXP:**                          |
-|        |                                                            |
-| **2**  | **si E est +, -,** $\mathbf{\times}\ $**, ou / :**         |
-|        |                                                            |
-| **3**  | **on dépile les opérateurs de [priorité supérieure ou      |
-|        | égale]{.ul}**                                              |
-| **4**  |                                                            |
-|        | **on les copie dans RESULT**                               |
-| **5**  |                                                            |
-|        | **on empile E dans P**                                     |
-| **6**  |                                                            |
-|        | **si E est une parenthèse \")\":**                         |
-| **7**  |                                                            |
-|        | **on dépile de P et on recopie dans RESULT jusqu\'à une    |
-| **8**  | \"(\"**                                                    |
-|        |                                                            |
-| **9**  | **si E est une parenthèse \"(\":**                         |
-|        |                                                            |
-| **10** | **on l\'empile dans P**                                    |
-|        |                                                            |
-| **11** | **sinon (E est une variable ou un nombre):**               |
-|        |                                                            |
-| **12** | **on l\'ajoute à RESULT**                                  |
-|        |                                                            |
-| **13** | **A la fin, on dépile tous les éléments de P pour les      |
-|        | copier dans RESULT**                                       |
-| **14** |                                                            |
-|        |                                                            |
-| **15** |                                                            |
-+--------+------------------------------------------------------------+
+```
+Pour chaque élément E de EXP:
+	si E est +, -, × , ou / :
+		on dépile les opérateurs de   				priorité supérieure ou égale
+		on les copie dans RESULT
+		on empile E dans P
+	si E est une parenthèse ")":
+		on dépile de P et on recopie 			dans RESULT jusqu'à une "("
+	si E est une parenthèse "(":
+		on l'empile dans P
+	sinon (E est une variable ou un nombre):
+		on l'ajoute à RESULT
+A la fin, on dépile tous les éléments de P pour les copier dans RESULT
+
+```
+
 
 ### Trace sur $\left( 5 - (3 \times A + 2) \right) \times 3$
 
@@ -151,33 +137,19 @@ facilement avec une pile:
 
 P est une pile
 
-+--------+------------------------------------------------------------+
-| **1**  | **Pour chaque élément E de la chaine RESULT obtenue par    |
-|        | post-fixage**                                              |
-| **2**  |                                                            |
-|        | **Si E est un nombre :**                                   |
-| **3**  |                                                            |
-|        | **on l\'empile dans P**                                    |
-| **4**  |                                                            |
-|        | **Si non, si E est un +, -,** $\mathbf{\times}\ $**, /:**  |
-| **5**  |                                                            |
-|        | **on dépile 2 fois :**                                     |
-| **6**  |                                                            |
-|        | **a dépiler(P)**                                           |
-| **7**  |                                                            |
-|        | **b dépiler(P)**                                           |
-| **8**  |                                                            |
-|        | **on effectue l\'opération E entre b et a, résultat dans   |
-| **9**  | R**                                                        |
-|        |                                                            |
-| **10** | **On empile R dans P**                                     |
-|        |                                                            |
-| **11** | **A la fin le résultat est au sommet de la pile P.**       |
-|        |                                                            |
-| **12** |                                                            |
-|        |                                                            |
-| **13** |                                                            |
-+--------+------------------------------------------------------------+
+```
+Pour chaque élément E de la chaine RESULT obtenue par post-fixage
+	Si E est un nombre :
+		on l'empile dans P
+	Si	non, si E est un +, -, × , /:
+		on dépile 2 fois :
+		a  dépiler(P)
+		b  dépiler(P)
+		on effectue l'opération E entre 			b et a, résultat dans R
+		On empile R dans P
+A la fin le résultat est au sommet de la pile P.
+```
+
 
 ### Exemple et trace :
 

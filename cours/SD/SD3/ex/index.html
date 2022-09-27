@@ -15,7 +15,7 @@
     
     
       
-        <title>Exemples d'utilisation d'une pile - NSI Terminale</title>
+        <title>Ex - NSI Terminale</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exemples d'utilisation d'une pile
+              Ex
             
           </span>
         </div>
@@ -1059,69 +1059,204 @@
                 
 
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 <h1 id="exemples-dutilisation-dune-pile">Exemples d'utilisation d'une pile</h1>
 <h2 id="verification-des-parentheses">Vérification des parenthèses</h2>
 <h3 id="algorithme">Algorithme</h3>
-<p><a class="btn btn-info" href="#">Info</a></p>
 <p>L'algorithme vérifiant la correction des parenthèses dans un programme utilise une pile.</p>
-<p>| <strong>1</strong>  | <strong>erreur FAUX</strong>                                    |
-| <strong>2</strong>  | <strong>P est une pile vide</strong>                            |
-| <strong>3</strong>  | <strong>i un compteur initialisé à 0</strong>                   |
-| <strong>4</strong>  | <strong>exp la chaine de caractère à analyser</strong>          |
-| <strong>5</strong>  | <strong>TANT que erreur est FAUX:</strong>                      |
-| <strong>6</strong>  | <strong>c exp[i]</strong>                                     |
-| <strong>7</strong>  | <strong>si c est une parenthèse (, { ou [:</strong>            |
-| <strong>8</strong>  | <strong>on empile c dans P</strong>                             |
-| <strong>9</strong>  | <strong>sinon, si c est égal à ), } ou ]</strong>              |
-| <strong>10</strong> | <strong>si P est vide</strong>                                  |
-| <strong>11</strong> | <strong>erreur VRAI</strong>                                    |
-| <strong>12</strong> | <strong>sinon</strong>                                          |
-| <strong>13</strong> | <strong>on dépile P dans s</strong>                             |
-| <strong>14</strong> | <strong>si c ne correspond pas à s :</strong>                   |
-| <strong>15</strong> | <strong>erreur VRAI</strong>                                    |
-| <strong>16</strong> | <strong>i i+1</strong>                                          |
-| <strong>17</strong> | <strong>Si erreur est vrai ou P non vide</strong>               |
-| <strong>18</strong> | <strong>on renvoie FAUX et \"erreur pos.\" i</strong>           |
-| <strong>19</strong> | <strong>Sinon</strong>                                          |
-| <strong>20</strong> | <strong>on renvoie VRAI et \"chaine bien parenthésée\"</strong> |</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>erreur à FAUX
+P est une pile vide
+i un compteur initialisé à 0
+exp la chaine de caractère à analyser
+TANT que erreur est FAUX:
+    c à exp[i]
+    si c est une parenthèse (, { ou [:
+        on empile c dans P
+    sinon, si c est égal à ), } ou ]
+        si P est vide
+            erreur à VRAI
+        sinon
+            on dépile P dans s
+            si c ne correspond pas à s : 
+                erreur à VRAI
+  i à i+1
+Si erreur est vrai ou P  non vide
+    on renvoie FAUX et &quot;erreur pos.&quot; i
+Sinon
+    on renvoie VRAI et &quot;chaine bien parenthésée&quot;
+</code></pre></div>
 <h3 id="trace-de-cet-algorithme">Trace de cet algorithme</h3>
-<p>Sur CHAINE = \"(3*x+5*[10-x])\"</p>
-<p><strong>C</strong>   <strong>P</strong>   <strong>Erreur</strong></p>
-<hr />
-<p>(       (       FAUX
-  3       (       FAUX
-  *      (       FAUX
-  X       (       FAUX
-  +      (       FAUX
-  5       (       FAUX
-  *      (       FAUX
-  [      ([     FAUX
-  10      ([     FAUX
-  -      ([     FAUX
-  X       ([     FAUX
-  ]      (       FAUX
-  )               FAUX</p>
-<p>Sur CHAINE = \"(3*[x+5]*[10-x)+17*(x-1)\"</p>
-<p><strong>C</strong>   <strong>P</strong>   <strong>Erreur</strong></p>
-<hr />
-<p>(       (       FAUX
-  3       (       FAUX
-  *      (       FAUX
-  [      ([     FAUX
-  X       ([     FAUX
-  +      ([     FAUX
-  5       ([     FAUX
-  ]      (       FAUX
-  *      (       FAUX
-  [      ([     FAUX
-  10      ([     FAUX
-  -      ([     FAUX
-  X       ([     FAUX
-  )       (       VRAI</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sur CHAINE = <span class="arithmatex">\((3x+5x[10-x])\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>C</strong></th>
+<th align="center"><strong>P</strong></th>
+<th align="center"><strong>Erreur</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">(</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">]</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">)</td>
+<td align="center"></td>
+<td align="center">FAUX</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Sur CHAINE = <span class="arithmatex">\((5-(3×A+2))×3\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>C</strong></th>
+<th align="center"><strong>P</strong></th>
+<th align="center"><strong>Erreur</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">(</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">]</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">(</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">([</td>
+<td align="center">FAUX</td>
+</tr>
+<tr>
+<td align="center">)</td>
+<td align="center">(</td>
+<td align="center">VRAI</td>
+</tr>
+</tbody>
+</table>
 <h2 id="evaluation-dune-expression">Evaluation d\'une expression</h2>
 <p>Comment un programme évalue-t-il une expression du type :
-<span class="arithmatex">\(\left( \mathbf{5 -}\left( \mathbf{3} \times \mathbf{A + 2} \right) \right)\mathbf{\times}\mathbf{3}\)</span>
-?</p>
+<span class="arithmatex">\(5 -(3 \times A + 2))\  \times \ 3\)</span> ?</p>
 <h3 id="notation-rpn-ou-post-fixee">Notation RPN ou Post Fixée</h3>
 <p>L\'expression est d\'abord transformée en notation post-fixée qui
 supprime l\'utilité des parenthèses :</p>
@@ -1141,37 +1276,19 @@ supprime l\'utilité des parenthèses :</p>
 <p><strong>EXP</strong> est l\'expression à analyser, valide</p>
 </li>
 </ul>
-<p>+--------+------------------------------------------------------------+
-| <strong>1</strong>  | <strong>Pour chaque élément E de EXP:</strong>                          |
-|        |                                                            |
-| <strong>2</strong>  | <strong>si E est +, -,</strong> $\mathbf{\times} $<strong>, ou / :</strong>         |
-|        |                                                            |
-| <strong>3</strong>  | <strong>on dépile les opérateurs de [priorité supérieure ou      |
-|        | égale]{.ul}</strong>                                              |
-| <strong>4</strong>  |                                                            |
-|        | <strong>on les copie dans RESULT</strong>                               |
-| <strong>5</strong>  |                                                            |
-|        | <strong>on empile E dans P</strong>                                     |
-| <strong>6</strong>  |                                                            |
-|        | <strong>si E est une parenthèse \")\":</strong>                         |
-| <strong>7</strong>  |                                                            |
-|        | <strong>on dépile de P et on recopie dans RESULT jusqu\'à une    |
-| **8</strong>  | \"(\"**                                                    |
-|        |                                                            |
-| <strong>9</strong>  | <strong>si E est une parenthèse \"(\":</strong>                         |
-|        |                                                            |
-| <strong>10</strong> | <strong>on l\'empile dans P</strong>                                    |
-|        |                                                            |
-| <strong>11</strong> | <strong>sinon (E est une variable ou un nombre):</strong>               |
-|        |                                                            |
-| <strong>12</strong> | <strong>on l\'ajoute à RESULT</strong>                                  |
-|        |                                                            |
-| <strong>13</strong> | <strong>A la fin, on dépile tous les éléments de P pour les      |
-|        | copier dans RESULT</strong>                                       |
-| <strong>14</strong> |                                                            |
-|        |                                                            |
-| <strong>15</strong> |                                                            |
-+--------+------------------------------------------------------------+</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>Pour chaque élément E de EXP:
+    si E est +, -, × , ou / :
+        on dépile les opérateurs de                 priorité supérieure ou égale
+        on les copie dans RESULT
+        on empile E dans P
+    si E est une parenthèse &quot;)&quot;:
+        on dépile de P et on recopie            dans RESULT jusqu&#39;à une &quot;(&quot;
+    si E est une parenthèse &quot;(&quot;:
+        on l&#39;empile dans P
+    sinon (E est une variable ou un nombre):
+        on l&#39;ajoute à RESULT
+A la fin, on dépile tous les éléments de P pour les copier dans RESULT
+</code></pre></div>
 <h3 id="trace-sur-left-5-3-times-a-2-right-times-3">Trace sur <span class="arithmatex">\(\left( 5 - (3 \times A + 2) \right) \times 3\)</span></h3>
 <p><strong>E</strong>        <strong>P</strong>          <strong>RESULT</strong></p>
 <hr />
@@ -1194,33 +1311,17 @@ supprime l\'utilité des parenthèses :</p>
 facilement avec une pile:</p>
 <h3 id="algorithme_2">Algorithme</h3>
 <p>P est une pile</p>
-<p>+--------+------------------------------------------------------------+
-| <strong>1</strong>  | <strong>Pour chaque élément E de la chaine RESULT obtenue par    |
-|        | post-fixage</strong>                                              |
-| <strong>2</strong>  |                                                            |
-|        | <strong>Si E est un nombre :</strong>                                   |
-| <strong>3</strong>  |                                                            |
-|        | <strong>on l\'empile dans P</strong>                                    |
-| <strong>4</strong>  |                                                            |
-|        | <strong>Si non, si E est un +, -,</strong> $\mathbf{\times} $<strong>, /:</strong>  |
-| <strong>5</strong>  |                                                            |
-|        | <strong>on dépile 2 fois :</strong>                                     |
-| <strong>6</strong>  |                                                            |
-|        | <strong>a dépiler(P)</strong>                                           |
-| <strong>7</strong>  |                                                            |
-|        | <strong>b dépiler(P)</strong>                                           |
-| <strong>8</strong>  |                                                            |
-|        | <strong>on effectue l\'opération E entre b et a, résultat dans   |
-| **9</strong>  | R**                                                        |
-|        |                                                            |
-| <strong>10</strong> | <strong>On empile R dans P</strong>                                     |
-|        |                                                            |
-| <strong>11</strong> | <strong>A la fin le résultat est au sommet de la pile P.</strong>       |
-|        |                                                            |
-| <strong>12</strong> |                                                            |
-|        |                                                            |
-| <strong>13</strong> |                                                            |
-+--------+------------------------------------------------------------+</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>Pour chaque élément E de la chaine RESULT obtenue par post-fixage
+    Si E est un nombre :
+        on l&#39;empile dans P
+    Si  non, si E est un +, -, × , /:
+        on dépile 2 fois :
+        a  dépiler(P)
+        b  dépiler(P)
+        on effectue l&#39;opération E entre             b et a, résultat dans R
+        On empile R dans P
+A la fin le résultat est au sommet de la pile P.
+</code></pre></div>
 <h3 id="exemple-et-trace">Exemple et trace :</h3>
 <div class="arithmatex">\[(30 - ((3\  \times 8) + \ 2)) \times 3\]</div>
 <div class="arithmatex">\[30\ 3\ 8\  \times \ 2\  + \  - \ 3\  \times\]</div>
