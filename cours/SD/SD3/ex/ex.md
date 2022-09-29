@@ -1,5 +1,3 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
 # Exemples d'utilisation d'une pile
 
 ## Vérification des parenthèses
@@ -31,46 +29,51 @@ Sinon
 	on renvoie VRAI et "chaine bien parenthésée"
 ```
 
+
 ### Trace de cet algorithme
-===! "Sur CHAINE = $(3x+5x[10-x])$"
 
- | **C**  | **P**  | **Erreur**   |
- |:------:|:------:|:----------- :|
- | (      | (      |      FAUX    | 
- | 3      | (      |      FAUX    | 
- | \*     | (      |      FAUX    | 
- | X      | (      |      FAUX    | 
- | \+     | (      |      FAUX    | 
- | 5      | (      |      FAUX    | 
- | \*     | (      |      FAUX    | 
- | \[     | (\[    |      FAUX    | 
- | 10     | (\[    |      FAUX    | 
- | \-     | (\[    |      FAUX    | 
- | X      | (\[    |      FAUX    | 
- | \]     | (      |      FAUX    | 
- | )      |        |      FAUX    |  
+===! "Exemple 1"
+    Sur CHAINE = $(3x+5 \times [10-x])$
 
-=== "Sur CHAINE = $(5-(3×A+2))×3$"
-
- | **C**  | **P**  | **Erreur**   |
- |:------:|:------:|:----------- :|
- | (      | (      |     FAUX     |
- | 3      | (      |     FAUX     |
- | \*     | (      |     FAUX     |
- | \[     | (\[    |     FAUX     |
- | X      | (\[    |     FAUX     |
- | \+     | (\[    |     FAUX     |
- | 5      | (\[    |     FAUX     |
- | \]     | (      |     FAUX     |
- | \*     | (      |     FAUX     |
- | \[     | (\[    |     FAUX     |
- | 10     | (\[    |     FAUX     |
- | \-     | (\[    |     FAUX     |
- | X      | (\[    |     FAUX     |
- | )      | (      |     VRAI     |
+    | **C**  | **P**  | **Erreur**   |
+    |:------:|:------:|:----------- :|
+    | (      | (      |      FAUX    | 
+    | 3      | (      |      FAUX    | 
+    | \*     | (      |      FAUX    | 
+    | X      | (      |      FAUX    | 
+    | \+     | (      |      FAUX    | 
+    | 5      | (      |      FAUX    | 
+    | \*     | (      |      FAUX    | 
+    | \[     | (\[    |      FAUX    | 
+    | 10     | (\[    |      FAUX    | 
+    | \-     | (\[    |      FAUX    | 
+    | X      | (\[    |      FAUX    | 
+    | \]     | (      |      FAUX    | 
+    | )      |        |      FAUX    |  
 
 
-## Evaluation d\'une expression
+=== "Exemple 2"
+    Sur CHAINE = $(3 \times [x+5]  \times [10-x) + 17 \times (x-1)$
+
+    | **C**  | **P**  | **Erreur**   |
+    |:------:|:------:|:----------- :|
+    | (      | (      |     FAUX     |
+    | 3      | (      |     FAUX     |
+    | \*     | (      |     FAUX     |
+    | \[     | (\[    |     FAUX     |
+    | X      | (\[    |     FAUX     |
+    | \+     | (\[    |     FAUX     |
+    | 5      | (\[    |     FAUX     |
+    | \]     | (      |     FAUX     |
+    | \*     | (      |     FAUX     |
+    | \[     | (\[    |     FAUX     |
+    | 10     | (\[    |     FAUX     |
+    | \-     | (\[    |     FAUX     |
+    | X      | (\[    |     FAUX     |
+    | )      | (      |     VRAI     |
+
+
+## Conversion d'une expression
 
 Comment un programme évalue-t-il une expression du type :
 $5 -(3 \times A + 2))\  \times \ 3$ ?
@@ -95,11 +98,11 @@ supprime l\'utilité des parenthèses :
 ```
 Pour chaque élément E de EXP:
 	si E est +, -, × , ou / :
-		on dépile les opérateurs de   				priorité supérieure ou égale
+		on dépile les opérateurs de priorité supérieure ou égale
 		on les copie dans RESULT
 		on empile E dans P
 	si E est une parenthèse ")":
-		on dépile de P et on recopie 			dans RESULT jusqu'à une "("
+		on dépile de P et on recopie dans RESULT jusqu'à une "("
 	si E est une parenthèse "(":
 		on l'empile dans P
 	sinon (E est une variable ou un nombre):
@@ -109,28 +112,29 @@ A la fin, on dépile tous les éléments de P pour les copier dans RESULT
 ```
 
 
-### Trace sur $\left( 5 - (3 \times A + 2) \right) \times 3$
+===! "Exemple" 
+    Trace sur $\left( 5 - (3 \times A + 2) \right) \times 3$
 
-  **E**        **P**          **RESULT**
-  ------------ -------------- ---------------------------------
-  (            (              
-  5            (              5
-  \-           -(             5
-  (            (-(            5
-  3            (-(            5 3
-  $$\times$$   $\times$ (-(   5 3 A
-  A            $\times$ (-(   5 3 A
-  \+           +(-(           5 3 A $\times$
-  2            +(-(           5 3 A $\times$ 2
-  )            -(             5 3 A $\times$ 2 +
-  )                           5 3 A $\times$ 2 + -
-  $$\times$$   $$\times$$     5 3 A $\times$ 2 + -
-  3            $$\times$$     5 3 A $\times$ 2 + - 3
-                              5 3 A $\times$ 2 + - 3 $\times$
+    |**E**      |  **P**        |  **RESULT**                       |
+    |-----------| --------------| ----------------------------------|
+    |(          |  (            |                                   |
+    |5          |  (            |  5                                |
+    |\-         |  -(           |  5                                |
+    |(          |  (-(          |  5                                |
+    |3          |  (-(          |  5 3                              |
+    |$\times$   |  $\times$ (-( |  5 3 A                            |
+    |A          |  $\times$ (-( |  5 3 A                            |
+    |\+         |  +(-(         |  5 3 A $\times$                   |
+    |2          |  +(-(         |  5 3 A $\times$ 2                 |
+    |)          |  -(           |  5 3 A $\times$ 2 +               |
+    |)          |               |  5 3 A $\times$ 2 + -             |
+    |$\times$   |   $\times$    |  5 3 A $\times$ 2 + -             |
+    |3          |   $\times$    |  5 3 A $\times$ 2 + - 3           |
+    |           |               |  5 3 A $\times$ 2 + - 3 $\times$  |
 
-##  Evaluation d\'une expression
+##  Evaluation d'une expression
 
-Une fois qu\'on a l\'expression post-fixée, on peut l\'évaluer
+Une fois qu'on a l'expression post-fixée, on peut l'évaluer
 facilement avec une pile:
 
 ### Algorithme

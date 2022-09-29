@@ -15,7 +15,7 @@
     
     
       
-        <title>Ex - NSI Terminale</title>
+        <title>Exemples d'utilisation d'une pile - NSI Terminale</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ex
+              Exemples d'utilisation d'une pile
             
           </span>
         </div>
@@ -459,6 +459,20 @@
     <li class="md-nav__item">
       <a href="../Exemples%20du%20cours/" class="md-nav__link">
         Exemples du cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../exercices" class="md-nav__link">
+        Corrigé exo bac
       </a>
     </li>
   
@@ -1059,8 +1073,6 @@
                 
 
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
 <h1 id="exemples-dutilisation-dune-pile">Exemples d'utilisation d'une pile</h1>
 <h2 id="verification-des-parentheses">Vérification des parenthèses</h2>
 <h3 id="algorithme">Algorithme</h3>
@@ -1087,11 +1099,10 @@ Sinon
     on renvoie VRAI et &quot;chaine bien parenthésée&quot;
 </code></pre></div>
 <h3 id="trace-de-cet-algorithme">Trace de cet algorithme</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sur CHAINE = <span class="arithmatex">\((3x+5x[10-x])\)</span></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Exemple 1</label><label for="__tabbed_1_2">Exemple 2</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
+<p>Sur CHAINE = <span class="arithmatex">\((3x+5 \times [10-x])\)</span></p>
 <table>
 <thead>
 <tr>
@@ -1168,11 +1179,9 @@ Sinon
 </tr>
 </tbody>
 </table>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Sur CHAINE = <span class="arithmatex">\((5-(3×A+2))×3\)</span></label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
+<p>Sur CHAINE = <span class="arithmatex">\((3 \times [x+5]  \times [10-x) + 17 \times (x-1)\)</span></p>
 <table>
 <thead>
 <tr>
@@ -1254,7 +1263,10 @@ Sinon
 </tr>
 </tbody>
 </table>
-<h2 id="evaluation-dune-expression">Evaluation d\'une expression</h2>
+</div>
+</div>
+</div>
+<h2 id="conversion-dune-expression">Conversion d'une expression</h2>
 <p>Comment un programme évalue-t-il une expression du type :
 <span class="arithmatex">\(5 -(3 \times A + 2))\  \times \ 3\)</span> ?</p>
 <h3 id="notation-rpn-ou-post-fixee">Notation RPN ou Post Fixée</h3>
@@ -1278,36 +1290,107 @@ supprime l\'utilité des parenthèses :</p>
 </ul>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>Pour chaque élément E de EXP:
     si E est +, -, × , ou / :
-        on dépile les opérateurs de                 priorité supérieure ou égale
+        on dépile les opérateurs de priorité supérieure ou égale
         on les copie dans RESULT
         on empile E dans P
     si E est une parenthèse &quot;)&quot;:
-        on dépile de P et on recopie            dans RESULT jusqu&#39;à une &quot;(&quot;
+        on dépile de P et on recopie dans RESULT jusqu&#39;à une &quot;(&quot;
     si E est une parenthèse &quot;(&quot;:
         on l&#39;empile dans P
     sinon (E est une variable ou un nombre):
         on l&#39;ajoute à RESULT
 A la fin, on dépile tous les éléments de P pour les copier dans RESULT
 </code></pre></div>
-<h3 id="trace-sur-left-5-3-times-a-2-right-times-3">Trace sur <span class="arithmatex">\(\left( 5 - (3 \times A + 2) \right) \times 3\)</span></h3>
-<p><strong>E</strong>        <strong>P</strong>          <strong>RESULT</strong></p>
-<hr />
-<p>(            (            <br />
-  5            (              5
-  -           -(             5
-  (            (-(            5
-  3            (-(            5 3
-  <span class="arithmatex">\(<span class="arithmatex">\(\times\)</span>\)</span>   <span class="arithmatex">\(\times\)</span> (-(   5 3 A
-  A            <span class="arithmatex">\(\times\)</span> (-(   5 3 A
-  +           +(-(           5 3 A <span class="arithmatex">\(\times\)</span>
-  2            +(-(           5 3 A <span class="arithmatex">\(\times\)</span> 2
-  )            -(             5 3 A <span class="arithmatex">\(\times\)</span> 2 +
-  )                           5 3 A <span class="arithmatex">\(\times\)</span> 2 + -
-  <span class="arithmatex">\(<span class="arithmatex">\(\times\)</span>\)</span>   <span class="arithmatex">\(<span class="arithmatex">\(\times\)</span>\)</span>     5 3 A <span class="arithmatex">\(\times\)</span> 2 + -
-  3            <span class="arithmatex">\(<span class="arithmatex">\(\times\)</span>\)</span>     5 3 A <span class="arithmatex">\(\times\)</span> 2 + - 3
-                              5 3 A <span class="arithmatex">\(\times\)</span> 2 + - 3 <span class="arithmatex">\(\times\)</span></p>
-<h2 id="evaluation-dune-expression_1">Evaluation d\'une expression</h2>
-<p>Une fois qu\'on a l\'expression post-fixée, on peut l\'évaluer
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Exemple</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Trace sur <span class="arithmatex">\(\left( 5 - (3 \times A + 2) \right) \times 3\)</span></p>
+<table>
+<thead>
+<tr>
+<th><strong>E</strong></th>
+<th><strong>P</strong></th>
+<th><strong>RESULT</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(</td>
+<td>(</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>(</td>
+<td>5</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-(</td>
+<td>5</td>
+</tr>
+<tr>
+<td>(</td>
+<td>(-(</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(-(</td>
+<td>5 3</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\times\)</span></td>
+<td><span class="arithmatex">\(\times\)</span> (-(</td>
+<td>5 3 A</td>
+</tr>
+<tr>
+<td>A</td>
+<td><span class="arithmatex">\(\times\)</span> (-(</td>
+<td>5 3 A</td>
+</tr>
+<tr>
+<td>+</td>
+<td>+(-(</td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>+(-(</td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2</td>
+</tr>
+<tr>
+<td>)</td>
+<td>-(</td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2 +</td>
+</tr>
+<tr>
+<td>)</td>
+<td></td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2 + -</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\times\)</span></td>
+<td><span class="arithmatex">\(\times\)</span></td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2 + -</td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(\times\)</span></td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2 + - 3</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>5 3 A <span class="arithmatex">\(\times\)</span> 2 + - 3 <span class="arithmatex">\(\times\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="evaluation-dune-expression">Evaluation d'une expression</h2>
+<p>Une fois qu'on a l'expression post-fixée, on peut l'évaluer
 facilement avec une pile:</p>
 <h3 id="algorithme_2">Algorithme</h3>
 <p>P est une pile</p>

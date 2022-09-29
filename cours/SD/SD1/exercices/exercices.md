@@ -17,6 +17,7 @@
     `empiler(valeur)` : ajoute la valeur donnée en paramètre au sommet de la pile.
     `depiler()`: retourne la valeur située au sommet de la pile et la supprime.
     ```
+    
 === "🧩 Corrigé Q1"
     ```python
     def demain(ma_date):    
