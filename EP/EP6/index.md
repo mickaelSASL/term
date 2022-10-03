@@ -21,7 +21,7 @@ Exemples :
 
 [12,2,0]
 >>>	rendu(89)
-[17,2,1]
+[17,2,0]
 ```
 
 **Exercice 2 (4 points)**
