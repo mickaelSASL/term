@@ -204,7 +204,7 @@ ___
 
     ```Python
         >>> print(toto == titi)
-        True
+        False
     ```
 
     |               |    toto    |    titi    |                           |
@@ -212,6 +212,8 @@ ___
     |  Question 1   |  (1, 2, 3) |  (2, 1, 6) | *instanciation*           | 
     |  Question 3   |  (1, 2, 3) |  (1, 2, 6) | *inversion dans titi*     |
     |  Question 4   |  (1, 2, 6) |  (1, 2, 6) | *multiplication dan toto* |
+
+    Les valeurs de `i`, `j`, `k` sont les mêmes pour `toto` et `titi` mais le test est effectué sur les objets et non les valeurs de leurs attributs.
 ___
 
 ## Exercice 5 - CORRIGE
