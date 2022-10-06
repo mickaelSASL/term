@@ -1422,8 +1422,41 @@ b)
 </div>
 <hr />
 <h2 id="exercice-6-corrige">Exercice 6 - CORRIGE</h2>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>Il permet d&#39;effectuer un tirage aléatoire de 100 valeurs et d&#39;en afficher la moyenne.
+</code></pre></div>
 <hr />
 <h2 id="exercice-7-corrige">Exercice 7 - CORRIGE</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Questions 1 &amp; 2</label><label for="__tabbed_5_2">Question 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Carre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cote</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cote</span> <span class="o">=</span> <span class="n">cote</span>
+
+    <span class="k">def</span> <span class="nf">perimetre</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cote</span>
+
+    <span class="k">def</span> <span class="nf">aire</span><span class="p">():</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cote</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="n">c1</span> <span class="o">=</span> <span class="n">Carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">c2</span> <span class="o">=</span> <span class="n">Carre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">perimetre</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">aire</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="o">.</span><span class="n">perimetre</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="o">.</span><span class="n">aire</span><span class="p">)</span>
+</code></pre></div>
+<p>Retour de la console : 
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>12
+9
+8
+4
+</code></pre></div></p>
+</div>
+</div>
+</div>
 
               
     <script src="../../../../js/ide.js"></script> 

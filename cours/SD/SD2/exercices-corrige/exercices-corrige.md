@@ -284,6 +284,42 @@ ___
 
 ## Exercice 6 - CORRIGE
 
+```
+Il permet d'effectuer un tirage aléatoire de 100 valeurs et d'en afficher la moyenne.
+```
+
 ___
 
 ## Exercice 7 - CORRIGE
+
+===! "Questions 1 & 2"
+    ```Python
+    class Carre:
+        def __init(self, cote):
+            self.cote = cote
+
+        def perimetre():
+            return 4 * self.cote
+
+        def aire():
+            return self.cote**2
+    ```
+
+=== "Question 3"
+    ```Python
+        c1 = Carre(3)
+        c2 = Carre(2)
+        print(c1.perimetre)
+        print(c1.aire)
+        print(c2.perimetre)
+        print(c2.aire)
+    ```
+
+    Retour de la console : 
+    ```
+    12
+    9
+    8
+    4
+
+    ```
