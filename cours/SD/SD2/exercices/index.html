@@ -1340,6 +1340,78 @@ Il devra retourner :
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="exercice-4">Exercice 4</h2>
+<p>On donne ci-dessous le code en Python d’une classe nommée Toto. Chaque objet de cette classe a 3 attributs de type entier et dispose de 3 méthodes. Le code d’une de ces méthodes n’est pas complètement écrit.</p>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Toto</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">att1</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">att2</span> <span class="o">=</span> <span class="n">j</span>         
+        <span class="bp">self</span><span class="o">.</span><span class="n">att3</span> <span class="o">=</span> <span class="n">k</span> 
+
+    <span class="k">def</span> <span class="nf">meth1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>         
+        <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">att1</span>         
+        <span class="bp">self</span><span class="o">.</span><span class="n">att1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">att2</span>         
+        <span class="bp">self</span><span class="o">.</span><span class="n">att2</span> <span class="o">=</span> <span class="n">tmp</span> 
+
+    <span class="k">def</span> <span class="nf">meth2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">att3</span> 
+
+     <span class="k">def</span> <span class="nf">meth3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>         
+        <span class="c1"># code à compléter </span>
+</code></pre></div>
+1. Écrire la ligne de code qui crée un objet de nom toto de la classe <code>Toto</code>, dont les attributs <code>att1</code>, <code>att2</code> et <code>att3</code> contiennent respectivement 1, 2 et 3. De même créer un objet de nom <code>titi</code> de la même classe et contenant 2, 1 et 6 dans ses attributs <code>att1</code>, <code>att2</code> et <code>att3</code>.  </p>
+<ol>
+<li>
+<p>a.  Quel est le nom de la méthode de la classe <code>Toto</code> qui échange les attributs <code>att1</code> et <code>att2</code> ?<br />
+b.  Compléter le code de la méthode <code>meth3</code> afin qu’elle prenne en argument l’entier c et qu’elle multiplie l’argument <code>att3</code> par <code>c</code>.  </p>
+</li>
+<li>
+<p>Écrire la ligne de code permettant, à l’aide des méthodes de la classe <code>Toto</code> d’échanger les attributs <code>att1</code> et <code>att2</code> de <code>titi</code>.  </p>
+</li>
+<li>
+<p>Écrire la ligne de code permettant, à l’aide d’une méthode de la classe <code>Toto</code> de multiplier par 2 l’attribut <code>att3</code> de <code>toto</code>.  </p>
+</li>
+<li>
+<p>Toutes les lignes de codes précédentes ayant été exécutées, que va afficher l’instruction print(<code>toto</code> == <code>titi</code>) ? Expliquer. </p>
+</li>
+</ol>
+<hr />
+<h2 id="exercice-5">Exercice 5</h2>
+<p>On considère une classe <code>Personnage</code> représentant un personnage de Jeu.<br />
+    Le plateau de jeu est représenté par un repère orthonormé à trois axes.<br />
+    La position du joueur dans le plateau est repérée par ses attributs <code>x</code>, <code>y</code>, <code>z</code>.  </p>
+<p>1)  Ecrire un constructeur initialisant les mesures.<br />
+2)  Ecrire les méthodes <code>avance</code>, <code>droite</code> et <code>saute</code> permettant respectivement de faire avancer, aller à droite et sauter le personnage, c’est-à-dire d’augmenter de 1 respectivement <code>x</code>, <code>y</code> et <code>z</code>.<br />
+3)  Implémenter une autre méthode <code>coord</code> renvoyant les coordonnées sous forme d’un triplet.<br />
+4)  Essayer avec : <code>Laura = Personnage(0, 0, 0)</code>  </p>
+<hr />
+<h2 id="exercice-6">Exercice 6</h2>
+<p>Voici un programme en Python :  </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">Piece</span> <span class="p">:</span>  
+    <span class="k">def</span> <span class="nf">alea</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>  
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  
+
+    <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  
+        <span class="n">tirage</span> <span class="o">=</span> <span class="p">[]</span>              
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>                  
+            <span class="n">tirage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alea</span><span class="p">())</span>              
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tirage</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>  
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Piece</span><span class="p">()</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">moyenne</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>  
+</code></pre></div>
+<p>Expliquer en détail ce qu’il permet d’afficher. </p>
+<hr />
+<h2 id="exercice-7">Exercice 7</h2>
+<p>On considère une classe <code>Carre</code> admettant la mesure des côtés d’un carré en attribut.  </p>
+<p>1)  Ecrire un constructeur initialisant les mesures.  </p>
+<p>2)  Ecrire les méthodes :<br />
+- <code>perimetre</code> : permettant de retourner le périmètre du carré.<br />
+- <code>aire</code> : permettant de retourner son aire.  </p>
+<p>3)  Créer des exemples. </p>
 
               
     <script src="../../../../js/ide.js"></script> 

@@ -175,3 +175,88 @@ nb pièces = 4 , Surface totale = 47.9
 | `Appartement` |               |            |           |        |
 
 
+
+___
+## Exercice 4
+
+On donne ci-dessous le code en Python d’une classe nommée Toto. Chaque objet de cette classe a 3 attributs de type entier et dispose de 3 méthodes. Le code d’une de ces méthodes n’est pas complètement écrit.
+
+```Python
+class Toto:
+    def __init__(self, i, j, k): 
+        self.att1 = i
+        self.att2 = j         
+        self.att3 = k 
+    
+    def meth1(self):         
+        tmp = self.att1         
+        self.att1 = self.att2         
+        self.att2 = tmp 
+    
+    def meth2(self): 
+        return self.att3 
+
+     def meth3(self, c):         
+        # code à compléter 
+
+```
+1. Écrire la ligne de code qui crée un objet de nom toto de la classe `Toto`, dont les attributs `att1`, `att2` et `att3` contiennent respectivement 1, 2 et 3. De même créer un objet de nom `titi` de la même classe et contenant 2, 1 et 6 dans ses attributs `att1`, `att2` et `att3`.  
+ 
+2.  
+a.	Quel est le nom de la méthode de la classe `Toto` qui échange les attributs `att1` et `att2` ?  
+b.	Compléter le code de la méthode `meth3` afin qu’elle prenne en argument l’entier c et qu’elle multiplie l’argument `att3` par `c`.  
+ 
+3.	Écrire la ligne de code permettant, à l’aide des méthodes de la classe `Toto` d’échanger les attributs `att1` et `att2` de `titi`.  
+ 
+4.	Écrire la ligne de code permettant, à l’aide d’une méthode de la classe `Toto` de multiplier par 2 l’attribut `att3` de `toto`.  
+ 
+5.	Toutes les lignes de codes précédentes ayant été exécutées, que va afficher l’instruction print(`toto` == `titi`) ? Expliquer. 
+
+___
+## Exercice 5
+
+On considère une classe `Personnage` représentant un personnage de Jeu.  
+    Le plateau de jeu est représenté par un repère orthonormé à trois axes.  
+    La position du joueur dans le plateau est repérée par ses attributs `x`, `y`, `z`.  
+  
+1)	Ecrire un constructeur initialisant les mesures.  
+2)	Ecrire les méthodes `avance`, `droite` et `saute` permettant respectivement de faire avancer, aller à droite et sauter le personnage, c’est-à-dire d’augmenter de 1 respectivement `x`, `y` et `z`.  
+3)	Implémenter une autre méthode `coord` renvoyant les coordonnées sous forme d’un triplet.  
+4)	Essayer avec : `Laura = Personnage(0, 0, 0)`  
+
+___
+## Exercice 6
+
+Voici un programme en Python :  
+  
+```Python
+import random
+
+class Piece :  
+    def alea(self) :  
+        return random.randint(0, 1)  
+
+    def moyenne(self, n):  
+        tirage = []              
+        for i in range (n) :                  
+            tirage.append(self.alea())              
+        return sum(tirage) / n  
+
+p = Piece()  
+print(p.moyenne(100))  
+```  
+
+Expliquer en détail ce qu’il permet d’afficher. 
+
+___
+## Exercice 7
+
+On considère une classe `Carre` admettant la mesure des côtés d’un carré en attribut.  
+  
+1)	Ecrire un constructeur initialisant les mesures.  
+
+2)	Ecrire les méthodes :  
+- `perimetre` : permettant de retourner le périmètre du carré.  
+- `aire` : permettant de retourner son aire.  
+
+3)	Créer des exemples. 
