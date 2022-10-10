@@ -1245,7 +1245,7 @@ Voici les caractéristiques attendues du constructeur :</p>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Affecte un tableau à deux dimensions à l’attribut tableau</span>
 
-<span class="sd">        :param tableau: tableau à deux dimensions</span>
+<span class="sd">        tableau: tableau à deux dimensions</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 </code></pre></div>
 <h3 id="methode-affiche">Méthode <code>affiche()</code></h3>
@@ -1266,8 +1266,8 @@ Après avoir importé le module <code>os</code> il faut utiliser l'une des comma
 <span class="sd">        Elle rafraichit l’affichage à chaque tour</span>
 <span class="sd">        et attend delai entre chaque tour.</span>
 
-<span class="sd">        :param nombre_tours: nombre de tours à effectuer</span>
-<span class="sd">        :param delai: temps d’attente en secondes entre chaque tour</span>
+<span class="sd">        nombre_tours: nombre de tours à effectuer</span>
+<span class="sd">        delai: temps d’attente en secondes entre chaque tour</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tour</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1288,9 +1288,9 @@ Après avoir importé le module <code>os</code> il faut utiliser l'une des comma
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Renvoie la valeur suivante d’une la cellule.</span>
 
-<span class="sd">        :param valeur_case: la valeur de la cellule (0 ou 1)</span>
-<span class="sd">        :param total_voisins: la somme des valeurs des voisins</span>
-<span class="sd">        :return: la valeur de la cellule au tour suivant</span>
+<span class="sd">        valeur_case: la valeur de la cellule (0 ou 1)</span>
+<span class="sd">        total_voisins: la somme des valeurs des voisins</span>
+<span class="sd">        return: la valeur de la cellule au tour suivant</span>
 
 <span class="sd">        &gt;&gt;&gt; a = JeuDeLaVie([])</span>
 <span class="sd">        &gt;&gt;&gt; a.resultat(0, 3)</span>
@@ -1316,7 +1316,7 @@ Après avoir importé le module <code>os</code> il faut utiliser l'une des comma
 <span class="sd">        &quot;&quot;&quot;</span>
 </code></pre></div>
 <h3 id="utilisation-du-programme">Utilisation du programme</h3>
-<p>Pour instancier le jeux de la vie et la lancer il faudra alors ajouter ces commandes à la fin de votre fichier :</p>
+<p>Pour instancier le jeu de la vie et la lancer il faudra alors ajouter ces commandes à la fin de votre fichier :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tableau</span> <span class="o">=</span>  <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
            <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
            <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>

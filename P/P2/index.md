@@ -62,7 +62,7 @@ def __init__(self, tableau):
         """
         Affecte un tableau à deux dimensions à l’attribut tableau
 
-        :param tableau: tableau à deux dimensions
+        tableau: tableau à deux dimensions
         """
 ```
 
@@ -91,8 +91,8 @@ def run(self, nombre_tours, delai):
         Elle rafraichit l’affichage à chaque tour
         et attend delai entre chaque tour.
 
-        :param nombre_tours: nombre de tours à effectuer
-        :param delai: temps d’attente en secondes entre chaque tour
+        nombre_tours: nombre de tours à effectuer
+        delai: temps d’attente en secondes entre chaque tour
         """
 ```
 
@@ -121,9 +121,9 @@ def resultat(self, valeur_case, total_voisins):
         """
         Renvoie la valeur suivante d’une la cellule.
 
-        :param valeur_case: la valeur de la cellule (0 ou 1)
-        :param total_voisins: la somme des valeurs des voisins
-        :return: la valeur de la cellule au tour suivant
+        valeur_case: la valeur de la cellule (0 ou 1)
+        total_voisins: la somme des valeurs des voisins
+        return: la valeur de la cellule au tour suivant
 
         >>> a = JeuDeLaVie([])
         >>> a.resultat(0, 3)
@@ -152,7 +152,7 @@ def resultat(self, valeur_case, total_voisins):
 ### Utilisation du programme
 
 
-Pour instancier le jeux de la vie et la lancer il faudra alors ajouter ces commandes à la fin de votre fichier :
+Pour instancier le jeu de la vie et la lancer il faudra alors ajouter ces commandes à la fin de votre fichier :
 
 
 ```Python
