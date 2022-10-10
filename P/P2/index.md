@@ -187,6 +187,7 @@ Et pour avoir un affichage correct il sera surement nécessaire de lancer le pro
         ```Shell title=""
         python3 JeuDeLaVie.py
         ```
+
 OU plus simple
 
 * > Dans Spyder : `Run \ Configuration per file...` :
