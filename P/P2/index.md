@@ -187,7 +187,12 @@ Et pour avoir un affichage correct il sera surement nécessaire de lancer le pro
         ```Shell title=""
         python3 JeuDeLaVie.py
         ```
-OU
+OU plus simple
+
+* > Dans Spyder : `Run \ Configuration per file...` :
+        Modifiez comme ceci :
+        ![](config_spyder.png)  
+        Spyder exécutera désormais le fichier dans une invite de commande windows où les éléements s'afficheront grâce la fonction `print()`.
 
 
 L'état initial donné ici devrait faire apparaitre un motif qui se déplace en diagonale.

@@ -268,7 +268,7 @@ ___
             self.z = z + 1
 
         def coord(self):
-            return (x, y, z) 
+            return (self.x, self.y, self.z) 
     ```
 
     ```Python
