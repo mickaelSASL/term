@@ -76,7 +76,6 @@ Attention, il faudra effacer le contenu du shell avant chaque affichage pour don
 Après avoir importé le module `os` il faut utiliser l'une des commandes suivantes en fonction de votre système d'exploitation :
 
 * pour Windows : `os.system('cls')`
-* pour Linux : `os.system('clear')`
 
 
 ### Autre méthodes
@@ -184,9 +183,12 @@ mon_jeu.run(100, 0.1)
 
 Et pour avoir un affichage correct il sera surement nécessaire de lancer le programme à partir de la ligne de commande :
 
-```Shell
-python3 JeuDeLaVie.py
-```
+* > Dans l'invite de commande Windows (`cmd.exe`) :
+        ```Shell title=""
+        python3 JeuDeLaVie.py
+        ```
+OU
+
 
 L'état initial donné ici devrait faire apparaitre un motif qui se déplace en diagonale.
 Voici un autre état initial qui provoque une expension des cellules vivantes :

@@ -987,25 +987,27 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_3_3">
-          P2bis
+          Jeu de la vie  🧬
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="P2bis" data-md-level="2">
+      <nav class="md-nav" aria-label="Jeu de la vie  🧬" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
-          P2bis
+          Jeu de la vie  🧬
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1013,25 +1015,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../P2bis/" class="md-nav__link">
-        **P2: Jeu de cartes : la Bataille 🃏♣️♠♥♦ **
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Jeu de la vie 🧬
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2bis/corrige/" class="md-nav__link">
-        **P2: Jeu de cartes : la Bataille 🃏♣️♠♥♦ **
-      </a>
+      
     </li>
   
 
@@ -1259,7 +1255,6 @@ Attention, il faudra effacer le contenu du shell avant chaque affichage pour don
 Après avoir importé le module <code>os</code> il faut utiliser l'une des commandes suivantes en fonction de votre système d'exploitation :</p>
 <ul>
 <li>pour Windows : <code>os.system('cls')</code></li>
-<li>pour Linux : <code>os.system('clear')</code></li>
 </ul>
 <h3 id="autre-methodes">Autre méthodes</h3>
 <p>Voici la liste des autres méthodes de la classe JeuDeLaVie avec leurs docstrings qui font office de cahier des charges.</p>
@@ -1347,8 +1342,16 @@ Après avoir importé le module <code>os</code> il faut utiliser l'une des comma
 <span class="n">mon_jeu</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 </code></pre></div>
 <p>Et pour avoir un affichage correct il sera surement nécessaire de lancer le programme à partir de la ligne de commande :</p>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>python3 JeuDeLaVie.py
+<ul>
+<li>
+<blockquote>
+<p>Dans l'invite de commande Windows (<code>cmd.exe</code>) :
+        <div class="highlight"><pre><span></span><code>python3 JeuDeLaVie.py
 </code></pre></div>
+OU</p>
+</blockquote>
+</li>
+</ul>
 <p>L'état initial donné ici devrait faire apparaitre un motif qui se déplace en diagonale.
 Voici un autre état initial qui provoque une expension des cellules vivantes :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tableau</span> <span class="o">=</span>  <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
