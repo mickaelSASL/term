@@ -1,152 +1,283 @@
-# **P2: Jeu de cartes : la Bataille 🃏♣️♠♥♦ **  
-<center>![](main_cartes.png)</center>
+# Jeu de la vie 🧬
 
-A l'aide aux classes du fichier `classes.py`, créer un jeu de bataille.  
-La méthode `getNbCartes`de la classe `Joueur` est à implémenter.
+![](Gospers_glider_gun.gif)
 
-> Rappel des règles : [Wikipédia](https://fr.wikipedia.org/wiki/Bataille_(jeu))
 
-## Exemple d'exécution
+## Prérequis
 
-```
-moi : 5♠   |   toi : 7♣
-toi gagne
-moi : 5♠   |   toi : 5♥
-Bataille :  ['5♠', '5♥']
-moi : 3♦   |   toi : 3♠
-Bataille :  ['5♠', '5♥', '6♠', 'R♦', '3♦', '3♠']
-moi : 8♣   |   toi : 4♥
-moi gagne
-...
+* tableaux à deux dimensions
+* fonctions
+* modules
+* Programmation orientée objet
 
-...
-moi : 3♣   |   toi : 3♠
-Bataille :  ['3♣', '3♠']
-moi : 2♥   |   toi : 7♠
-toi gagne
-toi a gagné
-moi a perdu
-en 326 coups
-```
 
-## Détails du fichier `classes.py`
+## Présentation
 
-Fichier <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/Ed7WYFa_dsVOhob7Gcy0ZloBIceaxfeq3u6RmB4MkqlqFw" target="_blank">`classes.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
 
-### classe `Carte`
-```Python
-# Attributs de classe :
-#   couleurs : les 4 couleurs de cartes
-#   valeurs : les 8 valeurs de cartes
+Je vous propose un mini projet individuel visant à reproduire <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie">le jeu de la vie</a> proposé par Conway en 1970.
+Le jeu de la vie est ce qu'on appelle un automate cellulaire : c'est un « tableau » dont l'état de chaque case ou cellule dépent de l'état des cases voisines.
+À chaque « tour » de jeu, on met à jour l'ensemble des cases en fonction de leurs voisines et on recommence.
 
-couleurs = ["♥", "♦", "♣", "♠"]
-valeurs = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9,
-            "10": 10, "V": 11, "D": 12, "R": 13, "A": 14}
-    
-# Méthodes :
-#
-def __init__(self, couleur: str, nom: str):
-    #   couleur : une des valeur de Carte.couleurs : "♥" ou "♦" ou "♣" ou "♠"
-    #   valeurs : une des clés du dictionnaire Carte.valeurs : "2" ou "3" ou "4" ou "5" ou "6" ou "7" ou "8" ou "9" 
-    #                                                           ou  "10" ou "V"  ou "D" ou "R" ou "A"
+Dans le jeu de la vie, chaque cellule peut avoir deux états :
 
-def get_couleur(self):
-    # retourne la couleur de la carte : "♥" ou "♦" ou "♣" ou "♠"
+* vivante ;
+* morte.
 
-def get_couleur_int(self):
-    # retourne l'indice de la couleur de la carte dans Carte.couleurs : 0 pour ♥, 1 pour ♦, 2 pour ♣, 3 pour ♠
+L'état d'une cellule au tour suivant dépend de l'état de ses huit voisins directs.
+Il y a deux règles simples qui s'appliquent :
 
-def get_valeur(self):
-    # retourne la valeur de la carte : 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+* une cellule morte possédant exactement trois voisines vivantes devient vivante : elle naît ;
+* une cellule vivante possédant deux ou trois voisines vivantes le reste, sinon elle meurt.
 
-def get_nom(self):
-    # retourne la valeur de la carte parmi les clés de Carte.valeurs : "2" ou "3" ou "4" ou "5" ou "6" ou "7" ou "8" 
-    #                                                                  ou "9" ou  "10" ou "V"  ou "D" ou "R" ou "A"
+Si vous voulez des précisions ou en savoir plus allez sur <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie">la page Wikipédia du jeu de la vie</a>.
 
-def get_carte(self):
-    # retourne la carte sous la forme "valeur + couleurs : par exemples "D♥" ou "10♦"
-```
 
-___
 
-### classe `Joueur`
+## Travail demandé
+
+Vous allez donc coder le jeu de la vie en utilisant la programmation orientée objet.
+
+### Classe `JeuDeLaVie`
+
+Vous allez créer une classe JeuDeLaVie avec un attribut tableau.
+Nous auront besoin de quelques modules, voici donc comment devra commencer votre programme :
+
 
 ```Python
-# Méthodes :
-#
-def __init__(self, nom: str):
-    # nom du joueur,
-    # peut_jouer : booléen indiquant s'il reste au joueur des cartes (0 carte : False)
+import os
+import time
+import copy
 
-def ramasser(self, cartes: list):
-    # Ajoute des cartes à la main du joueur. (dessous le tas)
-    # cartes : liste de carte sous la forme "D♥"
-
-def melanger(self):
-    # Mélanger les cartes du joueur aléatoirement
-
-def jouer(self)->tuple:
-    # Sort la carte du dessus de la pile de cartes.
-    # retourne un tuple : (valeur, couleur)
-
-def getNom(self)->str:
-    # Retourne le nom du joueur
-
-def getCartes(self)->list:
-    # Fournit les cartes détenues par le joueur.
-
-def getNbCartes(self)->int:
-    # Indique le nombre de cartes en main.
-
-def setNom(self, nom: str):
-    # modifie le nom du joueur
+class JeuDeLaVie:
 ```
+### Constructeur
 
-___
+Le constructeur prendra en argument un tableau à deux dimensions de taille quelconque rempli de `0` et de `1` représentant les cellules.
+Un `0` pour une cellule morte et un `1` pour une cellule vivante.
+Voici les caractéristiques attendues du constructeur :
 
-### classe `JeuDeCartes`
+
 ```Python
-Classe jeu de cartes:
-# Méthodes :
-#
-def __init__(self):
-    # Fonction initialisation : créer un jeu de 52 cartes stockées sous forme d'une liste 'cartes'.
-    
-def melanger(self):
-    # melange le jeu de cartes de façon aléatoire
+def __init__(self, tableau):
+        """
+        Affecte un tableau à deux dimensions à l’attribut tableau
 
-def distribuer(self, nb_carte: int)->list:
-    # Tire un certain nombre de cartes du jeu
-    # nb_carte : nombre de carte à tirer.
-    # Retourne une liste des cartes tirées.
-
+        :param tableau: tableau à deux dimensions
+        """
 ```
 
-## En plus...
 
-Vous pouvez améliorer le jeu en créant une interface graphique.  
-
-- Remplacez le fichier `classes.py` par ce fichier <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/Ec7bA_ismRJLiDRCXekJarcBh0ovfi190GmK0OuIOVGfsg?e=nj5tAg" target="_blank">`classes_gui.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
-
-- et ajoutez dans le dossier de votre programme le fichier <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EUY23SRyvwxJt9i5_W7L3bcBxFdYOVIJzBDqj_prlfM8xA?e=bvMZUl" target="_blank">`graphismes.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
-
-- Exemple d'utilisation du fichier `graphismes.py` : <a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EadxoR3gPHZIuLd3PWdLm5ABBM_06sDaBg0tZ7jUqD89xQ?e=l8BMBx" target="_blank">`Affiche 1 carte.py`
-![](https://icons.iconarchive.com/icons/untergunter/leaf-mimes/32/text-x-python-icon.png)</a><br>
-
-### Exemple de fenêtre graphique
-
-![](interface_gui.png)
+### Méthode `affiche()`
 
 
-## **Travail attendu :**
-![](https://www.super-bac.com/articles/wp-content/uploads/2021/01/grand-oral_illustrations_reussir-discussion.png)
+Cette méthode doit permettre d'afficher le tableau dans le shell.
+On n'utilisera pas d'interface graphique pour simplifier le programme.
+Attention, il faudra effacer le contenu du shell avant chaque affichage pour donner l'effet d'une vidéo.
+Après avoir importé le module `os` il faut utiliser l'une des commandes suivantes en fonction de votre système d'exploitation :
 
-- Une présentation de votre programme sous la forme d'un 'algorithme' en langage naturel.
-> Vous réaliserez cette présentation sur une page (document numérique).
+* pour Windows : `os.system('cls')`
+* pour Linux : `os.system('clear')`
 
-- Une présentation orale d'une des parties du programme. (une classe ou une partie d'une classe)
-> Vous aurez un temps en classe pour préparer cette présentation accompagnée d'un document à présenter. Vous ferez votre présentation au reste du groupe.
 
+### Autre méthodes
+
+Voici la liste des autres méthodes de la classe JeuDeLaVie avec leurs docstrings qui font office de cahier des charges.
+
+```Python
+def run(self, nombre_tours, delai):
+        """
+        Méthode principale du jeu.
+
+        Fait tourner le jeu de la vie pendant nombre_tours.
+        Elle rafraichit l’affichage à chaque tour
+        et attend delai entre chaque tour.
+
+        :param nombre_tours: nombre de tours à effectuer
+        :param delai: temps d’attente en secondes entre chaque tour
+        """
+```
+
+```Python
+def tour(self):
+        """
+        Met à jour toute les cellules du tableau en respectant les règles
+        du jeu de la vie.
+        """
+```
+
+```Python
+def valeur_case(self, i, j):
+        """
+            Renvoie la valeur de la case [i][j] ou 0 si la case n’existe pas.
+        """
+```
+
+```Python
+def total_voisins(self, i, j):
+        """Renvoie la somme des valeurs des voisins de la case [i][j]."""
+```
+
+```Python
+def resultat(self, valeur_case, total_voisins):
+        """
+        Renvoie la valeur suivante d’une la cellule.
+
+        :param valeur_case: la valeur de la cellule (0 ou 1)
+        :param total_voisins: la somme des valeurs des voisins
+        :return: la valeur de la cellule au tour suivant
+
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(0, 3)
+        1
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(0, 1)
+        0
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(0, 4)
+        0
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(1, 2)
+        1
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(1, 3)
+        1
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(1, 1)
+        0
+        >>> a = JeuDeLaVie([])
+        >>> a.resultat(1, 4)
+        0
+        """
+```
+
+### Utilisation du programme
+
+
+Pour instancier le jeux de la vie et la lancer il faudra alors ajouter ces commandes à la fin de votre fichier :
+
+
+```Python
+tableau =  [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+
+mon_jeu = JeuDeLaVie(tableau)
+mon_jeu.run(100, 0.1)
+```
+
+Et pour avoir un affichage correct il sera surement nécessaire de lancer le programme à partir de la ligne de commande :
+
+```Shell
+python3 JeuDeLaVie.py
+```
+
+L'état initial donné ici devrait faire apparaitre un motif qui se déplace en diagonale.
+Voici un autre état initial qui provoque une expension des cellules vivantes :
+
+
+```Python
+tableau =  [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+```
+
+À vous d'essayer différentes situations initiales pour voir ce qu'il se passe.
+
+
+
+### Aides et conseils
+
+#### Délais
+
+
+Pour faire attendre le programme nous avons besoin du module `time` avec la méthode <a href="https://docs.python.org/fr/3/library/time.html#time.sleep"> `time.sleep()`</a>.
+
+
+
+#### Copier un tableau
+
+
+À un moment donné, vous allez avoir besoin de copier l'attribut tableau de la classe.
+Pour avoir une copie indépendante de l'original il vous faudra utiliser la méthode <a href="https://docs.python.org/fr/3/library/copy.html#copy.deepcopy">`copy.deepcopy()`</a> du module `copy`.
+
+
+
+### Améliorations
+
+
+Si vous êtes rapide, vous pouvez apporter des améliorations au programme.
+Voici quelques suggestions :
+
+
+
+* détecter s'il n'y a plus de changements dans le tableau entre deux tours et arrêter alors le programme ;
+* permettre de choisir le symbole représentant une cellule vivante ;
+* proposer de choisir parmi des configurations initiales pré-enregistrées ;
+* ajouter une interface graphique (pour ceux qui savent le faire). ;
+* toute autre idée pour améliorer le programme…
+
+
+
+## Tableau du barème
+
+Voilà le barème complet sur 14 pour ce projet.
+
+| Tâche                          | Barème        |
+|--------------------------------|---------------|
+| Affichage basique              | 1 point       |
+| Affichage amélioré             | 1 point       |
+| Valeur case                    | 1 point       |
+| Total voisins                  | 1 point       |
+| Tour                           | 1 point       |
+| Run                            | 1 point       |
+| Arrêt automatique              | 1 point       |
+| Configuration pré-enregistrées | 1 point       |
+| Interface graphique [Bonus]    | 1 point bonus |
+| Code propre                    | 2 points      |
+| Code optimisé                  | 2 points      |
+| Commentaires                   | 2 points      |
+| Total                          | 14            |
