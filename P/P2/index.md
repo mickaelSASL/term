@@ -289,3 +289,10 @@ Voilà le barème complet sur 14 pour ce projet.
 | Code optimisé                  | 2 points      |
 | Commentaires                   | 2 points      |
 | Total                          | 14            |
+
+
+
+
+(http://math.univ-lyon1.fr/irem/Formation_ISN/formation_interfaces_graphiques/module_tkinter/exo_canevas.html))[http://math.univ-lyon1.fr/irem/Formation_ISN/formation_interfaces_graphiques/module_tkinter/exo_canevas.html]
+
+(https://ismvsectioninfo.wordpress.com/2020/09/21/digital-clock-poo-tkinter-gui-avec-sous-menu/)[https://ismvsectioninfo.wordpress.com/2020/09/21/digital-clock-poo-tkinter-gui-avec-sous-menu/]
