@@ -19,7 +19,7 @@ Les tableaux seront représentés sous forme de liste Python.
 tableau = [0, 1, 4, 2, -2, 9, 3, 1, 7, 1]
 
 assert amplitude(tableau) == 11
-````
+```
 
 **Compléter** la fonction en vérifiant les préconditions. 
 
