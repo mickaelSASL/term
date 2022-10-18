@@ -1016,7 +1016,21 @@
   
     <li class="md-nav__item">
       <a href="../../P/P2/" class="md-nav__link">
-        consignes
+        Consignes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../P/P2/Ex_run/" class="md-nav__link">
+        Exemples d'exécution
       </a>
     </li>
   
@@ -1208,12 +1222,12 @@
 </code></pre></div>
 <p><strong>Compléter</strong> la fonction en vérifiant les préconditions. </p>
 <h2 id="exercice-2">Exercice 2</h2>
-<p>On dispose d’un programme permettant de créer un objet de type <strong>Temps</strong>, qui permet de manipuler un temps entré en heures, minutes et secondes.</p>
+<p>On dispose d’un programme permettant de créer un objet de type <code>Temps</code>, qui permet de manipuler un temps entré en heures, minutes et secondes.</p>
 <p>Les secondes et les minutes sont des entiers positifs, inférieurs à 60. Dans les méthodes <code>ajouter_secondes()</code> et <code>ajouter_minutes()</code>, si les secondes (ou les minutes) dépassent 59, on doit les convertir en minutes (ou respectivement en heure).</p>
 <p>La méthode <code>__str__()</code> est une méthode native qui est appelée quand on tente de convertir un objet en chaine de caractères. La méthode de cette classe renvoie une chaine de caractères sous la forme "hh : mm : ss". Par exemple, pour un objet initialisé avec les valeurs 3h,20min et 2s, la méthode renverrait "3 : 20: 2"</p>
 <p>La méthode <code>en_secondes()</code> permet de convertir le temps en secondes. La méthode <code>est_plus_petit()</code> compare deux objets temps et renvoie True si l'objet temps passé en paramètre est le plus grand des deux.</p>
-<p>Compléter ce code aux endroits indiqués par ..., puis ajouter des assertions dans l’initialiseur de <strong>Temps</strong>.
-On devra créer deux instances de la classe Temps, avec pour valeurs 1h,59min et 45s et l'autre avec 2h,15min et 13s. </p>
+<p>Compléter ce code aux endroits indiqués par <code>...</code>, puis ajouter des assertions dans l’initialiseur de <code>Temps</code>.
+On devra créer deux instances de la classe <code>Temps</code>, avec pour valeurs '1h,59min et 45s' et l'autre avec '2h,15min et 13s'. </p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Temps</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialise Temps (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>

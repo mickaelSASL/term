@@ -25,16 +25,16 @@ assert amplitude(tableau) == 11
 
 ## Exercice 2
 
-On dispose d’un programme permettant de créer un objet de type **Temps**, qui permet de manipuler un temps entré en heures, minutes et secondes.
+On dispose d’un programme permettant de créer un objet de type `Temps`, qui permet de manipuler un temps entré en heures, minutes et secondes.
 
-Les secondes et les minutes sont des entiers positifs, inférieurs à 60. Dans les méthodes ``ajouter_secondes()`` et ``ajouter_minutes()``, si les secondes (ou les minutes) dépassent 59, on doit les convertir en minutes (ou respectivement en heure).
+Les secondes et les minutes sont des entiers positifs, inférieurs à 60. Dans les méthodes `ajouter_secondes()` et `ajouter_minutes()`, si les secondes (ou les minutes) dépassent 59, on doit les convertir en minutes (ou respectivement en heure).
 
-La méthode ``__str__()`` est une méthode native qui est appelée quand on tente de convertir un objet en chaine de caractères. La méthode de cette classe renvoie une chaine de caractères sous la forme "hh : mm : ss". Par exemple, pour un objet initialisé avec les valeurs 3h,20min et 2s, la méthode renverrait "3 : 20: 2"
+La méthode `__str__()` est une méthode native qui est appelée quand on tente de convertir un objet en chaine de caractères. La méthode de cette classe renvoie une chaine de caractères sous la forme "hh : mm : ss". Par exemple, pour un objet initialisé avec les valeurs 3h,20min et 2s, la méthode renverrait "3 : 20: 2"
 
-La méthode ``en_secondes()`` permet de convertir le temps en secondes. La méthode ``est_plus_petit()`` compare deux objets temps et renvoie True si l'objet temps passé en paramètre est le plus grand des deux.
+La méthode `en_secondes()` permet de convertir le temps en secondes. La méthode `est_plus_petit()` compare deux objets temps et renvoie True si l'objet temps passé en paramètre est le plus grand des deux.
 
-Compléter ce code aux endroits indiqués par ..., puis ajouter des assertions dans l’initialiseur de **Temps**.
-On devra créer deux instances de la classe Temps, avec pour valeurs 1h,59min et 45s et l'autre avec 2h,15min et 13s. 
+Compléter ce code aux endroits indiqués par `...`, puis ajouter des assertions dans l’initialiseur de `Temps`.
+On devra créer deux instances de la classe `Temps`, avec pour valeurs '1h,59min et 45s' et l'autre avec '2h,15min et 13s'. 
 
 ```python
 class Temps:
