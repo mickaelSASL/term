@@ -294,5 +294,7 @@ Voilà le barème complet sur 14 pour ce projet.
 
 ## Ressources pour l'interface graphique
 
-* [Exemple pour créer une grille avec Tkinter](http://math.univ-lyon1.fr/irem/Formation_ISN/formation_interfaces_graphiques/module_tkinter/exo_canevas.html)
-* [Utiliser Tkinter avec la POO](https://ismvsectioninfo.wordpress.com/2020/09/21/digital-clock-poo-tkinter-gui-avec-sous-menu)
+* <a href="http://math.univ-lyon1.fr/irem/Formation_ISN/formation_interfaces_graphiques/module_tkinter/exo_canevas.html" target="_blank">Exemple pour créer une grille avec Tkinter
+![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
+* <a href="https://ismvsectioninfo.wordpress.com/2020/09/21/digital-clock-poo-tkinter-gui-avec-sous-menu" target="_blank">Utiliser Tkinter avec la POO
+![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
