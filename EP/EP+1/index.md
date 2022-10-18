@@ -7,7 +7,7 @@ hide:
 # **Epreuves Pratiques**
 ## SUJET +1
 
-[Corrigé](corrige.md)
+<!-- [Corrigé](corrige.md) -->
 
 ## Exercice 1
 
