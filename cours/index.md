@@ -13,7 +13,7 @@ hide:
 > -  SD5 : Graphes<!--[SD5 : Graphes](SD/SD5/)--> 🐌
 
 ## Bases de données
-> -  BDD1 : modèle relationnel, clé, schéma relationnel<!--[BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)-->
+> -  <!--BDD1 : modèle relationnel, clé, schéma relationnel-->✔️ [BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)
 > -  BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)<!--[BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](BDD/BDD2/)-->
 > -  BDD3 : système de gestion de BDD, requêtes, sécurisation<!--[BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)--> 🐌  
 > -  BDD4 : SQL<!--[BDD4 : SQL](BDD/BDD4)-->
