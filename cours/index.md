@@ -14,9 +14,9 @@ hide:
 
 ## Bases de données
 > -  <!--BDD1 : modèle relationnel, clé, schéma relationnel-->✔️ [BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)
-> -  BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)<!--[BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](BDD/BDD2/)-->
-> -  BDD3 : système de gestion de BDD, requêtes, sécurisation<!--[BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)--> 🐌  
-> -  BDD4 : SQL<!--[BDD4 : SQL](BDD/BDD4)-->
+> -  <!--BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)-->✔️[BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](BDD/BDD2/)
+> -  <!--BDD3 : système de gestion de BDD, requêtes, sécurisation-->✔️[BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/) 🐌  
+> -  <!--BDD4 : SQL-->✔️[BDD4 : SQL](BDD/BDD4)
 
 ## Architecture matérielle, système d'exploitation et réseau
 > -  <!--AMSER1 : Composants intégrés d’un système sur puce-->✔️ [AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)   
