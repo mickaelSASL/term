@@ -651,6 +651,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mickaelsasl.github.io/cours/BDD/BDD4/TD/</loc>
+         <lastmod>2022-11-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mickaelsasl.github.io/cours/BDD/BDD4/TD_corrige/</loc>
          <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>
