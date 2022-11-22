@@ -1,19 +1,13 @@
-# **BDD4 - Langage SQL**
+# Consultation d'une BDD en Python
 
+## Module à installer
 ```Python
 pip install mysql.connector
 ```
 
-## Exemple d'interogation d'une base de données
+## Exemple d'interogation d'une base de données en Python
 
 ```Python
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 23 18:40:18 2020
-
-@author: Mickael
-"""
-
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -100,4 +94,4 @@ else:
 
     curseur.close()  # fermeture du curseur
     conn.close()     # fermeture du connection
-    ```
+```

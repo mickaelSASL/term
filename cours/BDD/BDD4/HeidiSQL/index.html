@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mickaelsasl.github.io/cours/BDD/BDD4/projet/">
+        <link rel="canonical" href="https://mickaelsasl.github.io/cours/BDD/BDD4/HeidiSQL/">
       
       <link rel="icon" href="../../../../dlna">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>**BDD4 - Langage SQL** - NSI Terminale</title>
+        <title>Tutuoriel d'utilisation du logiciel HeidiSQL - NSI Terminale</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **BDD4 - Langage SQL**
+              Tutuoriel d'utilisation du logiciel HeidiSQL
             
           </span>
         </div>
@@ -734,8 +734,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../TD/" class="md-nav__link">
-        TD 'livres'
+      <a href="../TD_livres/" class="md-nav__link">
+        TD - Creation base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TD_distant/" class="md-nav__link">
+        TD - Base distante
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL-Python/" class="md-nav__link">
+        Exemple Python-mySQL
       </a>
     </li>
   
@@ -1364,100 +1392,10 @@
                 
 
 
-<h1 id="bdd4-langage-sql"><strong>BDD4 - Langage SQL</strong></h1>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span>
-</code></pre></div>
-<h2 id="exemple-dinterogation-dune-base-de-donnees">Exemple d'interogation d'une base de données</h2>
-<p>```Python</p>
-<h1 id="-coding-utf-8-">-<em>- coding: utf-8 -</em>-</h1>
-<p>"""
-Created on Mon Nov 23 18:40:18 2020</p>
-<p>@author: Mickael
-"""</p>
-<p>import mysql.connector
-from mysql.connector import errorcode</p>
-<h1 id="caracteristiques-de-la-connection">Caractéristiques de la connection</h1>
-<p>database    = 'villes'
-host_ip     = 'localhost'
-utilisateur = 'moi'
-password    = ''</p>
-<h6 id="_1"></h6>
-<h1 id="connection-a-la-bdd">CONNECTION à la BDD</h1>
-<h6 id="_2"></h6>
-<p>try: <br />
-  conn = mysql.connector.connect(
-      user = utilisateur, 
-      password = password,
-      host = host_ip,
-      database = database)</p>
-<h6 id="_3"></h6>
-<h1 id="la-connection-a-la-bdd-a-echoue">la connection à la BDD a échoué</h1>
-<h6 id="_4"></h6>
-<p>except mysql.connector.Error as err:    </p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code># Si Erreur de nom d&#39;utilisateur ou de mot de passe
-if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-    print(&quot;Votre nom d&#39;utilisateur ou votre mot de passe ne correspond pas !&quot;)
-
-# Si Erreur de nom de base de données
-elif err.errno == errorcode.ER_BAD_DB_ERROR:
-    print(&quot;La base de données&quot;,database,&quot;n&#39;existe pas&quot;)
-# Si autre Erreur
-else:
-    print(err)
-</code></pre></div>
-<h6 id="_5"></h6>
-<h1 id="la-connection-a-la-bdd-a-reussi">La connection à la BDD a réussi</h1>
-<h6 id="_6"></h6>
-<p>else:       <br />
-    print("vous êtes connecté à la base", conn._database)</p>
-<h6 id="_7">############################################################</h6>
-<h1 id="on-cree-un-curseur-mysql-qui-contient-le-resultat-de-la-requete">On créé un curseur MySQL qui contient le résultat de la requête</h1>
-<h6 id="_8"></h6>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>curseur = conn.cursor(buffered=True)
-</code></pre></div>
-<h6 id="_9"></h6>
-<h1 id="requete-sql-selection-methode-1">REQUETE SQL : Sélection méthode 1</h1>
-<h6 id="_10"></h6>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>requete=(&quot;SELECT ville_nom, ville_code_postal FROM villes_france_free;&quot;)  # Requête SQL
-resultat = curseur.execute(requete)           # Execution de la requete
-
-# On lit toutes les lignes de &#39;resultat&#39; pour les affecter à &#39;table&#39;
-table = curseur.fetchall()
-print(table)     # résultat : liste de tuples
-
-# Après la lecture des entrées du résultat de la requête avec
-# &#39;curseur.fetchall()&#39;, &#39;curseur&#39; est vidé.
-
-print()
-</code></pre></div>
-<h6 id="_11"></h6>
-<h1 id="requete-sql-selection-methode-2">REQUETE SQL : Sélection méthode 2</h1>
-<h6 id="_12"></h6>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>requete=(&quot;SELECT ville_nom, ville_code_postal FROM villes_france_free WHERE ville_nom=&#39;Auray&#39;;&quot;)
-resultat = curseur.execute(requete)
-
-
-for (nom_de_ville, le_cp) in curseur:
-    print(&quot;nom :&quot;, nom_de_ville, &quot;/ code postal :&quot;, le_cp)
-
-# le tuple de la boucle for (ici &#39;(nnom_de_ville, le_cp)&#39;) doit contenir autant d&#39;éléments
-# que d&#39;éléments dans la requête (&#39;ville_nom, ville_code_postal&#39;)
-</code></pre></div>
-<h6 id="_13"></h6>
-<h1 id="requete-sql-modification-de-donnees">REQUETE SQL : Modification de données</h1>
-<h6 id="_14"></h6>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>requete=(&quot;UPDATE villes_france_free SET ville_population_2012=&#39;&quot;+ input(&quot;Nouveau Population :&quot;)+&quot;&#39; WHERE nom=&#39;Auray&#39;;&quot;)
-resultat = curseur.execute(requete)
-
-conn.commit()  # Les modifications sont appliquées dans la BDD
-
-# &#39;commit()&#39; est nécessaire pour les requêtes de modification
-
-
-curseur.close()  # fermeture du curseur
-conn.close()     # fermeture du connection
-```
-</code></pre></div>
+<h1 id="tutuoriel-dutilisation-du-logiciel-heidisql">Tutuoriel d'utilisation du logiciel HeidiSQL</h1>
+<p><strong>HeidiSQL</strong> est un logiciel de gestion de bases de données. Toutes les fonctions d’administration sont disponibles : Création/modification de base de données, tables, vues, procédures, déclencheurs...</p>
+<p>Les différentes opérations peuvent réalisées par des requêtes SQL mais également grâce à l'interface graphique.</p>
+<h2 id="creer-une-base-de-donnees">Créer une base de données</h2>
 
               
     <script src="../../../../js/ide.js"></script> 

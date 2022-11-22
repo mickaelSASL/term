@@ -742,8 +742,36 @@
   
   
     <li class="md-nav__item">
-      <a href="TD/" class="md-nav__link">
-        TD 'livres'
+      <a href="TD_livres/" class="md-nav__link">
+        TD - Creation base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TD_distant/" class="md-nav__link">
+        TD - Base distante
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SQL-Python/" class="md-nav__link">
+        Exemple Python-mySQL
       </a>
     </li>
   
@@ -1379,190 +1407,6 @@
 <h2 id="illustration-des-jointures">Illustration des jointures</h2>
 <p><a href="https://datascientest.com/tout-comprendre-des-jointures-sql">site à consulter</a>
 <img style="bacground-color: #FFFFFF;" src="join.png"></p>
-<h2 id="td-sur-base-distante">TD sur base distante</h2>
-<ul>
-<li>Connecter vous sur la base de données <code>villes</code> située sur le serveur <code>192.168.2.107</code>, à l'aide de l'identifiant : <code>Prénom</code> et du mot de passe : <code>Nom</code>.</li>
-<li>
-<p>Veuillez trouver les requêtes SQL permettant d’effectuer chacune des demandes suivantes :  </p>
-<ol>
-<li>Obtenir la liste des 10 villes les plus peuplées en 2012</li>
-<li>Obtenir la liste des 50 villes ayant la plus faible superficie</li>
-<li>Obtenir la liste des départements d’outres-mer, c’est-à-dire ceux dont le numéro de département commencent par “97”</li>
-<li>Obtenir le nom des 10 villes les plus peuplées en 2012, ainsi que le nom du département associé</li>
-<li>Obtenir la liste du nom de chaque département, associé à son code et du nombre de commune au sein de ces département, en triant afin d’obtenir en priorité les départements qui possèdent le plus de communes</li>
-<li>Obtenir la liste des 10 plus grands départements, en terme de superficie</li>
-<li>Compter le nombre de villes dont le nom commence par “Saint”</li>
-<li>Obtenir la liste des villes qui ont un nom existants plusieurs fois, et trier afin d’obtenir en premier celles dont le nom est le plus souvent utilisé par plusieurs communes</li>
-<li>Obtenir en une seule requête SQL la liste des villes dont la superficie est supérieur à la superficie moyenne</li>
-<li>Obtenir la liste des départements qui possèdent plus de 2 millions d’habitants</li>
-<li>Remplacez les tirets par un espace vide, pour toutes les villes commençant par “SAINT-” (dans la colonne qui contient les noms en majuscule)</li>
-</ol>
-</li>
-</ul>
-<h3 id="aide">Aide</h3>
-<ol>
-<li>
-<p>COUNT<br />
-La fonction <code>COUNT()</code> permet de compter le nombre d’enregistrement dans une table.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
-</code></pre></div>
-Il est aussi possible de connaitre le nombre d’enregistrement sur une colonne en particulier. Les enregistrements qui possèdent la valeur nul ne seront pas comptabilisé. La syntaxe pour compter les enregistrement sur la colonne “nom_colonne” est la suivante :
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
-</code></pre></div></p>
-</li>
-<li>
-<p>SUM<br />
-La fonction <code>SUM()</code> permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
-</code></pre></div></p>
-</li>
-<li>
-<p>AVG<br />
-La fonction <code>ÀVG()</code> permet de calculer une valeur moyenne sur un ensemble d’enregistrement de type numérique et non nul.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
-</code></pre></div></p>
-</li>
-<li>
-<p>LIKE<br />
-L’opérateur <code>LIKE</code> est utilisé dans la clause <code>WHERE</code> des requêtes SQL. Ce mot-clé permet d’effectuer une recherche sur un modèle particulier. Il est par exemple possible de rechercher les enregistrements dont la valeur d’une colonne commence par telle ou telle lettre.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="n">modele</span><span class="w"></span>
-</code></pre></div>
-Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble très généralement à l’un des exemples suivants:</p>
-<ul>
-<li><code>LIKE ‘%a’</code> : le caractère “%” est un caractère joker qui remplace tous les autres caractères. Ainsi, ce modèle permet de rechercher toutes les chaines de caractère qui se termine par un “a”.  </li>
-<li><code>LIKE ‘a%’</code> : ce modèle permet de rechercher toutes les lignes de “colonne” qui commence par un “a”.  </li>
-<li><code>LIKE ‘%a%’</code> : ce modèle est utilisé pour rechercher tous les enregistrement qui utilisent le caractère “a”.  </li>
-<li><code>LIKE ‘pa%on’</code> : ce modèle permet de rechercher les chaines qui commence par “pa” et qui se terminent par “on”, comme “pantalon” ou “pardon”.  </li>
-<li><code>LIKE ‘a_c’</code> : peu utilisé, le caractère “_” (underscore) peut être remplacé par n’importe quel caractère, mais un seul caractère uniquement (alors que le symbole pourcentage “%” peut être remplacé par un nombre incalculable de caractères . Ainsi, ce modèle permet de retourner les lignes “aac”, “abc” ou même “azc”.  </li>
-</ul>
-</li>
-<li>
-<p>HAVING<br />
-La condition <code>HAVING</code> est presque similaire à <code>WHERE</code> à la seule différence que <code>HAVING</code> permet de filtrer en utilisant des fonctions telles que <code>SUM()</code>, <code>COUNT()</code>, <code>AVG()</code>, <code>MIN()</code> ou <code>MAX()</code>.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne1</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">colonne1</span><span class="w"></span>
-<span class="k">HAVING</span><span class="w"> </span><span class="n">fonction</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"> </span><span class="n">operateur</span><span class="w"> </span><span class="n">valeur</span><span class="w"></span>
-</code></pre></div></p>
-</li>
-<li>
-<p>REPLACE
-La fonction <code>REPLACE</code> permet de remplacer des caractères alphanumérique dans une chaîne de caractère. Cela sert particulièrement à mettre à jour des données dans une base de données ou à afficher des résultats personnalisés.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="s1">&#39;Hello tout le monde&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bonjour&#39;</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></p>
-</li>
-<li>
-<p>GROUP BY</p>
-</li>
-</ol>
-<p>Clause de l’instruction <code>SELECT</code> qui scinde le résultat de la requête en groupes de lignes, généralement pour effectuer ensuite une ou plusieurs agrégations sur chaque groupe. L’instruction <code>SELECT</code> retourne une ligne par groupe.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">,</span><span class="w"> </span><span class="n">ColumnB</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">;</span><span class="w"> </span>
-</code></pre></div></p>
-<p>Résultat :
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="n">Bonjour</span><span class="w"> </span><span class="n">tout</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">monde</span><span class="w"></span>
-</code></pre></div></p>
-<blockquote>
-<h3 id="fichiers-de-la-base-de-donnees">fichiers de la base de données :</h3>
-<ul>
-<li><a href="departement.sql">table <code>departement.sql</code></a></li>
-<li><a href="villes_france.sql">table <code>villes_france.sql</code></a></li>
-</ul>
-</blockquote>
-<h2 id="consultation-dune-bdd-en-python">Consultation d'une BDD en Python</h2>
-<h3 id="module-a-installer">Module à installer</h3>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span>
-</code></pre></div>
-<h3 id="exemple-dinterogation-dune-base-de-donnees-en-python">Exemple d'interogation d'une base de données en Python</h3>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">mysql.connector</span>
-<span class="kn">from</span> <span class="nn">mysql.connector</span> <span class="kn">import</span> <span class="n">errorcode</span>
-
-<span class="c1"># Caractéristiques de la connection</span>
-<span class="n">database</span>    <span class="o">=</span> <span class="s1">&#39;villes&#39;</span>
-<span class="n">host_ip</span>     <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
-<span class="n">utilisateur</span> <span class="o">=</span> <span class="s1">&#39;moi&#39;</span>
-<span class="n">password</span>    <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-
-<span class="c1">#####################</span>
-<span class="c1"># CONNECTION à la BDD</span>
-<span class="c1">#####################</span>
-<span class="k">try</span><span class="p">:</span>   
-  <span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-      <span class="n">user</span> <span class="o">=</span> <span class="n">utilisateur</span><span class="p">,</span> 
-      <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">,</span>
-      <span class="n">host</span> <span class="o">=</span> <span class="n">host_ip</span><span class="p">,</span>
-      <span class="n">database</span> <span class="o">=</span> <span class="n">database</span><span class="p">)</span>
-
-<span class="c1">#################################</span>
-<span class="c1"># la connection à la BDD a échoué   </span>
-<span class="c1">#################################</span>
-<span class="k">except</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>    
-
-    <span class="c1"># Si Erreur de nom d&#39;utilisateur ou de mot de passe</span>
-    <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errorcode</span><span class="o">.</span><span class="n">ER_ACCESS_DENIED_ERROR</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre nom d&#39;utilisateur ou votre mot de passe ne correspond pas !&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Si Erreur de nom de base de données</span>
-    <span class="k">elif</span> <span class="n">err</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errorcode</span><span class="o">.</span><span class="n">ER_BAD_DB_ERROR</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La base de données&quot;</span><span class="p">,</span><span class="n">database</span><span class="p">,</span><span class="s2">&quot;n&#39;existe pas&quot;</span><span class="p">)</span>
-    <span class="c1"># Si autre Erreur</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-
-<span class="c1">#################################</span>
-<span class="c1"># La connection à la BDD a réussi </span>
-<span class="c1">#################################</span>
-<span class="k">else</span><span class="p">:</span>         
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vous êtes connecté à la base&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="o">.</span><span class="n">_database</span><span class="p">)</span>
-
-<span class="c1">##################################################################  </span>
-<span class="c1"># On créé un curseur MySQL qui contient le résultat de la requête</span>
-<span class="c1">##################################################################</span>
-    <span class="n">curseur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">(</span><span class="n">buffered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">###################################</span>
-<span class="c1"># REQUETE SQL : Sélection méthode 1</span>
-<span class="c1">###################################</span>
-    <span class="n">requete</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;SELECT ville_nom, ville_code_postal FROM villes_france_free;&quot;</span><span class="p">)</span>  <span class="c1"># Requête SQL</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>           <span class="c1"># Execution de la requete</span>
-
-    <span class="c1"># On lit toutes les lignes de &#39;resultat&#39; pour les affecter à &#39;table&#39;</span>
-    <span class="n">table</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>     <span class="c1"># résultat : liste de tuples</span>
-
-    <span class="c1"># Après la lecture des entrées du résultat de la requête avec</span>
-    <span class="c1"># &#39;curseur.fetchall()&#39;, &#39;curseur&#39; est vidé.</span>
-
-    <span class="nb">print</span><span class="p">()</span>    
-<span class="c1">###################################</span>
-<span class="c1"># REQUETE SQL : Sélection méthode 2</span>
-<span class="c1">###################################</span>
-    <span class="n">requete</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;SELECT ville_nom, ville_code_postal FROM villes_france_free WHERE ville_nom=&#39;Auray&#39;;&quot;</span><span class="p">)</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
-
-
-    <span class="k">for</span> <span class="p">(</span><span class="n">nom_de_ville</span><span class="p">,</span> <span class="n">le_cp</span><span class="p">)</span> <span class="ow">in</span> <span class="n">curseur</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nom :&quot;</span><span class="p">,</span> <span class="n">nom_de_ville</span><span class="p">,</span> <span class="s2">&quot;/ code postal :&quot;</span><span class="p">,</span> <span class="n">le_cp</span><span class="p">)</span>
-
-    <span class="c1"># le tuple de la boucle for (ici &#39;(nnom_de_ville, le_cp)&#39;) doit contenir autant d&#39;éléments</span>
-    <span class="c1"># que d&#39;éléments dans la requête (&#39;ville_nom, ville_code_postal&#39;)</span>
-
-<span class="c1">#######################################</span>
-<span class="c1"># REQUETE SQL : Modification de données</span>
-<span class="c1">#######################################</span>
-    <span class="n">requete</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;UPDATE villes_france_free SET ville_population_2012=&#39;&quot;</span><span class="o">+</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nouveau Population :&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; WHERE nom=&#39;Auray&#39;;&quot;</span><span class="p">)</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
-
-    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># Les modifications sont appliquées dans la BDD</span>
-
-    <span class="c1"># &#39;commit()&#39; est nécessaire pour les requêtes de modification</span>
-
-
-    <span class="n">curseur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># fermeture du curseur</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>     <span class="c1"># fermeture du connection</span>
-</code></pre></div>
 
               
     <script src="../../../js/ide.js"></script> 
