@@ -16,7 +16,7 @@ ___
 
 ## La réalisation
 
-Imaginez une utilisation des données choisies afin de les exploiter avec <a href="https://python-visualization.github.io/folium/index.html" target="_blank">Folium</a>  et/ou <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>.
+Imaginez une utilisation des données choisies afin de les exploiter avec <a href="https://python-visualization.github.io/folium/index.html" target="_blank">Folium</a>  et éventuellement <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>.
 
 ## Compte rendu
 
