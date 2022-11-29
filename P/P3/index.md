@@ -27,3 +27,14 @@ Vous rédigerez un compte rendu qui présente :
 * l’exploitation prévue avec les données choisies,  
 * la partie de votre programme réalisant le traitement,  
 * un exemple d’exécution (avec les données d’entrée et le résultat obtenu).
+
+## Outils
+
+<a href="https://tableconvert.com/csv-to-sql" target="_blank">Tableconvert</a> : outil pour convertir un fichier 'csv' en requête 'SQL'.
+
+* Copier/Coller le fichier 'csv' dans la zone 'DataSource'
+* Dans la zone 'TableGenerator', sélectionner Quotes : MySQL.
+
+* Récupérer la requête SQL qui a été générée.
+
+![](tableconvert.png)
