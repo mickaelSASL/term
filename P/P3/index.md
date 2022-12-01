@@ -28,13 +28,22 @@ Vous rédigerez un compte rendu qui présente :
 * la partie de votre programme réalisant le traitement,  
 * un exemple d’exécution (avec les données d’entrée et le résultat obtenu).
 
+## Compte oral
+
+* Quelles sont les données ?
+* Qu'avez-vous envisagé de présenter ? 
+* Sous quelle forme ? (histogramme, courbe, carte, ...)
+* Ou en êtes-vous ?
+* Quelle(s) est(sont) la(les) prochaine(s) tâche(s) ?
+
+
 ## Outils
 
 <a href="https://tableconvert.com/csv-to-sql" target="_blank">Tableconvert</a> : outil pour convertir un fichier 'csv' en requête 'SQL'.
 
 * Copier/Coller le fichier 'csv' dans la zone 'DataSource'
 * Dans la zone 'TableGenerator', sélectionner Quotes : MySQL.
-
 * Récupérer la requête SQL qui a été générée.
 
 ![](tableconvert.png)
+
