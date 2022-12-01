@@ -39,6 +39,7 @@ Vous rédigerez un compte rendu qui présente :
 
 ## Outils
 
+### Conversion CSV --> SQL
 <a href="https://tableconvert.com/csv-to-sql" target="_blank">Tableconvert</a> : outil pour convertir un fichier 'csv' en requête 'SQL'.
 
 * Copier/Coller le fichier 'csv' dans la zone 'DataSource'
@@ -47,3 +48,14 @@ Vous rédigerez un compte rendu qui présente :
 
 ![](tableconvert.png)
 
+### Coordonnées contours communes, départements, régions en france
+
+Données issues du site <a href="https://france-geojson.gregoiredavid.fr/" target="_blank">France-Geojson</a>.  
+L'ensemble des données est disponible à cette adresse : <a href="https://github.com/gregoiredavid/france-geojson" target="_blank">https://github.com/gregoiredavid/france-geojson</a>
+
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes.geojson"  download="communes.geojson" target="_blank">Communes</a>
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-version-simplifiee.geojson" download="communes-version-simplifiee.geojson" target="_blank">Communes (version simpliée)</a>
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson" download="departements.geojson" target="_blank">Départements</a>
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson" download="departements-version-simplifiee.geojson" target="_blank">Départements (version simplifiée)</a>
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions.geojsonRégions" download="regions.geojsonRégions" target="_blank">Régions</a>
+* <a href="https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions-version-simplifiee.geojson" download="regions-version-simplifiee.geojson" target="_blank">Régions (version simplifiée)</a>
