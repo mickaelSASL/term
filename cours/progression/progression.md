@@ -23,15 +23,18 @@ hide:
 > - [BDD1 : modèle relationnel, clé, schéma relationnel](../BDD/BDD1/)
 > - [BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](../BDD/BDD2/)
 > - [BDD4 : SQL](../BDD/BDD4)
+> - [Projet 3](../../P/P3/)
+> - [LP2 : Récursivité](../LP/LP2)  
 
 ### <span style="background-color: DodgerBlue;">Vacances de Noël</span>
 
 ## Période 3 (6 semaines)
-> - [SD4 : Arbres](../SD/SD4/)
 > - [LP2 : Récursivité](../LP/LP2)  
+> - [SD4 : Arbres](../SD/SD4/)
 > - [A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche](../A/A1/)  
 > - [A3 : Méthode « diviser pour régner »](../A/A3/)
 > - [AMSER3 : Protocoles de routage](../AMSER/AMSER3)
+
 ### <span style="background-color: DodgerBlue;">Vacances d'Hiver</span>
 
 
