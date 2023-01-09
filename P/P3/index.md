@@ -28,7 +28,7 @@ Vous rédigerez un compte rendu qui présente :
 * la partie de votre programme réalisant le traitement,  
 * un exemple d’exécution (avec les données d’entrée et le résultat obtenu).
 
-## Compte oral
+## Compte rendu oral
 
 * Quelles sont les données ?
 * Qu'avez-vous envisagé de présenter ? 
