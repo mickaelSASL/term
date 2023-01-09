@@ -1523,111 +1523,91 @@
 <h1 id="exercice-type-bac-2">Exercice type BAC 2</h1>
 <h2 id="sujet-nsij1po1-polynesie-1-2022">Sujet NSIJ1PO1 - Polynésie 1, 2022</h2>
 <p><em>Cet exercice traite du thème «programmation», et principalement de la récursivité.</em></p>
-<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets "" et que : 
-• la fonction len renvoie la longueur de la chaîne de caractères passée en 
-paramètre ;
-• si une variable ch désigne une chaîne de caractères, alors ch[0] renvoie son 
-premier caractère, ch[1] le deuxième, etc. ;
-• l'opérateur + permet de concaténer deux chaînes de caractères.
-Exemples :</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>texte = "bricot"
-len(texte)
-6
-texte[0]
-"b"
-texte[1]
-"r"
-"a" + texte
-"abricot"
-On s'intéresse dans cet exercice à la construction de chaînes de caractères suivant 
-certaines règles de construction.
-Règle A : une chaîne est construite suivant la règle A dans les deux cas suivants:
-• soit elle est égale à "a" ;
-• soit elle est de la forme "a"+chaine+"a", où chaine est une chaîne de 
-caractères construite suivant la règle A.
-Règle B : une chaîne est construite suivant la règle B dans les deux cas suivants :
-• soit elle est de la forme "b"+chaine+"b", où chaine est une chaîne de 
-caractères construite suivant la règle A ;
-• soit elle est de la forme "b"+chaine+"b", où chaine est une chaîne de 
-caractères construite suivant la règle B.
-On a reproduit ci-dessous l'aide de la fonction choice du module random.
-from random import choice
-help(choice)
-Help on method choice in module random:
-choice(seq) method of random.Random instance
- Choose a random element from a non-empty sequence.
-La fonction A() ci-dessous renvoie une chaîne de caractères construite suivant la règle
-A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>def A():
-if choice([True, False]):
-return "a"
-else:
-return "a" + A() + "a"
-1. a. Cette fonction est-elle récursive ? Justifier.
-b. La fonction choice([True, False]) peut renvoyer False un très grand
-nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à 
-une erreur d'exécution.
-Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction
-prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la
-fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne
-de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant
-aléatoirement entre les deux cas de figure de cette règle.
-def A(n):
-if ... or choice([True, False]) :
-return "a"
-else:
-return "a" + ... + "a"
-2. a. Recopier sur la copie et compléter aux emplacements des points de
-suspension ... le code de cette nouvelle fonction A.
-b. Justifier le fait qu'un appel de la forme A(n) avec n un nombre entier positif 
-inférieur à 50, termine toujours.
-On donne ci-après le code de la fonction récursive B qui prend en paramètre un entier n
-et qui renvoie une chaîne de caractères construite suivant la règle B.
-def B(n):
-if n &lt;= 0 or choice([True, False]):
-return "b" + A(n-1) + "b"
-else:
-return "b" + B(n-1) + "b"
-On admet que :
-• les appels A(-1)et A(0) renvoient la chaîne "a";
-• l’appel A(1) renvoie la chaîne "a" ou la chaîne "aaa";
-• l’appel A(2) renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".
-3. Donner toutes les chaînes possibles renvoyées par les appels B(0), B(1)
-et B(2).</p>
-<p>On suppose maintenant qu'on dispose d'une fonction raccourcir qui prend comme
-paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la
-chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le
-dernier caractère.
-Par exemple :</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>raccourcir("abricot")
-"brico"
-raccourcir("ab")
-""
-4. a. Recopier sur la copie et compléter les points de suspension ... du code de la
-fonction regleA ci-dessous pour qu'elle renvoie True si la chaîne passée en
-paramètre est construite suivant la règle A, et False sinon.
-def regleA(chaine):
-n = len(chaine)
-if n &gt;= 2: 
- return chaine[0] == "a" and chaine[n-1] == "a" and
- regleA(...)
-else:
- return chaine == ...
-b. Écrire le code d’une fonction regleB, prenant en paramètre une chaîne de
-caractères et renvoyant True si la chaîne est construite suivant la règle B,
-et False sinon.</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets "" et que :  </p>
+<ul>
+<li>la fonction <code>len</code> renvoie la longueur de la chaîne de caractères passée en paramètre ;</li>
+<li>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]</code> renvoie son premier caractère, <code>ch[1]</code> le deuxième, etc. ;</li>
+<li>l'opérateur <code>+</code> permet de concaténer deux chaînes de caractères.</li>
+</ul>
+<p>Exemples :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;bricot&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s2">&quot;b&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="s2">&quot;r&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">texte</span>
+<span class="s2">&quot;abricot&quot;</span>
+</code></pre></div>
+On s'intéresse dans cet exercice à la construction de chaînes de caractères suivant certaines règles de construction.
+Règle A : une chaîne est construite suivant la règle A dans les deux cas suivants:</p>
+<ul>
+<li>soit elle est égale à <code>"a"</code> ;</li>
+<li>soit elle est de la forme <code>"a"+chaine+"a"</code>, où <code>chaine</code> est une chaîne de caractères construite suivant la règle A.
+Règle B : une chaîne est construite suivant la règle B dans les deux cas suivants :</li>
+<li>soit elle est de la forme <code>"b+chaine+"b"</code>, où <code>chaine</code> est une chaîne de caractères construite suivant la règle A ;</li>
+<li>soit elle est de la forme <code>"b"+chaine+"b"</code>, où <code>chaine</code> est une chaîne de caractères construite suivant la règle B.</li>
+</ul>
+<p>On a reproduit ci-dessous l'aide de la fonction <code>choice</code> du module <code>random</code>.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">help</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">method</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">random</span><span class="p">:</span>
+<span class="n">choice</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="n">method</span> <span class="n">of</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span> <span class="n">instance</span>
+ <span class="n">Choose</span> <span class="n">a</span> <span class="n">random</span> <span class="n">element</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">non</span><span class="o">-</span><span class="n">empty</span> <span class="n">sequence</span><span class="o">.</span>
+</code></pre></div>
+La fonction <code>A()</code> ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</code></pre></div>
+<p>1- <br />
+    a. Cette fonction est-elle récursive ? Justifier.<br />
+    b. La fonction <code>choice([True, False])</code> peut renvoyer <code>False</code> un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
+<p>Dans la suite, on considère une deuxième version de la fonction <code>A</code>. À présent, la fonction prend en paramètre un entier <code>n</code> tel que, si la valeur de <code>n</code> est négative ou nulle, la fonction renvoie <code>"a"</code>. Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un <code>n</code> décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</code></pre></div>
+2- 
+    a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction <code>A</code>.<br />
+    b. Justifier le fait qu'un appel de la forme <code>A(n)</code> avec <code>n</code> un nombre entier positif inférieur à 50, termine toujours.
+On donne ci-après le code de la fonction récursive <code>B</code> qui prend en paramètre un entier <code>n</code> et qui renvoie une chaîne de caractères construite suivant la règle B.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+</code></pre></div>
+On admet que :</p>
+<ul>
+<li>les appels <code>A(-1)</code> et <code>A(0)</code> renvoient la chaîne <code>"a"</code>;</li>
+<li>l’appel <code>A(1)</code> renvoie la chaîne <code>"a"</code> ou la chaîne <code>"aaa"</code>;</li>
+<li>l’appel <code>A(2)</code> renvoie la chaîne <code>"a"</code>, la chaîne <code>"aaa"</code> ou la chaîne <code>"aaaaa"</code>.</li>
+</ul>
+<p>3- Donner toutes les chaînes possibles renvoyées par les appels <code>B(0)</code>, <code>B(1)</code> et <code>B(2)</code>.
+On suppose maintenant qu'on dispose d'une fonction <code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.
+Par exemple :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;abricot&quot;</span><span class="p">)</span>
+<span class="s2">&quot;brico&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+<span class="s2">&quot;&quot;</span>
+</code></pre></div></p>
+<p>4- 
+    a. Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code> si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span> 
+ <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span>
+ <span class="n">regleA</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+ <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="o">...</span>
+</code></pre></div>
+    b. Écrire le code d’une fonction <code>regleB</code>, prenant en paramètre une chaîne de caractères et renvoyant <code>True</code> si la chaîne est construite suivant la règle B, et <code>False</code> sinon.</p>
 
 
 
