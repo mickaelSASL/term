@@ -9,7 +9,7 @@ hide:
 > -  <!--SD1 : structure de données abstraites -->✔️ [SD1 : structure de données abstraites](SD/SD1/)  
 > -  <!--SD2 : programmation objet-->✔️ [SD2 : programmation objet](SD/SD2/)
 > -  <!--SD3 : structures linéaires : listes, piles, files-->✔️ [SD3 : structures linéaires : listes, piles, files](SD/SD3/)  
-> -  SD4 : Arbres<!--✔️ [SD4 : Arbres](SD/SD4/)-->  
+> -  <!--SD4 : Arbres-->✔️ [SD4 : Arbres](SD/SD4/)  
 > -  SD5 : Graphes<!--✔️ [SD5 : Graphes](SD/SD5/)--> 🐌
 
 ## Bases de données
