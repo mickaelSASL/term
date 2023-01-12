@@ -3,7 +3,7 @@
 
 *Cet exercice traite du thème «programmation», et principalement de la récursivité.*
 
-On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets "" et que :  
+On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets `""` et que :  
 
 * la fonction `len` renvoie la longueur de la chaîne de caractères passée en paramètre ;
 * si une variable `ch` désigne une chaîne de caractères, alors `ch[0]` renvoie son premier caractère, `ch[1]` le deuxième, etc. ;
@@ -48,8 +48,7 @@ def A():
         return "a" + A() + "a"
 ```
 
-1-   
-    a. Cette fonction est-elle récursive ? Justifier.  
+1-  a. Cette fonction est-elle récursive ? Justifier.  
     b. La fonction `choice([True, False])` peut renvoyer `False` un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  
 
 Dans la suite, on considère une deuxième version de la fonction `A`. À présent, la fonction prend en paramètre un entier `n` tel que, si la valeur de `n` est négative ou nulle, la fonction renvoie `"a"`. Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un `n` décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.
@@ -60,9 +59,10 @@ def A(n):
     else:
         return "a" + ... + "a"
 ```
-2- 
-    a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction `A`.  
+2-  a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction `A`.  
     b. Justifier le fait qu'un appel de la forme `A(n)` avec `n` un nombre entier positif inférieur à 50, termine toujours.
+
+
 On donne ci-après le code de la fonction récursive `B` qui prend en paramètre un entier `n` et qui renvoie une chaîne de caractères construite suivant la règle B.
 ```Python
 def B(n):
@@ -78,6 +78,8 @@ On admet que :
 * l’appel `A(2)` renvoie la chaîne `"a"`, la chaîne `"aaa"` ou la chaîne `"aaaaa"`.
 
 3- Donner toutes les chaînes possibles renvoyées par les appels `B(0)`, `B(1)` et `B(2)`.
+
+
 On suppose maintenant qu'on dispose d'une fonction `raccourcir` qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.
 Par exemple :
 ```Python
@@ -86,9 +88,7 @@ Par exemple :
 >>> raccourcir("ab")
 ""
 ```
-
-4- 
-    a. Recopier sur la copie et compléter les points de suspension ... du code de la fonction `regleA` ci-dessous pour qu'elle renvoie `True` si la chaîne passée en paramètre est construite suivant la règle A, et `False` sinon.
+4-  a. Recopier sur la copie et compléter les points de suspension ... du code de la fonction `regleA` ci-dessous pour qu'elle renvoie `True` si la chaîne passée en paramètre est construite suivant la règle A, et `False` sinon.
 ```Python
 def regleA(chaine):
 n = len(chaine)

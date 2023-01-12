@@ -562,6 +562,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_4">
+          4. Les Arbres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Les Arbres" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          4. Les Arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SD/SD4/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1523,7 +1570,7 @@
 <h1 id="exercice-type-bac-2">Exercice type BAC 2</h1>
 <h2 id="sujet-nsij1po1-polynesie-1-2022">Sujet NSIJ1PO1 - Polynésie 1, 2022</h2>
 <p><em>Cet exercice traite du thème «programmation», et principalement de la récursivité.</em></p>
-<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets "" et que :  </p>
+<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets <code>""</code> et que :  </p>
 <ul>
 <li>la fonction <code>len</code> renvoie la longueur de la chaîne de caractères passée en paramètre ;</li>
 <li>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]</code> renvoie son premier caractère, <code>ch[1]</code> le deuxième, etc. ;</li>
@@ -1563,8 +1610,7 @@ La fonction <code>A()</code> ci-dessous renvoie une chaîne de caractères const
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </code></pre></div>
-<p>1- <br />
-    a. Cette fonction est-elle récursive ? Justifier.<br />
+<p>1-  a. Cette fonction est-elle récursive ? Justifier.<br />
     b. La fonction <code>choice([True, False])</code> peut renvoyer <code>False</code> un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
 <p>Dans la suite, on considère une deuxième version de la fonction <code>A</code>. À présent, la fonction prend en paramètre un entier <code>n</code> tel que, si la valeur de <code>n</code> est négative ou nulle, la fonction renvoie <code>"a"</code>. Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un <code>n</code> décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1573,10 +1619,9 @@ La fonction <code>A()</code> ci-dessous renvoie une chaîne de caractères const
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </code></pre></div>
-2- 
-    a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction <code>A</code>.<br />
-    b. Justifier le fait qu'un appel de la forme <code>A(n)</code> avec <code>n</code> un nombre entier positif inférieur à 50, termine toujours.
-On donne ci-après le code de la fonction récursive <code>B</code> qui prend en paramètre un entier <code>n</code> et qui renvoie une chaîne de caractères construite suivant la règle B.
+2-  a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction <code>A</code>.<br />
+    b. Justifier le fait qu'un appel de la forme <code>A(n)</code> avec <code>n</code> un nombre entier positif inférieur à 50, termine toujours.</p>
+<p>On donne ci-après le code de la fonction récursive <code>B</code> qui prend en paramètre un entier <code>n</code> et qui renvoie une chaîne de caractères construite suivant la règle B.
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
         <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
@@ -1589,16 +1634,15 @@ On admet que :</p>
 <li>l’appel <code>A(1)</code> renvoie la chaîne <code>"a"</code> ou la chaîne <code>"aaa"</code>;</li>
 <li>l’appel <code>A(2)</code> renvoie la chaîne <code>"a"</code>, la chaîne <code>"aaa"</code> ou la chaîne <code>"aaaaa"</code>.</li>
 </ul>
-<p>3- Donner toutes les chaînes possibles renvoyées par les appels <code>B(0)</code>, <code>B(1)</code> et <code>B(2)</code>.
-On suppose maintenant qu'on dispose d'une fonction <code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.
+<p>3- Donner toutes les chaînes possibles renvoyées par les appels <code>B(0)</code>, <code>B(1)</code> et <code>B(2)</code>.</p>
+<p>On suppose maintenant qu'on dispose d'une fonction <code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.
 Par exemple :
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;abricot&quot;</span><span class="p">)</span>
 <span class="s2">&quot;brico&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
 <span class="s2">&quot;&quot;</span>
-</code></pre></div></p>
-<p>4- 
-    a. Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code> si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.
+</code></pre></div>
+4-  a. Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code> si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span> 
