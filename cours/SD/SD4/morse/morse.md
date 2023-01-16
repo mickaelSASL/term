@@ -28,4 +28,4 @@ Message décodé : S O S
 ```
 
 
-[Corrigé](corrige.md)
+[Corrigé](morse_corr.ipynb)
