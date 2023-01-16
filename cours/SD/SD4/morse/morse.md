@@ -1,4 +1,5 @@
-![](./Morse-code-tree.svg)  
+![](./Morse-code-tree.svg) 
+*Figure 1* 
 Une branche à gauche correspond à un point (.) et une branche correspond à un tiret (-).
 
 **1. Implémentez cet arbre en python.**
@@ -25,3 +26,6 @@ Exemple d'exécution :
 >>> decode("... --- ...")
 Message décodé : S O S
 ```
+
+
+[Corrigé](corrige.md)
