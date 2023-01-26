@@ -4,8 +4,6 @@
 
 ++ctrl+alt+delete++
 
---8<-- "docs/cours/index.md"
-
 
 ```py
  --8<-- "snip/test.yaml"

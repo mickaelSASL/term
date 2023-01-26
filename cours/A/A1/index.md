@@ -9,6 +9,8 @@
 
 [Implémentation en Python](Algo_arbres.py)
 
+--8<-- "/.pages"
+
 ===! "Algo à compléter"
       ```Python
       from binarytree import tree, Node
@@ -84,13 +86,14 @@
       S.left = T
 
       ```
+
 === "Algo complété"
-      ```py
+      ```python
+      --8<-- "cours/A/A1/Algo_arbres.py"
       ```
 
 === "Exemple d'exécution"
-
-      ``` pycon
+      ```pycon
        >>> print(A)
 
 

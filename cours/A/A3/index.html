@@ -1158,6 +1158,88 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          A - Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="A - Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          A - Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6_1">
+          1. Algorithmes sur les arbres binaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Algorithmes sur les arbres binaires" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          1. Algorithmes sur les arbres binaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A1/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1582,6 +1664,59 @@
         </td>
     </tr>
 </tab></p>
+<h2 id="b-tri-fusion">B. Tri-Fusion</h2>
+<h3 id="5-implementation-en-python">5. Implémentation en Python</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Diviser</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">diviser</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fonction retournant les 2 moitiés de même longueur (+/- 1) d&#39;une liste l</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">long</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l</span><span class="p">[:</span><span class="n">long</span><span class="o">//</span><span class="mi">2</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="n">l</span><span class="o">//</span><span class="mi">2</span><span class="p">:]</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Combiner</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">combiner</span><span class="p">(</span><span class="n">gauche</span><span class="p">,</span><span class="n">droite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Combine 2 listes triées gauche et droite en une liste triée.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="p">[]</span>   
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">droite</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Tant que les listes gauche et droite ne sont pas vides</span>
+        <span class="k">if</span> <span class="n">gauche</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">droite</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>               <span class="c1"># Comparaison de la 1ère valeur de chaque liste</span>
+            <span class="n">resultat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gauche</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>          <span class="c1"># Et ajout au résultat de la plus petite</span>
+            <span class="n">gauche</span> <span class="o">=</span> <span class="n">gauche</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>                 <span class="c1"># Suppression de la valeur ajoutée</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resultat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">droite</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">droite</span> <span class="o">=</span> <span class="n">droite</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                        <span class="c1"># Dans le cas où </span>
+        <span class="n">resultat</span> <span class="o">=</span> <span class="n">resultat</span> <span class="o">+</span> <span class="n">droite</span>            
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">resultat</span> <span class="o">=</span> <span class="n">resultat</span> <span class="o">+</span> <span class="n">gauche</span>
+    <span class="k">return</span> <span class="n">resultat</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Tri-Fusion</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gauche</span><span class="p">,</span><span class="n">droite</span> <span class="o">=</span> <span class="n">diviser</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">combiner</span><span class="p">(</span><span class="n">tri_fusion</span><span class="p">(</span><span class="n">gauche</span><span class="p">),</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">droite</span><span class="p">))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="c-rotation-dune-image">C. Rotation d'une image</h2>
 <p><tab><tr><td><img alt="" src="fichiers/R2D2.jpg" /></td><td><img alt="" src="fichiers/vador.jpg" /></td></tr></tab></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>

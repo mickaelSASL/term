@@ -31,9 +31,6 @@ hide:
 ===! "Diviser"
     ```Python
     def diviser(l):
-        """
-        Fonction retournant les 2 moitiés de même longueur (+/- 1) d'une liste l
-        """
         long = len(l)
         return l[:long//2], l[l//2:]
     ```
@@ -41,20 +38,16 @@ hide:
 ===! "Combiner"
     ```Python
     def combiner(gauche,droite):
-        """
-        Combine 2 listes triées gauche et droite en une liste triée.
-        """
-        resultat = []   
-        while len(gauche) > 0 and len(droite) > 0:  # Tant que les listes gauche et droite ne sont pas vides
-            if gauche[0] < droite[0]:               # Comparaison de la 1ère valeur de chaque liste
-                resultat.append(gauche[0])          # Et ajout au résultat de la plus petite
-                gauche = gauche[1:]                 # Suppression de la valeur ajoutée
+        resultat = []
+        while len(gauche) > 0 and len(droite) > 0:  
+            if gauche[0] < droite[0]:
+                resultat.append(gauche[0])
+                gauche = gauche[1:]
             else:
                 resultat.append(droite[0])
                 droite = droite[1:]
-        
-        if len(gauche) == 0:                        # Dans le cas où 
-            resultat = resultat + droite            
+        if len(gauche) == 0:
+            resultat = resultat + droite
         else:
             resultat = resultat + gauche
         return resultat
@@ -64,11 +57,7 @@ hide:
 ===! "Tri-Fusion"
     ```Python
     def tri_fusion(l):
-        if len(l)<=1:
-            return l
-        else:
-            gauche,droite = diviser(l)
-            return combiner(tri_fusion(gauche), tri_fusion(droite))
+
     ```
 
 
