@@ -36,7 +36,7 @@ hide:
 > -  K plus proches voisins[K plus proches voisins](A/13/) (Chapitre de 1ère)
 > -  <!--A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche-->✔️ [A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche](A/A1/)  
 > -  A2 : Algorithmes sur les graphes<!--✔️ [A2 : Algorithmes sur les graphes](A/A2/)--> 🐌  
-> -  <!--A3 : Méthode « diviser pour régner »✔️--> [A3 : Méthode « diviser pour régner »](A/A3/)   
+> -  <!--A3 : Méthode « diviser pour régner »-->✔️ [A3 : Méthode « diviser pour régner »](A/A3/)   
 > - A4 : Programmation dynamique 🐌  
 > - A5 : Recherche textuelle. : Boyer Moore 🐌
 
