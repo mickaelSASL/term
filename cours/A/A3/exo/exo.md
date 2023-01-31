@@ -7,6 +7,7 @@ hide:
 # **A3 : Méthode Diviser pour Régner**
 
 [Retour](../)
+[Corrigé](exo_corrige.md)
 
 ## Exercice 1 (bac)
 
