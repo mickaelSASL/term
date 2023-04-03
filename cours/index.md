@@ -15,19 +15,19 @@ hide:
 ## Bases de données
 > -  <!--BDD1 : modèle relationnel, clé, schéma relationnel-->✔️ [BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)
 > -  <!--BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)-->✔️[BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](BDD/BDD2/)
-> -  🐌 <!--BDD3 : système de gestion de BDD, requêtes, sécurisation-->✔️[BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)   
+> -   <!--🐌 BDD3 : système de gestion de BDD, requêtes, sécurisation-->✔️🐌 [BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)   
 > -  <!--BDD4 : SQL-->✔️[BDD4 : SQL](BDD/BDD4)
 
 ## Architecture matérielle, système d'exploitation et réseau
 > -  <!--AMSER1 : Composants intégrés d’un système sur puce-->✔️ [AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)   
 > -  <!--AMSER2 : Gestion des processus et des ressources par un système d’exploitation-->✔️ [AMSER2 : Gestion des processus et des ressources par un système d’exploitation](AMSER/AMSER2)  
 > -  <!--AMSER3 : Protocoles de routage-->✔️ [AMSER3 : Protocoles de routage](AMSER/AMSER3)
-> -  🐌 AMSER4 : Sécurisation des communications<!--✔️ [AMSER4 : Sécurisation des communications](AMSER/AMSER4)--> 
+> -  <!--🐌 AMSER4 : Sécurisation des communications-->✔️🐌 [AMSER4 : Sécurisation des communications](AMSER/AMSER4) 
 
 ## Langage et programmation
 > -  🐌 LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité   
 > -  <!--LP2 : Récursivité-->✔️ [LP2 : Récursivité](LP/LP2)
-> -  LP3 : Modularité<!--✔️ [LP3 : Modularité ](LP/LP3)-->
+> -  <!--LP3 : Modularité-->✔️ [LP3 : Modularité ](LP/LP3)
 > -  🐌 LP4 : Paradigmes de programmation   
 > -  <!--LP5 : Mise au point des programmes. Gestion des bugs-->✔️ [LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
 

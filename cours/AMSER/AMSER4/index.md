@@ -4,38 +4,16 @@
 
 <!-- <center><p style="font-style: italic;color=red;">Se connecter à votre compte office365 pour visualiser les vidéos</p></center> -->
 
-## [Introduction](Intro.html)
 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/7W7WPMX7arI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7W7WPMX7arI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/Ef6RXUX9zP9OrbaAvIgkoqsBs4Loq_rzaM8Y3kN0ix4Pzw?e=KiWbep" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
 
 
-[Chat-Serveur](chat_serveur.py)
 
-[Chat-Client](chat_client.py)
-
-
-Sujet pratique - Exo2.py
-```Python
-ALPHABET='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-def position_alphabet(lettre):
-    return ALPHABET.find(lettre)
-
-def cesar(message, decalage):
-resultat = ''
-    for ... in message :
-        if lettre in ALPHABET :
-            indice = ( ... )%26
-            resultat = resultat + ALPHABET[indice] 
-        else:
-            resultat = ...
-    return resultat
-
-```
+<a href="chat_serveur.py" target="_blank">`Chat-Serveur.py`</a><br>
+<a href="Chat-Client.py" target="_blank">`Chat-Client.py`</a><br>
 
 
 <!-- 

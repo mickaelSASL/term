@@ -2,19 +2,29 @@
 hide:
   - navigation
 ---
+<link href="css/zoom.css" rel="stylesheet" />
 
 # **Grand Oral**
 
 ## Présentation
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3mN9w6rpXgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/3mN9w6rpXgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-[Présentation du Grand Oral par le ministère (Eduscol)](https://eduscol.education.fr/729/presentation-du-grand-oral)  
-[Texte du Bulletin Officiel définissant l'épreuve du Grand Oral](https://www.education.gouv.fr/bo/21/Hebdo31/MENE2121378N.htm)
+|  |  |
+|--|--|
+|Texte du Bulletin Officiel définissant l'épreuve du Grand Oral|<a href="https://www.education.gouv.fr/bo/21/Hebdo31/MENE2121378N.htm"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png"></a>|
+|Présentation du Grand Oral par le ministère (Eduscol)|<a href="https://eduscol.education.fr/729/presentation-du-grand-oral" target="blank"><img src= "link-previews/2023-03-31-éduscol__Ministère_de_l'Éduca…-Présentation_du_Grand_oral.png" width=30%></a>|
+
 
 ## Grille d'évaluation
 
-![](grille.png)
+<div class="container">
+  <input type="checkbox" id="zoomCheck">
+  <label for="zoomCheck">
+    <img src="grille.jpg" width=30%>
+  </label>
+</div>
+
 
 ## Ressources 
 
