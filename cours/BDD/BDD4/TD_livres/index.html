@@ -1907,7 +1907,9 @@
 <p>Pour chaque création, vous pouvez le faire par l'interface graphique ou par une requête SQL.</p>
 </div>
 <p>Pour commencer, vous devez créer une base de données. (Après avoir choisi un nom, par exemple <code>db_livres.db</code>)</p>
-<details><summary>Requête SQL</summary><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">db_livres</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<details>
+<summary>Requête SQL</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">db_livres</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </details>
 <h3 id="les-tables">Les tables</h3>
@@ -1918,7 +1920,9 @@
 <span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="w"></span>
 <span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span>
 </code></pre></div></p>
-<details><summary>Requête SQL</summary><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">);</span><span class="w"></span>
+<details>
+<summary>Requête SQL</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </details>
 <p>Comme indiqué dans la fenêtre, vous venez de créer votre première table.  </p>
@@ -1931,7 +1935,9 @@
 <span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="w">  </span>
 <span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="w"></span>
 </code></pre></div></p>
-<details><summary>Requête SQL</summary><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<details>
+<summary>Requête SQL</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
 <span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </details>
@@ -2051,7 +2057,9 @@ Comme nous avons créé cette base de données, nous en somme propriétaire et n
 <li>attribuer la note de 10 à tous les livres écrits par Asimov publiés après 1950  </li>
 <li>supprimer les livres publiés avant 1945</li>
 </ol>
-<details class="note"><summary>Solution</summary><div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">1</label><label for="__tabbed_4_2">2</label></div>
+<details class="note">
+<summary>Solution</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">1</label><label for="__tabbed_4_2">2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="n">id_auteur</span><span class="o">=</span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"></span>

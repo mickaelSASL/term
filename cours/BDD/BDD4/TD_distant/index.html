@@ -2078,23 +2078,31 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Aide</p>
-<details class="tip"><summary>1. COUNT</summary><p>La fonction <code>COUNT()</code> permet de compter le nombre d’enregistrement dans une table.
+<details class="tip">
+<summary>1. COUNT</summary>
+<p>La fonction <code>COUNT()</code> permet de compter le nombre d’enregistrement dans une table.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
 </code></pre></div>
 Il est aussi possible de connaitre le nombre d’enregistrement sur une colonne en particulier. Les enregistrements qui possèdent la valeur nul ne seront pas comptabilisé. La syntaxe pour compter les enregistrement sur la colonne “nom_colonne” est la suivante :
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<details class="tip"><summary>2. SUM</summary><p>La fonction <code>SUM()</code> permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
+<details class="tip">
+<summary>2. SUM</summary>
+<p>La fonction <code>SUM()</code> permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<details class="tip"><summary>3. AVG</summary><p>La fonction <code>ÀVG()</code> permet de calculer une valeur moyenne sur un ensemble d’enregistrement de type numérique et non nul.
+<details class="tip">
+<summary>3. AVG</summary>
+<p>La fonction <code>ÀVG()</code> permet de calculer une valeur moyenne sur un ensemble d’enregistrement de type numérique et non nul.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<details class="tip"><summary>4. LIKE</summary><p>L’opérateur <code>LIKE</code> est utilisé dans la clause <code>WHERE</code> des requêtes SQL. Ce mot-clé permet d’effectuer une recherche sur un modèle particulier. Il est par exemple possible de rechercher les enregistrements dont la valeur d’une colonne commence par telle ou telle lettre.
+<details class="tip">
+<summary>4. LIKE</summary>
+<p>L’opérateur <code>LIKE</code> est utilisé dans la clause <code>WHERE</code> des requêtes SQL. Ce mot-clé permet d’effectuer une recherche sur un modèle particulier. Il est par exemple possible de rechercher les enregistrements dont la valeur d’une colonne commence par telle ou telle lettre.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="n">modele</span><span class="w"></span>
@@ -2107,18 +2115,24 @@ Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble tr�
 - `LIKE ‘a_c’` : peu utilisé, le caractère “_” (underscore) peut être remplacé par n’importe quel caractère, mais un seul caractère uniquement (alors que le symbole pourcentage “%” peut être remplacé par un nombre incalculable de caractères . Ainsi, ce modèle permet de retourner les lignes “aac”, “abc” ou même “azc”.
 </code></pre></div>
 </details>
-<details class="tip"><summary>5. HAVING</summary><p>La condition <code>HAVING</code> est presque similaire à <code>WHERE</code> à la seule différence que <code>HAVING</code> permet de filtrer en utilisant des fonctions telles que <code>SUM()</code>, <code>COUNT()</code>, <code>AVG()</code>, <code>MIN()</code> ou <code>MAX()</code>.
+<details class="tip">
+<summary>5. HAVING</summary>
+<p>La condition <code>HAVING</code> est presque similaire à <code>WHERE</code> à la seule différence que <code>HAVING</code> permet de filtrer en utilisant des fonctions telles que <code>SUM()</code>, <code>COUNT()</code>, <code>AVG()</code>, <code>MIN()</code> ou <code>MAX()</code>.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne1</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">colonne1</span><span class="w"></span>
 <span class="k">HAVING</span><span class="w"> </span><span class="n">fonction</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"> </span><span class="n">operateur</span><span class="w"> </span><span class="n">valeur</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<details class="tip"><summary>6. REPLACE</summary><p>La fonction <code>REPLACE</code> permet de remplacer des caractères alphanumérique dans une chaîne de caractère. Cela sert particulièrement à mettre à jour des données dans une base de données ou à afficher des résultats personnalisés.
+<details class="tip">
+<summary>6. REPLACE</summary>
+<p>La fonction <code>REPLACE</code> permet de remplacer des caractères alphanumérique dans une chaîne de caractère. Cela sert particulièrement à mettre à jour des données dans une base de données ou à afficher des résultats personnalisés.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="s1">&#39;Hello tout le monde&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bonjour&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<details class="tip"><summary>7. GROUP BY</summary><p>Clause de l’instruction <code>SELECT</code> qui scinde le résultat de la requête en groupes de lignes, généralement pour effectuer ensuite une ou plusieurs agrégations sur chaque groupe. L’instruction <code>SELECT</code> retourne une ligne par groupe.
+<details class="tip">
+<summary>7. GROUP BY</summary>
+<p>Clause de l’instruction <code>SELECT</code> qui scinde le résultat de la requête en groupes de lignes, généralement pour effectuer ensuite une ou plusieurs agrégations sur chaque groupe. L’instruction <code>SELECT</code> retourne une ligne par groupe.
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">,</span><span class="w"> </span><span class="n">ColumnB</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div></p>
 <p>Résultat :
