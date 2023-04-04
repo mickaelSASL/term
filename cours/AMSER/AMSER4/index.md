@@ -12,8 +12,8 @@
 
 
 
-<a href="chat_serveur.py" target="_blank">`Chat-Serveur.py`</a><br>
-<a href="Chat-Client.py" target="_blank">`Chat-Client.py`</a><br>
+<a href="chat_serveur.py" target="_blank">`chat_serveur.py`</a><br>
+<a href="chat_client.py" target="_blank">`chat_client.py`</a><br>
 
 
 <!-- 
