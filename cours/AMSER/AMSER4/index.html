@@ -1905,16 +1905,101 @@
 
 <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/7W7WPMX7arI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
 <p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/Ef6RXUX9zP9OrbaAvIgkoqsBs4Loq_rzaM8Y3kN0ix4Pzw?e=KiWbep" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a></p>
-<p><a href="chat_serveur.py" target="_blank"><code>chat_serveur.py</code></a><br>
-<a href="chat_client.py" target="_blank"><code>chat_client.py</code></a><br></p>
-<!-- 
-## Fichiers Filius
-<img src="exemple.png">
-<a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EYCMNcnZa_hKrHwsWtyLCRYBlJckmoKgjRx2ZQLpYxpU3Q?e=2MYLS2" target="_blank">Exemple du cours.fls<img src="\images\filius.png" width="32px"></a>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">💾 Codage de César</label><label for="__tabbed_1_2">🐍 chat_client.py</label><label for="__tabbed_1_3">🐍 Corrigé Q2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Communication réseau</span><pre><span></span><code>1. Dans Spyder, ouvrir 2 onglets terminal.
+2. Dans le premier terminal, exécuter le programme `chat_client.py`
+3. Dans le second terminal, exécuter le programme `chat_serveur.py`
 
-<img src="Exo3.png">
-<a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EV4zFiIUprRKoKylAt0lUWkB5ddhkPBFzbnRIRyOytWzvQ?e=b0VmGO" target="_blank">Exo3.fls<img src="\images\filius.png" width="32px"></a>
-[Exo3 - Corrigé](exo3_corrige.md) -->
+4. Testez la communication 
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1">#  -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">socket</span> <span class="c1">##### CLIENT UDP #####</span>
+
+<span class="c1"># Adresse et port du serveur :</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">12345</span> <span class="c1"># N&#39;importe quel port non réservé (&gt; 1023)</span>
+<span class="n">HOTE</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="c1"># &lt;---Adresse du serveur, À ADAPTER À VOTRE SITUATION !! </span>
+<span class="n">sCli</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+<span class="n">TAILLE_MAX_PAQUET</span> <span class="o">=</span> <span class="mi">1024</span> <span class="c1"># Utile pour la réception uniquement.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saisir vos messages, suivi de [ENTRÉE].&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Écrire FIN pour terminer, voire STOP pour arrêter aussi le serveur.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="mi">1</span> <span class="p">:</span> <span class="c1"># On envoie des</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;===(FIN / STOP pour terminer)==&gt; &quot;</span><span class="p">)</span> <span class="c1"># octets, donc on</span>
+    <span class="n">sCli</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">HOTE</span><span class="p">,</span><span class="n">PORT</span><span class="p">))</span> <span class="c1"># doit encoder</span>
+    <span class="c1"># les chaînes...</span>
+    <span class="c1">#### Facultatif : afficher l&#39;accusé de réception #############</span>
+    <span class="n">paquet_recu</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">sCli</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">TAILLE_MAX_PAQUET</span><span class="p">)</span>
+    <span class="n">msg_recu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">paquet_recu</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Serveur :&quot;</span><span class="p">,</span> <span class="n">msg_recu</span><span class="p">)</span>
+    <span class="c1">##############################################################</span>
+    <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="s2">&quot;FIN&quot;</span> <span class="ow">or</span> <span class="n">msg</span> <span class="o">==</span> <span class="s2">&quot;STOP&quot;</span> <span class="p">:</span>
+        <span class="n">sCli</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bye !&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># coding: utf-8</span>
+<span class="c1">#!/usr/bin/env python3</span>
+<span class="c1">#-*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">socket</span> <span class="c1">##### SERVEUR UDP #####</span>
+
+<span class="n">HOTE</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="c1"># &lt;---Adresse IP À ADAPTER À VOTRE SITUATION ex. &#39;localhost&#39; en local</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">12345</span> <span class="c1"># N&#39;importe quel port non réservé (&gt; 1023)</span>
+<span class="n">TAILLE_MAX_PAQUET</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">sSrv</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span> <span class="c1"># On crée le socket</span>
+<span class="n">sSrv</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOTE</span><span class="p">,</span><span class="n">PORT</span><span class="p">))</span> <span class="c1"># On l&#39;associe à un couple (adresse_IP ; port)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Serveur en attente de message, sur le port&quot;</span><span class="p">,</span> <span class="n">HOTE</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saisir STOP sur un client pour arrêter le serveur.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="mi">1</span> <span class="p">:</span>
+<span class="n">paquet</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">sSrv</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">TAILLE_MAX_PAQUET</span><span class="p">)</span>    <span class="c1"># Réception du paquet (octets)</span>
+<span class="n">msg_recu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">paquet</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>             <span class="c1"># transformé en chaîne</span>
+
+<span class="c1"># /!\ On reçoit des octets, à re-coder ici en texte !</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;↳ Reçu du client d&#39;IP&quot;</span><span class="p">,</span> <span class="n">source</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;sur le port&quot;</span><span class="p">,</span> <span class="n">source</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">msg_recu</span><span class="p">)</span>
+<span class="c1"># Là aussi, source = (adresse_IP , port)</span>
+
+
+<span class="c1">#########################################################################</span>
+<span class="c1"># /!\ Idem ici, on a converti : chaîne msg --&gt; octets à envoyer</span>
+
+<span class="k">if</span> <span class="n">msg_recu</span> <span class="o">==</span> <span class="s2">&quot;STOP&quot;</span> <span class="p">:</span>
+        <span class="n">sSrv</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Message &#39;STOP&#39; reçu, serveur arrêté !&quot;</span><span class="p">)</span>
+        <span class="k">break</span>   
+
+<span class="c1">#### Facultatif : envoi d&#39;accusé de réception ###########################</span>
+<span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; &quot;</span><span class="p">)</span>
+<span class="n">sSrv</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">source</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">source</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>👍</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">🧩 Corrigé Q3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="a-avec-la-methode-len">a. avec la méthode len()</h3>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">):</span>    
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="b-sans-la-methode-len">b. sans la méthode len()</h3>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">):</span>
+    <span class="n">ct</span> <span class="o">=</span> <span class="mi">0</span>    
+    <span class="k">while</span> <span class="n">ma_liste</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">ma_liste</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">ct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ct</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
               
     <script src="../../../js/ide.js"></script> 
