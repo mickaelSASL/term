@@ -10,7 +10,7 @@ hide:
 > -  <!--SD2 : programmation objet-->✔️ [SD2 : programmation objet](SD/SD2/)
 > -  <!--SD3 : structures linéaires : listes, piles, files-->✔️ [SD3 : structures linéaires : listes, piles, files](SD/SD3/)  
 > -  <!--SD4 : Arbres-->✔️ [SD4 : Arbres](SD/SD4/)  
-> -  🐌 SD5 : Graphes<!--✔️ [SD5 : Graphes](SD/SD5/)--> 
+> -  🐌 <!--SD5 : Graphes-->✔️ [SD5 : Graphes](SD/SD5/) 
 
 ## Bases de données
 > -  <!--BDD1 : modèle relationnel, clé, schéma relationnel-->✔️ [BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)

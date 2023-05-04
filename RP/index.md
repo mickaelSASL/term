@@ -1,0 +1,14 @@
+---
+hide:
+  - navigation
+---
+<link href="css/zoom.css" rel="stylesheet" />
+
+# **Revue de Presse**
+*Vous trouverez sur cette page des arcticles de presse sur l'actu némurique, informatique,...*
+
+|Résumé|Lien|
+|:-:|:-:|
+|**Geoffrey Hinton, pionnier de l’IA, quitte Google et dit « regretter » son invention.** Le chercheur a joué un rôle crucial dans le développement des réseaux de neurones artificiels. Sans les travaux de celui-ci, des outils comme ChatGPT, Bard ou Midjourney n’auraient sans doute pas vu le jour.|<a href="https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html"><img src="https://aprc.it/api/640x480/https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html"></a>|
+|**Étude : combien de temps pour pirater votre mot de passe en 2023 ?** Le nouveau rapport d’Hive Systems démontre que les hackers mettent de moins en moins de temps à pirater un mot de passe.| <a href="https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/"><img src="https://aprc.it/api/640x480/https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/"></a>|
+|**Les cinq métiers de la cybersécurité qui vont faire parler d'eux dans les années à venir.** ANALYSE - Vol de données, espionnage, sabotage informatique, ransomware : les cyberattaques prennent différentes formes et touchent désormais tous les secteurs d'activité. Dans ce contexte, les besoins en cadres et experts de la cybersécurité explosent.|<a href="https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420" <img src="https://aprc.it/api/640x480/https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420/"></a>|

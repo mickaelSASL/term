@@ -486,6 +486,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mickaelsasl.github.io/RP/</loc>
+         <lastmod>2023-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mickaelsasl.github.io/cours/</loc>
          <lastmod>2023-05-04</lastmod>
          <changefreq>daily</changefreq>
