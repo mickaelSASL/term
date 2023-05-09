@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./labyrinthe/main.css">
+		<link rel="stylesheet" href="./labyrinthe/tomorrow-night.css">
+	</head>
+	<body class="">
+		<div id="page-wrapper">
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							
+							<div class="col-8  col-12-narrower imp-narrower">
+								<div id="content">
+
+									<!-- Content -->
+
+										<article>
+											<header>
+												<h2>Projet n°4 : Le Labyrinthe</h2>
+											</header>
+
+											<span class="image featured"><img src="./labyrinthe/menu_donnees_base.jpg" alt="donnees"></span>
+    <h3>Projet  : Créer, représenter et résoudre des labyrinthes</h3>
+    <p>
+    	Le but du TP est de créer, représenter et résoudre des labyrinthes. Les labyrinthes peuvent être vus comme des graphes.
+</p>
+
+
+
+
+<h2 class="titre">Propriétes des labyrinthes</h2>
+<p>
+	Nous nous intéresserons seulement à des labyrinthes rectangulaires composés de n lignes et m colonnes sur une grille régulière composée de n×m cellules. Chaque cellules comportant 4 côtés dont chacun peut être ouvert ou fermé (présence d'un mur).
+</p>
+
+<div class="centrer">
+	<img src="./labyrinthe/labyrinthe_1.png" alt="labyrinthe">
+	<figcaption>grille vide avec murs extérieurs</figcaption>
+</div>
+
+
+<blockquote>
+	<ul>
+		<li>Deux cellules sont consécutives si elles partagent un côté. </li>
+		<li>Un chemin dans un labyrinthe est une suite finie de n cellules où chacune est consécutive avec sa suivante.</li>
+		<li>Un labyrinthe est dit parfait s'il existe un et un seul chemin connectant 2 cellules.</li>
+	</ul>
+	<div class="centrer">
+		<img src="./labyrinthe/labyrinthe_2.png" alt="labyrinthe">
+
+		<img src="./labyrinthe/labyrinthe_3.png" alt="labyrinthe">
+
+		<img src="./labyrinthe/labyrinthe_4.png" alt="labyrinthe">
+			<figcaption>Chemin  ..................... plusieurs chemins .................................... parfait </figcaption>
+	</div>
+
+</blockquote>
+
+
+<div class="exercice">
+	<h4>Entrainement 1 :</h4>
+		<p>Montrer que pour un labyrinthe rectangulaire de n lignes et m colonnes le nombre maximal de murs internes fermés est : 2 n m - n - m</p>
+</div>
+
+
+
+
+<p>
+	La création d'un labyrinthe suit les étapes suivantes: 
+</p>
+<ul>
+	<li>Générer un graphe G représentant une grille de taille m*n</li>
+	<li>Construire un <b>arbre couvrant</b> A de ce graphe</li>
+	<li>Dessiner le labyrinthe en traçant un mur entre les sommets directement liés dans G et non dans A</li>
+</ul>
+
+
+
+<h4>Générer une grille de taille m * n</h4>
+<p>
+	Un labyrinthe, composé de longueur × largeur cases numérotées par des couples (i, j), est représenté par un graphe (non orienté) dont les sommets sont étiquetés par des couples (i, j). Lorsqu’une case (i0, j0) communique avec une autre case voisine (i1, j1), alors il existe une arête entre les sommets (i0, j0) et (i1, j1) du graphe. Deux cases (ou sommets) sont particuliers, ce sont l’entrée (0,0) et la sortie du labyrinthe.<br>
+	Soit le labyrinthe suivant :
+</p>
+
+
+<h5>Présentation de la structure de données représentant la géométrie d'un labyrinthe</h5>
+		<p>
+			Le labyrinthe de taille 4x4 suivant :
+		</p>
+		<div class="centrer">
+			<img src="./labyrinthe/labyrinthe_5.png" width="250">
+		</div>
+		<p>
+			est représenté par la matrice Python suivante :
+		</p>
+		<pre><code class="python hljs">grille = 
+[[[<span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>], [<span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>]],
+[[ <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>], [ <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>], [ <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>]],
+[[ <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>], [ <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>]],
+[[ <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>], [ <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>], [ <span class="hljs-literal">True</span>, <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">True</span>]]]
+</code></pre>
+		<p>
+			Il s'agit d'une matrice de dimension 4x4 et l'élément <code>grille[i][j]</code>, <code>i</code> et <code>j</code> étant deux entiers compris entre 0 et 3,
+			décrit la géométrie de la case à l'intersection de la ligne <code>i</code> et de la colonne <code>j</code>.
+		</p>
+		<p><u>Exemple</u> :</p>
+		<p>
+			<code>une_case = grille[2][1] = [False, False, True, True]</code> correspond à la case du labyrinthe à l'intersection de la ligne <code>2</code> et de la colonne <code>1</code>.
+		</p>
+		<div class="centrer">
+			<img src="./labyrinthe/labyrinthe_6.png" width="250">
+		</div>
+		<p>Description des éléments de la liste représentant <code>une_case = [False, False, True, True]</code> :</p>
+		<p>
+			</p><ul>
+				<li>Indice 1 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>en haut</b> de la case est présent.</li>
+				<li>Indice 2 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>à droite</b> de la case est présent.</li>
+				<li>Indice 3 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>en bas</b> de la case est présent.</li>
+				<li>Indice 4 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>à gauche</b> de la case est présent.</li>
+			</ul>
+		<p></p>
+
+
+<h4>Construire un <b>arbre couvrant</b> A de ce graphe</h4>
+
+<h5>Qu'est ce qu'un arbre couvrant ?</h5>
+<p>Un <b>arbre</b> est un graphe à la fois connexe et sans cycle. Un <b>arbre couvrant</b> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
+</p>
+		<div class="centrer">
+			<img src="./labyrinthe/labyrinthe_7.png" width="200">
+		</div>
+
+<p>
+	En plaçant un sommet sur chaque cellule de notre labyrinthe, et en reliant deux sommets par une arête si leurs cellules sont séparées par une porte, il devient possible de dessiner un arbre à partir de n'importe quel labyrinthe.<br>
+	Sur notre graphe, un arête est donc un passage dans notre labyrinthe.
+</p>
+		<div class="centrer">
+			<img src="./labyrinthe/labyrinthe_8.png" width="200">
+		</div>
+
+<div class="exercice">
+	<h4>Entrainement 2 :</h4>
+		<p>Représenter l'arbre du graphe ci-dessus avec en étiquette les coordonnées de chaque noeud.</p>
+</div>
+
+<h5>constuire l'arbre binaire </h5>
+
+<p>
+	De nombreux algorithmes existent répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.
+</p>
+
+
+		<div class="centrer">
+			<img src="./labyrinthe/labyrinthe_9.gif" width="200">
+			<figcaption>L'algorithme du parcours en profondeur (ou "recursive backtracker" en anglais) commence sur une cellule aléatoire dans le labyrinthe.
+
+Il suffit ensuite de se diriger dans une direction aléatoire et de casse le mur face à soi, tout en marquant la cellule précédente comme visitée.
+
+Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la position précédente : c'est le backtracking.</figcaption>
+		</div>
+
+
+
+
+
+<h3 class="titre">Cahier des charges :</h3>
+
+<p>
+  Le modèle de représentation afin de modéliser des labyrinthes rectangulaires est une classe <code class="python">Labyrinthe</code> qui contiendra les <i>méthodes</i> et les <i>attributs</i> suivants :
+ 
+</p><ul>
+  <li>un <b>constructeur</b> : <code class="python">__init__(self, largeur, hauteur)</code></li>
+  <li>des <strong>attributs</strong> :  <code class="python">self.largeur</code>, le nombre de colonnes de la grille et <code class="python">self.hauteur</code> , le nombre de lignes définis dans le constructeur</li>
+  <li>un <strong>attribut</strong> :  <code class="python">self.grille</code> représentant les cellules du labyrinthe.  </li>
+</ul>
+<p></p>
+
+<p>
+	Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="http://nsinfo.yo.fr/asset/labyrinthe.py" target="_blank">labyrinthe.py</a>.
+</p>
+
+
+
+
+<h2 class="titre">Le code du programme :</h2>
+
+	<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cellule</span>:</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+		self.mur_bas = <span class="hljs-literal">True</span> <span class="hljs-comment"># True signifie que le mur est fermé</span>
+		self.mur_droit = <span class="hljs-literal">True</span> <span class="hljs-comment"># False signifie que le mur est ouvert</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Labyrinthe</span>:</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, largeur, hauteur)</span>:</span>
+		self.hauteur = hauteur
+		self.largeur = largeur
+		self.grille = [[Cellule() <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(largeur)] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(hauteur)]
+		self.generation()
+	
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">solution</span><span class="hljs-params">(self, depart_ligne, depart_colonne, arrivee_ligne, arrivee_colonne)</span>:</span>
+		<span class="hljs-string">"""
+		Renvoie la liste de directions à suivre pour se rendre de la cellule
+		(depart_ligne, depart_colonne) à la cellule (arrivee_ligne, arrivee_colonne).
+		Exemple de retour : ['n', 'e', 'e', 's', 'o']
+		"""</span></code></pre>
+
+
+
+     	
+
+
+
+
+
+		</article>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+			<!-- Footer -->
+				
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="./labyrinthe/jquery.min.js.téléchargement"></script>
+			<script src="./labyrinthe/jquery.dropotron.min.js.téléchargement"></script>
+			<script src="./labyrinthe/browser.min.js.téléchargement"></script>
+			<script src="./labyrinthe/breakpoints.min.js.téléchargement"></script>
+			<script src="./labyrinthe/util.js.téléchargement"></script>
+			<script src="./labyrinthe/main.js.téléchargement"></script><ul class="dropotron level-0" style="user-select: none; display: none; position: absolute; z-index: 1000;">
+									    <li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_structure_donnees_listes.html" style="display: block;">Les listes, les piles, les files</a></li>
+									   <li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_structure_donnees_dictionnaires.html" style="display: block;">Les dictionnaires</a></li>
+									    <li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_structure_donnees_poo.html" style="display: block;">La POO</a></li>
+									    <li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_structure_donnees_arbres.html" style="display: block;">Les arbres</a></li>
+									    <li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_structure_donnees_graphes.html" style="display: block;">Les graphes</a></li>
+									</ul><ul class="dropotron level-0" style="user-select: none; display: none; position: absolute; z-index: 1000;">
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_base_donnees_relationnelle.html" style="display: block;">Les bases de données relationnelles</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_base_donnees_sgbd.html" style="display: block;">Les systèmes de gestion de base de données</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_base_donnees_sql.html" style="display: block;">Langage SQL</a></li>
+									</ul><ul class="dropotron level-0" style="user-select: none; display: none; position: absolute; z-index: 1000;">
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_arse_puce.html" style="display: block;">Composants intégrés d’un système sur puce</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_arse_processsus.html" style="display: block;">Gestion des processus et des ressources par un système d’exploitation</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_arse_routage.html" style="display: block;">Protocoles de routage</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_arse_securisation.html" style="display: block;">Sécurisation des communications</a></li>
+									</ul><ul class="dropotron level-0 center" style="user-select: none; position: absolute; z-index: 1000; left: 1162.56px; top: 258.969px; opacity: 1; display: none;">
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_calculabilite.html" style="display: block;">Calculabilité, décidabilité</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_recursivite.html" style="display: block;">Récursivité </a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_modularite.html" style="display: block;">Modularité</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_paradigmes.html" style="display: block;">Paradigmes de programmation</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_bugs.html" style="display: block;">Mise au point des programmes. Gestion des bugs</a></li>
+									</ul><ul class="dropotron level-0 center" style="user-select: none; position: absolute; z-index: 1000; left: 1457.28px; top: 258.969px; opacity: 1; display: none;">
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_algo_arbres.html" style="display: block;">Algorithmes sur les arbres </a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_algo_graphes.html" style="display: block;">Algorithmes sur les graphes</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_algo_regner.html" style="display: block;">Méthode « diviser pour régner »</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_algo_dynamique.html" style="display: block;">Programmation dynamique</a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_programmation_boyer.html" style="display: block;">Recherche textuelle. : Boyer Moore</a></li>
+									</ul><ul class="dropotron level-0" style="user-select: none; display: none; position: absolute; z-index: 1000;">
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_projet_3.html" style="display: block;">Projet n°1 : Dessine ta rue en POO </a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_projet_1.html" style="display: block;">Projet n°2 : Un jeu de bataille </a></li>
+										<li style="white-space: nowrap;"><a href="http://nsinfo.yo.fr/nsi_term_projet_2.html" style="display: block;">Projet n°3 : Le Labyrinthe </a></li>
+
+									</ul><div id="titleBar"><a href="http://nsinfo.yo.fr/nsi_term_projet_2.html#navPanel" class="toggle"></a><span class="title">Informatique au lycée <em>Faustin Fleret</em></span></div><div id="navPanel"><nav><a class="link depth-0" href="http://nsinfo.yo.fr/index.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Home</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_structure_donnees.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Structure de données</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_structure_donnees_listes.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les listes, les piles, les files</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_structure_donnees_dictionnaires.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les dictionnaires</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_structure_donnees_poo.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>La POO</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_structure_donnees_arbres.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les arbres</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_structure_donnees_graphes.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les graphes</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_base_donnees.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Base de données</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_base_donnees_relationnelle.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les bases de données relationnelles</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_base_donnees_sgbd.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Les systèmes de gestion de base de données</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_base_donnees_sql.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Langage SQL</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_arse_puce.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Architectures matérielles, système d'exploitation et réseaux</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_arse_puce.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Composants intégrés d’un système sur puce</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_arse_processsus.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Gestion des processus et des ressources par un système d’exploitation</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_arse_routage.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Protocoles de routage</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_arse_securisation.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Sécurisation des communications</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_programmation_calculabilite.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Langage de programmation</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_calculabilite.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Calculabilité, décidabilité</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_recursivite.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Récursivité </a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_modularite.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Modularité</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_paradigmes.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Paradigmes de programmation</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_bugs.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Mise au point des programmes. Gestion des bugs</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_algo_arbres.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Algorithmique</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_algo_arbres.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Algorithmes sur les arbres </a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_algo_graphes.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Algorithmes sur les graphes</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_algo_regner.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Méthode « diviser pour régner »</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_algo_dynamique.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Programmation dynamique</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_programmation_boyer.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Recherche textuelle. : Boyer Moore</a><a class="link depth-0" href="http://nsinfo.yo.fr/nsi_term_projet_1.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Projets</a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_projet_3.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Projet n°1 : Dessine ta rue en POO </a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_projet_1.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Projet n°2 : Un jeu de bataille </a><a class="link depth-1" href="http://nsinfo.yo.fr/nsi_term_projet_2.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Projet n°3 : Le Labyrinthe </a></nav></div>
+			<script src="./labyrinthe/solution.js.téléchargement"></script>
+			
+			<!--Mise en forme du code-->
+			<script src="./labyrinthe/highlight.pack.js.téléchargement"></script>
+			<script src="./labyrinthe/highlightjs-line-numbers.min.js.téléchargement"></script>
+
+			<script>hljs.initHighlightingOnLoad();
+			hljs.initLineNumbersOnLoad();</script>
+	
+
+
+
+</body></html>

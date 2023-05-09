@@ -87,7 +87,6 @@
     sSrv.sendto(bytes(message, encoding="utf8"), (source[0], source[1]))
     ```
 
-👍
 
 === "🧩 Corrigé Q3"
     ### a. avec la méthode len()
