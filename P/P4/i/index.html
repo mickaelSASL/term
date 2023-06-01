@@ -41,7 +41,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../overrides/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="../../../xtra/pyoditeur.css">
     
@@ -1804,6 +1804,55 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Résolution de labyrinthe par les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Résolution de labyrinthe par les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Résolution de labyrinthe par les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        Consignes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2046,52 +2095,130 @@
 
 
 <h1 id="p4-resolution-de-labyrinthe-par-les-graphes"><strong>P4: Résolution de labyrinthe par les graphes</strong></h1>
-<p><img src="./labyrinthe/menu_donnees_base.jpg" alt="donnees"></p>
-<h2 id="projet-creer-representer-et-resoudre-des-labyrinthes">Projet  : Créer, représenter et résoudre des labyrinthes</h2>
-<p>Le but du TP est de créer, représenter et résoudre des labyrinthes. Les labyrinthes peuvent être vus comme des graphes.</p>
-<h2 id="proprietes-des-labyrinthes">Propriétes des labyrinthes</h2>
+<p><img src="https://files.realpython.com/media/Build-a-Pac-Man-Maze-Solver-in-Python_Watermarked.c2e79a85fc99.jpg" alt="donnees" width="75%"></p>
+<p><em><center>Le but du projet est résoudre des labyrinthes générés aléatoirement. Les labyrinthes peuvent être vus comme des graphes.</center></em></p>
+<hr />
+<h2 class="titre">Propriétes des labyrinthes</h2>
 <p>Nous nous intéresserons seulement à des labyrinthes rectangulaires composés de n lignes et m colonnes sur une grille régulière composée de n×m cellules. Chaque cellules comportant 4 côtés dont chacun peut être ouvert ou fermé (présence d'un mur).</p>
-<p><img src="./labyrinthe/labyrinthe_1.png" alt="labyrinthe"></p>
-<figcaption>grille vide avec murs extérieurs</figcaption>
-
+<p><center>
+  <img src="../labyrinthe/labyrinthe_1.png" alt="labyrinthe">
+<br />
+<figcaption>grille vide avec murs extérieurs</figcaption></p>
+<p></center></p>
+<blockquote>
 <ul>
 <li>Deux cellules sont consécutives si elles partagent un côté.</li>
 <li>Un chemin dans un labyrinthe est une suite finie de n cellules où chacune est consécutive avec sa suivante.</li>
 <li>Un labyrinthe est dit parfait s'il existe un et un seul chemin connectant 2 cellules.</li>
 </ul>
-<p><img src="./labyrinthe/labyrinthe_2.png" alt="labyrinthe">
-<img src="./labyrinthe/labyrinthe_3.png" alt="labyrinthe">
-<img src="./labyrinthe/labyrinthe_4.png" alt="labyrinthe"></p>
-<figcaption>Chemin  ..................... plusieurs chemins .................................... parfait </figcaption>
-
+<table>
+<thead>
+<tr>
+<th align="center">Exemple 1</th>
+<th align="center">Exemple 2</th>
+<th align="center">Exemple3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="../labyrinthe/labyrinthe_2.png" alt="labyrinthe"></td>
+<td align="center"><img src="../labyrinthe/labyrinthe_3.png" alt="labyrinthe"></td>
+<td align="center"><img src="../labyrinthe/labyrinthe_4.png"alt="labyrinthe"></td>
+</tr>
+<tr>
+<td align="center"><figcaption>Chemin</figcaption></td>
+<td align="center"><figcaption>plusieurs chemins</figcaption></td>
+<td align="center"><figcaption>parfait</figcaption></td>
+</tr>
+</tbody>
+</table>
 </blockquote>
-<div class="exercice">
-    <h4>Entrainement 1 :</h4>
-        <p>Montrer que pour un labyrinthe rectangulaire de n lignes et m colonnes le nombre maximal de murs internes fermés est : 2 n m - n - m</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Montrer que pour un labyrinthe rectangulaire de n lignes et m colonnes le nombre maximal de murs internes fermés est : <span class="arithmatex">\(2 n m - n - m\)</span></p>
 </div>
-
-<p>
-    La création d'un labyrinthe suit les étapes suivantes: 
-</p>
+<h2 id="creation-dun-labyrinthe"><span class='titre'>Création d'un labyrinthe</span></h2>
+<p>La création d'un labyrinthe suit les étapes suivantes: </p>
+<ol>
+<li>Générer un graphe G représentant une grille de taille m*n  </li>
+<li>Construire un <b>arbre couvrant</b> A de ce graphe  </li>
+<li>Dessiner le labyrinthe en traçant un mur entre les sommets directement liés dans G et non dans A  </li>
+</ol>
+<hr />
+<h3 id="1-generer-une-grille-de-taille-m-n"><span class='titre'>1. Générer une grille de taille m * n</span></h3>
+<p>Un labyrinthe, composé de longueur × largeur cases numérotées par des couples (i, j), est représenté par un graphe (non orienté) dont les sommets sont étiquetés par des couples (i, j). Lorsqu’une case (i0, j0) communique avec une autre case voisine (i1, j1), alors il existe une arête entre les sommets (i0, j0) et (i1, j1) du graphe. Deux cases (ou sommets) sont particuliers, ce sont l’entrée (0,0) et la sortie du labyrinthe.<br />
+Soit le labyrinthe suivant :</p>
+<h4 id="presentation-de-la-structure-de-donnees-representant-la-geometrie-dun-labyrinthe">Présentation de la structure de données représentant la géométrie d'un labyrinthe</h4>
+<p>Le labyrinthe de taille 4x4 suivant :<br />
+<center><img src="../labyrinthe/labyrinthe_5.png" width="180"></center><br />
+est représenté par la matrice Python suivante :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">grille</span> <span class="o">=</span> 
+<span class="p">[[[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]],</span>
+<span class="p">[[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]],</span>
+<span class="p">[[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]],</span>
+<span class="p">[[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]]</span>
+</code></pre></div>
+<p>Il s'agit d'une matrice de dimension 4x4 et l'élément <code>grille[i][j]</code>, <code>i</code> et <code>j</code> étant deux entiers compris entre 0 et 3, décrit la géométrie de la case à l'intersection de la ligne <code>i</code> et de la colonne <code>j</code>.</p>
+<p>Exemple :<br />
+<code>une_case = grille[2][1] = [False, False, True, True]</code> correspond à la case du labyrinthe à l'intersection de la ligne <code>2</code> et de la colonne <code>1</code>.
+<center><img src="../labyrinthe/labyrinthe_6.png" width="250"></center></p>
+<p>Description des éléments de la liste représentant <code>une_case = [False, False, True, True]</code>:  </p>
 <ul>
-    <li>Générer un graphe G représentant une grille de taille m*n</li>
-    <li>Construire un <b>arbre couvrant</b> A de ce graphe</li>
-    <li>Dessiner le labyrinthe en traçant un mur entre les sommets directement liés dans G et non dans A</li>
+<li>Indice 1 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>en haut</b> de la case est présent.</li>
+<li>Indice 2 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>à droite</b> de la case est présent.</li>
+<li>Indice 3 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>en bas</b> de la case est présent.</li>
+<li>Indice 4 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>à gauche</b> de la case est présent.</li>
 </ul>
+<hr />
+<h3 id="2-construire-un-arbre-couvrant-a-de-ce-graphe">2. Construire un <b>arbre couvrant</b> A de ce graphe</h3>
+<h4 id="quest-ce-quun-arbre-couvrant">Qu'est ce qu'un arbre couvrant ?</h4>
+<p>Un <b>arbre</b> est un graphe à la fois connexe et sans cycle. Un <b>arbre couvrant</b> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
+<center><img src="../labyrinthe/labyrinthe_7.png" width="200"></center></p>
+<p>En plaçant un sommet sur chaque cellule de notre labyrinthe, et en reliant deux sommets par une arête si leurs cellules sont séparées par une porte, il devient possible de dessiner un arbre à partir de n'importe quel labyrinthe.  </p>
+<p>Sur notre graphe, un arête est donc un passage dans notre labyrinthe.</p>
+<p><center><img src="../labyrinthe/labyrinthe_8.png" width="200"></center></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Représenter l'arbre du graphe ci-dessus avec en étiquette les coordonnées de chaque noeud.</p>
+</div>
+<h4 id="constuire-larbre-binaire">constuire l'arbre binaire</h4>
+<p>De nombreux algorithmes existent répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.</p>
+<p><center>
+<img src="../labyrinthe/labyrinthe_9.gif" width="200"></p>
+<p>L'algorithme du parcours en profondeur (ou "recursive backtracker" en anglais) commence sur une cellule aléatoire dans le labyrinthe.
+Il suffit ensuite de se diriger dans une direction aléatoire et de casse le mur face à soi, tout en marquant la cellule précédente comme visitée.
+Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la position précédente : c'est le backtracking.</p>
+<p></center></p>
+<hr />
+<h2 id="cahier-des-charges">Cahier des charges :</h2>
+<p>Le modèle de représentation afin de modéliser des labyrinthes rectangulaires est une classe <code>Labyrinthe</code> qui contiendra les <i>méthodes</i> et les <i>attributs</i> suivants :</p>
+<ul>
+<li>un <b>constructeur</b> : <code>__init__(self, largeur, hauteur)</code>  </li>
+<li>des <strong>attributs</strong> :  <code>self.largeur</code>, le nombre de colonnes de la grille et <code>self.hauteur</code>, le nombre de lignes définis dans le constructeur</li>
+<li>un <strong>attribut</strong> :  <code>self.grille</code> représentant les cellules du labyrinthe.  </li>
+</ul>
+<p>Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="../labyrinthe.py" target="_blank">labyrinthe.py</a>.</p>
+<hr />
+<h2 id="le-code-du-programme">Le code du programme :</h2>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mur_bas</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># True signifie que le mur est fermé</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mur_droit</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># False signifie que le mur est ouvert</span>
 
-<h4>Générer une grille de taille m * n</h4>
-<p>
-    Un labyrinthe, composé de longueur × largeur cases numérotées par des couples (i, j), est représenté par un graphe (non orienté) dont les sommets sont étiquetés par des couples (i, j). Lorsqu’une case (i0, j0) communique avec une autre case voisine (i1, j1), alors il existe une arête entre les sommets (i0, j0) et (i1, j1) du graphe. Deux cases (ou sommets) sont particuliers, ce sont l’entrée (0,0) et la sortie du labyrinthe.<br>
-    Soit le labyrinthe suivant :
-</p>
 
-<h5>Présentation de la structure de données représentant la géométrie d'un labyrinthe</h5>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    &lt;p&gt;
-        Le labyrinthe de taille 4x4 suivant :
-    &lt;/p&gt;
-    &lt;div class=&quot;centrer&quot;&gt;
-        &lt;img src=&quot;./labyrinthe/labyrinthe_5.png&quot; width=&quot;250&quot;&gt;
-    &lt;/div&gt;
+<span class="k">class</span> <span class="nc">Labyrinthe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">=</span> <span class="n">largeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grille</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Cellule</span><span class="p">()</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">largeur</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hauteur</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generation</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depart_ligne</span><span class="p">,</span> <span class="n">depart_colonne</span><span class="p">,</span> <span class="n">arrivee_ligne</span><span class="p">,</span> <span class="n">arrivee_colonne</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Renvoie la liste de directions à suivre pour se rendre de la cellule</span>
+<span class="sd">        (depart_ligne, depart_colonne) à la cellule (arrivee_ligne, arrivee_colonne).</span>
+<span class="sd">        Exemple de retour : [&#39;n&#39;, &#39;e&#39;, &#39;e&#39;, &#39;s&#39;, &#39;o&#39;]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
 </code></pre></div>
 
               

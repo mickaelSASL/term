@@ -22,6 +22,7 @@ hide:
 > - [AMSER2 : Gestion des processus et des ressources par un système d’exploitation](../AMSER/AMSER2)
 > - [BDD1 : modèle relationnel, clé, schéma relationnel](../BDD/BDD1/)
 > - [BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](../BDD/BDD2/)
+> - [BDD3 : système de gestion de BDD, requêtes, sécurisation](../BDD/BDD2/) 🐌
 > - [BDD4 : SQL](../BDD/BDD4)
 > - [Projet 3](../../P/P3/)
 > - [LP2 : Récursivité](../LP/LP2)  
@@ -46,14 +47,14 @@ hide:
 ### <span style="background-color: DodgerBlue;">Vacances de Pâques</span>
 
 ## Période 5 (6 semaines)
-> - [SD5 : Graphes](../SD/SD5/) 🐌
 > - [AMSER4 : Sécurisation des communications](../AMSER/AMSER4) 🐌
+> - [SD5 : Graphes](../SD/SD5/) 🐌
+> - [A2 : Algorithmes sur les graphes](../A/A2/) 🐌 
 > - LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité 🐌  
 > - LP4 : Paradigmes de programmation 🐌  
-> - [A2 : Algorithmes sur les graphes](../A/A2/) 🐌  
-> - [BDD3 : système de gestion de BDD, requêtes, sécurisation](../BDD/BDD2/) 🐌  
+> - A5 : Recherche textuelle. : Boyer Moore 🐌 
+  
 > - A4 : Programmation dynamique 🐌  
-> - A5 : Recherche textuelle. : Boyer Moore 🐌
 > - [K plus proches voisins](../A/13/) (Chapitre de 1ère)
 
 ## <span style="background-color: orange;">Grand Oral</span>

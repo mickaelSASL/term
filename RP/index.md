@@ -6,6 +6,7 @@ hide:
 
 # **Revue de Presse**
 *Vous trouverez sur cette page des arcticles de presse sur l'actu némurique, informatique,...*
+<center><img src="https://files.realpython.com/media/Monthly-Python-News_Red_Watermarked.c82fffdbc32e.jpg" width="70%"></center>
 
 |Résumé|Lien|
 |:-:|:-:|
