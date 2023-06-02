@@ -150,3 +150,7 @@ Vous pouvez améliorer le jeu en créant une interface graphique.
 - Une présentation orale d'une des parties du programme. (une classe ou une partie d'une classe)
 > Vous aurez un temps en classe pour préparer cette présentation accompagnée d'un document à présenter. Vous ferez votre présentation au reste du groupe.
 
+
+
+
+<iframe src="https://trinket.io/embed/python/b474fe3491?outputOnly=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>

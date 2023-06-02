@@ -130,3 +130,9 @@ class Labyrinthe:
 		Exemple de retour : ['n', 'e', 'e', 's', 'o']
 		"""
 ```
+
+
+
+<iframe src="https://trinket.io/embed/python/e25159be66?outputOnly=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<iframe src="https://trinket.io/embed/python/e27dfa9f4d?outputOnly=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
