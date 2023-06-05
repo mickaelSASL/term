@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://mickaelsasl.github.io/cours/A/A5/">
+        <link rel="canonical" href="https://mickaelsasl.github.io/cours/A/A5/boyer-moore/">
       
-      <link rel="icon" href="../../../dlna">
+      <link rel="icon" href="../../../../dlna">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
     
     
       
-        <title>**A5 : Recherche textuelle Boyer-Moore** - NSI Terminale</title>
+        <title>-*- coding: utf-8 -*- - NSI Terminale</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -41,13 +41,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/pyoditeur.css">
+      <link rel="stylesheet" href="../../../../xtra/pyoditeur.css">
     
-      <link rel="stylesheet" href="../../../xtra/ajustements.css">
+      <link rel="stylesheet" href="../../../../xtra/ajustements.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="NSI Terminale" class="md-header__button md-logo" aria-label="NSI Terminale" data-md-component="logo">
+    <a href="../../../.." title="NSI Terminale" class="md-header__button md-logo" aria-label="NSI Terminale" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.38 12.56h-8.53c-.88 0-1.75.4-2.24 1.05v-.01c-.49.68-1.29 1.12-2.2 1.12-1.49 0-2.7-1.22-2.7-2.72 0-1.5 1.21-2.69 2.7-2.69.91 0 1.71.44 2.2 1.12v-.01c.49.65 1.36 1.08 2.24 1.08h8.44c.16 0 .71-.1.71-.83-.74-4.24-4.9-7.49-9.94-7.49-3.1 0-5.87 1.23-7.72 3.17-.29.44.01.57.29.61h5.51c.86 0 1.75-.42 2.24-1.07v.02c.5-.68 1.29-1.13 2.2-1.13 1.49 0 2.7 1.22 2.7 2.72 0 1.5-1.21 2.7-2.7 2.7-.91 0-1.7-.45-2.2-1.13v.01c-.49-.64-1.38-1.05-2.24-1.05H4.13h.02s-.89-.03-1.43.72C2.3 9.42 2 10.85 2 12c0 1.16.17 2.21.72 3.27.47.76 1.43.73 1.43.73h-.04 6.03c.86 0 1.75-.42 2.24-1.07v.01c.5-.68 1.29-1.13 2.2-1.13 1.49 0 2.7 1.22 2.7 2.69 0 1.5-1.21 2.73-2.7 2.73-.91 0-1.7-.45-2.2-1.13v.02c-.49-.65-1.38-1.07-2.24-1.07h-5.5c-.28.04-.58.17-.32.59 1.85 1.94 4.63 3.18 7.74 3.18 5.05 0 9.22-3.25 9.94-7.51 0-.59-.41-.73-.62-.75"/></svg>
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **A5 : Recherche textuelle Boyer-Moore**
+              -*- coding: utf-8 -*-
             
           </span>
         </div>
@@ -151,7 +151,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../../../.." class="md-tabs__link">
       Accueil
     </a>
   </li>
@@ -168,7 +168,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Cours
       </a>
     </li>
@@ -184,7 +184,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../P/" class="md-tabs__link">
+      <a href="../../../../P/" class="md-tabs__link">
         Projets
       </a>
     </li>
@@ -200,7 +200,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../EP/liste_algo/" class="md-tabs__link">
+      <a href="../../../../EP/liste_algo/" class="md-tabs__link">
         Epreuve Pratique
       </a>
     </li>
@@ -216,7 +216,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../m%C3%A9mos/variables/" class="md-tabs__link">
+      <a href="../../../../m%C3%A9mos/variables/" class="md-tabs__link">
         Mémos
       </a>
     </li>
@@ -232,7 +232,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../GO/" class="md-tabs__link">
+      <a href="../../../../GO/" class="md-tabs__link">
         Grand Oral
       </a>
     </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../RP/" class="md-tabs__link">
+      <a href="../../../../RP/" class="md-tabs__link">
         Revue de presse
       </a>
     </li>
@@ -272,9 +272,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -284,7 +282,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="NSI Terminale" class="md-nav__button md-logo" aria-label="NSI Terminale" data-md-component="logo">
+    <a href="../../../.." title="NSI Terminale" class="md-nav__button md-logo" aria-label="NSI Terminale" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.38 12.56h-8.53c-.88 0-1.75.4-2.24 1.05v-.01c-.49.68-1.29 1.12-2.2 1.12-1.49 0-2.7-1.22-2.7-2.72 0-1.5 1.21-2.69 2.7-2.69.91 0 1.71.44 2.2 1.12v-.01c.49.65 1.36 1.08 2.24 1.08h8.44c.16 0 .71-.1.71-.83-.74-4.24-4.9-7.49-9.94-7.49-3.1 0-5.87 1.23-7.72 3.17-.29.44.01.57.29.61h5.51c.86 0 1.75-.42 2.24-1.07v.02c.5-.68 1.29-1.13 2.2-1.13 1.49 0 2.7 1.22 2.7 2.72 0 1.5-1.21 2.7-2.7 2.7-.91 0-1.7-.45-2.2-1.13v.01c-.49-.64-1.38-1.05-2.24-1.05H4.13h.02s-.89-.03-1.43.72C2.3 9.42 2 10.85 2 12c0 1.16.17 2.21.72 3.27.47.76 1.43.73 1.43.73h-.04 6.03c.86 0 1.75-.42 2.24-1.07v.01c.5-.68 1.29-1.13 2.2-1.13 1.49 0 2.7 1.22 2.7 2.69 0 1.5-1.21 2.73-2.7 2.73-.91 0-1.7-.45-2.2-1.13v.02c-.49-.65-1.38-1.07-2.24-1.07h-5.5c-.28.04-.58.17-.32.59 1.85 1.94 4.63 3.18 7.74 3.18 5.05 0 9.22-3.25 9.94-7.51 0-.59-.41-.73-.62-.75"/></svg>
@@ -303,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Accueil
       </a>
     </li>
@@ -346,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         Liste des chapitres
       </a>
     </li>
@@ -412,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD1/" class="md-nav__link">
+      <a href="../../../SD/SD1/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -426,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD1/exercices/" class="md-nav__link">
+      <a href="../../../SD/SD1/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -473,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD2/" class="md-nav__link">
+      <a href="../../../SD/SD2/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -487,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD2/exercices/" class="md-nav__link">
+      <a href="../../../SD/SD2/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -501,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD2/exercices-corrige/" class="md-nav__link">
+      <a href="../../../SD/SD2/exercices-corrige/" class="md-nav__link">
         Ex-corrigé
       </a>
     </li>
@@ -548,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD3/" class="md-nav__link">
+      <a href="../../../SD/SD3/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -562,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD3/Exemples%20du%20cours/" class="md-nav__link">
+      <a href="../../../SD/SD3/Exemples%20du%20cours/" class="md-nav__link">
         Exemples du cours
       </a>
     </li>
@@ -576,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD3/exercices/" class="md-nav__link">
+      <a href="../../../SD/SD3/exercices/" class="md-nav__link">
         Corrigé exo bac
       </a>
     </li>
@@ -623,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD4/" class="md-nav__link">
+      <a href="../../../SD/SD4/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -670,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SD/SD5/" class="md-nav__link">
+      <a href="../../../SD/SD5/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -750,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD1/" class="md-nav__link">
+      <a href="../../../BDD/BDD1/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -797,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD2/" class="md-nav__link">
+      <a href="../../../BDD/BDD2/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -844,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD4/" class="md-nav__link">
+      <a href="../../../BDD/BDD4/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -858,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD4/TD_livres/" class="md-nav__link">
+      <a href="../../../BDD/BDD4/TD_livres/" class="md-nav__link">
         TD - Creation base
       </a>
     </li>
@@ -872,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD4/TD_distant/" class="md-nav__link">
+      <a href="../../../BDD/BDD4/TD_distant/" class="md-nav__link">
         TD - Base distante
       </a>
     </li>
@@ -886,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDD/BDD4/SQL-Python/" class="md-nav__link">
+      <a href="../../../BDD/BDD4/SQL-Python/" class="md-nav__link">
         Exemple Python-mySQL
       </a>
     </li>
@@ -966,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER1/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER1/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1013,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER2/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER2/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1027,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER2/exo/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER2/exo/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -1074,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER3/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER3/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1121,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER4/intro/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER4/intro/" class="md-nav__link">
         Intro
       </a>
     </li>
@@ -1135,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AMSER/AMSER4/" class="md-nav__link">
+      <a href="../../../AMSER/AMSER4/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1215,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP2/" class="md-nav__link">
+      <a href="../../../LP/LP2/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1229,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP2/exo_corrig%C3%A9/" class="md-nav__link">
+      <a href="../../../LP/LP2/exo_corrig%C3%A9/" class="md-nav__link">
         Correction exercices
       </a>
     </li>
@@ -1243,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP2/exo_bac1/" class="md-nav__link">
+      <a href="../../../LP/LP2/exo_bac1/" class="md-nav__link">
         Exo BAC 1
       </a>
     </li>
@@ -1290,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP3/" class="md-nav__link">
+      <a href="../../../LP/LP3/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1337,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP5/" class="md-nav__link">
+      <a href="../../../LP/LP5/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1351,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP5/Exemples%20du%20cours_test/" class="md-nav__link">
+      <a href="../../../LP/LP5/Exemples%20du%20cours_test/" class="md-nav__link">
         Exemples du cours
       </a>
     </li>
@@ -1365,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LP/LP5/Exercices/" class="md-nav__link">
+      <a href="../../../LP/LP5/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -1447,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A1/" class="md-nav__link">
+      <a href="../../A1/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1494,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A2/" class="md-nav__link">
+      <a href="../../A2/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1541,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A3/" class="md-nav__link">
+      <a href="../../A3/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1603,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/" class="md-nav__link">
+      <a href="../../../../P/" class="md-nav__link">
         Projets
       </a>
     </li>
@@ -1643,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P1bis/" class="md-nav__link">
+      <a href="../../../../P/P1bis/" class="md-nav__link">
         consignes
       </a>
     </li>
@@ -1657,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P1bis/serie/" class="md-nav__link">
+      <a href="../../../../P/P1bis/serie/" class="md-nav__link">
         Exemple série
       </a>
     </li>
@@ -1671,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P1bis/radio/" class="md-nav__link">
+      <a href="../../../../P/P1bis/radio/" class="md-nav__link">
         Exemple radio
       </a>
     </li>
@@ -1685,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P1bis/csv/" class="md-nav__link">
+      <a href="../../../../P/P1bis/csv/" class="md-nav__link">
         Exemple csv
       </a>
     </li>
@@ -1732,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P2/" class="md-nav__link">
+      <a href="../../../../P/P2/" class="md-nav__link">
         Consignes
       </a>
     </li>
@@ -1746,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P2/Ex_run/" class="md-nav__link">
+      <a href="../../../../P/P2/Ex_run/" class="md-nav__link">
         Exemples d'exécution
       </a>
     </li>
@@ -1793,7 +1791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/P3/" class="md-nav__link">
+      <a href="../../../../P/P3/" class="md-nav__link">
         Consignes
       </a>
     </li>
@@ -1840,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../index.html" class="md-nav__link">
+      <a href="../../../../index.html" class="md-nav__link">
         Consignes
       </a>
     </li>
@@ -1895,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../EP/liste_algo/" class="md-nav__link">
+      <a href="../../../../EP/liste_algo/" class="md-nav__link">
         Liste algo
       </a>
     </li>
@@ -1909,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../EP/" class="md-nav__link">
+      <a href="../../../../EP/" class="md-nav__link">
         sujets
       </a>
     </li>
@@ -1957,7 +1955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../m%C3%A9mos/variables/" class="md-nav__link">
+      <a href="../../../../m%C3%A9mos/variables/" class="md-nav__link">
         Portée des variables
       </a>
     </li>
@@ -1971,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../m%C3%A9mos/m%C3%A9mo%20python/" class="md-nav__link">
+      <a href="../../../../m%C3%A9mos/m%C3%A9mo%20python/" class="md-nav__link">
         mémo python
       </a>
     </li>
@@ -2019,7 +2017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GO/" class="md-nav__link">
+      <a href="../../../../GO/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2067,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../RP/" class="md-nav__link">
+      <a href="../../../../RP/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2096,122 +2094,98 @@
                 
 
 
-<h1 id="a5-recherche-textuelle-boyer-moore"><strong>A5 : Recherche textuelle Boyer-Moore</strong></h1>
-<p><center><img src="https://files.realpython.com/media/The-Best-Books-for-Python-Beginners_Watermarked.530f76514c63.jpg" width="75%"></center></p>
-<p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ERRHd4p4WylCiNz4cuDgy6EB7nyyAele_u1Jfxbpy-EFUg?e=uD5t9E" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a></p>
-<p><a href="boyer-moore.py">fichier python</a></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naif</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-    <span class="n">nb_trouve</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">long_txt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<h1 id="-coding-utf-8-">-<em>- coding: utf-8 -</em>-</h1>
+<p>def recherche_naif(m, t):
+    nb_trouve = 0
+    long_txt = len(m)
+    long_cle = len(t)</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>for position in range(0, long_txt - long_cle + 1):
+    if t == m[position : position + long_cle]:
+        nb_trouve = nb_trouve + 1
 
-    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">long_txt</span> <span class="o">-</span> <span class="n">long_cle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="n">m</span><span class="p">[</span><span class="n">position</span> <span class="p">:</span> <span class="n">position</span> <span class="o">+</span> <span class="n">long_cle</span><span class="p">]:</span>
-            <span class="n">nb_trouve</span> <span class="o">=</span> <span class="n">nb_trouve</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="k">return</span> <span class="n">nb_trouve</span>
+return nb_trouve
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">pretraitement</span><span class="p">(</span><span class="n">cle</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Effecute le prétraitement de l&#39;algorithme de Boyer-Moore&#39; : calule le décalage</span>
-<span class="sd">    nécessaire pour chacune des lettres.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    cle : chaine de caractères</span>
-<span class="sd">        motif recherché</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    dico : dictionnaire</span>
-<span class="sd">        Contient les lettres de la clé avec le décalage à utiliser pour </span>
-<span class="sd">        chacune d&#39;entre elles.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">long_cle</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># On ne traite pas le dernier caractère</span>
-        <span class="n">dico</span><span class="p">[</span><span class="n">cle</span><span class="p">[</span><span class="n">position</span><span class="p">]]</span> <span class="o">=</span> <span class="n">long_cle</span> <span class="o">-</span> <span class="n">position</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">dico</span>
-
-<span class="k">def</span> <span class="nf">boyer_moore</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Recherche textuelle selon l&#39;algorithme de Boyer-Moore,</span>
-<span class="sd">    version simplifiée de Horspool</span>
-
-<span class="sd">    PARAMETRES</span>
-<span class="sd">    m : Chaine de caractère, motif recherché (clé)</span>
-<span class="sd">    t : Chaine de caractère, texte exploré</span>
-
-<span class="sd">    RETURN</span>
-<span class="sd">    Liste des positions de départ des occurences trouvées</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">decalages</span> <span class="o">=</span> <span class="n">pretraitement</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="c1"># Dictionnaire de décalage de la clé</span>
-
-    <span class="n">positions</span> <span class="o">=</span> <span class="p">[]</span>      <span class="c1"># positions de départ des occurences trouvées</span>
-    <span class="n">long_txt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>   <span class="c1"># longueur du texte exploré</span>
-    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>   <span class="c1"># longueur de la clé</span>
-    <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c1"># position de début de la clé dans le texte</span>
-
-    <span class="c1"># Tant que la recherche n&#39;est pas à la fin du texte :</span>
-    <span class="c1">#</span>
-    <span class="c1"># ABCDEFGH</span>
-    <span class="c1">#      CLE</span>
-    <span class="c1">#      ↑</span>
-    <span class="c1">#</span>
-    <span class="c1"># Ici la clé est en dernière position : position = long_txt-long_cle -1</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="n">position</span> <span class="o">&lt;=</span> <span class="n">long_txt</span><span class="o">-</span><span class="n">long_cle</span><span class="p">):</span>     
-        <span class="c1"># Pour chaque caractère de la clé (de la fin au début)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">long_cle</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-
-            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>   <span class="c1"># trouve indique qu&#39;une occurence est trouvée</span>
-
-            <span class="c1"># Si le caractère de la clé (le dernier) est différent</span>
-            <span class="c1"># du caractère du texte à la position (position + i)</span>
-            <span class="c1"># ABCDEFGH</span>
-            <span class="c1">#    CLE</span>
-            <span class="c1">#      ↑</span>
-            <span class="c1">#   position + 2</span>
-
-            <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">position</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-                <span class="c1"># Alors on vérifie si ce caractères est présent dans le dictionnaire</span>
-                <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">position</span> <span class="o">+</span>  <span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">decalages</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                    <span class="c1"># pour ajouter le décalage correspondant</span>
-                    <span class="n">position</span> <span class="o">+=</span> <span class="n">decalages</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">position</span> <span class="o">+</span> <span class="n">i</span><span class="p">]]</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="c1"># Sinon on ajoute le décalage maximal : long_cle</span>
-                    <span class="n">position</span> <span class="o">+=</span> <span class="n">long_cle</span>
-
-                <span class="c1"># Si un caractère est différent, l&#39;occurence n&#39;existe pas</span>
-                <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
-                <span class="k">break</span>   <span class="c1"># On arrête la boucle POUR</span>
-
-
-        <span class="c1"># Lorsque tous les caractères de la clé sont testés,</span>
-        <span class="c1"># Si trouve est toujours Vrai, </span>
-        <span class="c1"># Alors on a trouvé une occurence de la clé</span>
-
-        <span class="k">if</span> <span class="n">trouve</span><span class="p">:</span>
-            <span class="n">positions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
-
-            <span class="c1"># actualisation de la position pour la suite de la recherche</span>
-            <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-
-    <span class="k">return</span> <span class="n">positions</span>
-
-
-<span class="k">assert</span> <span class="n">boyer_moore</span><span class="p">(</span><span class="s2">&quot;abra&quot;</span><span class="p">,</span> <span class="s2">&quot;abracadabra&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">boyer_moore</span><span class="p">(</span><span class="s2">&quot;clecle&quot;</span><span class="p">,</span> <span class="s2">&quot;cleclecleclecle&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<p>def pretraitement(cle):
+    dico = {}
+    long_cle = len(cle)</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>for position in range(0, long_cle-1): # On ne traite pas le dernier caractère
+    dico[cle[position]] = long_cle - position - 1
+print(dico)
+return dico
 </code></pre></div>
+<p>def boyer_moore(m, t):
+    """
+    Recherche textuelle selon l'algorithme de Boyer-Moore,
+    version simplifiée de Horspool</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>PARAMETRES
+m : Chaine de caractère, motif recherché (clé)
+t : Chaine de caractère, texte exploré
+
+RETURN
+Liste des positions de départ des occurences trouvées
+&quot;&quot;&quot;
+
+decalages = pretraitement(m) # Dictionnaire de décalage de la clé
+
+positions = []      # positions de départ des occurences trouvées
+long_txt = len(t)   # longueur du texte exploré
+long_cle = len(m)   # longueur de la clé
+position = 0        # position de début de la clé dans le texte
+
+# Tant que la recherche n&#39;est pas à la fin du texte :
+#
+# ABCDEFGH
+#      CLE
+#      ↑
+#
+# Ici la clé est en dernière position : position = long_txt-long_cle -1
+
+while (position &lt;= long_txt-long_cle):     
+    # Pour chaque caractère de la clé (de la fin au début)
+    for i in range(long_cle-1, -1, -1):
+
+        trouve = True   # trouve indique qu&#39;une occurence est trouvée
+
+        # Si le caractère de la clé (le dernier) est différent
+        # du caractère du texte à la position (position + i)
+        # ABCDEFGH
+        #    CLE
+        #      ↑
+        #   position + 2
+
+        if t[position+i] != m[i]:
+            # Alors on vérifie si ce caractères est présent dans le dictionnaire
+            if t[position +  i] in decalages.keys():
+                # pour ajouter le décalage correspondant
+                position += decalages[t[position + i]]
+            else:
+                # Sinon on ajoute le décalage maximal : long_cle
+                position += long_cle
+
+            # Si un caractère est différent, l&#39;occurence n&#39;existe pas
+            trouve = False
+            break   # On arrête la boucle POUR
+
+
+    # Lorsque tous les caractères de la clé sont testés,
+    # Si trouve est toujours Vrai, 
+    # Alors on a trouvé une occurence de la clé
+
+    if trouve:
+        positions.append(position)
+
+        # actualisation de la position pour la suite de la recherche
+        position += 1
+
+
+
+return positions
+</code></pre></div>
+<p>assert boyer_moore("abra", "abracadabra") == [0, 7]
+assert boyer_moore("clecle", "cleclecleclecle") == [0, 3, 6, 9]</p>
 
               
-    <script src="../../../js/ide.js"></script> 
+    <script src="../../../../js/ide.js"></script> 
 
             </article>
           </div>
@@ -2229,16 +2203,16 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "navigation.instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "navigation.instant", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
       
-        <script src="../../../xtra/js/config.js"></script>
+        <script src="../../../../xtra/js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="../../../xtra/js/interpreter.js"></script>
+        <script src="../../../../xtra/js/interpreter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
