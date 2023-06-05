@@ -2099,6 +2099,115 @@
 <h1 id="a5-recherche-textuelle-boyer-moore"><strong>A5 : Recherche textuelle Boyer-Moore</strong></h1>
 <p><center><img src="https://files.realpython.com/media/The-Best-Books-for-Python-Beginners_Watermarked.530f76514c63.jpg" width="75%"></center></p>
 <p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ERRHd4p4WylCiNz4cuDgy6EB7nyyAele_u1Jfxbpy-EFUg?e=uD5t9E" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naif</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">nb_trouve</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">long_txt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">long_txt</span> <span class="o">-</span> <span class="n">long_cle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="n">m</span><span class="p">[</span><span class="n">position</span> <span class="p">:</span> <span class="n">position</span> <span class="o">+</span> <span class="n">long_cle</span><span class="p">]:</span>
+            <span class="n">nb_trouve</span> <span class="o">=</span> <span class="n">nb_trouve</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">nb_trouve</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">pretraitement</span><span class="p">(</span><span class="n">cle</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Effecute le prétraitement de l&#39;algorithme de Boyer-Moore&#39; : calule le décalage</span>
+<span class="sd">    nécessaire pour chacune des lettres.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    cle : chaine de caractères</span>
+<span class="sd">        motif recherché</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dico : dictionnaire</span>
+<span class="sd">        Contient les lettres de la clé avec le décalage à utiliser pour </span>
+<span class="sd">        chacune d&#39;entre elles.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">long_cle</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># On ne traite pas le dernier caractère</span>
+        <span class="n">dico</span><span class="p">[</span><span class="n">cle</span><span class="p">[</span><span class="n">position</span><span class="p">]]</span> <span class="o">=</span> <span class="n">long_cle</span> <span class="o">-</span> <span class="n">position</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dico</span>
+
+<span class="k">def</span> <span class="nf">boyer_moore</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recherche textuelle selon l&#39;algorithme de Boyer-Moore,</span>
+<span class="sd">    version simplifiée de Horspool</span>
+
+<span class="sd">    PARAMETRES</span>
+<span class="sd">    m : Chaine de caractère, motif recherché (clé)</span>
+<span class="sd">    t : Chaine de caractère, texte exploré</span>
+
+<span class="sd">    RETURN</span>
+<span class="sd">    Liste des positions de départ des occurences trouvées</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">decalages</span> <span class="o">=</span> <span class="n">pretraitement</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="c1"># Dictionnaire de décalage de la clé</span>
+
+    <span class="n">positions</span> <span class="o">=</span> <span class="p">[]</span>      <span class="c1"># positions de départ des occurences trouvées</span>
+    <span class="n">long_txt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>   <span class="c1"># longueur du texte exploré</span>
+    <span class="n">long_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>   <span class="c1"># longueur de la clé</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c1"># position de début de la clé dans le texte</span>
+
+    <span class="c1"># Tant que la recherche n&#39;est pas à la fin du texte :</span>
+    <span class="c1">#</span>
+    <span class="c1"># ABCDEFGH</span>
+    <span class="c1">#      CLE</span>
+    <span class="c1">#      ↑</span>
+    <span class="c1">#</span>
+    <span class="c1"># Ici la clé est en dernière position : position = long_txt-long_cle -1</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">position</span> <span class="o">&lt;=</span> <span class="n">long_txt</span><span class="o">-</span><span class="n">long_cle</span><span class="p">):</span>     
+        <span class="c1"># Pour chaque caractère de la clé (de la fin au début)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">long_cle</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>   <span class="c1"># trouve indique qu&#39;une occurence est trouvée</span>
+
+            <span class="c1"># Si le caractère de la clé (le dernier) est différent</span>
+            <span class="c1"># du caractère du texte à la position (position + i)</span>
+            <span class="c1"># ABCDEFGH</span>
+            <span class="c1">#    CLE</span>
+            <span class="c1">#      ↑</span>
+            <span class="c1">#   position + 2</span>
+
+            <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">position</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="c1"># Alors on vérifie si ce caractères est présent dans le dictionnaire</span>
+                <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">position</span> <span class="o">+</span>  <span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">decalages</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="c1"># pour ajouter le décalage correspondant</span>
+                    <span class="n">position</span> <span class="o">+=</span> <span class="n">decalages</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">position</span> <span class="o">+</span> <span class="n">i</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Sinon on ajoute le décalage maximal : long_cle</span>
+                    <span class="n">position</span> <span class="o">+=</span> <span class="n">long_cle</span>
+
+                <span class="c1"># Si un caractère est différent, l&#39;occurence n&#39;existe pas</span>
+                <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>   <span class="c1"># On arrête la boucle POUR</span>
+
+
+        <span class="c1"># Lorsque tous les caractères de la clé sont testés,</span>
+        <span class="c1"># Si trouve est toujours Vrai, </span>
+        <span class="c1"># Alors on a trouvé une occurence de la clé</span>
+
+        <span class="k">if</span> <span class="n">trouve</span><span class="p">:</span>
+            <span class="n">positions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+
+            <span class="c1"># actualisation de la position pour la suite de la recherche</span>
+            <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+
+    <span class="k">return</span> <span class="n">positions</span>
+
+
+<span class="k">assert</span> <span class="n">boyer_moore</span><span class="p">(</span><span class="s2">&quot;abra&quot;</span><span class="p">,</span> <span class="s2">&quot;abracadabra&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">boyer_moore</span><span class="p">(</span><span class="s2">&quot;clecle&quot;</span><span class="p">,</span> <span class="s2">&quot;cleclecleclecle&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
 
               
     <script src="../../../js/ide.js"></script> 
