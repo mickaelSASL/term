@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Geoffrey Hinton, pionnier de l’IA, quitte Google et dit « regretter » son invention.",
+      "content": "Le chercheur a joué un rôle crucial dans le développement des réseaux de neurones artificiels. Sans les travaux de celui-ci, des outils comme ChatGPT, Bard ou Midjourney n’auraient sans doute pas vu le jour.",
+      "image": "https://aprc.it/api/200x125/https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html",
+      "url":"https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html"
+    },
+    {
+      "title": "Étude : combien de temps pour pirater votre mot de passe en 2023 ?",
+      "content": "Le nouveau rapport d’Hive Systems démontre que les hackers mettent de moins en moins de temps à pirater un mot de passe.",
+      "image": "https://aprc.it/api/200x125/https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/",
+      "url":"https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/"
+    },
+    {
+      "title": "Les cinq métiers de la cybersécurité qui vont faire parler d'eux dans les années à venir.",
+      "content": "ANALYSE - Vol de données, espionnage, sabotage informatique, ransomware : les cyberattaques prennent différentes formes et touchent désormais tous les secteurs d'activité. Dans ce contexte, les besoins en cadres et experts de la cybersécurité explosent.",
+      "image": "https://aprc.it/api/200x125/https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420/",
+      "url":"https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420"
+    },
+    {
+      "title": "Et maintenant, GPT peut lire dans les pensées !",
+      "content": "Lire dans les pensées et les retranscrire, voici ce qu’est capable de réaliser un modèle d’IA basé sur GPT1 d’OpenAI. Les chercheurs ont même été choqués par la précision et la justesse de ce décodeur.",
+      "image": "https://aprc.it/api/200x125/https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/",
+      "url":"https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/"
+    }
+  ]

@@ -163,7 +163,7 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-  color: rgb(31, 106, 180) !important;
+  color: rgb(84, 109, 120) !important;
 }
 
 h2 {
@@ -172,7 +172,7 @@ h2 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-  color: rgb(106, 151, 197) !important;
+  color: rgb(84, 109, 120) !important;
 }
 
 h1::before {

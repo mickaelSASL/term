@@ -1,0 +1,27 @@
+.capteur {
+    width: 80px;
+    height: 30px;
+    border-radius:20px;
+    position: absolute;
+}
+
+.capteur p{
+    font-size: 24;
+    font-weight: bold;
+    margin: 0px 0px 0px 20px;
+}
+
+#capteurs {
+  position: relative;
+  z-index: 10;
+  
+}
+
+#fond {
+   position: absolute;
+   top: 10px;
+   left: 0px;
+   z-index: 0;
+}
+
+

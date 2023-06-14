@@ -5,3 +5,12 @@
 
 > Blockquote  
 > Début de ligne avec '> '
+
+
+```mermaid
+graph LR
+    hello --> world
+    world --> again
+    again --> hello
+    hello --> again
+```

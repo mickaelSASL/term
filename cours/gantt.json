@@ -1,0 +1,213 @@
+[
+    {
+        "title": "Devoirs",
+        "events": [
+            {
+                "title": "DS1",
+                "time": "2023-10-04",
+                "icon": "https://cdn-icons-png.flaticon.com/512/5823/5823711.png"
+            },
+            {
+                "title": "EP1",
+                "time": "2023-10-20",
+                "icon": "https://cdn-icons-png.flaticon.com/512/3406/3406954.png"
+            },
+            {
+                "title": "Bac blanc 1",
+                "time": "2023-11-24",
+                "icon": "https://cdn-icons-png.flaticon.com/512/9043/9043010.png"
+            },
+            {
+                "title": "Bac blanc 2",
+                "time": "2024-01-08",
+                "icon": "https://cdn-icons-png.flaticon.com/512/9043/9043010.png"
+            },
+            {
+                "title": "Epreuves Pratiques",
+                "time": "2024-03/16",
+                "icon": "https://cdn-icons-png.flaticon.com/512/7851/7851704.png"
+            },
+            {
+                "title": "Ecrits J1",
+                "time": "2024-03/20",
+                "icon": "https://cdn-icons-png.flaticon.com/512/9913/9913418.png"
+            },
+            {
+                "title": "Ecrits J2",
+                "time": "2024-03/21",
+                "icon": "https://cdn-icons-png.flaticon.com/512/9913/9913418.png"
+            },
+            {
+                "title": "Grand Oral",
+                "time": "2024-06-19",
+                "icon": "https://cdn-icons-png.flaticon.com/512/10550/10550988.png"
+            }
+        ]
+    },
+    {
+        "title": "Structures de données",
+        "activities": [
+            {
+                "title": "[SD1 : structure de données abstraites](SD/SD1/)",
+                "bulle": "coucou",
+                "start": "2023-09-19",
+                "lasts": "2 day"
+            },
+            {
+                "title": "[SD2 : Programmation Orientée Objet](SD/SD2/)",
+                "start": "2023-10-06",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[SD3 : structures linéaires : listes, piles, files](SD/SD3/)",
+                "start": "2023-09-22",
+                "lasts": "2 week"
+            },
+            {
+                "title": "[SD4 : Arbres](SD/SD4/)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "🐌 [SD5 : Graphes](SD/SD5/)",
+                "start": "2024-06-25",
+                "lasts": "2 week"
+            }
+        ]
+    },
+    {
+        "title": "bases de données",
+        "activities": [
+            {
+                "title": "[BDD1 : modèle relationnel, clé, schéma relationnel](BDD/BDD1/)",
+                "start": "2023-11-10",
+                "lasts": "2 week"
+            },
+            {
+                "title": "[BDD2 : base de données relationnelle. (Passage du schéma à la BDD, anomalies)](BDD/BDD2/)",
+                "start": "2023-11-10",
+                "lasts": "2 week"
+            },{
+                "title": "🐌 [BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)",
+                "start": "2023-11-19",
+                "lasts": "2 week"
+            },
+            {
+                "title": "[BDD4 : SQL](BDD/BDD4)",
+                "start": "2023-11-21",
+                "lasts": "1 week"
+            }
+        ]
+    },
+    {
+        "title": "Architectures matérielles, Systèmes d'exploitation et réseaux",
+        "activities": [
+            {
+                "title": "[AMSER1 : Composants intégrés d’un système sur puce](AMSER/AMSER1)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[AMSER2 : Gestion des processus et des ressources par un système d’exploitation](AMSER/AMSER2)",
+                "start": "2023-11-07",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[AMSER3 : Protocoles de routage](AMSER/AMSER3)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "🐌 [AMSER4 : Sécurisation des communications](AMSER/AMSER4)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            }
+        ]
+    },
+    {
+        "title": "Langage et programmation",
+        "activities": [
+            {
+                "title": "🐌 LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[LP2 : Récursivité](LP/LP2)",
+                "start": "2024-01-05",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[LP3 : Modularité ](LP/LP3)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "🐌 LP4 : Paradigmes de programmation",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)",
+                "start": "2023-09-15",
+                "lasts": "3 day"
+            }
+        ]
+    },
+    {
+        "title": "Algorithmique",
+        "activities": [
+            {
+                "title": "[K plus proches voisins](A/13/) (Chapitre de 1ère)",
+                "start": "2023-09-03",
+                "lasts": "2 day"
+            },
+            {
+                "title": "[A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche](A/A1/)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "🐌 [A2 : Algorithmes sur les graphes](A/A2/)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[A3 : Méthode « diviser pour régner »](A/A3/)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "🐌 A4 : Programmation dynamique",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            },
+            {
+                "title": "[A5 : Recherche textuelle. : Boyer Moore](A/A5/)",
+                "start": "2024-06-25",
+                "lasts": "1 week"
+            }
+        ]
+    },
+    {
+        "title": "Projets",
+        "activities": [
+            {
+                "title": "P1: Relevé de température 🌡️ (Projet révision de première)",
+                "start": "2023-09-05",
+                "lasts": "1 week"
+            },
+            {
+                "title": "P2: Jeu de la vie 🧬",
+                "start": "2023-10-20",
+                "lasts": "2 week"
+            },
+            {
+                "title": "P3: Exploitation de données - Python / SQL 📈 🗺️",
+                "start": "2023-11-29",
+                "lasts": "2 week"
+            }
+        ]
+    }
+]
+

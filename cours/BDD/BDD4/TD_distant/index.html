@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://mickaelsasl.github.io/cours/BDD/BDD4/TD_distant/">
       
+      
+        <link rel="prev" href="../TD_livres/">
+      
+      
+        <link rel="next" href="../SQL-Python/">
+      
       <link rel="icon" href="../../../../dlna">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -19,12 +25,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
-        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
+      
+
     
     
     
@@ -47,10 +54,13 @@
     
       <link rel="stylesheet" href="../../../../xtra/ajustements.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="../../../../xtra/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -84,7 +94,7 @@
 
   
 
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../../../.." title="NSI Terminale" class="md-header__button md-logo" aria-label="NSI Terminale" data-md-component="logo">
       
@@ -93,7 +103,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -112,27 +122,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-red"  aria-label="mode sombre"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="mode sombre" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="mode clair"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="mode clair" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -142,7 +156,7 @@
     
       
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
@@ -321,17 +335,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Cours
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Cours" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Cours
@@ -361,17 +376,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2">
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           SD - Structures de Données
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SD - Structures de Données" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           SD - Structures de Données
@@ -387,17 +403,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_1" type="checkbox" id="__nav_2_2_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_1">
+        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
           1. Structure de Données abstraites
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1. Structure de Données abstraites" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_1">
           <span class="md-nav__icon md-icon"></span>
           1. Structure de Données abstraites
@@ -448,17 +465,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_2">
+        <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
           2. Programmation Orientée Objet
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2. Programmation Orientée Objet" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_2">
           <span class="md-nav__icon md-icon"></span>
           2. Programmation Orientée Objet
@@ -523,17 +541,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_3">
+        <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
           3. structure de données linéaires : Liste, Pile, File
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3. structure de données linéaires : Liste, Pile, File" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_3">
           <span class="md-nav__icon md-icon"></span>
           3. structure de données linéaires : Liste, Pile, File
@@ -598,17 +617,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_4">
+        <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
           4. Les Arbres
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="4. Les Arbres" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_4">
           <span class="md-nav__icon md-icon"></span>
           4. Les Arbres
@@ -645,17 +665,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" type="checkbox" id="__nav_2_2_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_5">
+        <label class="md-nav__link" for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
           5. Les Graphes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="5. Les Graphes" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_5">
           <span class="md-nav__icon md-icon"></span>
           5. Les Graphes
@@ -701,17 +722,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3">
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
           BDD - Bases De Données
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BDD - Bases De Données" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           BDD - Bases De Données
@@ -727,17 +749,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_1" type="checkbox" id="__nav_2_3_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3_1">
+        <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
           1. Modèle relationnel, clé, schéma relationnel
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1. Modèle relationnel, clé, schéma relationnel" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3_1">
           <span class="md-nav__icon md-icon"></span>
           1. Modèle relationnel, clé, schéma relationnel
@@ -774,17 +797,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3_2">
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
           2 & 3. Base de données relationnelle & SGBD
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2 & 3. Base de données relationnelle & SGBD" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3_2">
           <span class="md-nav__icon md-icon"></span>
           2 & 3. Base de données relationnelle & SGBD
@@ -823,17 +847,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3_3">
+        <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
           4. Langage SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="4. Langage SQL" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_3_3">
           <span class="md-nav__icon md-icon"></span>
           4. Langage SQL
@@ -877,7 +902,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -927,17 +952,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_4">
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
           AMSER - Architecture Matérielle, Système d'Exploitation et Réseaux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="AMSER - Architecture Matérielle, Système d'Exploitation et Réseaux" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           AMSER - Architecture Matérielle, Système d'Exploitation et Réseaux
@@ -953,17 +979,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_1" type="checkbox" id="__nav_2_4_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_4_1">
+        <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
           1. SOC - Composants intégrés d’un système sur puce
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1. SOC - Composants intégrés d’un système sur puce" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4_1">
           <span class="md-nav__icon md-icon"></span>
           1. SOC - Composants intégrés d’un système sur puce
@@ -1000,17 +1027,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_2" type="checkbox" id="__nav_2_4_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_4_2">
+        <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
           2. Gestion des processus et des ressources par un système d’exploitation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2. Gestion des processus et des ressources par un système d’exploitation" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4_2">
           <span class="md-nav__icon md-icon"></span>
           2. Gestion des processus et des ressources par un système d’exploitation
@@ -1061,17 +1089,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_4_3">
+        <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
           3. Protocoles de routage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3. Protocoles de routage" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4_3">
           <span class="md-nav__icon md-icon"></span>
           3. Protocoles de routage
@@ -1108,17 +1137,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_4_4">
+        <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
           4. Sécurisation des communications
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="4. Sécurisation des communications" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4_4">
           <span class="md-nav__icon md-icon"></span>
           4. Sécurisation des communications
@@ -1176,17 +1206,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_5">
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
           LP - Langage et Programmation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="LP - Langage et Programmation" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           LP - Langage et Programmation
@@ -1202,17 +1233,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_1" type="checkbox" id="__nav_2_5_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_5_1">
+        <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
           2. Récursivité
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2. Récursivité" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5_1">
           <span class="md-nav__icon md-icon"></span>
           2. Récursivité
@@ -1277,17 +1309,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_2" type="checkbox" id="__nav_2_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_5_2">
+        <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
           3. Modularité
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3. Modularité" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5_2">
           <span class="md-nav__icon md-icon"></span>
           3. Modularité
@@ -1324,17 +1357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_3" type="checkbox" id="__nav_2_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_5_3">
+        <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
           5. Mise au point des programmes. Gestion des bugs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="5. Mise au point des programmes. Gestion des bugs" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5_3">
           <span class="md-nav__icon md-icon"></span>
           5. Mise au point des programmes. Gestion des bugs
@@ -1406,17 +1440,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_6">
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
           A - Algorithmique
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="A - Algorithmique" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_6">
           <span class="md-nav__icon md-icon"></span>
           A - Algorithmique
@@ -1432,17 +1467,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_6_1">
+        <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
           1. Algorithmes sur les arbres binaires
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1. Algorithmes sur les arbres binaires" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_6_1">
           <span class="md-nav__icon md-icon"></span>
           1. Algorithmes sur les arbres binaires
@@ -1479,17 +1515,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_2" type="checkbox" id="__nav_2_6_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_6_2">
+        <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
           2. Algorithmes sur les graphes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2. Algorithmes sur les graphes" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_6_2">
           <span class="md-nav__icon md-icon"></span>
           2. Algorithmes sur les graphes
@@ -1526,17 +1563,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_3" type="checkbox" id="__nav_2_6_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2_6_3">
+        <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
           3. Méthode Diviser pour Régner
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3. Méthode Diviser pour Régner" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_6_3">
           <span class="md-nav__icon md-icon"></span>
           3. Méthode Diviser pour Régner
@@ -1588,17 +1626,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Projets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Projets
@@ -1628,17 +1667,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           Relevé de température 🌡️
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Relevé de température 🌡️" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Relevé de température 🌡️
@@ -1717,17 +1757,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Jeu de la vie  🧬
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Jeu de la vie  🧬" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Jeu de la vie  🧬
@@ -1778,17 +1819,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4">
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
           Exploitation de données - Python / SQL 📈 🗺️
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exploitation de données - Python / SQL 📈 🗺️" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           Exploitation de données - Python / SQL 📈 🗺️
@@ -1825,17 +1867,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5">
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
           Résolution de labyrinthe par les graphes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Résolution de labyrinthe par les graphes" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Résolution de labyrinthe par les graphes
@@ -1880,17 +1923,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Epreuve Pratique
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Epreuve Pratique" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Epreuve Pratique
@@ -1942,17 +1986,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Mémos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Mémos" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Mémos
@@ -2004,17 +2049,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Grand Oral
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Grand Oral" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Grand Oral
@@ -2052,17 +2098,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Revue de presse
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Revue de presse" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Revue de presse
@@ -2096,12 +2143,29 @@
               </div>
             
             
-          
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
               
-    
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+    
+                  
 
 
 <h1 id="td-sur-base-distante"><strong>TD sur base distante</strong></h1>
@@ -2131,7 +2195,7 @@
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 </div>
 </div>
@@ -2145,7 +2209,7 @@
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">50</span>
 </code></pre></div>
 </div>
 </div>
@@ -2158,7 +2222,7 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">departement</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">departement_code</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;97%&#39;</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">departement_code</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;97%&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -2171,9 +2235,9 @@
 <div class="tabbed-block">
 <p><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span><span class="w"></span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 ```</p>
 </div>
@@ -2187,9 +2251,9 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbr_items</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span><span class="w"></span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="w"></span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">nbr_items</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">nbr_items</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </div>
 </div>
@@ -2202,10 +2266,10 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span><span class="w"></span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w">  </span><span class="k">DESC</span><span class="w"></span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w">  </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 </div>
 </div>
@@ -2218,7 +2282,7 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;saint%&#39;</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;saint%&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -2232,7 +2296,7 @@
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_nom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbt_item</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nbt_item</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nbt_item</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </div>
 </div>
@@ -2245,7 +2309,7 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="p">)</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -2256,11 +2320,11 @@
 <p>Obtenir la liste des départements qui possèdent plus de 2 millions d’habitants</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_departement</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">population_2012</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_departement</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">population_2012</span>
 <span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_departement</span><span class="o">`</span><span class="w"></span>
-<span class="k">HAVING</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000000</span><span class="w"></span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_departement</span><span class="o">`</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000000</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </div>
 </div>
@@ -2273,7 +2337,7 @@
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
 <span class="k">SET</span><span class="w"> </span><span class="n">ville_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="n">ville_nom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;SAINT-%&#39;</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;SAINT-%&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -2286,31 +2350,31 @@
 <details class="tip">
 <summary>1. COUNT</summary>
 <p>La fonction <code>COUNT()</code> permet de compter le nombre d’enregistrement dans une table.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span>
 </code></pre></div>
 Il est aussi possible de connaitre le nombre d’enregistrement sur une colonne en particulier. Les enregistrements qui possèdent la valeur nul ne seront pas comptabilisé. La syntaxe pour compter les enregistrement sur la colonne “nom_colonne” est la suivante :
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span>
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>2. SUM</summary>
 <p>La fonction <code>SUM()</code> permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span>
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>3. AVG</summary>
 <p>La fonction <code>ÀVG()</code> permet de calculer une valeur moyenne sur un ensemble d’enregistrement de type numérique et non nul.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span>
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>4. LIKE</summary>
 <p>L’opérateur <code>LIKE</code> est utilisé dans la clause <code>WHERE</code> des requêtes SQL. Ce mot-clé permet d’effectuer une recherche sur un modèle particulier. Il est par exemple possible de rechercher les enregistrements dont la valeur d’une colonne commence par telle ou telle lettre.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="n">modele</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="n">modele</span>
 </code></pre></div>
 Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble très généralement à l’un des exemples suivants:</p>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>- `LIKE ‘%a’` : le caractère “%” est un caractère joker qui remplace tous les autres caractères. Ainsi, ce modèle permet de rechercher toutes les chaines de caractère qui se termine par un “a”.  
@@ -2323,16 +2387,16 @@ Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble tr�
 <details class="tip">
 <summary>5. HAVING</summary>
 <p>La condition <code>HAVING</code> est presque similaire à <code>WHERE</code> à la seule différence que <code>HAVING</code> permet de filtrer en utilisant des fonctions telles que <code>SUM()</code>, <code>COUNT()</code>, <code>AVG()</code>, <code>MIN()</code> ou <code>MAX()</code>.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne1</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"></span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">colonne1</span><span class="w"></span>
-<span class="k">HAVING</span><span class="w"> </span><span class="n">fonction</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"> </span><span class="n">operateur</span><span class="w"> </span><span class="n">valeur</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne1</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">colonne1</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="n">fonction</span><span class="p">(</span><span class="n">colonne2</span><span class="p">)</span><span class="w"> </span><span class="n">operateur</span><span class="w"> </span><span class="n">valeur</span>
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>6. REPLACE</summary>
 <p>La fonction <code>REPLACE</code> permet de remplacer des caractères alphanumérique dans une chaîne de caractère. Cela sert particulièrement à mettre à jour des données dans une base de données ou à afficher des résultats personnalisés.
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="s1">&#39;Hello tout le monde&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bonjour&#39;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="s1">&#39;Hello tout le monde&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bonjour&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 </details>
 <details class="tip">
@@ -2341,22 +2405,28 @@ Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble tr�
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">,</span><span class="w"> </span><span class="n">ColumnB</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ColumnA</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div></p>
 <p>Résultat :
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="n">Bonjour</span><span class="w"> </span><span class="n">tout</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">monde</span><span class="w"></span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="n">Bonjour</span><span class="w"> </span><span class="n">tout</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">monde</span>
 </code></pre></div></p>
 </details>
 </div>
 
-              
+
+
+
+
+                
     <script src="../../../../js/ide.js"></script> 
 
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Retour en haut de la page
-          </a>
+          </button>
         
       </main>
       
@@ -2365,10 +2435,11 @@ Dans cet exemple le “modèle” n’a pas été défini, mais il ressemble tr�
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "navigation.instant", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "navigation.instant", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../../../../xtra/js/config.js"></script>
       

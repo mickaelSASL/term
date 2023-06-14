@@ -1,6 +1,1 @@
-{
-"nom":"Crozat",
-"prenom":"Stéphane",
-"age":"40",
-"annee": "2000"
-}
+{"capteurA": {"top": 445, "left": 397, "valeur": "31"}, "capteurB": {"top": 200, "left": 127, "valeur": "35"}, "capteurC": {"top": 834, "left": 799, "valeur": 10}}
