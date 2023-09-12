@@ -14,6 +14,11 @@ Il se compose de 3 parties :
 <center><img src="/P/P1/présentation.png")></center>
 ___
 
+## Aperçu du résultat
+
+<center><img src="/P/P1/apercu.png")></center>
+___
+
 ## 📝 CONSIGNES
 Mettre en place le serveur Apache de Laragon.
 Flasher la carte microBit Maitre.
