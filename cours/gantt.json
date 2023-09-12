@@ -3,7 +3,7 @@
         "title": "Devoirs",
         "events": [
             {
-                "title": "DS1",
+                "title": "[DS1](../DS/DS1/)",
                 "time": "2023-10-04",
                 "icon": "https://cdn-icons-png.flaticon.com/512/5823/5823711.png"
             },
@@ -18,7 +18,7 @@
                 "icon": "https://cdn-icons-png.flaticon.com/512/9043/9043010.png"
             },
             {
-                "title": "Bac blanc 2",
+                "title": "[Bac blanc 2](../DS/BB2)",
                 "time": "2024-01-08",
                 "icon": "https://cdn-icons-png.flaticon.com/512/9043/9043010.png"
             },

@@ -1,0 +1,8 @@
+{
+"capteurA": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "31"}}, 
+"capteurB": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "12"}}, 
+"capteurC": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "10"}},
+"capteurD": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "0"}},
+"capteurE": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "-5"}},
+"capteurF": {"temperatures": {"datetime": "2020-02-08 00:00:00", "valeur": "22"}}
+}
