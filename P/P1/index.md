@@ -11,12 +11,12 @@ Il se compose de 3 parties :
 * Une carte microbit Maître connectée à l'ordinateur par un câble USB. Elle échange avec les microbit esclaves via radio.
 * Des cartes microbit Esclave. Elles récupèrent des données du capteur de température et les transmettent sur demande à la carte microbit maitre via radio.
 
-<center><img src="/P/P1/présentation.png")></center>
+<center><img src="présentation.png")></center>
 ___
 
 ## Aperçu du résultat
 
-<center><img src="/P/P1/apercu.png")></center>
+<center><img src="/term/P/P1/apercu.png")></center>
 ___
 
 ## 📝 CONSIGNES
