@@ -98,7 +98,7 @@ print ("Content-type:text/html\r\n\r\n")
 print('<!DOCTYPE html>')
 
 #ici débute le contenu du <HTML> provenant du fichier 'temperatures.html'
-with open('temperatures.html', 'r') as mon_fichier:
+with open('temperature.html', 'r') as mon_fichier:
 	print(mon_fichier.read())
 
 #fin de la page
@@ -107,18 +107,28 @@ print ('</html>')
 
 
 
+run=True
 while run:
 	# Atttente d'une consigne du maitre
 	data = mb_serie.readline().decode('utf-8')
 
 	if data:
-
+		if data[0:3] == "FIN" :
+            # Appui sur le bouton B de la carte maitre
+			...
+		elif data[0:3] == "...":
+			# Reception d'un capteur
 			
-    # Accuse de reception
-    accuse = "ACK"+data[3:5]
-    mb_serie.write(accuse.encode("utf-8"))
-
-
-
+			# Mise a jour du fichier json
+			capteur_id = ...
+			donnees = ...
+			...
+			ecrire_json(...)
+			
+			# Accuse de reception
+			accuse = "ACK"+data[3:5]
+			mb_serie.write(accuse.encode("utf-8"))
 
 mb_serie.close()	
+
+
