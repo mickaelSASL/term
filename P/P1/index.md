@@ -37,8 +37,9 @@ Le programme <a href="maitre.py" target="_blank">`maitre.py`</a> est à téléch
 
 ### 3. Modifier le programme `pc.py` afin d'afficher les valeurs des températures sur la page web.
 
-Le programme `pc.py` est un fichier *cgi* destiné à être exécuté sur un serveur web et permet de créer une page web (html) dynamiquement.
+Le programme `pc.py` est un fichier *cgi* destiné à être exécuté sur un serveur web et permet de créer une page web (html) dynamiquement.   
 
+<a href="www/pc2.py" target="_blank">`pc2.py`</a>
 ___
 
 
