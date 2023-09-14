@@ -16,7 +16,7 @@ ___
 
 ## Aperçu du résultat
 
-<center><img src="/term/P/P1/apercu.png")></center>
+<center><img src="apercu.png")></center>
 ___
 
 ## 📝 CONSIGNES
