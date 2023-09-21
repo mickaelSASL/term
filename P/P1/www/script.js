@@ -19,7 +19,7 @@ function refresh_capteur(){
   {
     id = capteur.id;
     capteur = document.getElementById(id[7]+"_temp")
-    temp = data[id].temperatures.valeur;
+    temp = data[id].valeur;
     // couleur_capteur = data;
     capteur.textContent = temp;
 
