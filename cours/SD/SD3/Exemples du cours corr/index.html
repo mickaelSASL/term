@@ -22,7 +22,7 @@
     
     
       
-        <title>Exemples du cours - NSI Terminale</title>
+        <title>Exemples du cours - Corrigé - NSI Terminale</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exemples-du-cours" class="md-skip">
+        <a href="#exemples-du-cours-corrige" class="md-skip">
           Aller au contenu
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exemples du cours
+              Exemples du cours - Corrigé
             
           </span>
         </div>
@@ -689,7 +689,7 @@
           
   
   <span class="md-ellipsis">
-    Exemples du cours
+    Exemples du cours - Corrigé
   </span>
   
 
@@ -700,7 +700,7 @@
         
   
   <span class="md-ellipsis">
-    Exemples du cours
+    Exemples du cours - Corrigé
   </span>
   
 
@@ -3767,7 +3767,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="exemples-du-cours">Exemples du cours<a href="https://mybinder.org/v2/gh/mickaelSASL/term/caf83e26b5bbc499e9aae494f411979453585d97?urlpath=lab%2Ftree%2Fcours%2FSD%2FSD3%2FExemples%20du%20cours%2FExemples%20du%20cours.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a><a class="anchor-link" href="#exemples-du-cours">¶</a></h1><h2 id="b-les-piles-et-les-files">B.	LES PILES ET LES FILES<a class="anchor-link" href="#b-les-piles-et-les-files">¶</a></h2><h3 id="1-les-piles">1.	Les piles<a class="anchor-link" href="#1-les-piles">¶</a></h3>
+<h1 id="exemples-du-cours-corrige">Exemples du cours - Corrigé <a href="https://mybinder.org/v2/gh/mickaelSASL/term/caf83e26b5bbc499e9aae494f411979453585d97?urlpath=lab%2Ftree%2Fcours%2FSD%2FSD3%2FExemples%20du%20cours%2FExemples%20du%20cours.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a><a class="anchor-link" href="#exemples-du-cours-corrige">¶</a></h1><h2 id="b-les-piles-et-les-files">B.	LES PILES ET LES FILES<a class="anchor-link" href="#b-les-piles-et-les-files">¶</a></h2><h3 id="1-les-piles">1.	Les piles<a class="anchor-link" href="#1-les-piles">¶</a></h3>
 </div>
 </div>
 </div>
@@ -3808,8 +3808,8 @@ Licensed under the Apache License, Version 2.0.
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
     
     <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">memoire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="kc">None</span>
     
     <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -3838,8 +3838,8 @@ class Pile:
         return self.taille == 0
     
     def empiler(self,x):
-        
-
+        self.memoire.append(x)
+        self.taille += 1
         return None
     
     def depiler(self):
@@ -3951,18 +3951,18 @@ print(p.estVide())      # pile vide ?</div>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">==</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        
-        
+        <span class="bp">self</span><span class="o">.</span><span class="n">pA</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">+=</span> <span class="mi">1</span>        
         <span class="k">return</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        
-        
-    <span class="err">…</span>
-
-                
-        
-        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">FileVide</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">pB</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pA</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pB</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pA</span><span class="o">.</span><span class="n">depiler</span><span class="p">())</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pB</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">-=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">class FileVide(Exception):
@@ -3986,18 +3986,18 @@ class File:
         return self.taille == 0
 
     def enfiler(self,x):
-        
-        
+        self.pA.empiler(x)
+        self.taille += 1        
         return None
 
     def defiler(self):
-        
-        
-    …
-
-                
-        
-        
+        if self.estVide():
+            raise FileVide
+        elif self.pB.estVide():
+            while not self.pA.estVide():
+                self.pB.empiler(self.pA.depiler())
+        x = self.pB.depiler()
+        self.taille -= 1
         return x
 </div>
 </div>
