@@ -1,0 +1,731 @@
+/*
+Theme Name: info
+Theme URI: 
+Version: 1.0.0
+Description:
+Template: hueman
+Author: Cédrick FAURY
+Author URI: 
+Tags: light, one-column, two-columns, three-columns, right-sidebar, left-sidebar, fluid-layout, fixed-layout, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: hueman
+
+	Copyright: (c) 2016 Cédrick FAURY
+	License: GNU General Public License v3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+@import url("../hueman/style.css");
+
+
+body {
+	color:#000;
+}
+/*@import url("../hueman/style.css");*/
+
+/*td { padding: 10px; } */
+
+#nextPrevPages{
+	width: 100%;
+  	/*cellpadding: 10px;
+	cellspacing: 0;*/
+	border: 2px solid #AAAAAA;
+	background-color: #D7E3F2;
+}
+
+#nextPages{
+	background-color: #D7E3F2;
+	text-align: right;
+}
+
+#prevPages{
+	background-color: #D7E3F2;
+	text-align: left;
+}
+
+.vertical {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+
+/*************************************************
+ * Pour les menus latéraux de Custom Menu Wizard
+ */
+.widget_nav_menu ul li a{
+	padding: 5px 0px 0px 0px;
+	font-weight: bold;
+}
+.widget_nav_menu li li a {
+	/*padding: 0px 0px 0px 15px;*/
+	padding: 0px 0px 0px 10px;
+	font-weight: normal;
+}
+.widget_nav_menu li li li a {
+	/*padding: 0px 0px 0px 15px;*/
+	padding: 0px 0px 0px 20px;
+	font-weight: normal;
+}
+.widget_nav_menu li li li li a {
+    padding: 0px 0px 0px 30px;
+	font-size: .8em;
+	font-weight: normal;
+}
+
+.sidebar-content .current-menu-item {
+	background:#ededaf;
+}
+
+.sidebar .widget {
+    padding: 15px 15px 10px;
+}
+
+
+.entry pre {
+    background:none;
+}
+
+.wp_syntax td.code {
+    background-color: #EEE;
+    background-image: none;
+}
+
+.wp_syntax {
+    width:auto;
+}
+
+.codes_table tr{
+	line-height:100%;
+	text-align:center;
+}
+
+
+/* simple table */
+.simple_table{
+	width:auto !important;
+}
+
+.simple_table tr td{
+	line-height:100%;
+	text-align:left;
+	vertical-align: top;
+	background-color:white;
+}
+
+.simple_table th{
+	line-height:100%;
+	text-align:left !important;
+	vertical-align: middle;
+	background-color:#EEEEEE;
+	font-weight:bold;
+}
+
+/* simple table 2 entête */
+.simple_table_2{
+	width:auto !important;
+	background-color: white !important;
+}
+
+
+.simple_table_2 tr.alt{
+	background-color: white !important;
+}
+
+
+.simple_table_2 td{
+	line-height: 100%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.simple_table_2 td{
+	border: 1px solid !important;
+	border-color:#333 !important;
+}
+
+
+/* table de vérité */
+.table_verite{
+	width:auto !important;
+}
+
+.table_verite tr td{
+	width:auto;
+	line-height:100%;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #000;
+	padding: 2px 10px;
+}
+
+
+.table_verite tr.alt{
+	background: #eee;
+}
+
+.table_verite tr th{
+	width:auto;
+	line-height:100%;
+	color:#ddd;
+	text-align:center;
+	font-weight:bold;
+	vertical-align: middle;
+	background-color:#444;
+	border:1px solid #000;
+	padding: 2px 10px;
+}
+
+/* //////////////////////////////////////////
+// Patch pour l'extension WP File Upload
+// ////////////////////////////////////////*/
+.file_div_clean div {
+	width:100%;
+	display:inline;
+}
+
+div.file_div_clean {
+	display:inline;
+	width:100%;
+}
+
+.file_div_clean wfu_container div{
+	display:inline;
+}
+
+/* ////////////////////////////////////////*/
+
+#imgascii {
+	line-height:100%;
+}
+
+/* Customisation des liens d'infobulle' */
+span.itg-tooltip >a{
+	text-decoration:none;
+}
+
+span.itg-mediatip >a{
+	text-decoration:none;
+}
+
+
+
+/********************************************************/
+
+.widget_categories ul li {
+	padding: 0 0 !important;
+}
+
+/********************************************************
+ * Style personnalisé : Question_ssnum et Question_num
+*********************************************************/
+body {
+    counter-reset: section;
+}
+
+.question_ssnum {
+	/* font-weight: bold; */
+	color:#109930;
+	background-color:#eeeeee;
+}
+
+
+.question_num {
+	/* font-weight: bold; */
+	color:#109930;
+	background-color:#eeeeee;
+}
+
+
+.question_num::before {
+    counter-increment: section;
+    content: "Q" counter(section) " ";
+	font-weight: bold;
+}
+
+/********************************************************
+ * Style personnalisé : Activité
+*********************************************************/
+.activite {
+	margin: 0 0 1.5em;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #efeffa;
+	padding: 10px;
+	border-color: #2F528F;
+	border-radius: 0 20px;
+	position: relative;
+	top: 20px;
+	margin-top:36px;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: 5px 5px 5px #aaa;*/
+	-webkit-filter: drop-shadow(5px 5px 5px #aaa);
+    filter        : drop-shadow(5px 5px 5px #aaa);
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#aaa')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#aaa')";
+
+}
+
+.activite::before {
+	display: block;
+	
+	/*content : url("https://si.blaisepascal.fr/wp-content/uploads/2020/06/Etiquette_activite.png") no repeat;
+	transform: scale(.2);*/
+	/*width:100px;
+	padding: 0;*/
+	position:absolute; 
+	left: -2px;
+  	top:-36px;
+	content: "";
+	background: url("https://si.blaisepascal.fr/wp-content/uploads/2020/06/Etiquette_activite.png") no-repeat;
+    background-size: 100%;
+    width: 100px; 
+	height: 36px;
+	overflow:hidden;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: -5px 5px 5px #aaa;*/
+}
+
+
+/********************************************************
+ * Style personnalisé : Activité+Spoiler
+*********************************************************/
+
+.activite-spoiler {
+	margin: 0 0 1.5em;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #efeffa !important; 
+	padding: 10px;
+	border-radius: 0 20px !important;
+	border: 1px solid #2F528F !important;
+	position: relative;
+	top: 20px;
+	margin-top:36px;
+	
+	-webkit-filter: drop-shadow(5px 5px 5px #aaa);
+    filter        : drop-shadow(5px 5px 5px #aaa);
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#aaa')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#aaa')";
+
+}
+
+.activite-spoiler>.su-spoiler-title {
+	display: block;
+	background-color: #2F528F !important; 
+	border-radius: 10px 10px 0 0 !important;
+	border: 1px solid #2F528F !important;
+	color: white;
+	padding: 8px 15px 0px 30px !important;
+	position:absolute; 
+	left: -1px;
+  	top:-36px;
+	content: "";
+    background-size: 100%;
+    width: auto; 
+	height: 26px;
+	overflow:hidden;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: -5px 5px 5px #aaa;*/
+
+}
+
+.activite-spoiler.su-spoiler-closed {
+	border: 0px !important;
+	padding: 0px;
+}
+
+
+/********************************************************
+ * Style personnalisé : Correction+Spoiler
+*********************************************************/
+
+.correction-spoiler {
+	/*margin: 0 0 1.5em;*/
+	border-width: 2px;
+	border-style: solid;
+	background-color: #F2F9EF !important; 
+	padding: 10px;
+	border-radius: 4px !important;
+	border: 1px solid #2FD68F !important;
+	position: relative;
+	top: 20px;
+	margin-top:20px;
+	margin-bottom: 40px !important;
+	font-size:small;
+	-webkit-filter: drop-shadow(3px 3px 3px #aaa);
+    filter        : drop-shadow(3px 3px 3px #aaa);
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+
+}
+
+.correction-spoiler>.su-spoiler-title {
+	display: block;
+	background-color: #2FD68F !important; 
+	border-radius: 4px !important;
+	border: 1px solid #2FD68F !important;
+	color: white;
+	padding: 2px 5px 0px 5px !important;
+	position: absolute; 
+	right: 0px;
+  	top:-20px;
+	content: "";
+    background-size: 100%;
+    width: auto; 
+	height: 2px;
+	overflow:hidden;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: -5px 5px 5px #aaa;*/
+
+}
+
+.su-spoiler-closed {
+	border: 0px !important;
+	padding: 0px;
+}
+.correction-spoiler .su-spoiler-icon::before{
+	content: ""!important;
+}
+
+
+
+
+
+/********************************************************
+ * Style personnalisé : Demonstration+Spoiler
+*********************************************************/
+
+.demo-spoiler {
+	/*margin: 0 0 1.5em;*/
+	border-width: 2px;
+	border-style: solid;
+	background-color: #F5F5F5 !important; 
+	padding: 10px;
+	border: 1px solid #666666 !important;
+	position: relative;
+	top: 20px;
+	margin-top:20px;
+	margin-bottom: 40px !important;
+	/*font-size:small;*/
+	-webkit-filter: drop-shadow(3px 3px 3px #aaa);
+    filter        : drop-shadow(3px 3px 3px #aaa);
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+
+}
+
+.demo-spoiler>.su-spoiler-title {
+	display: block;
+	background-color: #F5F5F5 !important; 
+	border: 1px solid #666666 !important;
+	color: #666666;
+	padding: 4px 5px 4px 28px !important;
+	position: absolute; 
+	left: 0px;
+  	top: -20px;
+	content: "";
+    background-size: 100%;
+    width: auto; 
+	height: 2px;
+	overflow:hidden;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: -5px 5px 5px #aaa;*/
+
+}
+
+
+.demo-spoiler .su-spoiler-content {
+	padding-left: 5px !important;
+}
+
+
+.demo-spoiler .su-spoiler-icon{
+	left: 2px !important;
+	top: 4px !important;
+}
+
+
+.demo-spoiler .su-spoiler-icon::before{
+	content: "\1F589" !important;
+	font-size: 1.5em;
+	color: #C10000;
+	font-weight: bold;
+}
+
+.demo-spoiler.su-spoiler-closed {
+	border: 0px !important;
+	padding: 0px;
+}
+
+
+
+
+
+/********************************************************
+ * Style personnalisé : Aide+Spoiler
+*********************************************************/
+
+.help-spoiler {
+	/*margin: 0 0 1.5em;*/
+	border-width: 2px;
+	border-style: solid;
+	background-color: #F5F5F5 !important; 
+	padding: 10px;
+	border: 1px solid #666666 !important;
+	position: relative;
+	top: 20px;
+	margin-top:20px;
+	margin-bottom: 40px !important;
+	/*font-size:small;*/
+	-webkit-filter: drop-shadow(3px 3px 3px #aaa);
+    filter        : drop-shadow(3px 3px 3px #aaa);
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#aaa')";
+
+}
+
+.help-spoiler>.su-spoiler-title {
+	display: block;
+	background-color: #F5F5F5 !important; 
+	border: 1px solid #666666 !important;
+	color: #666666;
+	padding: 4px 5px 4px 28px !important;
+	position: absolute; 
+	left: 0px;
+  	top: -20px;
+	content: "";
+    background-size: 100%;
+    width: auto; 
+	height: 2px;
+	overflow:hidden;
+	/*-webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: -5px 5px 5px #aaa;*/
+
+}
+
+
+.help-spoiler .su-spoiler-content {
+	padding-left: 5px !important;
+}
+
+
+.help-spoiler .su-spoiler-icon{
+	left: 2px !important;
+	top: 4px !important;
+}
+
+
+.help-spoiler .su-spoiler-icon::before{
+	content: "\1F4A1" !important;
+	font-size: 1.5em;
+	color: #C10000;
+	font-weight: bold;
+}
+
+.help-spoiler.su-spoiler-closed {
+	border: 0px !important;
+	padding: 0px;
+}
+
+
+
+
+
+
+/********************************************************
+ * Style personnalisé : exemple
+*********************************************************/
+
+.exemple {
+	color: #a0a0a0;
+	font-family: fantasy;
+	font-style:italic;
+	/*padding-left: 10px;*/
+}
+
+
+
+
+
+
+/*********************************************************/
+/* Une arborescence de type dossiers/fichiers
+/*  à partir d'une simple liste à bulle
+ * un dossier est distingué d'un fichier par la classe "doss"
+ *********************************************************/
+.file_tree li{
+	list-style-type: none !important;
+	line-height: 100%;
+	font-size: 90%;
+}
+
+.file_tree.odd-even li:nth-of-type(even) {
+        background: #EEE;
+}
+
+.file_tree.odd-even li:nth-of-type(odd) {
+        background: none;
+}
+
+.file_tree{
+	margin-left : 10px !important;
+	
+}
+
+.file_tree ul{
+	margin-left : 10px;
+}
+
+.file_tree li.doss::before {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAANZJREFUOI3VjzFqAlEQhv+ZfRFsUwWC4E5haeMB9gCp4xFSpTKlrYXoSWysBPEswttMlRwhIO9Nml3Y7C5kRUT8YWB4M//3vwFuLQKALMucqm6Y+bk233nvF/8C0jT9IKI5gFU5MLNHIpoBeA0hfLV4v1X10wEAEb2b2TrP82V1Q0SGALZJkjTcMcYjgBEXaQ9E1Ejx3k9DCP16xRjfmLkHAK4AGBG13qiqP/U3ETmVPbe6zlAJsEsBd/wDV+lfROSpo2/yB8DMBwBjAIOuyWa277p7Xf0CSZtMbp1vLaAAAAAASUVORK5CYII=');
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
+.file_tree li.py::before {
+  background:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHaSURBVDhPjZM/SFVxFMd/9+U/cIkc2hI1pAfS0qBDIQQtgolg8JZQcHCIBy02vFAQJxGjqSFaarB0EBKcXBxEeoEt+YcXDi1ZOTxpKEq95/j53Xvu9eV7gwe+nO/v3O/3nHPf777AnYuewnKnczqtKredyFWnoTqVfSfhKnmi+Ozhd5NGkbFcEfrGqW5g2MR8CVMdja5RG4UvmiiNqgZMvqxy0oq4BTjMFD1Cz6+bLI3qDUQW6NKMaQu8BMdm9s1NdBZBT+F9I+1nVfUea2fiaclkjMpUkUxkVvlRfLQ0Tx6j9smJPmADfYo5T+EGDzojiOWYm9k3i37QBozN4A58hoeaQ2SCZLKdk7WNgx3QkmpE+jOs3XbOfAI+gjXMaz4bXk3e3Zxj8n140vBK0P1k8YhCvZn/9bZ/G5rp2xhAmKUWVIib4DfJ/lqTmgu6x9/tQTriLXTlQ37piPNghTFG7fNP/wrL6StoWKaYvaDZ57f+2qbACoVD8Oc/cdRUtuFbEeJvw/PPbPvCqStU/Re01LeLwF9p0ug10Iir/ApurT82aRS1vsR4crKFyDDTuqh9hedMlUZ1A5UvFWZrFv6GH8DLpkqj1gYjTHwOShi88S9o59wLhkxl4dwpaI2+FZOGdUoAAAAASUVORK5CYII=');
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
+.file_tree li.html::before {
+  background:    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEmUExURe+ahOyHbe6Reep2WORNJupZJ+tZKOhVJ+hoSOyGa/FkKfFlKexbKOp4W++Wf+VuUOrJwfve0fze0fWNYO2IbvGlkuVrS+vr6+vn5uvh3/718v728vSJW+lXJ++YgeVcOeizpeRPKevq6erMxOZ6X/SQZvWRZ/FnK+dTJ+re2/7+/v/////7+vFlKuZRJueIcOeSffeoh/epiP7z7v3u5+VOJuiciem6ruRPKP708Pzg1ORTLem0puZ1WPSDU//+/vvSwe9iKediQOillOrg3f3x7PrFru5gKOVVMOlyU+RVL+Z9YuipmerV0P3r5PnBqfaXbvJuNu1eKOdlQ+yCZ+9hKelWJ+p1V+p6XeRRK+xcKOZQJuRQKup3WedmRedkQu+VfgAAABXCe14AAABidFJOU/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AEFaSqgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAMhJREFUKFNjSGRgRAJMiQyJzCxgwMoGBOwcQAFOiAAXNxDw8AIF+Fj4BYBAUEhISJhNBCggyiImLiEpKSUtLS0jKwcUSGSRF1eAamFPBAsoKimrqKiqqampa0AEWDTFxcW1tLV1dPWgAvoGBgaGRsYm3KZQATNzC6AZllZcLGABaxYbcVsLXTt7B0eIgBOLs7i4i6u2tpu7B1jAk8XL28fXzz8gMCgYLBACc3poWDhYIDEiEigQFRYdEwvkgASAQC4uPgFEJyYCAJ82Lz6RRiKeAAAAAElFTkSuQmCC');
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
+/*.file_tree li.doss::before {
+  content: '<i class="far fa-folder"></i>';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}*/
+
+
+
+
+.file_tree li::before {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAUhJREFUOI2FkzFLA0EQhd+buygWNgG7CNkjhZWdRbBM6Y+wSmEq8xPSWmjpD9A/oJ2FIJLCVkEsDIQDK0ERDZgQbsYmkb3LJvdgYObt7sfbYghPjUZjfTqdEgWlaTouenPJvHHOdVR1HEXRb7GSJDktBZCsAnjKsqzpl6q+Aeg6585CgNgfVPUnTdMH36vX6xMAFyTbzjkMh8NuMMEqmdm9qh7MILkkpQARyczsHMANgA2Sx0mSHAa/AAC1Wq0aRdGaZ3VEZHvWT1S1B2BrKSCO42sR2Q+lUdVbAN+5+4HIl2bWDwFIvprZ0UoAgBbJvRAAQN/M8omLN8zsGUC2BPACYKcMMCL5FXpNclSagGSLZDMEMLO7opcDiMgmgCszewwBALyLSFtVFwFm9klyF8AJubCQOYnIx39i/2DZOvuqVCo2GAwm8/kPe36CajURTTMAAAAASUVORK5CYII=');
+	content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
+/*.file_tree li::before {
+	content: '<i class="far fa-file"></i>';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: -2px;
+  margin-right: 6px;
+}*/
+
+.file_tree .comment {
+	float: right;
+	font-style: italic;
+}
+
+/********************************************************
+ * Contenu privé ADMINISTRATOR
+*********************************************************/
+div .private.administrator-content {
+	background : #FEE;
+	padding: 6px;
+}
+div .private.administrator-content::before{
+	background : #FBB;
+	content: 'Contenu privé';
+	font-size: small;
+	color: #F00;
+	transform: rotate(25deg);
+	display: block;
+	position: absolute;
+	right: 10px;
+	padding: 2px 5px;
+	box-shadow: 3px 3px 5px red;
+	z-index: 10;
+}
+
+
+/********************************************************
+ * Contenu privé PROFESSEUR
+*********************************************************/
+div .private.professeur-content {
+	background : #FFFEEE;
+	padding: 6px;
+}
+div .private.professeur-content::before{
+	background : #FFDBBB;
+	content: 'Prof seulement';
+	font-size: small;
+	color: #F00;
+	transform: rotate(20deg);
+	display: block;
+	position: absolute;
+	right: 10px;
+	padding: 2px 5px;
+	box-shadow: 3px 3px 5px red;
+	z-index: 10;
+}
+
+
+#forkme_banner {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	z-index: 10;
+	padding: 10px 50px 10px 10px;
+	color: #fff;
+	background: url('https://info.blaisepascal.fr/wp-content/uploads/blacktocat.png') #0090ff no-repeat 95% 50%;
+	font-weight: 700;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+
+/***********************************************************************/
+
+
+.legende {
+	right: 0;
+    position: absolute;
+	font-size: small;
+}
+
+.legende>.su-box-title{
+	padding:.2em 1em;
+	text-align: right;
+}
+
+.legende>.su-box-content{
+	padding: .5em;
+	text-align: right;
+}
+
+
+.dashicons, .dashicons-before::before {
+  text-decoration: none;
+}

@@ -3,7 +3,38 @@
 
 [Corrigé](corrige.md)
 
+## ▶ Sujet 01
 
+[Version originale du sujet](pdf2023/23-NSI-01.pdf){. target="_blank"} en pdf.
+
+### Exercice 01.1
+!!! example "Exercice 01.1"
+    === "Énoncé" 
+        --8<-- "EP/2023/files/01_1/enonce.md"
+
+    === "Correction"
+        --8<-- "EP/2023/files/01_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "EP/2023/files/01_1/enonce.md"
+    
+    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
+
+
+### Exercice 01.2
+!!! example "Exercice 01.2"
+    === "Énoncé" 
+        --8<-- "EP/2023/files/01_2/enonce.md"
+
+    === "Correction"
+        --8<-- "EP/2023/files/01_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "EP/2023/files/01_2/enonce.md"
+        ```             
+          
+    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-01.py){. target="_blank"}
 **Exercice 1 (4 points)**
 
 Programmer la fonction recherche, prenant en paramètre un tableau non vide `tab` (type `list`) d'entiers et un entier `n`, et qui renvoie l'indice de la dernière occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie la longueur du tableau.
