@@ -1,0 +1,10 @@
+title: '3. structure de données linéaires : Liste, Pile, File'
+
+hide: false
+
+nav:
+    - Cours: index.md
+    - Exemple du cours: Exemples du cours.ipynb
+    - Corrigé exo bac: exercices.md
+
+#    - Exercices: Palindrome.ipynb
