@@ -56,4 +56,9 @@ Ou bien utiliser une bibliothèque, comme [termcolor](https://pypi.org/project/t
 …
 
 ### Affichage graphique
+Avec la bibliothèque TKinter (voir [ressources](ressources.md))
+…
+
+## Gestion du temps
+Exécution automatique de chaque tour de jeu (méthode `tour()`) à intervalle de temps régulier.
 …
