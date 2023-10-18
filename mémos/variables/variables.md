@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Portée des variables
 Il est important lorsque l'on utilise des fonctions de savoir où les variables sont visibles dans le programme. Les variables créées dans une fonction restent **locales** à la fonction. C'est-à-dire qu'elles ne sont pas visibles à l'extérieur de la fonction.
 

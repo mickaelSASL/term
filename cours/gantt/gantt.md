@@ -1,3 +1,7 @@
-[gantt no-years no-quarters no-days vline-space=monthly(docs/cours/gantt.json)]
+---
+hide:
+    - toc
+    - navigation
+---    
 
-🐌 : Chapitres non évalués lors de l'épreuve finale du bac
+[gantt no-years no-quarters no-days vline-space=monthly(docs/cours/gantt.json)]

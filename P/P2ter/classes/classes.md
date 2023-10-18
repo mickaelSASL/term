@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Lemmings 🏃🏻🧍🚶🤸  
 
 ## Définition des classes

@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # **P1: Relevé de température 🌡️**  
 <center>![](https://cdn.sanity.io/images/ajwvhvgo/production/fd06eb79876afd582f5cc6064da724262312c875-4258x2496.png?w=325&q=80&fit=max&auto=format)
 </center>

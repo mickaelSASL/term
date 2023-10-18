@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Lemmings 🏃🏻🧍🚶🤸  
 
 ## Déroulement du jeu

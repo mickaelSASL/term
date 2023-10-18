@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # **P4: Résolution de labyrinthe par les graphes**  
 <img src="https://files.realpython.com/media/Build-a-Pac-Man-Maze-Solver-in-Python_Watermarked.c2e79a85fc99.jpg" alt="donnees" width="75%">
 

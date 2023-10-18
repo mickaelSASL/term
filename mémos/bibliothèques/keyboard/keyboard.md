@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # ⌨️ Keyboard ⌨️ 
 
 > `keyboard` est un module à installer permettant de gérer les claviers.

@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Lemmings 🏃🏻🧍🚶🤸  
 
 ## Gestion des tableaux

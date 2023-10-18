@@ -69,7 +69,7 @@
                 "lasts": "1 week"
             },
             {
-                "title": "🐌 [SD5 : Graphes](SD/SD5/)",
+                "title": "[SD5 : Graphes](SD/SD5/)",
                 "start": "2024-06-25",
                 "lasts": "2 week"
             }
@@ -88,7 +88,7 @@
                 "start": "2023-11-10",
                 "lasts": "2 week"
             },{
-                "title": "🐌 [BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)",
+                "title": "[BDD3 : système de gestion de BDD, requêtes, sécurisation](BDD/BDD2/)",
                 "start": "2023-11-19",
                 "lasts": "2 week"
             },
@@ -118,7 +118,7 @@
                 "lasts": "1 week"
             },
             {
-                "title": "🐌 [AMSER4 : Sécurisation des communications](AMSER/AMSER4)",
+                "title": "[AMSER4 : Sécurisation des communications](AMSER/AMSER4)",
                 "start": "2024-06-25",
                 "lasts": "1 week"
             }
@@ -128,7 +128,7 @@
         "title": "Langage et programmation",
         "activities": [
             {
-                "title": "🐌 LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité",
+                "title": "LP1 : Notion de programme en tant que donnée. Calculabilité, décidabilité",
                 "start": "2024-06-25",
                 "lasts": "1 week"
             },
@@ -143,7 +143,7 @@
                 "lasts": "1 week"
             },
             {
-                "title": "🐌 LP4 : Paradigmes de programmation",
+                "title": "LP4 : Paradigmes de programmation",
                 "start": "2024-06-25",
                 "lasts": "1 week"
             },
@@ -168,7 +168,7 @@
                 "lasts": "1 week"
             },
             {
-                "title": "🐌 [A2 : Algorithmes sur les graphes](A/A2/)",
+                "title": "[A2 : Algorithmes sur les graphes](A/A2/)",
                 "start": "2024-06-25",
                 "lasts": "1 week"
             },
@@ -178,7 +178,7 @@
                 "lasts": "1 week"
             },
             {
-                "title": "🐌 A4 : Programmation dynamique",
+                "title": "A4 : Programmation dynamique",
                 "start": "2024-06-25",
                 "lasts": "1 week"
             },

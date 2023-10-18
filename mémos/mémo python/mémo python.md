@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Mémo python
 
 ![](mémo1.jpg)

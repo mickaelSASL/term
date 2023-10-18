@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # **P3: Utilisation d'un base de données avec Python**  
 <center>![](https://www.guillaumedueymes.com/img/formation/Python-SQL-1.jpg)
 </center>

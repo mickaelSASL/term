@@ -26,11 +26,10 @@ compteur
 
 Sans surprises, la valeur de la variable compteur vaut 100. Vous remarquerez la manière dont l'incrémentation du compteur a été volontairement complexifié. La raison va apparaître maintenant car nous allons maintenant lancer 4 processus légers (appelés threads) qui vont tous les 4 exécuter la fonction calcul.
 
-On pourrait imaginer que puisque calcul est exécuté 4 fois le résultat final sera 400. En réalité, il n'en est rien :
+On pourrait imaginer que puisque `calcul` est exécuté 4 fois le résultat final sera 400. En réalité, il n'en est rien :
 
 ```Python
 
- 
 compteur = 0
 for i in range(4): # Lance en parallèle 4 exécutions dd calcul
     p = Thread(target = calcul)
@@ -55,28 +54,27 @@ Il n'y a rien d'illogique ou d'aléatoire dans le fonctionnement de notre progra
 
 - quatre processus (appelons les P1, P2, P3 et P4) exécutent la fonction calcul simultanément. Celle-ci utilise une variable globale qui sera donc modifiée par chacun de ces processus et une variable locale temp qui sera spécifique à chacun de nos processus. Nous la désignerons par temp(P1) temp(P2) etc... Un scénario possible est le suivant : Imaginons au départ que compteur vaille 10.
 
-- P1 sauvegarde compteur dans temp(P1) --> temp(P1) vaut 10
+- P1 sauvegarde `compteur` dans temp(P1) --> temp(P1) vaut 10
 
-- P2 sauvegarde compteur dans temp(P2) --> temp(P2) vaut 10
-- P3 sauvegarde compteur dans temp(P3) --> temp(P3) vaut 10
-- P1 et P2 incrémentent temp et sauvegardent la réponse dans compteur --> compteur vaut 11
-- P4 sauvegarde compteur dans temp(P4) --> temp(P4) vaut 11
-- P3 et P4 incrémentent temp et sauvegardent la réponse dans compteur
+- P2 sauvegarde `compteur` dans temp(P2) --> temp(P2) vaut 10
+- P3 sauvegarde `compteur` dans temp(P3) --> temp(P3) vaut 10
+- P1 et P2 incrémentent temp et sauvegardent la réponse dans `compteur` --> `compteur` vaut 11
+- P4 sauvegarde `compteur` dans temp(P4) --> temp(P4) vaut 11
+- P3 et P4 incrémentent temp et sauvegardent la réponse dans `compteur`
 
-au final, compteur a été incrémenté 4 fois mais de fait de l'exécution en parallèle compteur ne vaut pas 14 mais 12 ! cela explique que notre compteur au final ne vaut pas 400 car sa sauvegarde dans des variables temporaires fait que la plupart des incrémentations ne sont pas prises en compte.
+au final, `compteur` a été incrémenté 4 fois mais de fait de l'exécution en parallèle `compteur` ne vaut pas 14 mais 12 ! cela explique que notre compteur au final ne vaut pas 400 car sa sauvegarde dans des variables temporaires fait que la plupart des incrémentations ne sont pas prises en compte.
 
 Quand au résultat apparemment aléatoire, il est du au scénario d'exécution. j'en ai cité un au hasard mais bien d'autres sont possibles qui mèneraient à des résultats différents. Un problème avec les threads est que l'on ne maîtrise pas du tout l'ordre dans lequel ils sont exécutés. Une fois lancés, chacun vit sa vie...
-
-Vous voila j'espère convaincus que les threads sont réellement diaboliques !
 
 ### Fiabiliser l'algorithme
 
 Il est possible d'éviter que nos threads interfèrent les uns avec les autres : il suffit de s'assurer que la partie centrale qui incrémente notre compteur ne soit pas exécutée par 2 threads à la fois. Pour ce faire, on introduit la notion de **verrou**: un **verrou** peut être vu comme un témoin qui passe de thread en thread. Seul celui qui possède ce témoin peut exécuter l'incrémentation du compteur, les autres doivent attendre leur tour.
 
-Nous allons donc légèrement modifier notre fonction calcul afin d'utiliser la partie critique de notre algorithme, à savoir l'incrémentation du compteur. Le module threading propose un objet Lock() destiné à cette tâche. Deux méthodes seront utilisées ici:
+Nous allons donc légèrement modifier notre fonction `calcul` afin d'utiliser la partie critique de notre algorithme, à savoir l'incrémentation du compteur. Le module `threading` propose un objet `Lock()` destiné à cette tâche. Deux méthodes seront utilisées ici:
 
-verrou.acquire() : attend que le vérrou soit libéré pour se l'accaparer et l'activer
-verrou.release() : libère le verrou
+`verrou.acquire()` : attend que le vérrou soit libéré pour se l'accaparer et l'activer
+`verrou.release()` : libère le verrou
+
 from threading import Lock
 verrou = Lock()
  

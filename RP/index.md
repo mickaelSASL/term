@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+  - toc
 ---
 <link href="css/zoom.css" rel="stylesheet" />
 

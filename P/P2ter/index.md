@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # Lemmings 🏃🏻🧍🚶🤸   
 
 <center>![](img/Lemmings_Logo_1.gif)</center>
@@ -8,6 +13,7 @@
 
 <a href="https://www.abandonware-france.org/online/play/lemmings/" target="_blank">Cliquez ici pour jouer !
 ![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
+
 Dans ce jeu, les lemmings marchent dans une **grotte** représentée par une grille à deux dimensions dont chaque case est soit un mur soit un espace vide, un espace vide pouvant contenir au maximum un lemming à un instant donné. Les lemmings apparaissent les uns après les autres à une position de départ, et disparaissent lorsqu’ils atteignent une case de sortie.
 
 Chaque lemming possède les propriétés suivantes :

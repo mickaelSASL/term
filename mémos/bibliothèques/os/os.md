@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---    
+
 # 🐧🐧 OS 🐧🐧
 
 > Le module `os` est une bibliothèque standard qui permet de travailler avec le système d'exploitation.
