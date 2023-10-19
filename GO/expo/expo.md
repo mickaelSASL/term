@@ -1,16 +1,21 @@
+---
+hide:
+  - toc
+---
+
 # Exposés oraux
 ## Liste des sujets :
 
 * Qu’est-ce qu’un langage informatique et pourquoi en existe-t-il plusieurs ? 
 * Informatique dans le Cloud (Qu’est-ce ? les entreprises ont-elles encore besoin de posséder un datacenter ?) 
 * L’Informatique est-elle une science ou seulement une partie des mathématiques ?
-* Organiser les données : pourquoi utiliser différentes structures de données ? Un peu bateau
-* Open source : qu’est-ce ? Pourquoi partager ses programmes ? Un peu trop vague
-* C (langage informatique). Historique : conception, langages descendant du C, usage moderne. Je regrette de ne pas avoir imposé le lien Python / C
-* MP2I : la classe prépa des anciens NSI ? TB, ils savent tous ce que c’est maintenant
-* SSII : Qu’est-ce ? En France et dans le monde. Ca va
-* Alan Turing : Qui était-ce ? Quelles sont ses contributions à l’informatique ? Super
-* Bioinformatique : qu’est-ce ? Quels en sont les enjeux ? Super
+* Organiser les données : pourquoi utiliser différentes structures de données ? 
+* Open source : qu’est-ce ? Pourquoi partager ses programmes ? 
+* C (langage informatique). Historique : conception, langages descendant du C, usage moderne. (pensez au lien Python / C)
+* MP2I : la classe prépa des anciens NSI ? 
+* SSII : Qu’est-ce ? En France et dans le monde. 
+* Alan Turing : Qui était-ce ? Quelles sont ses contributions à l’informatique ?
+* Bioinformatique : qu’est-ce ? Quels en sont les enjeux ? 
 * Les données personnelles : une mine d’or pour les entreprises ?
 * Phishing : qu’est-ce ? Comment s’en prémunir ?
 * John Von Neumann : Qui était-ce ? Quelles sont ses contributions à l’informatique ?
