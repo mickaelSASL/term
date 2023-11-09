@@ -1,5 +1,11 @@
 [
     {
+      "title": "En pleine tempête, le patron d'Unity a pris une décision radicale.",
+      "content": "Quelques semaines après les annonces, puis le rétropédalage autour du nouveau mode de fonctionnement d'Unity, les choses évoluent. John Riccitiello, P.-D.G. de la firme depuis 2014, a annoncé son départ le 9 octobre dernier.",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1gGJLP.img?w=768&h=534&m=6",
+      "url":"https://www.msn.com/fr-fr/lifestyle/shopping/en-pleine-temp%C3%AAte-le-patron-d-unity-a-pris-une-d%C3%A9cision-radicale/ar-AA1iiDba?ocid=msedgntp&cvid=edfc3e85b7c2493eb5e136fb61c33660&ei=7"
+    },
+    {
       "title": "Geoffrey Hinton, pionnier de l’IA, quitte Google et dit « regretter » son invention.",
       "content": "Le chercheur a joué un rôle crucial dans le développement des réseaux de neurones artificiels. Sans les travaux de celui-ci, des outils comme ChatGPT, Bard ou Midjourney n’auraient sans doute pas vu le jour.",
       "image": "https://aprc.it/api/200x125/https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html",
@@ -24,3 +30,5 @@
       "url":"https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/"
     }
   ]
+
+  
