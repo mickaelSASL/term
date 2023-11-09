@@ -22,7 +22,7 @@
     
     
       
-        <title>** BDD1 : Exercices - Corrigé** - NSI Terminale</title>
+        <title>Exercices corrigés - NSI Terminale</title>
       
     
     
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ** BDD1 : Exercices - Corrigé**
+              Exercices corrigés
             
           </span>
         </div>
@@ -928,6 +928,34 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Exercices corrigés
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -2813,56 +2841,189 @@
                   
 
 
-<h1 id="bdd1-exercices-corrige">** BDD1 : Exercices - Corrigé**</h1>
+<h1 id="bdd1-exercices-corrige">BDD1 : Exercices - Corrigé</h1>
 <h2 id="1-les-schemas-relationnels">1. Les schémas relationnels</h2>
+<p>Une sandwicherie effectuant des livraisons à domicile dispose d’une base de données dont certains extraits sont présentés ci-dessous. 
+La table <code>Sandwichs</code> comporte les informations relatives aux sandwichs proposés à la vente :</p>
+<table>
+<thead>
+<tr>
+<th>Nom_Sandwich</th>
+<th>Prix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cheeseburger</td>
+<td>3.90</td>
+</tr>
+<tr>
+<td>Double cheese</td>
+<td>4.90</td>
+</tr>
+<tr>
+<td>Italien</td>
+<td>4.90</td>
+</tr>
+<tr>
+<td>Foie gras</td>
+<td>15.00</td>
+</tr>
+</tbody>
+</table>
+<p>La table Clients comporte les informations relatives aux clients :</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Prénom</th>
+<th>Adresse</th>
+<th>Numéro_client</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bernard</td>
+<td>Alain</td>
+<td>9, rue Bienvenu, 13008 MARSEILLE</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Bernard</td>
+<td>Yves</td>
+<td>2, rue Vive la Joie, 13400 AUBAGNE</td>
+<td>51</td>
+</tr>
+</tbody>
+</table>
+<p>La table Commandes comporte les informations relatives aux commandes passées :</p>
+<table>
+<thead>
+<tr>
+<th>Numéro_Client</th>
+<th>Nom_Sandwich</th>
+<th>Quantité</th>
+<th>Numéro_Commande</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42</td>
+<td>Italien</td>
+<td>2</td>
+<td>12452</td>
+<td>2019-12-11</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Foie gras</td>
+<td>1</td>
+<td>12452</td>
+<td>2019-12-11</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Cheeseburger</td>
+<td>4</td>
+<td>13301</td>
+<td>2019-12-23</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition question">
+<p class="admonition-title">a. Une commande peut-elle comporter plusieurs sandwichs de types différents ?</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p>Une commande peut comporter plusieurs sandwichs de types différents.  </p>
 <blockquote>
-<p>a. Une commande peut comporter plusieurs sandwichs de types différents.<br />
-   Exemple : la commande n°<code>12452</code> : <code>Italien</code> &amp; <code>Foie gras</code></p>
+<p>Exemple : la commande n°<code>12452</code> : <code>Italien</code> &amp; <code>Foie gras</code></p>
 </blockquote>
-<hr />
-<blockquote>
-<p>b. 
-table <code>Sandwichs</code> :<br />
-table <code>Clients</code> :<br />
-table <code>Commandes</code> :      </p>
-</blockquote>
-<hr />
-<blockquote>
-<p>c. La clé primaire de la table <code>Sandwichs</code> est <code>Nom_Sandwich</code>
-   la table <code>Sandwichs</code> n'a pas de clé étrangère.</p>
-</blockquote>
-<hr />
-<blockquote>
-<p>d. La clé primaire de la table <code>clients</code> est <code>Numéro_client</code>
-   La table <code>clients</code> n'a pas de clé étrangère.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">b.    Quel est le schéma de la table Sandwichs ? de la table Clients ? de la table Commandes ?</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p>table <code>Sandwichs</code> :  Sandwichs (Nom_Sandwich, Prix )<br />
+table <code>Clients</code> :  Clients (Nom, Prénom, Adresse, Numéro_client)<br />
+table <code>Commandes</code> : Commandes (Numéro_Client, Nom_Sandwich, Quantité, Numéro_Commande, Date)</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">c.    La table Sandwichs comporte-t-elle un attribut qui est clé primaire ? Un attribut qui clé étrangère ?</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p>La clé primaire de la table <code>Sandwichs</code> est <code>Nom_Sandwich</code>
+la table <code>Sandwichs</code> n'a pas de clé étrangère.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">d.    Répondre aux mêmes questions pour les tables Clients et Commandes. En l’absence d’un attribut clé primaire, un couple ou un triplet d’attribut peut-il jouer ce rôle ?</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p>La clé primaire de la table <code>clients</code> est <code>Numéro_client</code>
+La table <code>clients</code> n'a pas de clé étrangère.</p>
 <p>La table <code>Commandes</code> n'a pas d'attribut clé primaire mais le couple <code>(Numéro_Client, Numéro_Commande)</code> en forme une.
-   Elle a une clé étrangère : <code>Numéro_Client</code>. </p>
-</blockquote>
-<hr />
-<blockquote>
-<p>e. Cette base de données semble bien modélisée. Les relations créées lui permettront de fonctionner. Cependant, la logique voudrait que l'on utilise, dans la table <code>Commandes</code>, un enregistrement par commande.<br />
-   Son schéma de relation serait :<br />
+Elle a une clé étrangère : <code>Numéro_Client</code>. </p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">e.    Cette base de données semble-t-elle bien modélisée ? Si ce n’est pas le cas, proposer des modifications. </p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p>Cette base de données semble bien modélisée. Les relations créées lui permettront de fonctionner. Cependant, la logique voudrait que l'on utilise, dans la table <code>Commandes</code>, un enregistrement par commande.<br />
+Son schéma de relation serait :<br />
 <code>Commandes ( 🔑Numéro_Commande, Numéro_Client, Liste_Sandwich, Liste_Quantité, Date )</code></p>
-</blockquote>
+</details>
 <h2 id="2-modeliser-une-base-de-donnees">2. Modéliser une base de données</h2>
 <p>On souhaite modéliser, de manière nettement simplifiée, une base de données concernant les informations relatives à un forum hébergé sur Internet. Une première relation, Users, contient les informations relatives aux comptes des utilisateurs du forum : pseudonyme, adresse email, date d’enregistrement, droits (administrateurs, modérateur, etc.).</p>
 <p>Une seconde relation, Posts, contient des informations relatives aux messages postés sur le forum : titre, contenu, date et heure du message, auteur.</p>
-<p>a. Proposer un schéma relationnel permettant de représenter les utilisateurs. Donner un exemple d’enregistrement.</p>
-<p>b. La relation Users comporte-t-elle une clé primaire ? Si oui, laquelle ?</p>
-<p>c. Proposer un schéma relationnel permettant de représenter les messages. Donner un exemple d’enregistrement.</p>
-<p>d. La relation Posts comporte-t-elle une clé primaire ? Si oui, laquelle ? Comporte-t-elle une clé étrangère ? Si oui, laquelle ?</p>
-<p>e. On souhaite autoriser les utilisateurs à changer leur pseudonyme. Quelles adaptations des schémas relationnels seront nécessaires et pourquoi ?</p>
+<div class="admonition question">
+<p class="admonition-title">a. Proposer un schéma relationnel permettant de représenter les utilisateurs. Donner un exemple d’enregistrement.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">b. La relation Users comporte-t-elle une clé primaire ? Si oui, laquelle ?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">c. Proposer un schéma relationnel permettant de représenter les messages. Donner un exemple d’enregistrement.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">d. La relation Posts comporte-t-elle une clé primaire ? Si oui, laquelle ? Comporte-t-elle une clé étrangère ? Si oui, laquelle ?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">e. On souhaite autoriser les utilisateurs à changer leur pseudonyme. Quelles adaptations des schémas relationnels seront nécessaires et pourquoi ?</p>
+</div>
 <h2 id="3-creation-de-base-de-donnees">3. Création de base de données</h2>
-<p>a) Anciens élèves</p>
+<h4 id="a-anciens-eleves">a) Anciens élèves</h4>
 <p>On veut créer une petite base de données permettant de garder le contact avec nos copains de classe. On supposera qu'ils sont tous domicilies en France, qu'ils n'ont qu'un numéro de téléphone, mais éventuellement plusieurs adresses. On veut stocker les renseignements suivants : nom, prénom, sexe, date de naissance, numéro de téléphone, rue, numéro postal, ville, département et région.</p>
-<p>Réalisez un schéma relationnel.</p>
-<p>b) Clients étrangers</p>
+<div class="admonition question">
+<p class="admonition-title">Réalisez un schéma relationnel.</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p><img alt="" src="../Cr%C3%A9ation%20BDD%20a.png" /></p>
+</details>
+<h4 id="b-clients-etrangers">b) Clients étrangers</h4>
 <p>On veut créer une base de données permettant de gérer les clients étrangers d'une entreprise et les pays de ces clients. La table des clients sera simplifiée et comportera leur nom, leur prénom, le pays de résidence et le solde de leur compte, dans la monnaie du pays.</p>
 <p>On veut aussi que les clients aient la possibilité de faire des réclamations et que la base de données gère toutes ces réclamations pour chacun des clients.</p>
-<p>Réalisez un schéma relationnel.</p>
-<p>c) Listes de classe</p>
+<div class="admonition question">
+<p class="admonition-title">Réalisez un schéma relationnel.</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p><img alt="" src="../Cr%C3%A9ation%20BDD%20b.png" /></p>
+</details>
+<h4 id="c-listes-de-classe">c) Listes de classe</h4>
 <p>Une école veut informatiser ses listes de classe. Une classe est formée d'élevés (toujours les mêmes et un élevé n'appartient qu'à une seule classe). Il y a un enseignant de classe par classe. Un professeur peut enseigner plusieurs disciplines.</p>
-<p>Réalisez un schéma relationnel.</p>
+<div class="admonition question">
+<p class="admonition-title">Réalisez un schéma relationnel.</p>
+</div>
+<details class="note">
+<summary>Solution</summary>
+<p><img alt="" src="../Cr%C3%A9ation%20BDD%20c.png" /></p>
+</details>
 
 
 

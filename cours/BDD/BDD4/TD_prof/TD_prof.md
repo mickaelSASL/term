@@ -15,7 +15,7 @@ Supprimer un utilisateur :
 DROP USER 'user'@'%';
 ```
 
-Modifier le mot de passe d'untuilisateur :  
+Modifier le mot de passe d'un utilisateur :  
 ```SQL
 UPDATE mysql.user SET authentication_string=MD5("password") where User="user";
 ```
