@@ -1,6 +1,8 @@
 # Exercice type BAC 2
 ## Sujet NSIJ1PO1 - Polynésie 1, 2022
 
+[Corrigé](correction_exo_bac2.pdf)
+
 *Cet exercice traite du thème «programmation», et principalement de la récursivité.*
 
 On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets `""` et que :  

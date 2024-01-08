@@ -1,6 +1,8 @@
 # Exercice type BAC 1
 ## Sujet NSIJ2G11 - Centres étrangers 2, 2022
 
+[Corrigé](correction_exo_bac1.pdf)
+
 *Cet exercice porte sur les langages et la programmation (récursivité).* 
 
 1. Voici une fonction codée en Python :
