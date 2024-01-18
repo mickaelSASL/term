@@ -92,7 +92,7 @@
       ```
 
 === "Exemple d'exécution"
-      ```pycon
+      ```python
        >>> print(A)
 
 
