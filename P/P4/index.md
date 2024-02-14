@@ -14,7 +14,7 @@ ___
 Nous nous intéresserons seulement à des labyrinthes rectangulaires composés de n lignes et m colonnes sur une grille régulière composée de n×m cellules. Chaque cellules comportant 4 côtés dont chacun peut être ouvert ou fermé (présence d'un mur).
 
 <center>
-  <img src="../labyrinthe/labyrinthe_1.png" alt="labyrinthe">
+  <img src="./labyrinthe/labyrinthe_1.png" alt="labyrinthe">
   <figcaption>grille vide avec murs extérieurs</figcaption>
 </center>
 
@@ -24,7 +24,7 @@ Nous nous intéresserons seulement à des labyrinthes rectangulaires composés d
 > 
 > |Exemple 1|Exemple 2|Exemple3|
 > |:-:|:-:|:-:|
-> |<img src="../labyrinthe/labyrinthe_2.png" alt="labyrinthe">|<img src="../labyrinthe/labyrinthe_3.png" alt="labyrinthe">|<img src="../labyrinthe/labyrinthe_4.png"alt="labyrinthe"> |
+> |<img src="./labyrinthe/labyrinthe_2.png" alt="labyrinthe">|<img src="./labyrinthe/labyrinthe_3.png" alt="labyrinthe">|<img src="./labyrinthe/labyrinthe_4.png"alt="labyrinthe"> |
 > |<figcaption>Chemin</figcaption>|<figcaption>plusieurs chemins</figcaption>|<figcaption>parfait</figcaption>|
 
 
@@ -48,7 +48,7 @@ Soit le labyrinthe suivant :
 
 #### Présentation de la structure de données représentant la géométrie d'un labyrinthe
 Le labyrinthe de taille 4x4 suivant :  
-<center><img src="../labyrinthe/labyrinthe_5.png" width="180"></center>  
+<center><img src="./labyrinthe/labyrinthe_5.png" width="180"></center>  
 est représenté par la matrice Python suivante :
 
 ```Python
@@ -63,7 +63,7 @@ Il s'agit d'une matrice de dimension 4x4 et l'élément `grille[i][j]`, `i` et `
 
 Exemple :  
 `une_case = grille[2][1] = [False, False, True, True]` correspond à la case du labyrinthe à l'intersection de la ligne `2` et de la colonne `1`.
-<center><img src="../labyrinthe/labyrinthe_6.png" width="250"></center>
+<center><img src="./labyrinthe/labyrinthe_6.png" width="250"></center>
 
 Description des éléments de la liste représentant `une_case = [False, False, True, True]`:  
 
@@ -76,13 +76,13 @@ ___
 
 #### Qu'est ce qu'un arbre couvrant ?
 Un <b>arbre</b> est un graphe à la fois connexe et sans cycle. Un <b>arbre couvrant</b> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
-<center><img src="../labyrinthe/labyrinthe_7.png" width="200"></center>
+<center><img src="./labyrinthe/labyrinthe_7.png" width="200"></center>
 
 En plaçant un sommet sur chaque cellule de notre labyrinthe, et en reliant deux sommets par une arête si leurs cellules sont séparées par une porte, il devient possible de dessiner un arbre à partir de n'importe quel labyrinthe.  
 
 Sur notre graphe, un arête est donc un passage dans notre labyrinthe.
 
-<center><img src="../labyrinthe/labyrinthe_8.png" width="200"></center>
+<center><img src="./labyrinthe/labyrinthe_8.png" width="200"></center>
 
 
 !!! note  
@@ -93,7 +93,7 @@ Sur notre graphe, un arête est donc un passage dans notre labyrinthe.
 De nombreux algorithmes existent répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.
 
 <center>
-<img src="../labyrinthe/labyrinthe_9.gif" width="200">
+<img src="./labyrinthe/labyrinthe_9.gif" width="200">
 <p>L'algorithme du parcours en profondeur (ou "recursive backtracker" en anglais) commence sur une cellule aléatoire dans le labyrinthe.
 Il suffit ensuite de se diriger dans une direction aléatoire et de casse le mur face à soi, tout en marquant la cellule précédente comme visitée.
 Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la position précédente : c'est le backtracking.</p>
@@ -108,7 +108,7 @@ Le modèle de représentation afin de modéliser des labyrinthes rectangulaires 
 * des <strong>attributs</strong> :  `self.largeur`, le nombre de colonnes de la grille et `self.hauteur`, le nombre de lignes définis dans le constructeur
 * un <strong>attribut</strong> :  `self.grille` représentant les cellules du labyrinthe.  
 
-Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="../labyrinthe.py" target="_blank">labyrinthe.py</a>.
+Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="./labyrinthe.py" target="_blank">labyrinthe.py</a>.
 
 
 ___ 

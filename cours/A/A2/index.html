@@ -2388,58 +2388,16 @@
   
   
   
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
-        
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Résolution de labyrinthe par les graphes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            Résolution de labyrinthe par les graphes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../../index.html" class="md-nav__link">
+      <a href="../../../P4/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Consignes
+    P4
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -2937,8 +2895,12 @@
 <blockquote>
 <p><em>Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.</em></p>
 </blockquote>
-<p>===!"Pseudo-code"
-    <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>VARIABLES
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Pseudo-code</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>VARIABLES
 depart : noeud (origine)
 graph : un graphe (liste des voisins)
 noeud : noeud
@@ -2969,37 +2931,43 @@ FIN TANT QUE
 Renvoyer visites
 FIN
 </code></pre></div>
-    <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
-    <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">file</span><span class="o">=</span><span class="p">[]</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">depart</span><span class="p">)</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Implémentation en Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">file</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">depart</span><span class="p">)</span>
 
-    <span class="k">while</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
-            <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-            <span class="n">unvisited</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="n">unvisited</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">]</span>
 
-            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">unvisited</span><span class="p">:</span>
-                <span class="n">file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">unvisited</span><span class="p">:</span>
+                    <span class="n">file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">visited</span>
+        <span class="k">return</span> <span class="n">visited</span>
 
-<span class="n">ma_liste</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">]}</span>
+    <span class="n">ma_liste</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">]}</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
 </code></pre></div>
-    ## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
-    &gt; <em>Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.</em></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>``` 
+<h2 id="parcours-dun-graphe-en-profondeur-dabord-pseudo-code">Parcours d’un graphe en profondeur d'abord : (Pseudo-code)</h2>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>&gt; *Pour tester votre algorithme, il est plus simple de d&#39;impléter un graphe exemple sous la forme d&#39;une liste d&#39;adjacence.*
+
+``` 
 VARIABLES
 graph: un graphe (liste des voisins)
 depart : noeud
@@ -3120,8 +3088,10 @@ Distances{&#39;A&#39;: 0, &#39;B&#39;: 15, &#39;C&#39;: 4, &#39;E&#39;: 9, &#39;
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
 </code></pre></div></p>
 <h4 id="2-recherche-de-chemins-dans-un-graphe">2. Recherche de chemins dans un graphe</h4>
-<p>===!"Enoncé"
-Le loup,la chèvre,un chou et un passeur ....
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Le loup,la chèvre,un chou et un passeur ....
 Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :</p>
 <p><img alt="" src="Loup_chevre_chou_passeur.jpg" /></p>
 <ul>
@@ -3132,6 +3102,10 @@ Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. L
 <p>On décide de représenter le passeur par la lettre P,la chèvre par la lettre C,le loup par L et le chou par X.</p>
 <p>Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)</p>
 <p>Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 <h4 id="3-algorithmes-de-recherche-dun-chemin-entre-deux-sommets">3. Algorithmes de recherche d'un chemin entre deux sommets</h4>
 <p>Implémentez en Python une fonction Python nommée cherche_chemin(graphe,depart,arrivee) qui recherche et retourne un chemin (s'il existe) entre les sommets depart et arrivee dans le graphe graphe à partir de l'algorithme suivant :</p>
 <p><code>`Python

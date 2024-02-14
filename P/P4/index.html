@@ -2379,61 +2379,17 @@
                 
   
   
-    
-  
-  
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
-        
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Résolution de labyrinthe par les graphes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            Résolution de labyrinthe par les graphes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../P4/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Consignes
+    P4
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -2933,7 +2889,7 @@
 <h2 class="titre">Propriétes des labyrinthes</h2>
 <p>Nous nous intéresserons seulement à des labyrinthes rectangulaires composés de n lignes et m colonnes sur une grille régulière composée de n×m cellules. Chaque cellules comportant 4 côtés dont chacun peut être ouvert ou fermé (présence d'un mur).</p>
 <p><center>
-  <img src="../labyrinthe/labyrinthe_1.png" alt="labyrinthe">
+  <img src="./labyrinthe/labyrinthe_1.png" alt="labyrinthe">
 <br />
 <figcaption>grille vide avec murs extérieurs</figcaption></p>
 <p></center></p>
@@ -2953,9 +2909,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../labyrinthe/labyrinthe_2.png" alt="labyrinthe"></td>
-<td style="text-align: center;"><img src="../labyrinthe/labyrinthe_3.png" alt="labyrinthe"></td>
-<td style="text-align: center;"><img src="../labyrinthe/labyrinthe_4.png"alt="labyrinthe"></td>
+<td style="text-align: center;"><img src="./labyrinthe/labyrinthe_2.png" alt="labyrinthe"></td>
+<td style="text-align: center;"><img src="./labyrinthe/labyrinthe_3.png" alt="labyrinthe"></td>
+<td style="text-align: center;"><img src="./labyrinthe/labyrinthe_4.png"alt="labyrinthe"></td>
 </tr>
 <tr>
 <td style="text-align: center;"><figcaption>Chemin</figcaption></td>
@@ -2982,7 +2938,7 @@
 Soit le labyrinthe suivant :</p>
 <h4 id="presentation-de-la-structure-de-donnees-representant-la-geometrie-dun-labyrinthe">Présentation de la structure de données représentant la géométrie d'un labyrinthe</h4>
 <p>Le labyrinthe de taille 4x4 suivant :<br />
-<center><img src="../labyrinthe/labyrinthe_5.png" width="180"></center><br />
+<center><img src="./labyrinthe/labyrinthe_5.png" width="180"></center><br />
 est représenté par la matrice Python suivante :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">grille</span> <span class="o">=</span> 
 <span class="p">[[[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]],</span>
@@ -2993,7 +2949,7 @@ est représenté par la matrice Python suivante :</p>
 <p>Il s'agit d'une matrice de dimension 4x4 et l'élément <code>grille[i][j]</code>, <code>i</code> et <code>j</code> étant deux entiers compris entre 0 et 3, décrit la géométrie de la case à l'intersection de la ligne <code>i</code> et de la colonne <code>j</code>.</p>
 <p>Exemple :<br />
 <code>une_case = grille[2][1] = [False, False, True, True]</code> correspond à la case du labyrinthe à l'intersection de la ligne <code>2</code> et de la colonne <code>1</code>.
-<center><img src="../labyrinthe/labyrinthe_6.png" width="250"></center></p>
+<center><img src="./labyrinthe/labyrinthe_6.png" width="250"></center></p>
 <p>Description des éléments de la liste représentant <code>une_case = [False, False, True, True]</code>:  </p>
 <ul>
 <li>Indice 1 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>en haut</b> de la case est présent.</li>
@@ -3005,10 +2961,10 @@ est représenté par la matrice Python suivante :</p>
 <h3 id="2-construire-un-arbre-couvrant-a-de-ce-graphe">2. Construire un <b>arbre couvrant</b> A de ce graphe</h3>
 <h4 id="quest-ce-quun-arbre-couvrant">Qu'est ce qu'un arbre couvrant ?</h4>
 <p>Un <b>arbre</b> est un graphe à la fois connexe et sans cycle. Un <b>arbre couvrant</b> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
-<center><img src="../labyrinthe/labyrinthe_7.png" width="200"></center></p>
+<center><img src="./labyrinthe/labyrinthe_7.png" width="200"></center></p>
 <p>En plaçant un sommet sur chaque cellule de notre labyrinthe, et en reliant deux sommets par une arête si leurs cellules sont séparées par une porte, il devient possible de dessiner un arbre à partir de n'importe quel labyrinthe.  </p>
 <p>Sur notre graphe, un arête est donc un passage dans notre labyrinthe.</p>
-<p><center><img src="../labyrinthe/labyrinthe_8.png" width="200"></center></p>
+<p><center><img src="./labyrinthe/labyrinthe_8.png" width="200"></center></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Représenter l'arbre du graphe ci-dessus avec en étiquette les coordonnées de chaque noeud.</p>
@@ -3016,7 +2972,7 @@ est représenté par la matrice Python suivante :</p>
 <h4 id="constuire-larbre-binaire">constuire l'arbre binaire</h4>
 <p>De nombreux algorithmes existent répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.</p>
 <p><center>
-<img src="../labyrinthe/labyrinthe_9.gif" width="200"></p>
+<img src="./labyrinthe/labyrinthe_9.gif" width="200"></p>
 <p>L'algorithme du parcours en profondeur (ou "recursive backtracker" en anglais) commence sur une cellule aléatoire dans le labyrinthe.
 Il suffit ensuite de se diriger dans une direction aléatoire et de casse le mur face à soi, tout en marquant la cellule précédente comme visitée.
 Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la position précédente : c'est le backtracking.</p>
@@ -3029,7 +2985,7 @@ Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la pos
 <li>des <strong>attributs</strong> :  <code>self.largeur</code>, le nombre de colonnes de la grille et <code>self.hauteur</code>, le nombre de lignes définis dans le constructeur</li>
 <li>un <strong>attribut</strong> :  <code>self.grille</code> représentant les cellules du labyrinthe.  </li>
 </ul>
-<p>Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="../labyrinthe.py" target="_blank">labyrinthe.py</a>.</p>
+<p>Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="./labyrinthe.py" target="_blank">labyrinthe.py</a>.</p>
 <hr />
 <h2 id="le-code-du-programme">Le code du programme :</h2>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span><span class="p">:</span>

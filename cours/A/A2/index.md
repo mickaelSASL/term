@@ -8,40 +8,41 @@
 ## Parcours d’un graphe en largeur d'abord
 > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
 
-===!"Pseudo-code"
-    ``` 
-    VARIABLES
-    depart : noeud (origine)
-    graph : un graphe (liste des voisins)
-    noeud : noeud
-    voisin : noeud
-    file : file (liste vide au départ)
-    visites : liste
-    nonvisites : liste
-    
-    DEBUT
-    bfs(graph, depart) :
-    visites ← liste vide
-    chemin  ← liste vide
-    enfiler depart dans chemin
-    
-    TANT QUE chemin n'est pas vide :
-    noeud ← defiler(chemin)
-    
-    SI noeud n'appartient pas à visites :
-            ajouter noeud à visites
-            nonvisites ← listes des voisins de noeud non visités
-    
-            POUR chaque s dans nonvisites :
-                    ajouter s dans chemin à la 1ère position 
-            FIN POUR
-    FIN SI
-    FIN TANT QUE
-    
-    Renvoyer visites
-    FIN
-    ```
-    ```Python
+===! "Pseudo-code"
+``` 
+VARIABLES
+depart : noeud (origine)
+graph : un graphe (liste des voisins)
+noeud : noeud
+voisin : noeud
+file : file (liste vide au départ)
+visites : liste
+nonvisites : liste
+
+DEBUT
+bfs(graph, depart) :
+visites ← liste vide
+chemin  ← liste vide
+enfiler depart dans chemin
+
+TANT QUE chemin n'est pas vide :
+noeud ← defiler(chemin)
+
+SI noeud n'appartient pas à visites :
+        ajouter noeud à visites
+        nonvisites ← listes des voisins de noeud non visités
+
+        POUR chaque s dans nonvisites :
+                ajouter s dans chemin à la 1ère position 
+        FIN POUR
+FIN SI
+FIN TANT QUE
+
+Renvoyer visites
+FIN
+```
+=== "Implémentation en Python"
+```Python
     def bfs(graph, depart):
         visited = []
         file=[]
@@ -69,8 +70,9 @@
                 'H': ['G']}
 
     print(bfs(ma_liste, 'E'))
-    ```
-    ## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
+```
+    
+## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
     > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
 
     ``` 
@@ -209,22 +211,23 @@ dijkstra(graph,'A', 'E')
 
 #### 2. Recherche de chemins dans un graphe
 
-===!"Enoncé"
-Le loup,la chèvre,un chou et un passeur ....
-Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :
+===! "Enoncé"
+    Le loup,la chèvre,un chou et un passeur ....
+    Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :
 
-![](Loup_chevre_chou_passeur.jpg)
+    ![](Loup_chevre_chou_passeur.jpg)
 
-* la chèvre et le chou ne peuvent pas rester sur la même rive sans le passeur;
-* la chèvre et le loup ne peuvent pas rester sur la même rive sans le passeur;
-* le passeur ne peut mettre qu'un seul "passager" avec lui.
+    * la chèvre et le chou ne peuvent pas rester sur la même rive sans le passeur;
+    * la chèvre et le loup ne peuvent pas rester sur la même rive sans le passeur;
+    * le passeur ne peut mettre qu'un seul "passager" avec lui.
 
-On décide de représenter le passeur par la lettre P,la chèvre par la lettre C,le loup par L et le chou par X.
+    On décide de représenter le passeur par la lettre P,la chèvre par la lettre C,le loup par L et le chou par X.
 
-Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)
+    Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)
 
-Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).
+    Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).
 
+=== "Solution"
 
 #### 3. Algorithmes de recherche d'un chemin entre deux sommets
 Implémentez en Python une fonction Python nommée cherche_chemin(graphe,depart,arrivee) qui recherche et retourne un chemin (s'il existe) entre les sommets depart et arrivee dans le graphe graphe à partir de l'algorithme suivant :
