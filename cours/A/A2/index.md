@@ -5,139 +5,142 @@
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/EaTpwp12EjRLp9K0cNtAyAQBSgsmXjM6x7nhSOFjy3oIRg?e=gNUr59" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
 
 
-## Parcours d’un graphe en largeur d'abord : (Pseudo-code)
+## Parcours d’un graphe en largeur d'abord
 > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
 
-``` 
-VARIABLES
-depart : noeud (origine)
-graph : un graphe (liste des voisins)
-noeud : noeud
-voisin : noeud
-file : file (liste vide au départ)
-visites : liste
-nonvisites : liste
- 
-DEBUT
-bfs(graph, depart) :
-visites ← liste vide
-chemin  ← liste vide
-enfiler depart dans chemin
- 
-TANT QUE chemin n'est pas vide :
-  noeud ← defiler(chemin)
-  
-  SI noeud n'appartient pas à visites :
-          ajouter noeud à visites
-          nonvisites ← listes des voisins de noeud non visités
-  
-          POUR chaque s dans nonvisites :
-                  ajouter s dans chemin à la 1ère position 
-          FIN POUR
-  FIN SI
-FIN TANT QUE
- 
-Renvoyer visites
-FIN
-```
-```Python
-def bfs(graph, depart):
-    visited = []
-    file=[]
-    file.append(depart)
-
-    while file:
-        node = file.pop()
-
-        if node not in visited:
-            visited.append(node)
-            unvisited = [n for n in graph[node] if n not in visited]
-
-            for s in unvisited:
-                file.insert(0, s)
-                
-    return visited
-
-ma_liste = {'A': ['B', 'C'],
-            'B': ['A', 'D', 'E'],
-            'C': ['A', 'D'],
-            'D': ['B', 'C', 'E'],
-            'E': ['B', 'D', 'F', 'G'],
-            'F': ['E', 'G'],
-            'G': ['E', 'F', 'H'],
-            'H': ['G']}
-
-print(bfs(ma_liste, 'E'))
-```
-## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
-> *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
-
-``` 
-VARIABLES
-graph: un graphe (liste des voisins)
-depart : noeud
-voisin : noeud
- 
-DEBUT
-dfs(graph, depart, visites = None) :
-        SI visites est None :
-                visites ← liste vide
-        FIN SI
-        
-        Ajouter depart à visites
-        
-        POUR chaque voisin de depart :
-                SI voisin n est pas visité :
-                        dfs(graph, voisin, visites)
-                FIN SI
-        FIN POUR
- 
-Renvoyer visites
-FIN
-```
-```Python
-def bfs(graph, depart):
-    visited = []
-    file=[]
-    file.append(depart)
-
-    while file:
-        node = file.pop()
-
-        if node not in visited:
-            visited.append(node)
-            unvisited = [n for n in graph[node] if n not in visited]
-
-            for s in unvisited:
-                file.insert(0, s)
-                
-    return visited
-
-
-def pfs(graph, depart, visited=None):
-    if visited==None:
-        visited = []
-        
-    visited.append(depart)
+===!"Pseudo-code"
+    ``` 
+    VARIABLES
+    depart : noeud (origine)
+    graph : un graphe (liste des voisins)
+    noeud : noeud
+    voisin : noeud
+    file : file (liste vide au départ)
+    visites : liste
+    nonvisites : liste
     
-    for v in graph[depart]:
-        if v not in visited:
-            pfs(graph, v, visited)
+    DEBUT
+    bfs(graph, depart) :
+    visites ← liste vide
+    chemin  ← liste vide
+    enfiler depart dans chemin
+    
+    TANT QUE chemin n'est pas vide :
+    noeud ← defiler(chemin)
+    
+    SI noeud n'appartient pas à visites :
+            ajouter noeud à visites
+            nonvisites ← listes des voisins de noeud non visités
+    
+            POUR chaque s dans nonvisites :
+                    ajouter s dans chemin à la 1ère position 
+            FIN POUR
+    FIN SI
+    FIN TANT QUE
+    
+    Renvoyer visites
+    FIN
+    ```
+    ```Python
+    def bfs(graph, depart):
+        visited = []
+        file=[]
+        file.append(depart)
+
+        while file:
+            node = file.pop()
+
+            if node not in visited:
+                visited.append(node)
+                unvisited = [n for n in graph[node] if n not in visited]
+
+                for s in unvisited:
+                    file.insert(0, s)
+                    
+        return visited
+
+    ma_liste = {'A': ['B', 'C'],
+                'B': ['A', 'D', 'E'],
+                'C': ['A', 'D'],
+                'D': ['B', 'C', 'E'],
+                'E': ['B', 'D', 'F', 'G'],
+                'F': ['E', 'G'],
+                'G': ['E', 'F', 'H'],
+                'H': ['G']}
+
+    print(bfs(ma_liste, 'E'))
+    ```
+    ## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
+    > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
+
+    ``` 
+    VARIABLES
+    graph: un graphe (liste des voisins)
+    depart : noeud
+    voisin : noeud
+    
+    DEBUT
+    dfs(graph, depart, visites = None) :
+            SI visites est None :
+                    visites ← liste vide
+            FIN SI
             
-    return visited
+            Ajouter depart à visites
+            
+            POUR chaque voisin de depart :
+                    SI voisin n est pas visité :
+                            dfs(graph, voisin, visites)
+                    FIN SI
+            FIN POUR
+    
+    Renvoyer visites
+    FIN
+    ```
 
-ma_liste = {'A': ['B', 'C'],
-            'B': ['A', 'D', 'E'],
-            'C': ['A', 'D'],
-            'D': ['B', 'C', 'E'],
-            'E': ['B', 'D', 'F', 'G'],
-            'F': ['E', 'G'],
-            'G': ['E', 'F', 'H'],
-            'H': ['G']}
+==="Python"
+    ```Python
+    def bfs(graph, depart):
+        visited = []
+        file=[]
+        file.append(depart)
 
-print(pfs(ma_liste, 'E'))
-print(bfs(ma_liste, 'E'))
-```
+        while file:
+            node = file.pop()
+
+            if node not in visited:
+                visited.append(node)
+                unvisited = [n for n in graph[node] if n not in visited]
+
+                for s in unvisited:
+                    file.insert(0, s)
+                    
+        return visited
+
+
+    def pfs(graph, depart, visited=None):
+        if visited==None:
+            visited = []
+            
+        visited.append(depart)
+        
+        for v in graph[depart]:
+            if v not in visited:
+                pfs(graph, v, visited)
+                
+        return visited
+
+    ma_liste = {'A': ['B', 'C'],
+                'B': ['A', 'D', 'E'],
+                'C': ['A', 'D'],
+                'D': ['B', 'C', 'E'],
+                'E': ['B', 'D', 'F', 'G'],
+                'F': ['E', 'G'],
+                'G': ['E', 'F', 'H'],
+                'H': ['G']}
+
+    print(pfs(ma_liste, 'E'))
+    print(bfs(ma_liste, 'E'))
+    ```
 
 ## Recherche du chemin le plus court : Algorithme de Dijkstra 
 
@@ -205,6 +208,8 @@ dijkstra(graph,'A', 'E')
 
 
 #### 2. Recherche de chemins dans un graphe
+
+===!"Enoncé"
 Le loup,la chèvre,un chou et un passeur ....
 Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :
 
@@ -219,3 +224,36 @@ On décide de représenter le passeur par la lettre P,la chèvre par la lettre C
 Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)
 
 Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).
+
+
+#### 3. Algorithmes de recherche d'un chemin entre deux sommets
+Implémentez en Python une fonction Python nommée cherche_chemin(graphe,depart,arrivee) qui recherche et retourne un chemin (s'il existe) entre les sommets depart et arrivee dans le graphe graphe à partir de l'algorithme suivant :
+
+````Python
+Fonction cherche_chemin(graphe,depart,arrivee)
+	P ← pile vide
+	empiler le couple (depart,[depart]) dans P
+	Tant que P n'est pas vide faire
+		(sommet,chemin) ← tête de P
+		listes_nouveaux_sommets_voisins ← liste des sommets adjacents à sommet qui ne sont pas dans chemin
+		Pour un_sommet dans listes_nouveaux_sommets_voisins
+			Si un_sommet = arrivee alors
+				retourner chemin + [un_sommet]
+			sinon
+				empiler (un_sommet,chemin + [un_sommet])
+			FinSi
+		FinPour
+	FinTantQue
+FinFonction
+```
+
+On testera la fonction Python cherche_chemin(graphe,depart,arrivee) avec le graphe du début :
+
+![](graphe1.png)
+représenté par sa liste d'adjacence : graphe = {"A":("B","D","E"),"B":("A","C"),"C":("B","D"),"D":("A","C","E"),"E":("A","D","F","G"),"F":("E","G"),"G":("E","F","H"),"H":("G")} et avec tous les couples possibles (depart,arrivee).
+
+Q1. Vérifiez si les chemins proposés sont de plus courte distance. Si ce n'est pas le cas,citez des chemins donnés par la fonction Python qui ne sont pas de plus courte distance.
+
+Q2. A partir de la fonction précédente, proposez une autre fonction cherche_tous_chemins(graphe,depart,arrivee) qui retourne la liste de tous les chemins entre deux sommets.
+
+Q3. Complétez la fonction qui retourne la liste de tous les chemins entre deux sommets pour créer une fonction nommée cherche_chemin_plus_court(graphe,depart,arrivee) qui retourne le plus court chemin entre deux sommets.
