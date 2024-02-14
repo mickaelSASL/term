@@ -3111,11 +3111,24 @@ On visite le sommet E
 Distances{&#39;A&#39;: 0, &#39;B&#39;: 15, &#39;C&#39;: 4, &#39;E&#39;: 9, &#39;D&#39;: 6}
 </code></pre></div>
 <h3 id="a-faire">A faire :</h3>
+<h4 id="1-dijkstra">1. Dijkstra</h4>
 <p>Modifier la fonction <code>dijkstra</code> pour qu'elle renvoie le chemin le plus court d'un sommet de <em>départ</em> à un sommet <em>arrivé</em>.</p>
 <p>Exemple :
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dijkstra</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
 </code></pre></div></p>
+<h4 id="2-recherche-de-chemins-dans-un-graphe">2. Recherche de chemins dans un graphe</h4>
+<p>Le loup,la chèvre,un chou et un passeur ....
+Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :</p>
+<p><img alt="" src="Loup_chevre_chou_passeur.jpg" /></p>
+<ul>
+<li>la chèvre et le chou ne peuvent pas rester sur la même rive sans le passeur;</li>
+<li>la chèvre et le loup ne peuvent pas rester sur la même rive sans le passeur;</li>
+<li>le passeur ne peut mettre qu'un seul "passager" avec lui.</li>
+</ul>
+<p>On décide de représenter le passeur par la lettre P,la chèvre par la lettre C,le loup par L et le chou par X.</p>
+<p>Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)</p>
+<p>Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).</p>
 
 
 

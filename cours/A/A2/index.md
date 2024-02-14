@@ -194,6 +194,7 @@ Distances{'A': 0, 'B': 15, 'C': 4, 'E': 9, 'D': 6}
 
 
 ### A faire :
+#### 1. Dijkstra
 Modifier la fonction `dijkstra` pour qu'elle renvoie le chemin le plus court d'un sommet de *départ* à un sommet *arrivé*.
 
 Exemple :
@@ -201,3 +202,20 @@ Exemple :
 dijkstra(graph,'A', 'E')
 >>> ['A', 'C', 'D', 'E']
 ```
+
+
+#### 2. Recherche de chemins dans un graphe
+Le loup,la chèvre,un chou et un passeur ....
+Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque,menée par le passeur,en respectant les règles suivantes :
+
+![](Loup_chevre_chou_passeur.jpg)
+
+* la chèvre et le chou ne peuvent pas rester sur la même rive sans le passeur;
+* la chèvre et le loup ne peuvent pas rester sur la même rive sans le passeur;
+* le passeur ne peut mettre qu'un seul "passager" avec lui.
+
+On décide de représenter le passeur par la lettre P,la chèvre par la lettre C,le loup par L et le chou par X.
+
+Q1. Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)
+
+Q2. Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).
