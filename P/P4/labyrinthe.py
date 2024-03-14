@@ -25,7 +25,7 @@ class Labyrinthe:
         Exemple de retour : ['n', 'e', 'e', 's', 'o']
 
         """
-        
+
         
     
     def generation(self):
@@ -163,8 +163,6 @@ class GfxHMI(tk.Tk):
         chemin_solution = self.maze.solution(self.porte_ligne, self.porte_colonne, self.tresor_ligne, self.tresor_colonne)
         self.tracer_chemin(self.porte_ligne, self.porte_colonne, chemin_solution)
         
-
-    
 
 
 class Affichage(tk.Tk):
