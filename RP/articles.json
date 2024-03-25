@@ -1,32 +1,62 @@
 [
     {
-      "title": "En pleine tempête, le patron d'Unity a pris une décision radicale.",
-      "content": "Quelques semaines après les annonces, puis le rétropédalage autour du nouveau mode de fonctionnement d'Unity, les choses évoluent. John Riccitiello, P.-D.G. de la firme depuis 2014, a annoncé son départ le 9 octobre dernier.",
-      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1gGJLP.img?w=768&h=534&m=6",
-      "url":"https://www.msn.com/fr-fr/lifestyle/shopping/en-pleine-temp%C3%AAte-le-patron-d-unity-a-pris-une-d%C3%A9cision-radicale/ar-AA1iiDba?ocid=msedgntp&cvid=edfc3e85b7c2493eb5e136fb61c33660&ei=7"
+      "title": "Le glitch de la clé dans Zelda sur NES – Un mystère enfin résolu",
+      "content": "Vous vous souvenez de The Legend of Zelda sur NES ? Un classique parmi les classiques, pas vrai ? En bon vieux, j’y ai évidemment joué et on pourrait croire qu’après toutes ces années, ce jeu n’a plus aucun secret pour nous autres, les geeks de la vieille école.",
+      "image": "https://korben.info/app/uploads/2024/03/link-scaled.webp",
+      "url":"https://korben.info/glitch-cle-zelda-nes-mystere-resolu.html"
     },
     {
-      "title": "Geoffrey Hinton, pionnier de l’IA, quitte Google et dit « regretter » son invention.",
-      "content": "Le chercheur a joué un rôle crucial dans le développement des réseaux de neurones artificiels. Sans les travaux de celui-ci, des outils comme ChatGPT, Bard ou Midjourney n’auraient sans doute pas vu le jour.",
-      "image": "https://aprc.it/api/200x125/https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html",
-      "url":"https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html"
+      "title": "Black – Pour formater votre code Python rapidement et sans douleur",
+      "content": "Si vous codez avec vos gros doigts boudinés toute la journée, notamment en Python, il se peut que comme 99% des codeurs, vous ne vous encombriez pas avec le formatage de votre code. Pas le temps, et l’IDE fait le minimum syndical donc ça vaaaaa.",
+      "image": "https://korben.info/app/uploads/2024/02/BlackDecouvrezleformatagePythonrevolutionnaire.webp",
+      "url":"https://korben.info/outil-black-python-nouvelles-fonctionnalites-preview-amelioration-code.html"
     },
     {
-      "title": "Étude : combien de temps pour pirater votre mot de passe en 2023 ?",
-      "content": "Le nouveau rapport d’Hive Systems démontre que les hackers mettent de moins en moins de temps à pirater un mot de passe.",
-      "image": "https://aprc.it/api/200x125/https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/",
-      "url":"https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/"
+      "title": "Étude : les 50 outils d’IA générative les plus utilisés en 2023",
+      "content": "Pour le fonds d’investissement Andreessen Horowitz, ChatGPT domine encore largement le marché des IA génératives.",
+      "image": "https://f.hellowork.com/blogdumoderateur/2023/10/50-outils-IA.jpg",
+      "url":"https://www.blogdumoderateur.com/etude-50-outils-ia-generative-plus-utilises-2023/"
     },
     {
-      "title": "Les cinq métiers de la cybersécurité qui vont faire parler d'eux dans les années à venir.",
-      "content": "ANALYSE - Vol de données, espionnage, sabotage informatique, ransomware : les cyberattaques prennent différentes formes et touchent désormais tous les secteurs d'activité. Dans ce contexte, les besoins en cadres et experts de la cybersécurité explosent.",
-      "image": "https://aprc.it/api/200x125/https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420/",
-      "url":"https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420"
+      "title": "Il y a 40 ans, Microsoft annonçait la sortie de Windows...",
+      "content": "On a l'impression que le système d'exploitation le plus utilisé sur ordinateur existe depuis, au moins, une éternité. Cependant, il y a un début à tout, et dans le cas de Windows, l'histoire commence en novembre 1983.",
+      "image": "https://pic.clubic.com/v1/images/2160355/raw.webp?fit=max&width=1200&hash=6bca289717532113a89cb8caf745a13c0cc1270b",
+      "url":"https://www.clubic.com/actualite-508486-il-y-a-40-ans-microsoft-annoncait-la-sortie-de-windows.html"
     },
     {
-      "title": "Et maintenant, GPT peut lire dans les pensées !",
-      "content": "Lire dans les pensées et les retranscrire, voici ce qu’est capable de réaliser un modèle d’IA basé sur GPT1 d’OpenAI. Les chercheurs ont même été choqués par la précision et la justesse de ce décodeur.",
-      "image": "https://aprc.it/api/200x125/https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/",
+      "title": "Voici les technologies que nous utiliserons dans dix ans",
+      "content": "L’édition du soir monte dans la machine à voyager dans le temps, direction 2033. Un monde qui pourrait être sans smartphone, mais avec des robots et des intelligences artificielles plus performantes. Suivez le guide.",
+      "image": "https://media.ouest-france.fr/v1/pictures/8f8499a502724ab0c264942c103dbf6e-25369971.jpg?width=1260&client_id=eds&sign=a97f36a11b8c9c22792df7cbedab3adccf5e270bbebf2f9ea61f090fa821b707",
+      "url":"https://www.ouest-france.fr/leditiondusoir/2023-11-08/voici-les-technologies-que-nous-utiliserons-dans-dix-ans-e234c6e1-c492-4883-afbe-b8ed53307afa"
+    },
+    {
+      "title": "Des ingénieurs développent un robot qui va mettre au chômage les chiens guides d'aveugles",
+      "content": "Mais on n'y est pas encore tout à fait.",
+      "image": "https://korii.slate.fr/uploads/store/story_265324/large_landscape_265324.jpg",
+      "url":"https://korii.slate.fr/tech/ingenieurs-developpent-robot-mettre-chomage-chiens-guides-aveugles-projet-recherche-remplacement-machines-animaux-etats-unis"
+    },
+    {
+      "title": "AutoDev, un framework innovant développé par Microsoft, pourrait révolutionner le développement de logiciels",
+      "content": "En combinant l'IA avec les besoins pratiques des développeurs, rationalisant les tâches",
+      "image": "https://www.developpez.net/forums/attachments/p652269d1/a/a/a",
+      "url":"https://intelligence-artificielle.developpez.com/actu/355306/AutoDev-un-framework-innovant-developpe-par-Microsoft-pourrait-revolutionner-le-developpement-de-logiciels-en-combinant-l-IA-avec-les-besoins-pratiques-des-developpeurs-rationalisant-les-taches/"
+    },
+    {
+      "title": "Elon Musk publie un torrent de 318 Go et rend Grok open source.",
+      "content": "En guerre contre OpenAI et ses modèles commerciaux, Elon Musk avait promis début mars qu’il rendrait le modèle de langage derrière Grok, son chatbot, open source. Promesse tenue.",
+      "image": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2023/11/grok-1024x576.jpg?avif=1&key=1587c970",
+      "url":"https://www.numerama.com/tech/1654490-elon-musk-publie-un-torrent-de-318-go-et-rend-grok-open-source.html"
+    },
+    {
+      "title": "Cybersécurité : la gendarmerie teste son personnel avant les JO de Paris, 10 % échouent.",
+      "content": "Dans le cadre d’un exercice, la gendarmerie francilienne a envoyé un mail frauduleux à tout son personnel. Cinq cents militaires ont cliqué sur un lien piégé.",
+      "image": "https://static-images.lpnt.fr/cd-cw1618/images/2024/03/16/26237379lpw-26237409-mega-une-jpg_10182490.jpg",
+      "url":"https://www.lepoint.fr/high-tech-internet/cybersecurite-la-gendarmerie-teste-son-personnel-avant-les-jo-de-paris-10-echouent-16-03-2024-2555190_47.php#11"
+    },
+    {
+      "title": "Les folles prédictions de l’inventeur du World Wide Web (WWW) sur l’avenir d’Internet, l’IA sera encore plus au rendez-vous dans les prochaines années !",
+      "content": "Le World Wide Web a célébré son 35ᵉ anniversaire le 12 mars, marquant une étape historique dans l'évolution de la technologie. L'inventeur du Web, Tim Berners-Lee, partage ses prédictions pour l'avenir de cette plateforme mondiale, mettant en lumière l'impact de l'intelligence artificielle, la propriété des données et la possibilité de voir les grandes entreprises technologiques se diviser.",
+      "image": "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2024/03/capture-decran-2024-03-18-a-18.12.37-750x410.png",
       "url":"https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/"
     },
     {
@@ -36,63 +66,33 @@
       "url":"https://www.jeuxvideo.com/news/1865740/35-ans-apres-avoir-invente-le-web-tim-berners-lee-reagit-enfin-il-est-bouleverse-par-l-usage-que-l-humanite-a-fait-de-sa-creation.htm"
     },
     {
-      "title": "Les folles prédictions de l’inventeur du World Wide Web (WWW) sur l’avenir d’Internet, l’IA sera encore plus au rendez-vous dans les prochaines années !",
-      "content": "Le World Wide Web a célébré son 35ᵉ anniversaire le 12 mars, marquant une étape historique dans l'évolution de la technologie. L'inventeur du Web, Tim Berners-Lee, partage ses prédictions pour l'avenir de cette plateforme mondiale, mettant en lumière l'impact de l'intelligence artificielle, la propriété des données et la possibilité de voir les grandes entreprises technologiques se diviser.",
-      "image": "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2024/03/capture-decran-2024-03-18-a-18.12.37-750x410.png",
+      "title": "Et maintenant, GPT peut lire dans les pensées !",
+      "content": "Lire dans les pensées et les retranscrire, voici ce qu’est capable de réaliser un modèle d’IA basé sur GPT1 d’OpenAI. Les chercheurs ont même été choqués par la précision et la justesse de ce décodeur.",
+      "image": "https://aprc.it/api/200x125/https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/",
       "url":"https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-maintenant-gpt-peut-lire-pensees-105096/"
     },
     {
-      "title": "Cybersécurité : la gendarmerie teste son personnel avant les JO de Paris, 10 % échouent.",
-      "content": "Dans le cadre d’un exercice, la gendarmerie francilienne a envoyé un mail frauduleux à tout son personnel. Cinq cents militaires ont cliqué sur un lien piégé.",
-      "image": "https://static-images.lpnt.fr/cd-cw1618/images/2024/03/16/26237379lpw-26237409-mega-une-jpg_10182490.jpg",
-      "url":"https://www.lepoint.fr/high-tech-internet/cybersecurite-la-gendarmerie-teste-son-personnel-avant-les-jo-de-paris-10-echouent-16-03-2024-2555190_47.php#11"
+      "title": "Les cinq métiers de la cybersécurité qui vont faire parler d'eux dans les années à venir.",
+      "content": "ANALYSE - Vol de données, espionnage, sabotage informatique, ransomware : les cyberattaques prennent différentes formes et touchent désormais tous les secteurs d'activité. Dans ce contexte, les besoins en cadres et experts de la cybersécurité explosent.",
+      "image": "https://aprc.it/api/200x125/https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420/",
+      "url":"https://emploi.lefigaro.fr/carriere-remuneration/les-cinq-metiers-de-la-cybersecurite-qui-vont-faire-parler-d-eux-dans-les-annees-a-venir-20230420"
     },
     {
-      "title": "Elon Musk publie un torrent de 318 Go et rend Grok open source.",
-      "content": "En guerre contre OpenAI et ses modèles commerciaux, Elon Musk avait promis début mars qu’il rendrait le modèle de langage derrière Grok, son chatbot, open source. Promesse tenue.",
-      "image": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2023/11/grok-1024x576.jpg?avif=1&key=1587c970",
-      "url":"https://www.numerama.com/tech/1654490-elon-musk-publie-un-torrent-de-318-go-et-rend-grok-open-source.html"
+      "title": "Étude : combien de temps pour pirater votre mot de passe en 2023 ?",
+      "content": "Le nouveau rapport d’Hive Systems démontre que les hackers mettent de moins en moins de temps à pirater un mot de passe.",
+      "image": "https://aprc.it/api/200x125/https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/",
+      "url":"https://www.blogdumoderateur.com/etude-temps-pirater-mot-de-passe-2023/"
     },
     {
-      "title": "AutoDev, un framework innovant développé par Microsoft, pourrait révolutionner le développement de logiciels",
-      "content": "En combinant l'IA avec les besoins pratiques des développeurs, rationalisant les tâches",
-      "image": "https://www.developpez.net/forums/attachments/p652269d1/a/a/a",
-      "url":"https://intelligence-artificielle.developpez.com/actu/355306/AutoDev-un-framework-innovant-developpe-par-Microsoft-pourrait-revolutionner-le-developpement-de-logiciels-en-combinant-l-IA-avec-les-besoins-pratiques-des-developpeurs-rationalisant-les-taches/"
-    },
+      "title": "Geoffrey Hinton, pionnier de l’IA, quitte Google et dit « regretter » son invention.",
+      "content": "Le chercheur a joué un rôle crucial dans le développement des réseaux de neurones artificiels. Sans les travaux de celui-ci, des outils comme ChatGPT, Bard ou Midjourney n’auraient sans doute pas vu le jour.",
+      "image": "https://aprc.it/api/200x125/https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html",
+      "url":"https://www.lemonde.fr/pixels/article/2023/05/02/geoffrey-hinton-pionnier-de-l-ia-quitte-google-et-dit-regretter-son-invention_6171773_4408996.html"
+    }, 
     {
-      "title": "Des ingénieurs développent un robot qui va mettre au chômage les chiens guides d'aveugles",
-      "content": "Mais on n'y est pas encore tout à fait.",
-      "image": "https://korii.slate.fr/uploads/store/story_265324/large_landscape_265324.jpg",
-      "url":"https://korii.slate.fr/tech/ingenieurs-developpent-robot-mettre-chomage-chiens-guides-aveugles-projet-recherche-remplacement-machines-animaux-etats-unis"
-    },
-    {
-      "title": "Voici les technologies que nous utiliserons dans dix ans",
-      "content": "L’édition du soir monte dans la machine à voyager dans le temps, direction 2033. Un monde qui pourrait être sans smartphone, mais avec des robots et des intelligences artificielles plus performantes. Suivez le guide.",
-      "image": "https://media.ouest-france.fr/v1/pictures/8f8499a502724ab0c264942c103dbf6e-25369971.jpg?width=1260&client_id=eds&sign=a97f36a11b8c9c22792df7cbedab3adccf5e270bbebf2f9ea61f090fa821b707",
-      "url":"https://www.ouest-france.fr/leditiondusoir/2023-11-08/voici-les-technologies-que-nous-utiliserons-dans-dix-ans-e234c6e1-c492-4883-afbe-b8ed53307afa"
-    },
-    {
-      "title": "Il y a 40 ans, Microsoft annonçait la sortie de Windows...",
-      "content": "On a l'impression que le système d'exploitation le plus utilisé sur ordinateur existe depuis, au moins, une éternité. Cependant, il y a un début à tout, et dans le cas de Windows, l'histoire commence en novembre 1983.",
-      "image": "https://pic.clubic.com/v1/images/2160355/raw.webp?fit=max&width=1200&hash=6bca289717532113a89cb8caf745a13c0cc1270b",
-      "url":"https://www.clubic.com/actualite-508486-il-y-a-40-ans-microsoft-annoncait-la-sortie-de-windows.html"
-    },
-    {
-      "title": "Étude : les 50 outils d’IA générative les plus utilisés en 2023",
-      "content": "Pour le fonds d’investissement Andreessen Horowitz, ChatGPT domine encore largement le marché des IA génératives.",
-      "image": "https://f.hellowork.com/blogdumoderateur/2023/10/50-outils-IA.jpg",
-      "url":"https://www.blogdumoderateur.com/etude-50-outils-ia-generative-plus-utilises-2023/"
-    },
-    {
-      "title": "Black – Pour formater votre code Python rapidement et sans douleur",
-      "content": "Si vous codez avec vos gros doigts boudinés toute la journée, notamment en Python, il se peut que comme 99% des codeurs, vous ne vous encombriez pas avec le formatage de votre code. Pas le temps, et l’IDE fait le minimum syndical donc ça vaaaaa.",
-      "image": "https://korben.info/app/uploads/2024/02/BlackDecouvrezleformatagePythonrevolutionnaire.webp",
-      "url":"https://korben.info/outil-black-python-nouvelles-fonctionnalites-preview-amelioration-code.html"
-    },
-    {
-      "title": "Le glitch de la clé dans Zelda sur NES – Un mystère enfin résolu",
-      "content": "Vous vous souvenez de The Legend of Zelda sur NES ? Un classique parmi les classiques, pas vrai ? En bon vieux, j’y ai évidemment joué et on pourrait croire qu’après toutes ces années, ce jeu n’a plus aucun secret pour nous autres, les geeks de la vieille école.",
-      "image": "https://korben.info/app/uploads/2024/03/link-scaled.webp",
-      "url":"https://korben.info/glitch-cle-zelda-nes-mystere-resolu.html"
+      "title": "En pleine tempête, le patron d'Unity a pris une décision radicale.",
+      "content": "Quelques semaines après les annonces, puis le rétropédalage autour du nouveau mode de fonctionnement d'Unity, les choses évoluent. John Riccitiello, P.-D.G. de la firme depuis 2014, a annoncé son départ le 9 octobre dernier.",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1gGJLP.img?w=768&h=534&m=6",
+      "url":"https://www.msn.com/fr-fr/lifestyle/shopping/en-pleine-temp%C3%AAte-le-patron-d-unity-a-pris-une-d%C3%A9cision-radicale/ar-AA1iiDba?ocid=msedgntp&cvid=edfc3e85b7c2493eb5e136fb61c33660&ei=7"
     }
   ]
