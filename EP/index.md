@@ -1,6 +1,61 @@
 # **Epreuves Pratiques**
 
-## Liste des sujets 2021-22
+## Pour s'entrainer
+
+<a href="https://codex.forge.apps.education.fr/" target="_blank">Codex - Exercices de codage</a>
+<a href="https://kxs.fr/cours/python/exercices-bases-structures" target="_blank">Python - exercices de base</a>
+
+## Liste des sujets 2024
+
+[Sujets 2024](2024)
+
+## Liste des sujets 2023
+|                   | Exercice 1 | Exercice 2 |
+|:-----------------:|------------|------------|
+| [Sujet 1](2022/EP1)  | Nb d’occurrences d’un caractère dans une chaîne de caractères	|   Rendu de monnaie glouton (listes)|
+| [Sujet 2](2022/EP2)  | Moyenne pondérée	|   Triangle de Pascal (listes)|
+| [Sujet 3](2022/EP3)  | Fonction delta (listes)	|   Arbre binaire de calcul (classe Noeud)|
+| [Sujet 4](2022/EP4)  | Couples d’entiers successifs dans une liste	|   Composante d’une image binaire (liste de listes)|
+| [Sujet 5](2022/EP5)  | Min-max d’un tableau non trié sous forme de dictionnaire	|   Paquet de carte en objet|
+| [Sujet 6](2022/EP6)  | Maxi d’une liste et indice de sa première apparition	|   Recherche d’occurrence d’une chaîne de caractères dans une autre chaîne.|
+| [Sujet 7](2022/EP7)  | Conversion d’un entier en binaire avec renvoie de la liste des 0 et 1 et du nombre de bits.	|   Tri à bulles|
+| [Sujet 8](2022/EP8)  | Indice de la première occurrence d’une valeur dans un tableau	|   Insertion d’une valeur dans un tableau trié|
+| [Sujet 9](2022/EP9)  | Suite de Syracuse	Mot Parfait (dictionnaire lettre : nombre)|
+| [Sujet 10](2022/EP10)  | Dictionnaire des occurrences de lettres dans une chaîne de caractères	|   Fusion de deux listes triées|
+| [Sujet 11](2022/EP11)  | Recherche dichotomique d’une valeur dans un tableau et renvoi d’un indice.	|   Code César avec support ALPHABET en chaîne de caractères|
+| [Sujet 12](2022/EP12)  | Moyenne d’un tableau d’entiers	|   Tri d’un tableau de 0 et de 1|
+| [Sujet 13](2022/EP13)  | Rendu de monnaie glouton avec renvoi du nombre de billets/pièces	|   File par liste chaînée (classe Maillon et classe File)|
+| [Sujet 14](2022/EP14)  | Recherche de correspondance entre un mot en majuscules et un mot « à trous » en majuscules et *.	|   Plan d’envois de messages sous forme de dictionnaire émetteur : destinataire ; recherche de cycles|
+| [Sujet 15](2022/EP15)  | Nombre de répétitions d’un élément dans un tableau	|   Conversion d’un décimal en binaire (division euclidienne).|
+| [Sujet 16](2022/EP16)  | Maxi d’un tableau et indice de sa première occurrence	|   Pile des entiers positifs à partir d’un tableau d’entiers relatifs (listes sans classe)|
+| [Sujet 17](2022/EP17)  | Nombre de mots présents dans une phrase.	|   Arbre Binaire de Recherche (classes ABR et Noeud)|
+| [Sujet 18](2022/EP18)  | Recherche d’un minimum dans un tableau associé à un tableau d’années. |   Renvoi du tuple minimum, année	Palindrome de chaînes de caractères et de nombres|
+| [Sujet 19](2022/EP19)  | Produit de deux nombres entiers avec seulement des additions et des soustractions.	|   Recherche dichotomique récursive d’une valeur dans un tableau trié. (Renvoi de l’indice)|
+| [Sujet 20](2022/EP20)  | XOR à partir de listes de 0 et 1	|   Carré magique (classe Carré)|
+| [Sujet 21](2022/EP21)  | Produit de deux nombres entiers avec seulement des additions et des soustractions.	|   Recherche dichotomique d’une valeur dans un tableau trié. (Renvoi True ou False)|
+| [Sujet 22](2022/EP22)  | Fonction qui renverse une chaîne de caractères	|   Crible d’Eratosthène : liste des nombres premiers à un nombre passé en paramètre|
+| [Sujet 23](2022/EP23)  | Recherche d’un maximum dans les valeurs d’un dico et renvoi du tuple clé, valeur	|   Notation postfixe de calculatrice avec classe Pile.|
+| [Sujet 24](2022/EP24)  | Renvoi du maximum d’un tableau non trié	|   Test de parenthésage correct sur des chaînes de caractères composées de (et). Classe Pile|
+| [Sujet 25](2022/EP25)  | Traitement de données sous forme d’une liste de dictionnaires. |   Récupération d’une liste des dictionnaires correspondant à une clé : valeur ciblée	Recherche d’un élément intrus dans une liste d’éléments présents consécutivement en triple.|
+| [Sujet 26](2022/EP26)  | Minimum dans un tableau non trié et renvoi de l’indice de première occurrence	|   Tri d’un tableau de 0 et 1|
+| [Sujet 27](2022/EP27)  | Calcul de la taille d’un arbre binaire de caractères stocké sous forme de dictionnaire.	|   Tri par sélection|
+| [Sujet 28](2022/EP28)  | Moyenne d’un tableau de flottants	|   Conversion décimale en binaire (chaîne de caractères)|
+| [Sujet 29](2022/EP29)  | Fibonacci dynamique	|   Note maxi et nombre d’élèves correspondants à partir d’une liste d’élève et d’une liste de notes.|
+| [Sujet 30](2022/EP30)  | Fusion de deux listes triées	|   Conversion chiffres romains en décimal (dictionnaire symbole : valeur)|
+| [Sujet 31](2022/EP31)  | Nombre d’occurrences d’une valeur dans un tableau	|   Rendu de monnaie : liste des pièces à rendre pour une somme due et une somme versée|
+| [Sujet 32](2022/EP32)  | Indice de la première occurrence d’un élément dans un tableau	|   Attribution d’adresses IPv4 (classe Adresse IP)|
+| [Sujet 33](2022/EP33)  | Conversion d’une écriture binaire sous forme de tableau de 0 et 1 en décimal	|   Tri par insertion|
+| [Sujet 34](2022/EP34)  | Renvoie du caractère le plus fréquent dans une chaîne de caractères.	|   Traitement d’image (matrice de niveaux de gris) : nombres de lignes et colonnes ; négatif ; nuances de gris en binaire (listes)|
+| [Sujet 35](2022/EP35)  | Moyenne d’une liste d’entiers	|   Recherche dichotomique d’une valeur dans une liste : réponses True et False avec précision de cas|
+| [Sujet 36](2022/EP36)  | Renvoi de la dernière occurrence d’un élément dans un tableau	|   Distance la plus courte entre un point de départ et une liste de points (tuples)|
+| [Sujet 37](2022/EP37)  | Vérification du fait qu’un tableau est trié par ordre croissant	|   Dépouillement d’une liste de bulletins|
+| [Sujet 38](2022/EP38)  | Tri par sélection	|   Jeu du plus ou moins (nombre mystère)|
+| [Sujet 39](2022/EP39)  | Moyenne d’une liste d’entiers	|   Image noir et blanc matrice 0 et 1 zoom et affichage en console|
+| [Sujet 40](2022/EP40)  | Liste des indices d’occurrence d’une valeur dans un tableau	|   Moyenne de notes répertoriées dans des dictionnaires de dictionnaires|
+
+
+
+## Liste des sujets 2022
 
 |                   | Exercice 1 | Exercice 2 |
 |:-----------------:|------------|------------|
