@@ -2,10 +2,14 @@
 
 ## Pour s'entrainer
 
-<a href="https://codex.forge.apps.education.fr/" target="_blank">Codex - Exercices de codage</a>
-<a href="https://kxs.fr/cours/python/exercices-bases-structures" target="_blank">Python - exercices de base</a>
+<a href="https://codex.forge.apps.education.fr/" target="_blank">Codex - Exercices de codage</a>  
+<a href="https://kxs.fr/cours/python/exercices-bases-structures" target="_blank">Python - exercices de base</a>  
 
-## Liste des sujets 2024
+
+## Liste des sujets 
+
+|      [2024](2024)       |   2023  |
+|:---------------:|-----|
 
 [Sujets 2024](2024)
 
