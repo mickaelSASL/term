@@ -14,8 +14,5 @@
 <a href="personnages.csv" target="_blank">données personnages, fichier csv  <img src="https://img.icons8.com/color/48/000000/export-csv.png"/></a>
 
 Bloc Notes Jupyter, Codes Python
-<a href="KNN.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
+<a href="KNN/KNN.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
 
-
-<a href="https://nbviewer.org/github/mickaelSASL/mickaelSASL.github.io/blob/main/T/cours/A/13/KNN.ipynb" target="_blank"><img src="/images/nbviewer_badge.svg"></a>
-<a href="https://mybinder.org/v2/gh/mickaelSASL/mickaelSASL.github.io/HEAD?filepath=T/A/13/KNN.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
