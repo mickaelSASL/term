@@ -1,1440 +1,293 @@
-# Épreuve Pratique BNS 2023
-
-
-
-Les sujets ci-dessous correspondent à la dernière version officielle, publiée le **25/01/2023**.    
-Pour signaler des erreurs éventuelles : `gilles.lassus@ac-bordeaux.fr`  
-*(merci à Rémi Vanicat, Pierre Mouriès, Cyrille Jochault, Vincent Bruneau, Tristan Bringuier, Mireille Coilhac)*    
-  
-:arrow_down: **Téléchargements**  
- 
-- Une archive contenant les 45 dossiers (contenant chacun les deux fichiers ```.pdf``` et ```.py```) : [BNS_2023.zip](data2023/BNS_2023.zip){. target="_blank"} (2,9 Mo)
-- Un pdf unique de tous les sujets : [BNS_2023_pdf_unique.pdf](data2023/BNS_2023_pdf_unique.pdf){. target="_blank"} (3,2 Mo) 
-
-
-
-
-
-
-
-
-    
-## ▶ Sujet 02
-
-[Version originale du sujet](pdf2023/23-NSI-02.pdf){. target="_blank"} en pdf.
-
-### Exercice 02.1
-!!! example "Exercice 02.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/02_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/02_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/02_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 02.2
-!!! example "Exercice 02.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/02_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/02_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/02_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-02.py){. target="_blank"}
-    
-## ▶ Sujet 03
-
-[Version originale du sujet](pdf2023/23-NSI-03.pdf){. target="_blank"} en pdf.
-
-### Exercice 03.1
-!!! example "Exercice 03.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/03_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/03_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/03_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 03.2
-!!! example "Exercice 03.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/03_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/03_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/03_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-03.py){. target="_blank"}
-    
-## ▶ Sujet 04
-
-[Version originale du sujet](pdf2023/23-NSI-04.pdf){. target="_blank"} en pdf.
-
-### Exercice 04.1
-!!! example "Exercice 04.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/04_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/04_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/04_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 04.2
-!!! example "Exercice 04.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/04_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/04_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/04_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-04.py){. target="_blank"}
-    
-## ▶ Sujet 05
-
-[Version originale du sujet](pdf2023/23-NSI-05.pdf){. target="_blank"} en pdf.
-
-### Exercice 05.1
-!!! example "Exercice 05.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/05_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/05_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/05_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 05.2
-!!! example "Exercice 05.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/05_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/05_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/05_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-05.py){. target="_blank"}
-    
-## ▶ Sujet 06
-
-[Version originale du sujet](pdf2023/23-NSI-06.pdf){. target="_blank"} en pdf.
-
-### Exercice 06.1
-!!! example "Exercice 06.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/06_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/06_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/06_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 06.2
-!!! example "Exercice 06.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/06_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/06_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/06_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-06.py){. target="_blank"}
-    
-## ▶ Sujet 07
-
-[Version originale du sujet](pdf2023/23-NSI-07.pdf){. target="_blank"} en pdf.
-
-### Exercice 07.1
-!!! example "Exercice 07.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/07_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/07_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/07_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 07.2
-!!! example "Exercice 07.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/07_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/07_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/07_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-07.py){. target="_blank"}
-    
-## ▶ Sujet 08
-
-[Version originale du sujet](pdf2023/23-NSI-08.pdf){. target="_blank"} en pdf.
-
-### Exercice 08.1
-!!! example "Exercice 08.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/08_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/08_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/08_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 08.2
-!!! example "Exercice 08.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/08_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/08_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/08_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-08.py){. target="_blank"}
-    
-## ▶ Sujet 09
-
-[Version originale du sujet](pdf2023/23-NSI-09.pdf){. target="_blank"} en pdf.
-
-### Exercice 09.1
-!!! example "Exercice 09.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/09_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/09_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/09_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 09.2
-!!! example "Exercice 09.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/09_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/09_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/09_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-09.py){. target="_blank"}
-    
-## ▶ Sujet 10
-
-[Version originale du sujet](pdf2023/23-NSI-10.pdf){. target="_blank"} en pdf.
-
-### Exercice 10.1
-!!! example "Exercice 10.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/10_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/10_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/10_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 10.2
-!!! example "Exercice 10.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/10_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/10_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/10_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-10.py){. target="_blank"}
-    
-## ▶ Sujet 11
-
-[Version originale du sujet](pdf2023/23-NSI-11.pdf){. target="_blank"} en pdf.
-
-### Exercice 11.1
-!!! example "Exercice 11.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/11_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/11_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/11_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 11.2
-!!! example "Exercice 11.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/11_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/11_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/11_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-11.py){. target="_blank"}
-    
-## ▶ Sujet 12
-
-[Version originale du sujet](pdf2023/23-NSI-12.pdf){. target="_blank"} en pdf.
-
-### Exercice 12.1
-!!! example "Exercice 12.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/12_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/12_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/12_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 12.2
-!!! example "Exercice 12.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/12_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/12_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/12_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-12.py){. target="_blank"}
-    
-## ▶ Sujet 13
-
-[Version originale du sujet](pdf2023/23-NSI-13.pdf){. target="_blank"} en pdf.
-
-### Exercice 13.1
-!!! example "Exercice 13.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/13_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/13_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/13_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 13.2
-!!! example "Exercice 13.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/13_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/13_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/13_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-13.py){. target="_blank"}
-    
-## ▶ Sujet 14
-
-[Version originale du sujet](pdf2023/23-NSI-14.pdf){. target="_blank"} en pdf.
-
-### Exercice 14.1
-!!! example "Exercice 14.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/14_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/14_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/14_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 14.2
-!!! example "Exercice 14.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/14_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/14_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/14_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-14.py){. target="_blank"}
-    
-## ▶ Sujet 15
-
-[Version originale du sujet](pdf2023/23-NSI-15.pdf){. target="_blank"} en pdf.
-
-### Exercice 15.1
-!!! example "Exercice 15.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/15_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/15_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/15_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 15.2
-!!! example "Exercice 15.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/15_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/15_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/15_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-15.py){. target="_blank"}
-    
-## ▶ Sujet 16
-
-[Version originale du sujet](pdf2023/23-NSI-16.pdf){. target="_blank"} en pdf.
-
-### Exercice 16.1
-!!! example "Exercice 16.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/16_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/16_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/16_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 16.2
-!!! example "Exercice 16.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/16_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/16_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/16_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-16.py){. target="_blank"}
-    
-## ▶ Sujet 17
-
-[Version originale du sujet](pdf2023/23-NSI-17.pdf){. target="_blank"} en pdf.
-
-### Exercice 17.1
-!!! example "Exercice 17.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/17_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/17_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/17_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 17.2
-!!! example "Exercice 17.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/17_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/17_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/17_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-17.py){. target="_blank"}
-    
-## ▶ Sujet 18
-
-[Version originale du sujet](pdf2023/23-NSI-18.pdf){. target="_blank"} en pdf.
-
-### Exercice 18.1
-!!! example "Exercice 18.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/18_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/18_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/18_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 18.2
-!!! example "Exercice 18.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/18_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/18_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/18_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-18.py){. target="_blank"}
-    
-## ▶ Sujet 19
-
-[Version originale du sujet](pdf2023/23-NSI-19.pdf){. target="_blank"} en pdf.
-
-### Exercice 19.1
-!!! example "Exercice 19.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/19_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/19_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/19_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 19.2
-!!! example "Exercice 19.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/19_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/19_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/19_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-19.py){. target="_blank"}
-    
-## ▶ Sujet 20
-
-[Version originale du sujet](pdf2023/23-NSI-20.pdf){. target="_blank"} en pdf.
-
-### Exercice 20.1
-!!! example "Exercice 20.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/20_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/20_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/20_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 20.2
-!!! example "Exercice 20.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/20_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/20_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/20_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-20.py){. target="_blank"}
-    
-## ▶ Sujet 21
-
-[Version originale du sujet](pdf2023/23-NSI-21.pdf){. target="_blank"} en pdf.
-
-### Exercice 21.1
-!!! example "Exercice 21.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/21_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/21_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/21_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 21.2
-!!! example "Exercice 21.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/21_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/21_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/21_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-21.py){. target="_blank"}
-    
-## ▶ Sujet 22
-
-[Version originale du sujet](pdf2023/23-NSI-22.pdf){. target="_blank"} en pdf.
-
-### Exercice 22.1
-!!! example "Exercice 22.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/22_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/22_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/22_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 22.2
-!!! example "Exercice 22.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/22_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/22_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/22_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-22.py){. target="_blank"}
-    
-## ▶ Sujet 23
-
-[Version originale du sujet](pdf2023/23-NSI-23.pdf){. target="_blank"} en pdf.
-
-### Exercice 23.1
-!!! example "Exercice 23.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/23_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/23_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/23_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 23.2
-!!! example "Exercice 23.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/23_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/23_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/23_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-23.py){. target="_blank"}
-    
-## ▶ Sujet 24
-
-[Version originale du sujet](pdf2023/23-NSI-24.pdf){. target="_blank"} en pdf.
-
-### Exercice 24.1
-!!! example "Exercice 24.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/24_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/24_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/24_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 24.2
-!!! example "Exercice 24.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/24_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/24_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/24_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-24.py){. target="_blank"}
-    
-## ▶ Sujet 25
-
-[Version originale du sujet](pdf2023/23-NSI-25.pdf){. target="_blank"} en pdf.
-
-### Exercice 25.1
-!!! example "Exercice 25.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/25_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/25_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/25_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 25.2
-!!! example "Exercice 25.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/25_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/25_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/25_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-25.py){. target="_blank"}
-    
-## ▶ Sujet 26
-
-[Version originale du sujet](pdf2023/23-NSI-26.pdf){. target="_blank"} en pdf.
-
-### Exercice 26.1
-!!! example "Exercice 26.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/26_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/26_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/26_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 26.2
-!!! example "Exercice 26.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/26_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/26_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/26_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-26.py){. target="_blank"}
-    
-## ▶ Sujet 27
-
-[Version originale du sujet](pdf2023/23-NSI-27.pdf){. target="_blank"} en pdf.
-
-### Exercice 27.1
-!!! example "Exercice 27.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/27_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/27_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/27_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 27.2
-!!! example "Exercice 27.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/27_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/27_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/27_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-27.py){. target="_blank"}
-    
-## ▶ Sujet 28
-
-[Version originale du sujet](pdf2023/23-NSI-28.pdf){. target="_blank"} en pdf.
-
-### Exercice 28.1
-!!! example "Exercice 28.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/28_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/28_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/28_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 28.2
-!!! example "Exercice 28.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/28_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/28_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/28_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-28.py){. target="_blank"}
-    
-## ▶ Sujet 29
-
-[Version originale du sujet](pdf2023/23-NSI-29.pdf){. target="_blank"} en pdf.
-
-### Exercice 29.1
-!!! example "Exercice 29.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/29_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/29_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/29_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 29.2
-!!! example "Exercice 29.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/29_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/29_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/29_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-29.py){. target="_blank"}
-    
-## ▶ Sujet 30
-
-[Version originale du sujet](pdf2023/23-NSI-30.pdf){. target="_blank"} en pdf.
-
-### Exercice 30.1
-!!! example "Exercice 30.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/30_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/30_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/30_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 30.2
-!!! example "Exercice 30.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/30_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/30_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/30_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-30.py){. target="_blank"}
-    
-## ▶ Sujet 31
-
-[Version originale du sujet](pdf2023/23-NSI-31.pdf){. target="_blank"} en pdf.
-
-### Exercice 31.1
-!!! example "Exercice 31.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/31_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/31_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/31_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 31.2
-!!! example "Exercice 31.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/31_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/31_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/31_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-31.py){. target="_blank"}
-    
-## ▶ Sujet 32
-
-[Version originale du sujet](pdf2023/23-NSI-32.pdf){. target="_blank"} en pdf.
-
-### Exercice 32.1
-!!! example "Exercice 32.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/32_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/32_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/32_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 32.2
-!!! example "Exercice 32.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/32_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/32_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/32_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-32.py){. target="_blank"}
-    
-## ▶ Sujet 33
-
-[Version originale du sujet](pdf2023/23-NSI-33.pdf){. target="_blank"} en pdf.
-
-### Exercice 33.1
-!!! example "Exercice 33.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/33_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/33_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/33_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 33.2
-!!! example "Exercice 33.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/33_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/33_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/33_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-33.py){. target="_blank"}
-    
-## ▶ Sujet 34
-
-[Version originale du sujet](pdf2023/23-NSI-34.pdf){. target="_blank"} en pdf.
-
-### Exercice 34.1
-!!! example "Exercice 34.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/34_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/34_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/34_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 34.2
-!!! example "Exercice 34.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/34_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/34_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/34_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-34.py){. target="_blank"}
-    
-## ▶ Sujet 35
-
-[Version originale du sujet](pdf2023/23-NSI-35.pdf){. target="_blank"} en pdf.
-
-### Exercice 35.1
-!!! example "Exercice 35.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/35_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/35_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/35_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 35.2
-!!! example "Exercice 35.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/35_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/35_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/35_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-35.py){. target="_blank"}
-    
-## ▶ Sujet 36
-
-[Version originale du sujet](pdf2023/23-NSI-36.pdf){. target="_blank"} en pdf.
-
-### Exercice 36.1
-!!! example "Exercice 36.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/36_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/36_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/36_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 36.2
-!!! example "Exercice 36.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/36_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/36_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/36_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-36.py){. target="_blank"}
-    
-## ▶ Sujet 37
-
-[Version originale du sujet](pdf2023/23-NSI-37.pdf){. target="_blank"} en pdf.
-
-### Exercice 37.1
-!!! example "Exercice 37.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/37_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/37_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/37_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 37.2
-!!! example "Exercice 37.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/37_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/37_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/37_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-37.py){. target="_blank"}
-    
-## ▶ Sujet 38
-
-[Version originale du sujet](pdf2023/23-NSI-38.pdf){. target="_blank"} en pdf.
-
-### Exercice 38.1
-!!! example "Exercice 38.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/38_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/38_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/38_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 38.2
-!!! example "Exercice 38.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/38_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/38_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/38_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-38.py){. target="_blank"}
-    
-## ▶ Sujet 39
-
-[Version originale du sujet](pdf2023/23-NSI-39.pdf){. target="_blank"} en pdf.
-
-### Exercice 39.1
-!!! example "Exercice 39.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/39_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/39_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/39_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 39.2
-!!! example "Exercice 39.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/39_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/39_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/39_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-39.py){. target="_blank"}
-    
-## ▶ Sujet 40
-
-[Version originale du sujet](pdf2023/23-NSI-40.pdf){. target="_blank"} en pdf.
-
-### Exercice 40.1
-!!! example "Exercice 40.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/40_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/40_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/40_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 40.2
-!!! example "Exercice 40.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/40_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/40_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/40_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-40.py){. target="_blank"}
-    
-## ▶ Sujet 41
-
-[Version originale du sujet](pdf2023/23-NSI-41.pdf){. target="_blank"} en pdf.
-
-### Exercice 41.1
-!!! example "Exercice 41.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/41_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/41_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/41_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 41.2
-!!! example "Exercice 41.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/41_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/41_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/41_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-41.py){. target="_blank"}
-    
-## ▶ Sujet 42
-
-[Version originale du sujet](pdf2023/23-NSI-42.pdf){. target="_blank"} en pdf.
-
-### Exercice 42.1
-!!! example "Exercice 42.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/42_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/42_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/42_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 42.2
-!!! example "Exercice 42.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/42_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/42_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/42_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-42.py){. target="_blank"}
-    
-## ▶ Sujet 43
-
-[Version originale du sujet](pdf2023/23-NSI-43.pdf){. target="_blank"} en pdf.
-
-### Exercice 43.1
-!!! example "Exercice 43.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/43_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/43_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/43_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 43.2
-!!! example "Exercice 43.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/43_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/43_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/43_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-43.py){. target="_blank"}
-    
-## ▶ Sujet 44
-
-[Version originale du sujet](pdf2023/23-NSI-44.pdf){. target="_blank"} en pdf.
-
-### Exercice 44.1
-!!! example "Exercice 44.1"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/44_1/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/44_1/correction.md"
-
-    === "Source Markdown"
-            --8<-- "includes/2023/files/44_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=){. target="_blank"}
-
-
-### Exercice 44.2
-!!! example "Exercice 44.2"
-    === "Énoncé" 
-        --8<-- "includes/2023/files/44_2/enonce.md"
-
-    === "Correction"
-        --8<-- "includes/2023/files/44_2/correction.md"
-
-    === "Sources Markdown"
-        ```md
-        --8<-- "includes/2023/files/44_2/enonce.md"
-        ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-44.py){. target="_blank"}
-    
+<table class="table" style="width: 95%; margin-left: auto; margin-right: auto;" border="1" cellspacing="5" cellpadding="2" tr:nth-child="background-color:#f0f0f0"><caption><span style="color: #000080;"><strong>Bac NSI 2022 : Epreuves Pratiques</strong></span></caption>
+<thead>
+<tr style="background-color: #2f96b4;">
+<td style="text-align: left;"><strong>&nbsp;Sujets</strong></td>
+<td style="text-align: left;"><strong>Thème exercice 1</strong></td>
+<td style="text-align: left;"><strong>Thème exercice 2</strong></td>
+<td style="text-align: left;"><strong target=_blank>Code</strong></td>
+<td style="text-align: left;"><strong>Corrections</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./sujets/22-NSI-01.pdf" target=_blank>Sujet N°01</a></td>
+<td>Recherche d'occurrences <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Recursif (Tle)</span></span> : Rendu de monnaie</td>
+<td><a href="./sujets/22-NSI-01.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-01-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-01-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-02.pdf" target=_blank>Sujet N°02</a></td>
+<td>Calcul d'une moyenne pondérée avec une liste de tuples <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Listes de Listes</span> : Triangle de Pascal <span style="color: #ff6600;">(1re *)</span></td>
+<td><a href="./sujets/22-NSI-02.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-02-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-02-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-03.pdf" target=_blank>Sujet N°03</a></td>
+<td>Codage par différence <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO et arbres (Tle)</span></span> : Arbre binaire et expression arithmétique</td>
+<td><a href="./sujets/22-NSI-03.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-03-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-03-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-04.pdf" target=_blank>Sujet N°04</a></td>
+<td>Recherche des couples d'entiers consécutifs dans un tableau <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Recursif (Tle)</span></span> : Codage d'une image en liste de listes <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span></td>
+<td><a href="./sujets/22-NSI-04.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-04-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-04-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-05.pdf" target=_blank>Sujet N°05</a></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Écrire une fonction qui prend en paramètre un tableau de nombres non triés, et qui renvoie la plus petite et la plus grande valeur du tableau sous la forme d’un dictionnaire à deux clés ‘min’ et ‘max’. <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : cartes et paquet de cartes</td>
+<td><a href="./sujets/22-NSI-05.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-05-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-05-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-06.pdf" target=_blank>Sujet N°06</a></td>
+<td>Valeur et indice du maximum dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td>Recherche textuelle d'une suite de caractères dans un texte <span style="color: #ff6600;">(1re) <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span></span></td>
+<td><a href="./sujets/22-NSI-06.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-06-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-06-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-07.pdf" target=_blank>Sujet N°07</a></td>
+<td>Conversion binaire/décimal <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Tris (Tle)</span></span> : Tri à bulles</td>
+<td><a href="./sujets/22-NSI-07.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-07-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-07-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-08.pdf" target=_blank>Sujet N°08</a></td>
+<td>Recherche indice de la première occurrence dans un tableau <span style="color: #ff6600;">(1re)</span></td>
+<td>Insertion dans une liste triée <span style="color: #ff6600;">(1re *) </span></td>
+<td><a href="./sujets/22-NSI-08.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-08-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-08-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-09.pdf" target=_blank>Sujet N°09</a></td>
+<td>Suite de Collatz <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Codage d'un mot <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-09.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-09-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-09-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-10.pdf" target=_blank>Sujet N°10</a></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Nombre d'occurrence avec un dictionnaire <span style="color: #ff6600;">(1re)</span></td>
+<td>Fusion de deux listes triées <span style="color: #ff6600;">(1re **) <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span></span></td>
+<td><a href="./sujets/22-NSI-10.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-10-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-10-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-11.pdf" target=_blank>Sujet N°11</a></td>
+<td><span style="text-decoration: underline;">Dichotomie</span> : Recherche recherche dichotomique du nombre entier n dans le tableau non vide tab <span style="color: #ff6600;">(1re *)</span></td>
+<td target=_blank>Code de César <span style="color: #ff6600;">(1re)</span><br>Rem : utilisation ded la méthode<em> find()</em></td>
+<td><a href="./sujets/22-NSI-11.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-11-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-11-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-12.pdf" target=_blank>Sujet N°12</a></td>
+<td>Calcul d'une moyenne <span style="color: #ff6600;">(1re)</span></td>
+<td>Séparation des 0 et des 1 dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-12.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-12-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-12-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-13.pdf" target=_blank>Sujet N°13</a></td>
+<td><span style="text-decoration: underline;">Glouton</span> : Rendu de monnaie <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO et liste chainée (Tle)</span></span> : gestion d'une file <span style="color: #ff0000;">(*)</span><span style="color: #ff6600;"></span><span style="color: #ff6600;"></span></td>
+<td><a href="./sujets/22-NSI-13.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-13-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-13-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-14.pdf" target=_blank>Sujet N°14</a></td>
+<td>Mots correspodants à un motif dans une chaine de caractères&nbsp; <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Recherche d'un cycle dans un dictionnaire <span style="color: #ff6600;">(1re *)</span></td>
+<td><a href="./corriges/22-NSI-14.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-14-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-14-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-15.pdf" target=_blank>Sujet N°15</a></td>
+<td>Nombre de répétitions d'un élément <span style="color: #ff6600;">(1re)</span></td>
+<td>Conversion en binaire <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-15.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-15-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-15-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-16.pdf" target=_blank>Sujet N°16</a></td>
+<td>Maximum d'un élément dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Piles (Tle)</span></span> : Structure de données : piles</td>
+<td><a href="./sujets/22-NSI-16.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-16-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-16-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-17.pdf" target=_blank>Sujet N°17</a></td>
+<td>Nombre de mots dans une phrase <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : arbre binaire de recherche</td>
+<td><a href="./sujets/22-NSI-17.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-17-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-17-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-18.pdf" target=_blank>Sujet N°18</a></td>
+<td>Minimum d'une liste de températures <span style="color: #ff6600;">(1re)</span></td>
+<td>Palindrome <span style="color: #ff6600;">(1re *)</span></td>
+<td><a href="./sujets/22-NSI-18.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-18-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-18-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-19.pdf" target=_blank>Sujet N°19</a></td>
+<td>Multiplications avec uniquement additions et soustractions <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dichotomie</span> : Recherche dichotomique <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-19.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-19-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-19-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./corriges/22-NSI-20.pdf" target=_blank>Sujet N°20</a></td>
+<td>Ou exclusif entre deux tableaux <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : Test de carrés magiques</td>
+<td><a href="./sujets/22-NSI-20.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-20-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-20-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-21.pdf" target=_blank>Sujet N°21</a></td>
+<td>Multiplications avec uniquement additions et soustractions <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dichotomie</span> : Recherche dichotomique dans un tableau trié <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-21.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-21-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-21-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-22.pdf" target=_blank>Sujet N°22</a></td>
+<td>Ecriture d'une chaîne de caractères à l'envers <span style="color: #ff6600;">(1re)</span></td>
+<td>Crible d'Eratosthène <span style="color: #ff6600;">(1re *)<br></span></td>
+<td><a href="./sujets/22-NSI-22.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-22-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-22-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-23.pdf" target=_blank>Sujet N°23</a></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Maximum des valeurs d'un dictionnaire <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : pile pour noter une expression arithmétique</td>
+<td><a href="./sujets/22-NSI-23.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-23-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-23-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-24.pdf" target=_blank>Sujet N°24</a></td>
+<td>Maximum des éléments d'une liste et son indice&nbsp; <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : expression bien parenthésée et piles</td>
+<td><a href="./sujets/22-NSI-24.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-24-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-24-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-25.pdf" target=_blank>Sujet N°25</a></td>
+<td><span style="text-decoration: underline;">Traitement de données en tables</span> :&nbsp;écrire une fonction qui prend en paramètre une phrase et renvoie le nombre de mots présents dans cette phrase. <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Recursif (Tle)</span></span> : Recherche récursive dans un tableau <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span><span style="color: #ff6600;"></span></td>
+<td><a href="./sujets/22-NSI-25.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-25-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-25-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-26.pdf" target=_blank>Sujet N°26</a></td>
+<td>Minimum : l'indice de la première occurrence du minimum d'un tableau&nbsp; <span style="color: #ff6600;">(1re)</span></td>
+<td>Séparation des 0 et des 1 dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-26.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-26-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-26-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-27.pdf" target=_blank>Sujet N°27</a></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Arbre, recursif, dictionnaire (Tle)</span></span> : Écrire une fonction récursive taille prenant en paramètres un arbre binaire arbre sous la forme d’un dictionnaire et un caractère lettre qui est la valeur du sommet de l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de noeud. <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span><span style="color: #ff6600;"></span></td>
+<td>Tri par sélection <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-27.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-27-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-27-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-28.pdf" target=_blank>Sujet N°28</a></td>
+<td>Calcul de moyenne <span style="color: #ff6600;">(1re)</span></td>
+<td>Conversion decimal en binaire <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-28.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-28-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-28-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-29.pdf" target=_blank>Sujet N°29</a></td>
+<td>Termes de la suite de Fibonacci <span style="color: #ff6600;">(1re)</span></td>
+<td>Recherche de maximum dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-29.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-29-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-29-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-30.pdf" target=_blank>Sujet N°30</a></td>
+<td><span style="text-decoration: underline;">Tri et fusion</span> :Fusion de deux listes déjà triées <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Recursif et dictionnaires (Tle)</span></span> : Conversion numération romaine</td>
+<td><a href="./sujets/22-NSI-30.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-30-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-30-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-31.pdf" target=_blank>Sujet N°31</a></td>
+<td>Nombre d'occurrence d'un élément dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Glouton</span> : Rendu de monnaie <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-31.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-31-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-31-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-32.pdf" target=_blank>Sujet N°32</a></td>
+<td>Dernière occurrence d'un élément dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">POO (Tle)</span></span> : adresse IP</td>
+<td><a href="./sujets/22-NSI-32.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-32-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-32-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-33.pdf" target=_blank>Sujet N°33</a></td>
+<td>Conversion binaire décimal <span style="color: #ff6600;">(1re)</span></td>
+<td>Tri par insertion <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-33.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-33-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-33-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-34.pdf" target=_blank>Sujet N°34</a></td>
+<td>Lettre la plus fréquente dans un texte <span style="color: #ff6600;">(1re)</span></td>
+<td>Représentation d'une image par une liste de listes <span style="color: #ff6600;">(1re *) <span style="color: #ff6600;"><span style="color: #ff0000;">(*)</span>&nbsp;</span><span style="color: #ff6600;"></span></span></td>
+<td><a href="./sujets/22-NSI-34.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-34-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-34-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-35.pdf" target=_blank>Sujet N°35</a></td>
+<td>Calcul d'une moyenne <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dichotomie</span> : Recherche dichotomique <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-35.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-35-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-35-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-36.pdf" target=_blank>Sujet N°36</a></td>
+<td>Dernière occurrence d'un élément dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td>Calcul de la distance entre deux points <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-36.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-36-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-36-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-37.pdf" target=_blank>Sujet N°37</a></td>
+<td><span style="text-decoration: underline;">Tri</span> :Vérification si une liste est triée ou non <span style="color: #ff6600;">(1re)</span></td>
+<td><span style="text-decoration: underline;">Dictionnaires</span> : Comptabilisation de votes <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-37.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-37-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-37-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-38.pdf" target=_blank>Sujet N°38</a></td>
+<td><span style="text-decoration: underline;">Tri</span> : Tri par sélection <span style="color: #ff6600;">(1re)</span></td>
+<td>Jeu du nombre mystère : Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99. <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-38.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-38-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-38-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-39.pdf" target=_blank>Sujet N°39</a></td>
+<td>Calcul d'une moyenne <span style="color: #ff6600;">(1re)</span></td>
+<td>Représentation d'une image par une liste de listes <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-39.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-39-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-39-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+<tr>
+<td><a href="./sujets/22-NSI-40.pdf" target=_blank>Sujet N°40</a></td>
+<td>Recherche d'un élément dans une liste <span style="color: #ff6600;">(1re)</span></td>
+<td>Calcul de moyennes (dictionnaires) <span style="color: #ff6600;">(1re)</span></td>
+<td><a href="./sujets/22-NSI-40.py" target=_blank>Code</a></td>
+<td><a href="./corriges/22-NSI-40-ex1.py" target=_blank>Ex.1</a> / <a href="./corriges/22-NSI-40-ex2.py" target=_blank>Ex.2</a></td>
+</tr>
+</tbody>
+</table>
