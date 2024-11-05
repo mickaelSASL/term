@@ -1,3 +1,25 @@
+Le domino est un jeu très ancien constitué de 28 pièces toute différentes. Sur chacune de ces pièces, il y a deux cotés qui sont constitués de 0 (blanc) à 6 points noirs. Lorsqué les 2 cotés possèdent le même nombre de points, on l’appelle domino double. 
+
+1. Proposer un classe Domino permettant de représenter une pièce. Les objets seront initialisés avec les valeurs des deux côtés (gauche et droite). On définira des méthodes pour tester si le domino est double ou blanc. On implémentera également une méthode pour compter le nombre de points sur un domino. 
+On ajoutera également une méthode qui affiche les valeurs des deux faces de manière horizontale pour un domino classique et de manière verticale pour un domino double comme le montre la figure ci-dessous.
+
+```
+ ------- 
+| 5 | 4 |
+ ------- 
+ --- 
+| 1 |
+|   |
+| 1 |
+ --- 
+```
+
+
+2. Proposer une classe JeuDeDomino permettant de manipuler le jeu de domino complet. On créera une méthode pour mélanger le jeu et pour distribuer selon 2 joueurs ou plus. 
+
+3. En utilisant cette classe, on affichera le jeu de 2 joueurs ainsi que le jeu restant (la pioche). Pour chaque joueur, on affichera le nombre 
+de points dans le jeu.
+
 
 
 ```python

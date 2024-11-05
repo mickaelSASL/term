@@ -10,5 +10,3 @@
 
 <a href="https://gayerie.dev/docs/python/python3/objet.html" target="_blank">Documentation Python POO
 ![](https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png)</a>
-
-[Exercice "Jeu de Dominos"](dominos.md)
