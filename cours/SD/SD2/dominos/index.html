@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mickaelsasl.github.io/cours/SD/SD2/SD2-ex3-interm%C3%A9diaire/">
+        <link rel="canonical" href="https://mickaelsasl.github.io/cours/SD/SD2/dominos/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../SD2-ex3-interm%C3%A9diaire/">
       
       
-        <link rel="next" href="../dominos/">
+        <link rel="next" href="../exercices-corrige/">
       
       
       <link rel="icon" href="../../../../dlna">
@@ -22,7 +22,7 @@
     
     
       
-        <title>SD2 - Exercice 3 - Version intermédiaire - NSI Terminale</title>
+        <title>Dominos - NSI Terminale</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SD2 - Exercice 3 - Version intermédiaire
+              Dominos
             
           </span>
         </div>
@@ -3328,52 +3328,98 @@
                   
 
 
-<h1 id="sd2-exercice-3-version-intermediaire">SD2 - Exercice 3 - Version intermédiaire</h1>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Proposition intermédiaire:</span>
-<span class="c1"># Dans l&#39;éditeur PYTHON</span>
-<span class="k">class</span> <span class="nc">Piece</span><span class="p">:</span>
-    <span class="c1"># nom est une string et surface est un float</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="n">surface</span><span class="p">):</span>
-        <span class="c1"># chaque objet a pour attributs le nom de la pièce(string)</span>
-        <span class="c1"># et la surface de celle ci(float) en m2.</span>
-        <span class="c1"># on doit rentrer le couple nom de la pièce et la surface</span>
-        <span class="c1"># pour chaque pièce.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="o">=</span><span class="n">nom</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">surface</span><span class="o">=</span><span class="n">surface</span>
+  <h1>Dominos</h1>
 
-    <span class="c1"># Accesseurs: retournent les attributs d&#39;un objet de cette classe</span>
-    <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
-    <span class="k">def</span> <span class="nf">getSurface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">JeuDeDomino</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Classe JeuDeDomino &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__creerJeu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Pour créer un jeu de 28 pieces toutes différentes &quot;&quot;&quot;</span>
+        <span class="n">jeu</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">jeu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Domino</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">jeu</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Constructeur &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__Jeu</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__NbPieces</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">Melanger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Mélange aléatoirement le jeu de dominos &quot;&quot;&quot;</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">AfficherJeu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Affiche toutes les pièces du jeu ou la pioche si il y eu distribution &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
-    <span class="c1"># Mutateur: modifient les attributs, ici la surface d&#39;une pièce</span>
-    <span class="c1"># déjà renseignée</span>
-    <span class="k">def</span> <span class="nf">setSurface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">s</span><span class="p">):</span> <span class="c1"># s est un float</span>
+    <span class="k">def</span> <span class="nf">Distribuer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nb_joueur</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Extrait des dominos du jeu pour un joueur et retourne une liste de 6 ou 7 dominos &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
 
-<span class="k">class</span> <span class="nc">Appartement</span><span class="p">:</span>
-    <span class="c1"># nom est une string</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">):</span>
-        <span class="c1">#nomme l&#39;appartement et une liste de pièces vide à remplir</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">listeDePieces</span><span class="o">=</span><span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="o">=</span><span class="n">nom</span>
+<span class="k">class</span> <span class="nc">Domino</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Classe Domino &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">piece</span><span class="p">):</span>
-        <span class="c1"># ajoute une piece (instance(=objet) de la classe Piece)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ptg</span><span class="p">,</span> <span class="n">ptd</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Constructeur &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cote_gauche</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cote_droit</span> <span class="o">=</span> <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">nbPieces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># retourne le nombre de pièces de l&#39;appartement</span>
+    <span class="k">def</span> <span class="nf">AfficherDomino</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Affiche les 2 faces du Domino &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">getSurfaceTotale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># retourne la surface totale de l&#39;appartement (un float)</span>
+    <span class="k">def</span> <span class="nf">Nb_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; retourne la somme des points présents sur les 2 côtés &quot;&quot;&quot;</span>
+       <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">EstBlanc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; teste si le domino possède un blanc : 0 sur un des côtés &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">getListePieces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># retourne la liste des pieces</span>
+    <span class="k">def</span> <span class="nf">EstDouble</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; teste si le domino est double : même nombre sur les 2 côtés &quot;&quot;&quot;</span>
         <span class="o">...</span>
+
+
+
+<span class="n">monjeu</span> <span class="o">=</span> <span class="n">JeuDeDomino</span><span class="p">()</span>
+<span class="n">monjeu</span><span class="o">.</span><span class="n">Melanger</span><span class="p">()</span>
+
+<span class="n">jeu1</span> <span class="o">=</span> <span class="n">monjeu</span><span class="o">.</span><span class="n">Distribuer</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;joueur1&quot;</span><span class="p">)</span>
+<span class="n">points_joueur1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nb_domino_blc_1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nb_dominos_double_1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">jeu1</span><span class="p">)):</span>
+    <span class="n">jeu1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">AfficherDomino</span><span class="p">()</span>
+    <span class="n">points_joueur1</span> <span class="o">+=</span> <span class="n">jeu1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">Nb_points</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">jeu1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">EstDouble</span><span class="p">():</span>
+        <span class="n">nb_dominos_double_1</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">jeu1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">EstBlanc</span><span class="p">():</span>
+        <span class="n">nb_domino_blc_1</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;points :&quot;</span><span class="p">,</span> <span class="n">points_joueur1</span><span class="p">,</span> <span class="s2">&quot;points possibles : dont&quot;</span><span class="p">,</span> <span class="n">nb_domino_blc_1</span><span class="p">,</span> <span class="s2">&quot;blanc(s) et&quot;</span><span class="p">,</span> <span class="n">nb_dominos_double_1</span><span class="p">,</span> <span class="s2">&quot;double(s)&quot;</span><span class="p">)</span>
+
+<span class="n">jeu2</span> <span class="o">=</span> <span class="n">monjeu</span><span class="o">.</span><span class="n">Distribuer</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;joueur2&quot;</span><span class="p">)</span>
+<span class="n">points_joueur2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nb_domino_blc_2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nb_dominos_double_2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">jeu2</span><span class="p">)):</span>
+    <span class="n">jeu2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">AfficherDomino</span><span class="p">()</span>
+    <span class="n">points_joueur2</span> <span class="o">+=</span> <span class="n">jeu2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">Nb_points</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">jeu2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">EstDouble</span><span class="p">():</span>
+        <span class="n">nb_dominos_double_2</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">jeu2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">EstBlanc</span><span class="p">():</span>
+        <span class="n">nb_domino_blc_2</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;points :&quot;</span><span class="p">,</span> <span class="n">points_joueur2</span><span class="p">,</span> <span class="s2">&quot;points possibles : dont&quot;</span><span class="p">,</span> <span class="n">nb_domino_blc_2</span><span class="p">,</span> <span class="s2">&quot;blanc(s) et&quot;</span><span class="p">,</span> <span class="n">nb_dominos_double_2</span><span class="p">,</span> <span class="s2">&quot;double(s)&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pioche&quot;</span><span class="p">)</span>
+<span class="n">monjeu</span><span class="o">.</span><span class="n">AfficherJeu</span><span class="p">()</span>
 </code></pre></div>
 
 
