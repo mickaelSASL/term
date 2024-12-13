@@ -14,7 +14,7 @@
         <link rel="prev" href="../dominos/">
       
       
-        <link rel="next" href="../exercices-corrige/">
+        <link rel="next" href="../../SD3/">
       
       
       <link rel="icon" href="../../../../dlna">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Dominos corrigé - NSI Terminale</title>
+        <title>Exercice bilan corrigé - NSI Terminale</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dominos corrigé
+              Exercice bilan corrigé
             
           </span>
         </div>
@@ -801,6 +801,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Exercice bilan corrigé
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -3349,7 +3378,7 @@
                   
 
 
-  <h1>Dominos corrigé</h1>
+  <h1>Exercice bilan corrigé</h1>
 
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="kn">import</span> <span class="nn">random</span>
 
@@ -3398,12 +3427,20 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span> <span class="o">=</span> <span class="n">ptg</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_cote_droit</span> <span class="o">=</span> <span class="n">ptd</span>
 
+
         <span class="k">def</span> <span class="nf">AfficherDomino</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">EstDouble</span><span class="p">():</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[ &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ]&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; |&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;|---|&quot;</span><span class="p">)</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; |&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_droit</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; ------- &quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; | &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cote_droit</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; |&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; ------- &quot;</span><span class="p">)</span>
+
 
         <span class="k">def</span> <span class="nf">Nb_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cote_gauche</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cote_droit</span>

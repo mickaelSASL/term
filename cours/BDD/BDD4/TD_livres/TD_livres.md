@@ -93,7 +93,7 @@ Puis nous allons remplir ces tables avec les requêtes suivantes :
     (12,'Ravage',7,1943,8),
     (13,'Le Maître du Haut Château',6,1962,8),
     (14,'Le monde des A',9,1945,7),
-    (15,'La Fin de l'éternité',3,1955,8),
+    (15,'La Fin de l''éternité',3,1955,8),
     (16,'De la Terre à la Lune',10,1865,10);
     ```
 

@@ -46,13 +46,21 @@
             self._cote_gauche = ptg
             self._cote_droit = ptd
 
+
         def AfficherDomino(self):
             if self.EstDouble():
-                print("[" + str(self._cote_gauche) + "]")
-                print("[ " + str(self._cote_gauche) + " ]")
+                print(" --- ")
+                print("| " + str(self._cote_gauche) + " |")
+                print("|---|")
+                
+                print("| " + str(self._cote_gauche) + " |")
+                print(" --- ")
             else:
-                print("[" + str(self._cote_gauche) + "|" + str(self._cote_droit) + "]")
-
+                print(" ------- ")
+                print("| " + str(self._cote_gauche) + " | " + str(self._cote_droit) + " |")
+                print(" ------- ")
+                
+                
         def Nb_points(self):
             return self._cote_gauche + self._cote_droit
 
