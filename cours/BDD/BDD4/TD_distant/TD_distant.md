@@ -1,9 +1,9 @@
 # **TD sur base distante**
 
-Connecter vous sur la base de données `villes` située sur le serveur `192.168.2.99`, à l'aide de vos nom et prénom en respectant la syntaxe suivante :
+Connecter vous sur la base de données `villes` située sur le serveur `192.168.2.239`, à l'aide de vos nom et prénom en respectant la syntaxe suivante :
 
-* identifiant : `prenom` 
-* mot de passe : `nom`
+* identifiant : `prénom` 
+* mot de passe : `prénom`
 
 > fichiers de la base de données :  
 >
