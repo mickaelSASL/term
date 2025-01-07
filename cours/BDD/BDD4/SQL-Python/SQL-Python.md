@@ -113,4 +113,4 @@ else:
 
     résultat attendu :
 
-    ![](figure.png)
+    ![](Figure.png)
