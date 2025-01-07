@@ -1,0 +1,1 @@
+select count(*), departement_nom from villes_france_free join departement on villes_france_free.departement.id = departement.departement_id group by departement_nom
