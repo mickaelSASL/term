@@ -3459,7 +3459,7 @@
 <span class="c1">#######################################</span>
 <span class="c1"># REQUETE SQL : Modification de données</span>
 <span class="c1">#######################################</span>
-    <span class="n">requete</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;UPDATE villes_france_free SET ville_population_2012=&#39;&quot;</span><span class="o">+</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nouveau Population :&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; WHERE nom=&#39;Auray&#39;;&quot;</span><span class="p">)</span>
+    <span class="n">requete</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;UPDATE villes_france_free SET ville_population_2012=&#39;&quot;</span><span class="o">+</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nouveau Population :&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; WHERE ville_nom=&#39;Auray&#39;;&quot;</span><span class="p">)</span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 
     <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># Les modifications sont appliquées dans la BDD</span>

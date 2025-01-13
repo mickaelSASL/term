@@ -84,7 +84,7 @@ else:
 #######################################
 # REQUETE SQL : Modification de données
 #######################################
-    requete=("UPDATE villes_france_free SET ville_population_2012='"+ input("Nouveau Population :")+"' WHERE nom='Auray';")
+    requete=("UPDATE villes_france_free SET ville_population_2012='"+ input("Nouveau Population :")+"' WHERE ville_nom='Auray';")
     resultat = curseur.execute(requete)
     
     conn.commit()  # Les modifications sont appliquées dans la BDD
