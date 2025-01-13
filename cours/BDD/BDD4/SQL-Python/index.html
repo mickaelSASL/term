@@ -3471,8 +3471,16 @@
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>     <span class="c1"># fermeture du connection</span>
 </code></pre></div>
 <h2 id="exercice">Exercice</h2>
+<p>!!! 1. Recopier le code ci-dessus et le tester (pensez à modifier les informations de connexion au serveur)</p>
+<details class="note">
+<summary>Solution</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">departement_nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">villes_france_free</span><span class="p">.</span><span class="n">ville_departement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departement</span><span class="p">.</span><span class="n">departement_id</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span>
+</code></pre></div>
+</details>
 <ol>
-<li>Recopier le code ci-dessus et le tester (pensez à modifier les informations de connexion au serveur)</li>
 <li>
 <p>Ecrire un requête permettant de récupérer le nombre de villes par département.
     pour cela il faut utiliser SELECT, JOIN, COUNT, GROUP BY</p>

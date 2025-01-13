@@ -99,7 +99,17 @@ else:
 
 ## Exercice
 
-1. Recopier le code ci-dessus et le tester (pensez à modifier les informations de connexion au serveur)
+
+!!! 1. Recopier le code ci-dessus et le tester (pensez à modifier les informations de connexion au serveur)
+
+??? note "Solution"
+
+    ```SQL
+    SELECT count(*), departement_nom 
+    FROM villes_france_free JOIN departement 
+    ON villes_france_free.ville_departement = departement.departement_id 
+    GROUP BY departement_nom
+    ```
 2. Ecrire un requête permettant de récupérer le nombre de villes par département.
     pour cela il faut utiliser SELECT, JOIN, COUNT, GROUP BY
 
