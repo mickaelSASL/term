@@ -103,7 +103,7 @@ else:
 !!! Question "1. Recopier le code ci-dessus et le tester (pensez à modifier les informations de connexion au serveur)"
 
 
-!!! Question "2. Ecrire un requête permettant de récupérer le nombre de villes par département."
+!!! Question "2. Ecrire une requête permettant de récupérer le nombre de villes par département."
     pour cela il faut utiliser SELECT, JOIN, COUNT, GROUP BY
 
     résultat attendu :
@@ -124,3 +124,13 @@ else:
     résultat attendu :
 
     ![](Figure.png)
+
+!!! Question "4. Ecrire un programme permettant le fonctionnement illustré ci-dessous."
+    ``` 
+        Saisir le nom d'une ville : AURAY
+        Auray est sitée dans le département du Morbihan.
+    ```
+    ??? note "Solution"
+
+        ```
+        ```
