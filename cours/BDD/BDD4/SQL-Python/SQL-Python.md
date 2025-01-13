@@ -110,14 +110,14 @@ else:
     ``` python
     [(419, 'Ain'), (1176, 'Aisne'), (320, 'Allier'), (200, 'Alpes-de-Haute-Provence'), (163, 'Alpes-Maritimes'), (339, 'Ardèche'), (463, 'Ardennes'), (332, 'Ariège'), (433, 'Aube'), (438, 'Aude'), (304, 'Aveyron'), (377, 'Bas-Rhin'), (119, 'Bouches-du-Rhône'), (706, 'Calvados'), (260, 'Cantal'), (404, 'Charente'), (472, 'Charente-Maritime'), (290, 'Cher'), (286, 'Corrèze'), (373, "Côte-d'or"), (260, "Côtes-d'armor"), (557, 'Creuse'), (782, 'Deux-Sèvres'), (594, 'Dordogne'), (369, 'Doubs'), (675, 'Drôme'), (36, 'Essonne'), (403, 'Eure'), (283, 'Eure-et-Loir'), (353, 'Finistère'), (589, 'Gard'), (542, 'Gers'), (343, 'Gironde'), (293, 'Haut-Rhin'), (706, 'Haute-corse'), (463, 'Haute-Garonne'), (221, 'Haute-Loire'), (261, 'Haute-Marne'), (573, 'Haute-Saône'), (1, 'Haute-Savoie'), (515, 'Haute-Vienne'), (177, 'Hautes-Alpes'), (226, 'Hautes-Pyrénées'), (40, 'Hauts-de-Seine'), (353, 'Hérault'), (247, 'Ile-et-Vilaine'), (277, 'Indre'), (533, 'Indre-et-Loire'), (544, 'Isère'), (331, 'Jura'), (291, 'Landes'), (327, 'Loir-et-Cher'), (260, 'Loire'), (334, 'Loire-Atlantique'), (340, 'Loiret'), (319, 'Lot'), (185, 'Lot-et-Garonne'), (363, 'Lozère'), (601, 'Maine-et-Loire'), (620, 'Manche'), (433, 'Marne'), (594, 'Mayenne'), (500, 'Meurthe-et-Moselle'), (261, 'Meuse'), (730, 'Morbihan'), (312, 'Moselle'), (650, 'Nièvre'), (693, 'Nord'), (505, 'Oise'), (895, 'Orne'), (745, 'Paris'), (470, 'Pas-de-Calais'), (547, 'Puy-de-Dôme'), (474, 'Pyrénées-Atlantiques'), (527, 'Pyrénées-Orientales'), (545, 'Rhône'), (375, 'Saône-et-Loire'), (305, 'Sarthe'), (294, 'Savoie'), (262, 'Seine-et-Marne'), (514, 'Seine-Maritime'), (47, 'Seine-Saint-Denis'), (323, 'Somme'), (195, 'Tarn'), (153, 'Tarn-et-Garonne'), (196, 'Territoire de Belfort'), (185, 'Val-de-Marne'), (151, 'Var'), (282, 'Vaucluse'), (281, 'Vendée'), (201, 'Vienne'), (455, 'Vosges'), (102, 'Yonne'), (305, 'Yvelines')]
     ```
-??? note "Solution"
+    ??? note "Solution"
 
-    ```SQL
-    SELECT count(*), departement_nom 
-    FROM villes_france_free JOIN departement 
-    ON villes_france_free.ville_departement = departement.departement_id 
-    GROUP BY departement_nom
-    ```
+        ```SQL
+        SELECT count(*), departement_nom 
+        FROM villes_france_free JOIN departement 
+        ON villes_france_free.ville_departement = departement.departement_id 
+        GROUP BY departement_nom
+        ```
 !!! Question "3. Exploiter ces données pour construire un diagramme circulaire présentant la répartition des communes par département."
     Utiliser la bibliothèque [*'matplotlib'*](https://matplotlib.org/)
 
