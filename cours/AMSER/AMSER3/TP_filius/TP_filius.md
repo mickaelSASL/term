@@ -7,5 +7,7 @@
 **Dans ce réseau, chaque sous-réseau est convenablement configuré mais les liens entre routeurs ne sont pas faits. Vous devez donc :**
 
 * Configurez les interfaces IP entre routeurs
-* Configurez les tables de routage – interdiction d'utiliser le routage automatique ! – pour que le sous-réseau 172.16.x.x puisse communiquer avec M6.
+* Configurez les tables de routage – interdiction d'utiliser le routage automatique ! – pour que uniquement le sous-réseau 172.16.x.x puisse communiquer avec M6. (les informations doivent circuler dans les 2 sens)
+* Tester la communication.
 * Configurez pour que toutes les machines puissent communiquer ensemble.
+* Tester la communication.
