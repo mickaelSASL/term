@@ -14,8 +14,8 @@ from mysql.connector import errorcode
 # Caractéristiques de la connection
 database    = 'villes'
 host_ip     = 'localhost'
-utilisateur = 'moi'
-password    = ''
+utilisateur = 'prenom'
+password    = 'prenom'
 
 #####################
 # CONNECTION à la BDD
