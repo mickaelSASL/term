@@ -2,7 +2,7 @@
 
 ![](reseau.png)
 
-<a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EZ8jV2Pq-YZNumgcdUQHET0B3i1tw3oBqpa8eUSUcHPA2g?e=AAV5Vk" target="_blank">reseau.fls<img src="\images\filius.png" width="32px"></a>
+<a href="https://sasl56-my.sharepoint.com/:u:/g/personal/mickael_kerviche_sa-sl_fr/EZ8jV2Pq-YZNumgcdUQHET0B3i1tw3oBqpa8eUSUcHPA2g?e=AAV5Vk" target="_blank">reseau.fls<img src="\term\images\filius.png" width="32px"></a>
 
 **Dans ce réseau, chaque sous-réseau est convenablement configuré mais les liens entre routeurs ne sont pas faits. Vous devez donc :**
 
