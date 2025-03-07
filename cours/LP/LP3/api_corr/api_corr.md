@@ -26,7 +26,7 @@ Plus précisément, on utilisera la **météo actuelle**, vous pouvez vous rendr
 Le module `requests` de Python permet d'effectuer des **appels d'API** à l'aide de **requêtes HTTP**, et ainsi de de récupérer des données sur le web **au format JSON** et de les intégrer dans un **dictionnaire**.
 
 !!! tip "Utilisation du programme"
-    Ouvrez le script `meteo.py` dans **Thonny** (ou dans votre IDE préféré), puis exécutez-le.
+    Ouvrez le script `meteo.py` dans **Spyder**, puis exécutez-le.
 
     En appelant `get_weather('Paris')`, vous devriez obtenir quelque chose comme ceci :
     ```python
@@ -112,7 +112,7 @@ Le module `requests` de Python permet d'effectuer des **appels d'API** à l'aide
         print(f"Température ressentie à {ville} : {donnees['main']['feels_like']} °C.")
     ```
 
-    Un petit test dans la console de Thonny donnera quelque chose comme ceci :
+    Un petit test dans la console de Spyder donnera quelque chose comme ceci :
 
     ```python
     >>> temperature_ressentie('Paris')
@@ -561,7 +561,7 @@ Voici un exemple de graphe affichant la comparaison entre l'évolution de la tem
     from matplotlib import pyplot
     ```
 
-    **Si le module n'est pas installé sur votre machine, vous devez l'installer**. Pour cela, dans Thonny, cliquez sur "Outils" puis sur "Gérer les paquets", puis recherchez et installez le paquet **Matplotlib**.
+    **Si le module n'est pas installé sur votre machine, vous devez l'installer**. Pour cela, dans la console de Spyder, exécuter la commande ```pip install matplotlib``` 
 
     En l'occurence, vous n'aurez besoin que des fonctions `plot` et `show`, et éventuellement de `legend` si vous souhaitez afficher des légendes.
 

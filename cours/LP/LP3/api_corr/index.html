@@ -3457,7 +3457,7 @@ Pour ce type d'API, une méthode consiste à émettre une <strong>requête HTTP<
 <p>Le module <code>requests</code> de Python permet d'effectuer des <strong>appels d'API</strong> à l'aide de <strong>requêtes HTTP</strong>, et ainsi de de récupérer des données sur le web <strong>au format JSON</strong> et de les intégrer dans un <strong>dictionnaire</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Utilisation du programme</p>
-<p>Ouvrez le script <code>meteo.py</code> dans <strong>Thonny</strong> (ou dans votre IDE préféré), puis exécutez-le.</p>
+<p>Ouvrez le script <code>meteo.py</code> dans <strong>Spyder</strong>, puis exécutez-le.</p>
 <p>En appelant <code>get_weather('Paris')</code>, vous devriez obtenir quelque chose comme ceci :
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">{</span><span class="s1">&#39;coord&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="mf">2.3488</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="mf">48.8534</span><span class="p">},</span> 
 <span class="s1">&#39;weather&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s1">&#39;main&#39;</span><span class="p">:</span> <span class="s1">&#39;Clear&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;clear sky&#39;</span><span class="p">,</span> <span class="s1">&#39;icon&#39;</span><span class="p">:</span> <span class="s1">&#39;01n&#39;</span><span class="p">}],</span> 
@@ -3524,7 +3524,7 @@ Une <strong>f-string</strong> permet d'intégrer facilement des variables à une
     <span class="n">donnees</span> <span class="o">=</span> <span class="n">get_weather</span><span class="p">(</span><span class="n">ville</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Température ressentie à </span><span class="si">{</span><span class="n">ville</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">donnees</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;feels_like&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> °C.&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Un petit test dans la console de Thonny donnera quelque chose comme ceci :</p>
+<p>Un petit test dans la console de Spyder donnera quelque chose comme ceci :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">temperature_ressentie</span><span class="p">(</span><span class="s1">&#39;Paris&#39;</span><span class="p">)</span>
 <span class="n">Température</span> <span class="n">ressentie</span> <span class="n">à</span> <span class="n">Paris</span> <span class="p">:</span> <span class="mf">33.02</span> <span class="err">°</span><span class="n">C</span><span class="o">.</span>
 </code></pre></div>
@@ -3952,7 +3952,7 @@ L'API permet d'obtenir les prévisions des <strong>5 prochains jours</strong>, �
 <p>Vous pouvez consulter <a href="http://www.python-simple.com/python-matplotlib/pyplot.php" target="_blank">cette page</a> pour des rappels concernant le module <strong>pyplot</strong> contenu dans la bibliothèque <strong>Matplotlib</strong>. N'oubliez pas d'importer le module dans votre script s'il ne l'est pas, en rajoutant cette ligne au début de votre script :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 </code></pre></div>
-<p><strong>Si le module n'est pas installé sur votre machine, vous devez l'installer</strong>. Pour cela, dans Thonny, cliquez sur "Outils" puis sur "Gérer les paquets", puis recherchez et installez le paquet <strong>Matplotlib</strong>.</p>
+<p><strong>Si le module n'est pas installé sur votre machine, vous devez l'installer</strong>. Pour cela, dans la console de Spyder, exécuter la commande <code>pip install matplotlib</code> </p>
 <p>En l'occurence, vous n'aurez besoin que des fonctions <code>plot</code> et <code>show</code>, et éventuellement de <code>legend</code> si vous souhaitez afficher des légendes.</p>
 </div>
 <hr />
