@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://mickaelsasl.github.io/term/cours/LP/LP3/">
       
       
-        <link rel="prev" href="../LP2/exo_bac2/">
+        <link rel="prev" href="../LP2/puce/">
       
       
-        <link rel="next" href="../LP5/">
+        <link rel="next" href="APIs/">
       
       
       <link rel="icon" href="../../../dlna">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Cours - NSI Terminale</title>
+        <title>**LP3 : Modularité** - NSI Terminale</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours
+              **LP3 : Modularité**
             
           </span>
         </div>
@@ -2046,26 +2046,60 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Cours
+    API
   </span>
   
 
       </a>
-      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="APIs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liste d'APIs
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3401,59 +3435,25 @@
 
 <h1 id="lp3-modularite"><strong>LP3 : Modularité</strong></h1>
 <p><center><img src="https://files.realpython.com/media/Consuming-APIs-in-Python_Watermarked.beb5a262ae01.jpg" width="75%"></center></p>
-<p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/ETD-O2EUZxhMhjeCcz_zIhwBIHRTG1uXWtzqOeY_gYRojA?e=ERAqjW
-" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a></p>
-<p><a href="https://openweathermap.org/current" target="_blank">API Open Weather<img src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png"></a></p>
-<p><a href="https://samples.openweathermap.org/data/2.5/weather?zip=14200,fr&appid=439d4b804bc8187953eb36d2a8c26a02" target="_blank">Exemple d'utilisation de l'API Open Weather<img src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png"></a></p>
-<p><code>https://samples.openweathermap.org/data/2.5/weather?zip=14200,fr&amp;appid=439d4b804bc8187953eb36d2a8c26a02</code></p>
-<div class="highlight"><span class="filename">JSON</span><pre><span></span><code><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;coord&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="mf">-122.09</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="mf">37.39</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;weather&quot;</span><span class="p">:[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Rain&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;light rain&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;10d&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">],</span>
-<span class="w">   </span><span class="nt">&quot;base&quot;</span><span class="p">:</span><span class="s2">&quot;stations&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;main&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;temp&quot;</span><span class="p">:</span><span class="mf">280.44</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mi">1017</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">61</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;temp_min&quot;</span><span class="p">:</span><span class="mf">279.15</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;temp_max&quot;</span><span class="p">:</span><span class="mf">281.15</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;visibility&quot;</span><span class="p">:</span><span class="mi">12874</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;wind&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">8.2</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">340</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;gust&quot;</span><span class="p">:</span><span class="mf">11.3</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;clouds&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;all&quot;</span><span class="p">:</span><span class="mi">1</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1519061700</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;sys&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">392</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="mf">0.0027</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sunrise&quot;</span><span class="p">:</span><span class="mi">1519051894</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sunset&quot;</span><span class="p">:</span><span class="mi">1519091585</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Mountain View&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;cod&quot;</span><span class="p">:</span><span class="mi">200</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>clé API = 3f1aa1fecdccf8c6cdeeb41957ff33b4</p>
-<p><a href="https://openweathermap.org/api/air-pollution" target="_blank">Air Pollution<img src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png"></a></p>
-<p><a href="https://openweathermap.org/api/geocoding-api" target="_blank">Geo Coding<img src="https://icons.iconarchive.com/icons/icons8/windows-8/24/Programming-External-Link-icon.png"></a></p>
-<p><a href="APIs/">Liste d'API gratuites</a></p>
+<p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/EeS9XN7hHNFHg26YFqG4jccBSbGr9-OZZFPcAaw7egdq6A?e=CtV0A6" target="_blank">Document de cours<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a></p>
+<table>
+<thead>
+<tr>
+<th>Liste des contenus</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="api/">Activité - Utilisation d'une API</a></td>
+<td>Utilisation d'une API dans un programme Python.</td>
+</tr>
+<tr>
+<td><a href="modules/">Gestion de modules</a></td>
+<td>Appeler, créer et utiliser des modules Python.</td>
+</tr>
+</tbody>
+</table>
 
 
 
