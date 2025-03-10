@@ -28,7 +28,7 @@ Plus précisément, on utilisera la **météo actuelle**, vous pouvez vous rendr
 **openweathermap** fournit des données en JSON, XML et HTML. Nous utiliserons ici le format **JSON**.
 
 !!! success "À télécharger"
-    - [meteo.py](src/meteo.py){ target="_blank" } : Programme initial à compléter
+    - [meteo.py](meteo.py){ target="_blank" } : Programme initial à compléter
 
 Le module `requests` de Python permet d'effectuer des **appels d'API** à l'aide de **requêtes HTTP**, et ainsi de de récupérer des données sur le web **au format JSON** et de les intégrer dans un **dictionnaire**.
 
