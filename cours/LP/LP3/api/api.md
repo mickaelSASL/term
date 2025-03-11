@@ -356,7 +356,7 @@ On peut voir qu'une **liste Python** est associée à la clé `list` du dictionn
 Voici un exemple de graphe affichant la comparaison entre l'évolution de la température de la ville de **Paris** et celle de la ville de **Méru**, sur les 5 prochains jours :
 
 <figure markdown>
-  ![Courbes d'évolution température](images/courbe_previsions.png){ width="500px" }
+  ![Courbes d'évolution température](courbe_previsions.png){ width="500px" }
   <figcaption>Courbes d'évolution des températures</figcaption>
 </figure>
 
