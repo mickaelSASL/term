@@ -277,7 +277,7 @@ Vous allez créer un module permettant d'effectuer un certain nombre d'opératio
 
     Voici un exemple d'interface :
 
-    ![Un exemple d'interface](images/capture_interface.png)
+    ![Un exemple d'interface](capture_interface.png)
 
 !!! abstract "Notion d'encapsulation"
     Le contrat qu'une **interface** établit entre l'utilisateur et l'auteur d'un module porte sur les **résultats**, et non pas sur les **moyens** mis en oeuvre : il est notamment libre d'introduire des fonctions, variables, constantes, ..., qui ne sont **pas incluses** dans l'**interface**. On parle alors de fonctions, variables, constantes **encapsulées** dans le module. (On reviendra sur cette notion d'encapsulation dans la partie sur la **POO**.)
