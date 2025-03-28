@@ -1,10 +1,13 @@
+## Les exercices sont identiques à ceux de 2024 mais dans un ordre différents !!!
+
+
 <table border="1" class="table" style="width: 95%; margin-left: auto; margin-right: auto;" cellspacing="5" cellpadding="2" tr:nth-child="background-color:#f0f0f0"><caption><span style="color: #000080;"><strong>Bac NSI 2025 : Epreuve Pratique de NSI<br></strong></span></caption>
 <thead>
 <tr style="background-color: #2f96b4;">
 <td style="text-align: left;"><strong>Sujets du Bac 2025 de NSI épreuve pratique<br></strong></td>
 <td style="text-align: left;"><strong>Thème exercice 1 <strong>du Bac 2025 de NSI épreuve pratique</strong><br></strong></td>
 <td style="text-align: left;"><strong>Thème exercice 2 <strong>du Bac 2025 de NSI épreuve pratique</strong><br></strong></td>
-<td style="text-align: left;"><strong target="_blank">Code</strong></td>
+<td style="text-align: left;"><strong>Code</strong></td>
 <td style="text-align: left;"><strong>Corrections <strong>du Bac 2025 de NSI épreuve pratique</strong><br></strong></td>
 </tr>
 </thead>
