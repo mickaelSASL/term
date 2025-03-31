@@ -14,6 +14,7 @@ hide:
 [Le Robert](https://grand-oral.lerobert.com/cahier-preparation-bac/assets/nsi/preview)  
 
 !!! Info "L’histoire de l’informatique:"
+
     - Femmes et numérique : quelle histoire ? quel avenir ?
     - Ada Lovelace, pionnière du langage informatique
     - Quelle est la différence entre le web 1.0 et le web 2.0 ?
@@ -21,6 +22,7 @@ hide:
 
 
 !!! Info "Langages et programmation : 
+
     - P = NP, un problème à un million de dollars ?
     - Les fractales : informatique et mathématiques imitent-elles la nature?
     - De la récurrence à la récursivité
@@ -29,11 +31,13 @@ hide:
 
 
 !!! Info "Données structurées et structures de données :
+
     - L’informatisation des métros : progrès ou outil de surveillance ?
     - Musique et informatique : une alliance possible de l’art et de la science ?
 
 
 !!! Info "Algorithmique :
+
     - Comment créer une machine intelligente ?
     - Comment lutter contre les biais algorithmiques ?
     - Quels sont les enjeux de la reconnaissance faciale (notamment éthiques) ?
@@ -44,11 +48,13 @@ hide:
 
 
 !!! Info "Bases de données : 
+
     - Données personnelles : la vie privé en voie d’extinction ?
     - Comment optimiser les données ?
 
 
 !!! Info "Architectures matérielles, systèmes d’exploitation et réseaux :
+
     - L’ordinateur quantique : nouvelle révolution informatique ?
     - La course à l’infiniment petit : jusqu’où ?
     - Peut-on vraiment sécuriser les communications ?
@@ -57,12 +63,14 @@ hide:
 
 
 !!! Info "Interfaces Hommes-Machines (IHM) :
+
     - Smart cities, smart control ?
     - La réalité virtuelle : un nouveau monde ?
     - La voiture autonome, quels enjeux ?
 
 
 !!! Info "Impact sociétal et éthique de l’informatique :
+
     - Comment protéger les données numériques sur les réseaux sociaux ?
     - Quelle est l’empreinte carbone du numérique en termes de consommation?
     - Pourquoi chiffrer ses communications ?
