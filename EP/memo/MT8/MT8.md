@@ -4,7 +4,7 @@ hide:
 
 ---
 
-[Retour](../../)
+[Retour](../..)
 
 
 # **Insertion d'une clé dans un Abre Binaire**

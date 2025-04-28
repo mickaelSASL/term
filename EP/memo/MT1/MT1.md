@@ -4,7 +4,7 @@ hide:
 
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-[Retour](../../)
+[Retour](../..)
 
 
 # **Calcul de la taille d'un arbre binaire**

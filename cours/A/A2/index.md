@@ -9,72 +9,74 @@
 > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
 
 ===! "Pseudo-code"
-``` 
-VARIABLES
-depart : noeud (origine)
-graph : un graphe (liste des voisins)
-noeud : noeud
-voisin : noeud
-file : file (liste vide au départ)
-visites : liste
-nonvisites : liste
+    ``` 
+    VARIABLES
+    depart : noeud (origine)
+    graph : un graphe (liste des voisins)
+    noeud : noeud
+    voisin : noeud
+    file : file (liste vide au départ)
+    visites : liste
+    nonvisites : liste
 
-DEBUT
-bfs(graph, depart) :
-visites ← liste vide
-chemin  ← liste vide
-enfiler depart dans chemin
+    DEBUT
+    bfs(graph, depart) :
+    visites ← liste vide
+    chemin  ← liste vide
+    enfiler depart dans chemin
 
-TANT QUE chemin n'est pas vide :
-noeud ← defiler(chemin)
+    TANT QUE chemin n'est pas vide :
+    noeud ← defiler(chemin)
 
-SI noeud n'appartient pas à visites :
-        ajouter noeud à visites
-        nonvisites ← listes des voisins de noeud non visités
+    SI noeud n'appartient pas à visites :
+            ajouter noeud à visites
+            nonvisites ← listes des voisins de noeud non visités
 
-        POUR chaque s dans nonvisites :
-                ajouter s dans chemin à la 1ère position 
-        FIN POUR
-FIN SI
-FIN TANT QUE
+            POUR chaque s dans nonvisites :
+                    ajouter s dans chemin à la 1ère position 
+            FIN POUR
+    FIN SI
+    FIN TANT QUE
 
-Renvoyer visites
-FIN
-```
+    Renvoyer visites
+    FIN
+    ```
+
 === "Implémentation en Python"
-```Python
-    def bfs(graph, depart):
-        visited = []
-        file=[]
-        file.append(depart)
+    ```Python
+        def bfs(graph, depart):
+            visited = []
+            file=[]
+            file.append(depart)
 
-        while file:
-            node = file.pop()
+            while file:
+                node = file.pop()
 
-            if node not in visited:
-                visited.append(node)
-                unvisited = [n for n in graph[node] if n not in visited]
+                if node not in visited:
+                    visited.append(node)
+                    unvisited = [n for n in graph[node] if n not in visited]
 
-                for s in unvisited:
-                    file.insert(0, s)
-                    
-        return visited
+                    for s in unvisited:
+                        file.insert(0, s)
+                        
+            return visited
 
-    ma_liste = {'A': ['B', 'C'],
-                'B': ['A', 'D', 'E'],
-                'C': ['A', 'D'],
-                'D': ['B', 'C', 'E'],
-                'E': ['B', 'D', 'F', 'G'],
-                'F': ['E', 'G'],
-                'G': ['E', 'F', 'H'],
-                'H': ['G']}
+        ma_liste = {'A': ['B', 'C'],
+                    'B': ['A', 'D', 'E'],
+                    'C': ['A', 'D'],
+                    'D': ['B', 'C', 'E'],
+                    'E': ['B', 'D', 'F', 'G'],
+                    'F': ['E', 'G'],
+                    'G': ['E', 'F', 'H'],
+                    'H': ['G']}
 
-    print(bfs(ma_liste, 'E'))
-```
-    
+        print(bfs(ma_liste, 'E'))
+    ```
+        
 ## Parcours d’un graphe en profondeur d'abord : (Pseudo-code)
-    > *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
+> *Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.*
 
+===! "Pseudo-code"
     ``` 
     VARIABLES
     graph: un graphe (liste des voisins)
@@ -99,7 +101,7 @@ FIN
     FIN
     ```
 
-==="Python"
+=== "Python"
     ```Python
     def bfs(graph, depart):
         visited = []
@@ -253,7 +255,8 @@ FinFonction
 On testera la fonction Python cherche_chemin(graphe,depart,arrivee) avec le graphe du début :
 
 ![](graphe1.png)
-représenté par sa liste d'adjacence : graphe = {"A":("B","D","E"),"B":("A","C"),"C":("B","D"),"D":("A","C","E"),"E":("A","D","F","G"),"F":("E","G"),"G":("E","F","H"),"H":("G")} et avec tous les couples possibles (depart,arrivee).
+représenté par sa liste d'adjacence : 
+```'graphe = {"A":("B","D","E"),"B":("A","C"),"C":("B","D"),"D":("A","C","E"),"E":("A","D","F","G"),"F":("E","G"),"G":("E","F","H"),"H":("G")}``` et avec tous les couples possibles ```(depart,arrivee)```.
 
 Q1. Vérifiez si les chemins proposés sont de plus courte distance. Si ce n'est pas le cas,citez des chemins donnés par la fonction Python qui ne sont pas de plus courte distance.
 

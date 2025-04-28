@@ -1087,6 +1087,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exos.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SD5-TP.ipynbpush" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3448,11 +3490,9 @@
 <blockquote>
 <p><em>Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.</em></p>
 </blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Pseudo-code</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Pseudo-code</label><label for="__tabbed_1_2">Implémentation en Python</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>VARIABLES
 depart : noeud (origine)
 graph : un graphe (liste des voisins)
@@ -3484,11 +3524,8 @@ FIN TANT QUE
 Renvoyer visites
 FIN
 </code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Implémentation en Python</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
         <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">file</span><span class="o">=</span><span class="p">[]</span>
@@ -3517,11 +3554,17 @@ FIN
 
     <span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="parcours-dun-graphe-en-profondeur-dabord-pseudo-code">Parcours d’un graphe en profondeur d'abord : (Pseudo-code)</h2>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>&gt; *Pour tester votre algorithme, il est plus simple de d&#39;impléter un graphe exemple sous la forme d&#39;une liste d&#39;adjacence.*
-
-``` 
-VARIABLES
+<blockquote>
+<p><em>Pour tester votre algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.</em></p>
+</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Pseudo-code</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>VARIABLES
 graph: un graphe (liste des voisins)
 depart : noeud
 voisin : noeud
@@ -3542,10 +3585,10 @@ dfs(graph, depart, visites = None) :
 
 Renvoyer visites
 FIN
-```
 </code></pre></div>
-<p>==="Python"
-    <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
     <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">file</span><span class="o">=</span><span class="p">[]</span>
     <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">depart</span><span class="p">)</span>
@@ -3586,7 +3629,10 @@ FIN
 
 <span class="nb">print</span><span class="p">(</span><span class="n">pfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="recherche-du-chemin-le-plus-court-algorithme-de-dijkstra">Recherche du chemin le plus court : Algorithme de Dijkstra</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MybdP4kice4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -3679,7 +3725,8 @@ Fonction cherche_chemin(graphe,depart,arrivee)
 FinFonction</code></p>
 <p>On testera la fonction Python cherche_chemin(graphe,depart,arrivee) avec le graphe du début :</p>
 <p><img alt="" src="graphe1.png" />
-représenté par sa liste d'adjacence : graphe = {"A":("B","D","E"),"B":("A","C"),"C":("B","D"),"D":("A","C","E"),"E":("A","D","F","G"),"F":("E","G"),"G":("E","F","H"),"H":("G")} et avec tous les couples possibles (depart,arrivee).</p>
+représenté par sa liste d'adjacence : 
+<code>'graphe = {"A":("B","D","E"),"B":("A","C"),"C":("B","D"),"D":("A","C","E"),"E":("A","D","F","G"),"F":("E","G"),"G":("E","F","H"),"H":("G")}</code> et avec tous les couples possibles <code>(depart,arrivee)</code>.</p>
 <p>Q1. Vérifiez si les chemins proposés sont de plus courte distance. Si ce n'est pas le cas,citez des chemins donnés par la fonction Python qui ne sont pas de plus courte distance.</p>
 <p>Q2. A partir de la fonction précédente, proposez une autre fonction cherche_tous_chemins(graphe,depart,arrivee) qui retourne la liste de tous les chemins entre deux sommets.</p>
 <p>Q3. Complétez la fonction qui retourne la liste de tous les chemins entre deux sommets pour créer une fonction nommée cherche_chemin_plus_court(graphe,depart,arrivee) qui retourne le plus court chemin entre deux sommets.</p>

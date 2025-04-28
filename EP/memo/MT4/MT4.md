@@ -4,7 +4,7 @@ hide:
 
 ---
 
-[Retour](../../)
+[Retour](../..)
 
 
 # **Parcours d'un arbre binaire en ordre *infixe***

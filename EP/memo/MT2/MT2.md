@@ -4,7 +4,7 @@ hide:
 
 ---
 
-[Retour](../../)
+[Retour](../..)
 
 
 # **Calcul de la hauteur d'un arbre binaire**
