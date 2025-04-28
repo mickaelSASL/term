@@ -231,10 +231,12 @@ dijkstra(graph,'A', 'E')
 
 === "Solution"
 
+
+
 #### 3. Algorithmes de recherche d'un chemin entre deux sommets
 Implémentez en Python une fonction Python nommée cherche_chemin(graphe,depart,arrivee) qui recherche et retourne un chemin (s'il existe) entre les sommets depart et arrivee dans le graphe graphe à partir de l'algorithme suivant :
 
-````Python
+```Python
 Fonction cherche_chemin(graphe,depart,arrivee)
 	P ← pile vide
 	empiler le couple (depart,[depart]) dans P

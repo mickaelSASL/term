@@ -3707,22 +3707,22 @@ Sur la rive d'un fleuve se trouvent un loup,une chèvre,un chou et un passeur. L
 </div>
 <h4 id="3-algorithmes-de-recherche-dun-chemin-entre-deux-sommets">3. Algorithmes de recherche d'un chemin entre deux sommets</h4>
 <p>Implémentez en Python une fonction Python nommée cherche_chemin(graphe,depart,arrivee) qui recherche et retourne un chemin (s'il existe) entre les sommets depart et arrivee dans le graphe graphe à partir de l'algorithme suivant :</p>
-<p><code>`Python
-Fonction cherche_chemin(graphe,depart,arrivee)
-    P ← pile vide
-    empiler le couple (depart,[depart]) dans P
-    Tant que P n'est pas vide faire
-        (sommet,chemin) ← tête de P
-        listes_nouveaux_sommets_voisins ← liste des sommets adjacents à sommet qui ne sont pas dans chemin
-        Pour un_sommet dans listes_nouveaux_sommets_voisins
-            Si un_sommet = arrivee alors
-                retourner chemin + [un_sommet]
-            sinon
-                empiler (un_sommet,chemin + [un_sommet])
-            FinSi
-        FinPour
-    FinTantQue
-FinFonction</code></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Fonction</span> <span class="n">cherche_chemin</span><span class="p">(</span><span class="n">graphe</span><span class="p">,</span><span class="n">depart</span><span class="p">,</span><span class="n">arrivee</span><span class="p">)</span>
+    <span class="n">P</span> <span class="err">←</span> <span class="n">pile</span> <span class="n">vide</span>
+    <span class="n">empiler</span> <span class="n">le</span> <span class="n">couple</span> <span class="p">(</span><span class="n">depart</span><span class="p">,[</span><span class="n">depart</span><span class="p">])</span> <span class="n">dans</span> <span class="n">P</span>
+    <span class="n">Tant</span> <span class="n">que</span> <span class="n">P</span> <span class="n">n</span><span class="s1">&#39;est pas vide faire</span>
+        <span class="p">(</span><span class="n">sommet</span><span class="p">,</span><span class="n">chemin</span><span class="p">)</span> <span class="err">←</span> <span class="n">tête</span> <span class="n">de</span> <span class="n">P</span>
+        <span class="n">listes_nouveaux_sommets_voisins</span> <span class="err">←</span> <span class="n">liste</span> <span class="n">des</span> <span class="n">sommets</span> <span class="n">adjacents</span> <span class="n">à</span> <span class="n">sommet</span> <span class="n">qui</span> <span class="n">ne</span> <span class="n">sont</span> <span class="n">pas</span> <span class="n">dans</span> <span class="n">chemin</span>
+        <span class="n">Pour</span> <span class="n">un_sommet</span> <span class="n">dans</span> <span class="n">listes_nouveaux_sommets_voisins</span>
+            <span class="n">Si</span> <span class="n">un_sommet</span> <span class="o">=</span> <span class="n">arrivee</span> <span class="n">alors</span>
+                <span class="n">retourner</span> <span class="n">chemin</span> <span class="o">+</span> <span class="p">[</span><span class="n">un_sommet</span><span class="p">]</span>
+            <span class="n">sinon</span>
+                <span class="n">empiler</span> <span class="p">(</span><span class="n">un_sommet</span><span class="p">,</span><span class="n">chemin</span> <span class="o">+</span> <span class="p">[</span><span class="n">un_sommet</span><span class="p">])</span>
+            <span class="n">FinSi</span>
+        <span class="n">FinPour</span>
+    <span class="n">FinTantQue</span>
+<span class="n">FinFonction</span>
+</code></pre></div>
 <p>On testera la fonction Python cherche_chemin(graphe,depart,arrivee) avec le graphe du début :</p>
 <p><img alt="" src="graphe1.png" />
 représenté par sa liste d'adjacence : 
