@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mickaelsasl.github.io/term/EP/memo/MT1/">
+        <link rel="canonical" href="https://mickaelsasl.github.io/term/EP/memo/MT10/">
       
       
-        <link rel="prev" href="../M16/">
+        <link rel="prev" href="../MT1/">
       
       
-        <link rel="next" href="../MT10/">
+        <link rel="next" href="../MT11/">
       
       
       <link rel="icon" href="../../../dlna">
@@ -22,7 +22,7 @@
     
     
       
-        <title>MT1 - NSI Terminale</title>
+        <title>MT10 - NSI Terminale</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MT1
+              MT10
             
           </span>
         </div>
@@ -3477,35 +3477,82 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 <p><a href="../..">Retour</a></p>
-<h1 id="calcul-de-la-taille-dun-arbre-binaire"><strong>Calcul de la taille d'un arbre binaire</strong></h1>
+<h1 id="parcours-dun-graphe-en-largeur-dabord"><strong>Parcours d’un graphe en largeur d'abord</strong></h1>
 <h2 id="principe">Principe</h2>
 <blockquote>
-<p>L'arbre est parcouru récursivement en additionnant :</p>
-<p>1 + taille du sous-arbre gauche + taille du sous-arbre droit</p>
-<p>(1 représente la taille de la racine).</p>
+<p>On choisit un sommet de départ 
+SI le sommet est déjà visité, on ne fait rien
+SINON, on le marque comme visité (en l'ajoutant dans la liste <code>visites</code>) 
+       ET Pour chaque sommet connecté, on réitère récursivement cet algorithme</p>
+<p><em>Pour tester cet algorithme, il est plus simple de d'impléter un graphe exemple sous la forme d'une liste d'adjacence.</em></p>
 </blockquote>
-<h2 id="algorithme">Algorithme</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Pseudo-code</label><label for="__tabbed_1_2">Implémentation en Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>VARIABLES
-T : arbre
-x : noeud
+depart : noeud (origine)
+graph : un graphe (liste des voisins)
+noeud : noeud
+voisin : noeud
+file : file (liste vide au départ)
+visites : liste
+nonvisites : liste
 
 DEBUT
-TAILLE(T) :
-  si T ≠ vide :
-    x ← T.racine
-    renvoyer 1 + TAILLE(x.gauche) + TAILLE(x.droit)
-  sinon :
-    renvoyer 0
-  fin si
+bfs(graph, depart) :
+visites ← liste vide
+chemin  ← liste vide
+enfiler depart dans chemin
+
+TANT QUE chemin n&#39;est pas vide :
+noeud ← defiler(chemin)
+
+SI noeud n&#39;appartient pas à visites :
+        ajouter noeud à visites
+        nonvisites ← listes des voisins de noeud non visités
+
+        POUR chaque s dans nonvisites :
+                ajouter s dans chemin à la 1ère position 
+        FIN POUR
+FIN SI
+FIN TANT QUE
+
+Renvoyer visites
 FIN
 </code></pre></div>
-<h2 id="implementation-en-python">Implémentation en Python</h2>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">T</span><span class="p">:</span> <span class="n">tree</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">T</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">file</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">depart</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="n">unvisited</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">]</span>
+
+                <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">unvisited</span><span class="p">:</span>
+                    <span class="n">file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">visited</span>
+
+    <span class="n">ma_liste</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">]}</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">))</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 
 
 
