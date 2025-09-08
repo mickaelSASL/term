@@ -13,6 +13,6 @@
 
 <a href="personnages.csv" target="_blank">données personnages, fichier csv  <img src="https://img.icons8.com/color/48/000000/export-csv.png"/></a>
 
-Bloc Notes Jupyter, Codes Python
-<a href="KNN/KNN.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
+
+<a href="KNN" target="_blank">Bloc Notes Jupyter, Codes Python<img src="\images\jupyter.png"></a>
 

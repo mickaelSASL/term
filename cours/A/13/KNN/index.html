@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../Untitled%202021-09-23%2020_12_45/">
+        <link rel="next" href="../../A1/">
       
       
       <link rel="icon" href="../../../../dlna">
@@ -3980,18 +3980,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67f2be5d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=034ee2e2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Télécharger le bloc note :</p>
 <h2 id="a-introduction">A. Introduction<a class="anchor-link" href="#a-introduction">¶</a></h2><h3 id="2-knn-en-exemple">2. KNN en exemple<a class="anchor-link" href="#2-knn-en-exemple">¶</a></h3>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c387344e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4f98e57b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4062,7 +4063,7 @@ plt.show()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c736aaec">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f7fb31e1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4139,7 +4140,7 @@ plt.show()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=612ff1dd">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2c51674c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4216,7 +4217,7 @@ plt.show()</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c6ee1390">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=da84c2df">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4227,7 +4228,7 @@ plt.show()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=72708e4a">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d9b2162c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4245,7 +4246,8 @@ plt.show()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># On peut utiliser des listes ou des dictionnaires</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># On peut utiliser des listes ou des dictionnaires</span>
 <span class="n">table</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'t1'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t1'</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">27.2</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t1'</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mf">37.6</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t1'</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mf">40.7</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t2'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t2'</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">26</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t2'</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">39</span><span class="p">],</span> <span class="p">[</span><span class="s1">'t2'</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mf">35.5</span><span class="p">]]</span>
 <span class="c1"># 't1' représente le type 1</span>
 <span class="c1"># 't2' représente le type 2</span>
@@ -4263,7 +4265,7 @@ plt.show()</div>
     
     <span class="k">def</span> <span class="nf">distance_cible</span><span class="p">(</span><span class="n">donnee</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">        </span><span class="sd">""" renvoie la distance entre la donnée et la cible"""</span>
-        <span class="n">distance</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">donnee</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">cible</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">donnee</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">cible</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>      
+        <span class="n">distance</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">donnee</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">cible</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">donnee</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">cible</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">distance</span>
     
     <span class="n">table_triee</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">distance_cible</span><span class="p">)</span> <span class="c1"># La fonction distance_cible est appliquée sur chaque élément de table avant de trier</span>
@@ -4277,7 +4279,8 @@ plt.show()</div>
 
 <span class="n">k_plus_proches_voisins</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">cible</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># On peut utiliser des listes ou des dictionnaires
+<div class="clipboard-copy-txt" id="cell-4">import math
+# On peut utiliser des listes ou des dictionnaires
 table = [['t1',1,28], ['t1',3,27.2], ['t1',8,37.6], ['t1',13,40.7], ['t2',2,30], ['t2',3,26], ['t2',10,39], ['t2',15,35.5]]
 # 't1' représente le type 1
 # 't2' représente le type 2
@@ -4295,7 +4298,7 @@ def k_plus_proches_voisins(table, cible, k) :
     
     def distance_cible(donnee) :
         """ renvoie la distance entre la donnée et la cible"""
-        distance = abs(donnee[1]-cible[0])+abs(donnee[2]-cible[1])      
+        distance = math.sqrt((donnee[1]-cible[0])**2+(donnee[2]-cible[1])**2)
         return distance
     
     table_triee = sorted(table, key = distance_cible) # La fonction distance_cible est appliquée sur chaque élément de table avant de trier
@@ -4319,14 +4322,14 @@ k_plus_proches_voisins(table,cible,k)</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>[['t1', 3, 27.2], ['t1', 1, 28], ['t2', 3, 26]]</pre>
+<pre>[['t1', 3, 27.2], ['t2', 3, 26], ['t2', 2, 30]]</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ff08559d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4ee1b793">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4337,7 +4340,7 @@ k_plus_proches_voisins(table,cible,k)</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3c1d6ea5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=85119e82">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4386,22 +4389,22 @@ k_plus_proches_voisins(table,cible,k)</div>
 <pre>[('Fantassin', 10, 13),
  ('Fantassin', 10, 12),
  ('Fantassin', 9, 12),
- ('Fantassin', 12, 16),
- ('Chevalier', 11, 9),
  ('Chevalier', 10, 10),
- ('Fantassin', 15, 11)]</pre>
+ ('Fantassin', 15, 11),
+ ('Fantassin', 12, 16),
+ ('Chevalier', 11, 9)]</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0280f57e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=276ab093">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-6">
@@ -4430,7 +4433,7 @@ Counter(k_plus_proches_voisins(table,cible,k)).most_common(1)[0][0][0]</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>'Fantassin'</pre>
 </div>
