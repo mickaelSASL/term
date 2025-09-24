@@ -7,41 +7,53 @@
 
 ```Python
 class Carte:
+    couleurs = ('CARREAU', 'COEUR', 'TREFLE', 'PIQUE')
+    noms = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi', 'As']
+    valeurs = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
+                   '10': 10, 'Valet': 11, 'Dame': 12, 'Roi': 13, 'As': 14}
+
     def __init__(self, nom, couleur):
         # Affectation de l'attribut nom et de l'attribut couleur
-        couleur = ('CARREAU', 'COEUR', 'TREFLE', 'PIQUE')
-        noms = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 
-                'Roi', 'As']
-        valeurs = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
-                   '10': 10, 'Valet': 11, 'Dame': 12, 'Roi': 13, 'As': 14}
+        assert nom in Carte.noms,"le nom n'existe pas"
+        assert couleur in Carte.couleurs, "la couleur n'existe pas"
+        self.nom = nom
+        self.couleur = couleur
         
     def setNom(self, nom):
         # Mutateur de l'attribut nom (de la liste noms)
-        
+        self.__init__(nom, self.couleur)
+        pass
+
     def getNom(self):
         # renvoie le nom de la carte (de la liste noms): Accesseur
+        return self.nom
         
     def getCouleur(self):
         # renvoie la couleur de la carte (de la liste couleur): Accesseur
+        return self.couleur
         
     def getValeur(self):
         # renvoie la valeur de la carte (du dictionnaire valeurs) : Accesseur
+        return Carte.valeurs[self.nom]
         
     def egalite(self, carte):
         ''' Renvoie True si les cartes self et carte ont même valeur, False sinon
         carte: Objet de type Carte '''
+        return Carte.valeurs[self.nom] == Carte.valeurs[carte.nom]
         
     def estSuperieureA(self, carte):
         ''' Renvoie True si la valeur de self est supérieure à celle de carte,
         False sinon
         carte: Objet de type Carte
         '''
+        return Carte.valeurs[self.nom] > Carte.valeurs[carte.nom]
         
     def estInferieureA(self, carte):
         ''' Renvoie True si la valeur de self est inférieure à celle de carte,
         False sinon
         carte: Objet de type Carte
         '''
+        return Carte.valeurs[self.nom] < Carte.valeurs[carte.nom]
 ```
 
 **Ecrire (sur feuille) un programme principal qui va :**  
