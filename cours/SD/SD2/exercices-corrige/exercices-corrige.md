@@ -151,7 +151,7 @@ class Appartement:
     def nbPieces(self):              # autre nbPieces N’EST PAS un attribut de la classe Appartement
         return len(self.listeDePieces)
     
-    def getSurfaceTotale(self):      # accesseur
+    def SurfaceTotale(self):      # accesseur
         total=0
         for piece in self.listeDePieces:
             surf=piece.getSurface()
