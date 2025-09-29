@@ -216,7 +216,7 @@ class Toto:
  
 2.  
 a.	Quel est le nom de la méthode de la classe `Toto` qui échange les attributs `att1` et `att2` ?  
-b.	Compléter le code de la méthode `meth3` afin qu’elle prenne en argument l’entier c et qu’elle multiplie l’argument `att3` par `c`.  
+b.	Compléter le code de la méthode `meth3` afin qu’elle prenne en argument l’entier c et qu’elle multiplie l'attribut `att3` par `c`.  
  
 3.	Écrire la ligne de code permettant, à l’aide des méthodes de la classe `Toto` d’échanger les attributs `att1` et `att2` de `titi`.  
  

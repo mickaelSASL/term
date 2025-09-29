@@ -231,13 +231,13 @@ ___
 
     ```Python
     def avance(self):
-        self.x = x + 1
+        self.x = self.x + 1
     
     def droite(self):
-        self.y = y + 1
+        self.y = self.y + 1
 
     def saute(self):
-        self.z = z + 1
+        self.z = self.z + 1
     ```
 
 === "Question 3"
@@ -259,13 +259,13 @@ ___
             self.z = z
 
         def avance(self):
-            self.x = x + 1
+            self.x = self.x + 1
         
         def droite(self):
-            self.y = y + 1
+            self.y = self.y + 1
 
         def saute(self):
-            self.z = z + 1
+            self.z = self.z + 1
 
         def coord(self):
             return (self.x, self.y, self.z) 
