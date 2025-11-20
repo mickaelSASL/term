@@ -53,9 +53,9 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
 
         === "🧩 Réponse"
             ```SQL
-            SELECT * 
+            SELECT ville_nom, departement_nom 
             FROM villes_france_free 
-            LEFT JOIN departement ON departement_code = ville_departement
+            JOIN departement ON departement.departement_code = villes_france_free.ville_departement
             ORDER BY ville_population_2012 DESC 
             LIMIT 10
             ```
@@ -67,7 +67,7 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
             ```SQL
             SELECT departement_nom, departement_code, COUNT(*) AS nbr_items 
             FROM villes_france_free 
-            LEFT JOIN departement ON departement_code = ville_departement
+            JOIN departement ON departement_code = ville_departement
             GROUP BY departement_nom, departement_code
             ORDER BY nbr_items DESC
             ```
@@ -79,7 +79,7 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
             ```SQL
             SELECT departement_nom, departement_code, SUM(ville_surface) AS dpt_surface 
             FROM villes_france_free 
-            LEFT JOIN departement ON departement_code = ville_departement
+            JOIN departement ON departement_code = ville_departement
             GROUP BY departement_nom, departement_code 
             ORDER BY dpt_surface  DESC
             LIMIT 10
