@@ -3483,8 +3483,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ville_population_2012</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 </div>
@@ -3497,8 +3497,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ville_surface</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="mi">50</span>
 </code></pre></div>
 </div>
@@ -3511,8 +3511,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">departement</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">departement_code</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;97%&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;97%&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -3523,13 +3523,12 @@
 <p>Obtenir le nom des 10 villes les plus peuplées en 2012, ainsi que le nom du département associé</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
 <span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ville_population_2012</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
-```</p>
 </div>
 </div>
 </div>
@@ -3540,10 +3539,10 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbr_items</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
 <span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">nbr_items</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nbr_items</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </div>
 </div>
@@ -3554,8 +3553,8 @@
 <p>Obtenir la liste des 10 plus grands départements, en terme de superficie</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">ville_surface</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
 <span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ville_departement</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departement_nom</span><span class="p">,</span><span class="w"> </span><span class="n">departement_code</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dpt_surface</span><span class="w">  </span><span class="k">DESC</span>
@@ -3571,8 +3570,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;saint%&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville_nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;saint%&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -3584,8 +3583,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_nom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbt_item</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ville_nom</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nbt_item</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </div>
@@ -3598,8 +3597,8 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="o">`</span><span class="n">ville_surface</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville_surface</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">ville_surface</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -3610,9 +3609,9 @@
 <p>Obtenir la liste des départements qui possèdent plus de 2 millions d’habitants</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_departement</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">ville_population_2012</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">population_2012</span>
-<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">ville_departement</span><span class="o">`</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ville_departement</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">ville_population_2012</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">population_2012</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ville_departement</span>
 <span class="k">HAVING</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000000</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">population_2012</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
@@ -3625,9 +3624,9 @@
 <p>Remplacez les tirets par un espace vide, pour toutes les villes commençant par “SAINT-” (dans la colonne qui contient les noms en majuscule)</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="o">`</span><span class="n">villes_france_free</span><span class="o">`</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">villes_france_free</span><span class="w"> </span>
 <span class="k">SET</span><span class="w"> </span><span class="n">ville_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="n">ville_nom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">ville_nom</span><span class="o">`</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;SAINT-%&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville_nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;SAINT-%&#39;</span>
 </code></pre></div>
 </div>
 </div>

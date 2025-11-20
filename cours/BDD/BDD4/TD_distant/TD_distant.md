@@ -22,8 +22,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT * 
-            FROM `villes_france_free` 
-            ORDER BY `ville_population_2012` DESC 
+            FROM villes_france_free 
+            ORDER BY ville_population_2012 DESC 
             LIMIT 10
             ```
         
@@ -33,8 +33,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT * 
-            FROM `villes_france_free` 
-            ORDER BY `ville_surface` ASC 
+            FROM villes_france_free 
+            ORDER BY ville_surface ASC 
             LIMIT 50
             ```
 
@@ -44,8 +44,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT * 
-            FROM `departement` 
-            WHERE `departement_code` LIKE '97%'
+            FROM departement 
+            WHERE departement_code LIKE '97%'
             ```
             
         ===! "❓ Question 4"
@@ -54,11 +54,10 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT * 
-            FROM `villes_france_free` 
+            FROM villes_france_free 
             LEFT JOIN departement ON departement_code = ville_departement
-            ORDER BY `ville_population_2012` DESC 
+            ORDER BY ville_population_2012 DESC 
             LIMIT 10
-            ```
             ```
 
         ===! "❓ Question 5"
@@ -67,10 +66,10 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT departement_nom, departement_code, COUNT(*) AS nbr_items 
-            FROM `villes_france_free` 
+            FROM villes_france_free 
             LEFT JOIN departement ON departement_code = ville_departement
             GROUP BY departement_nom, departement_code
-            ORDER BY `nbr_items` DESC
+            ORDER BY nbr_items DESC
             ```
 
         ===! "❓ Question 6"
@@ -78,8 +77,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
 
         === "🧩 Réponse"
             ```SQL
-            SELECT departement_nom, departement_code, SUM(`ville_surface`) AS dpt_surface 
-            FROM `villes_france_free` 
+            SELECT departement_nom, departement_code, SUM(ville_surface) AS dpt_surface 
+            FROM villes_france_free 
             LEFT JOIN departement ON departement_code = ville_departement
             GROUP BY departement_nom, departement_code 
             ORDER BY dpt_surface  DESC
@@ -92,8 +91,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT COUNT(*) 
-            FROM `villes_france_free` 
-            WHERE `ville_nom` LIKE 'saint%'
+            FROM villes_france_free 
+            WHERE ville_nom LIKE 'saint%'
             ```
 
         ===! "❓ Question 8"
@@ -102,8 +101,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT ville_nom, COUNT(*) AS nbt_item 
-            FROM `villes_france_free` 
-            GROUP BY `ville_nom` 
+            FROM villes_france_free 
+            GROUP BY ville_nom 
             ORDER BY nbt_item DESC
             ```
 
@@ -114,8 +113,8 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
         === "🧩 Réponse"
             ```SQL
             SELECT * 
-            FROM `villes_france_free` 
-            WHERE `ville_surface` > (SELECT AVG(`ville_surface`) FROM `villes_france_free`)
+            FROM villes_france_free 
+            WHERE ville_surface > (SELECT AVG(ville_surface) FROM villes_france_free)
             ```
 
         ===! "❓ Question 10"
@@ -123,9 +122,9 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
 
         === "🧩 Réponse"
             ```SQL
-            SELECT ville_departement, SUM(`ville_population_2012`) AS population_2012
-            FROM `villes_france_free` 
-            GROUP BY `ville_departement`
+            SELECT ville_departement, SUM(ville_population_2012) AS population_2012
+            FROM villes_france_free 
+            GROUP BY ville_departement
             HAVING population_2012 > 2000000
             ORDER BY population_2012 DESC
             ```
@@ -135,9 +134,9 @@ Connecter vous sur la base de données `villes` située sur le serveur `192.168.
 
         === "🧩 Réponse"
             ```SQL
-            UPDATE `villes_france_free` 
+            UPDATE villes_france_free 
             SET ville_nom = REPLACE(ville_nom, '-', ' ') 
-            WHERE `ville_nom` LIKE 'SAINT-%'
+            WHERE ville_nom LIKE 'SAINT-%'
             ```
 
 
