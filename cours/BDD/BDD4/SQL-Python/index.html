@@ -3582,7 +3582,24 @@
 </code></pre></div>
 <details class="note">
 <summary>Solution</summary>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    #Insérer avant le code de connexion à la BDD
+
+    curseur = conn.cursor(buffered=True)
+
+    ville=input(&quot;Saisir le nom d&#39;une ville : &quot;)
+
+    requete = (&quot;SELECT ville_nom, departement_nom FROM villes_france_free &quot;\
+            &quot;JOIN departement ON villes_france_free.ville_departement = departement.departement_code &quot;\
+            &quot;WHERE ville_nom = &#39;&quot; + ville + &quot;&#39;;&quot;)
+
+    resultat = curseur.execute(requete)
+    table = curseur.fetchall()
+
+    print(table[0][0] , &quot;est sitée dans le département du&quot; , table[0][1] , &quot;.&quot;)
+
+
+    curseur.close()  # fermeture du curseur
+    conn.close()     # fermeture du connection
 </code></pre></div>
 </details>
 </div>

@@ -133,4 +133,23 @@ else:
     ??? note "Solution"
 
         ```
+            #Insérer avant le code de connexion à la BDD
+            
+            curseur = conn.cursor(buffered=True)
+
+            ville=input("Saisir le nom d'une ville : ")
+
+            requete = ("SELECT ville_nom, departement_nom FROM villes_france_free "\
+                    "JOIN departement ON villes_france_free.ville_departement = departement.departement_code "\
+                    "WHERE ville_nom = '" + ville + "';")
+            
+            resultat = curseur.execute(requete)
+            table = curseur.fetchall()
+
+            print(table[0][0] , "est sitée dans le département du" , table[0][1] , ".")
+
+
+            curseur.close()  # fermeture du curseur
+            conn.close()     # fermeture du connection
+    
         ```
