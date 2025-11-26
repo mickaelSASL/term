@@ -2927,11 +2927,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../P/P4/index" class="md-nav__link">
+      <a href="../../../../P/P4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     P4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../P/P5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parc Animalier
   </span>
   
 
@@ -3582,24 +3603,24 @@
 </code></pre></div>
 <details class="note">
 <summary>Solution</summary>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    #Insérer avant le code de connexion à la BDD
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="c1">#Insérer avant le code de connexion à la BDD</span>
 
-    curseur = conn.cursor(buffered=True)
+    <span class="n">curseur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">(</span><span class="n">buffered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    ville=input(&quot;Saisir le nom d&#39;une ville : &quot;)
+    <span class="n">ville</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir le nom d&#39;une ville : &quot;</span><span class="p">)</span>
 
-    requete = (&quot;SELECT ville_nom, departement_nom FROM villes_france_free &quot;\
-            &quot;JOIN departement ON villes_france_free.ville_departement = departement.departement_code &quot;\
-            &quot;WHERE ville_nom = &#39;&quot; + ville + &quot;&#39;;&quot;)
+    <span class="n">requete</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;SELECT ville_nom, departement_nom FROM villes_france_free &quot;</span>\
+            <span class="s2">&quot;JOIN departement ON villes_france_free.ville_departement = departement.departement_code &quot;</span>\
+            <span class="s2">&quot;WHERE ville_nom = &#39;&quot;</span> <span class="o">+</span> <span class="n">ville</span> <span class="o">+</span> <span class="s2">&quot;&#39;;&quot;</span><span class="p">)</span>
 
-    resultat = curseur.execute(requete)
-    table = curseur.fetchall()
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
-    print(table[0][0] , &quot;est sitée dans le département du&quot; , table[0][1] , &quot;.&quot;)
+    <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="s2">&quot;est sitée dans le département du&quot;</span> <span class="p">,</span> <span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
 
 
-    curseur.close()  # fermeture du curseur
-    conn.close()     # fermeture du connection
+    <span class="n">curseur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># fermeture du curseur</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>     <span class="c1"># fermeture du connection</span>
 </code></pre></div>
 </details>
 </div>

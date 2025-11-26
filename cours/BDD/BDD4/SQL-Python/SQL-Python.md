@@ -132,7 +132,7 @@ else:
     ```
     ??? note "Solution"
 
-        ```
+        ``` python
             #Insérer avant le code de connexion à la BDD
             
             curseur = conn.cursor(buffered=True)
