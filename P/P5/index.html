@@ -22,7 +22,7 @@
     
     
       
-        <title>Index - NSI Terminale</title>
+        <title>🦁 Projet NSI – Gestion d’un Parc Animalier - NSI Terminale</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              🦁 Projet NSI – Gestion d’un Parc Animalier
             
           </span>
         </div>
@@ -2942,7 +2942,7 @@
         
   
   <span class="md-ellipsis">
-    Parc Animalier
+    🦁 Parc Animalier
   </span>
   
 
@@ -3469,9 +3469,197 @@
                   
 
 
-  <h1>Index</h1>
-
-<p><a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/IQD_k0oOCXirTKC9d9AzdnfGATIc5RigqPgsru3ZZ3qyIPU?e=QcWtM1">Document consignes</a></p>
+<h1 id="projet-nsi-gestion-dun-parc-animalier">🦁 Projet NSI – Gestion d’un Parc Animalier</h1>
+<h2 id="objectifs-du-projet">🎯 Objectifs du projet</h2>
+<p>À travers ce projet, vous allez :</p>
+<ul>
+<li>Concevoir une base de données relationnelle complète</li>
+<li>Construire un schéma relationnel</li>
+<li>Créer une base MySQL avec des tables et des contraintes</li>
+<li>Insérer et manipuler des données via SQL</li>
+<li>Écrire un script Python connecté à MySQL</li>
+<li>Générer des statistiques et des graphiques Matplotlib</li>
+<li>Créer une mini-application Web affichant les données et les graphiques</li>
+</ul>
+<h2 id="1-modelisation-de-la-base">🧩 1. Modélisation de la base</h2>
+<h3 id="travail-demande">Travail demandé</h3>
+<ol>
+<li>Proposer un <strong>schéma relationnel</strong></li>
+<li>Traduire ce schéma relationnel en <strong>instructions SQL</strong> (CREATE TABLE)</li>
+</ol>
+<h3 id="entites-minimales-a-modeliser">Entités minimales à modéliser</h3>
+<ul>
+<li>Animal (id, nom, espèce, sexe, date_naissance, poids, enclos_id…)</li>
+<li>Espèce (id, nom, famille, régime alimentaire)</li>
+<li>Enclos (id, nom, superficie, biome)</li>
+<li>Nourrissage (id, animal_id, date, type_nourriture, quantite)</li>
+<li>Intervention vétérinaire (id, animal_id, date, motif, compte_rendu)</li>
+</ul>
+<hr />
+<h2 id="2-base-mysql">🗄️ 2. Base MySQL</h2>
+<h3 id="travail-demande_1">Travail demandé</h3>
+<p>Vous créerez :
+1. les <strong>tables</strong> avec clés primaires et étrangères
+2. un <strong>jeu de données</strong> cohérent (ou import depuis CSV fourni)
+3. un <strong>fichier .sql</strong> comprenant les requêtes demandées</p>
+<h3 id="requetes-obligatoires">Requêtes obligatoires</h3>
+<ul>
+<li>Liste des animaux d’un enclos donné</li>
+<li>Répartition des animaux par espèce</li>
+<li>Dernier nourrissage de chaque animal</li>
+<li>Animaux avec intervention vétérinaire ce mois-ci</li>
+<li>Poids moyen par espèce</li>
+<li>Animaux les plus nourris</li>
+<li>Densité des enclos (nombre d’animaux / superficie)</li>
+</ul>
+<hr />
+<h2 id="3-script-python">🐍 3. Script Python</h2>
+<h3 id="travail-demande_2">Travail demandé</h3>
+<p>Vous développerez un <strong>script Python</strong> qui :</p>
+<ol>
+<li>Se connecte à MySQL (avec <code>mysql.connector</code>)</li>
+<li>
+<p>Permet :</p>
+</li>
+<li>
+<p>d’ajouter un animal,</p>
+</li>
+<li>d’enregistrer un nourrissage,</li>
+<li>d’enregistrer une intervention,</li>
+<li>d’exécuter les requêtes SQL,</li>
+<li>
+<p>de générer des statistiques.</p>
+</li>
+<li>
+<p>Génère des <strong>graphiques</strong> (avec <code>Matplotlib</code>)
+Les graphiques devront être enregistrés en fichier PNG (ex : <code>static/stats/especes.png</code>).</p>
+</li>
+</ol>
+<h3 id="graphiques-obligatoires">Graphiques obligatoires</h3>
+<ol>
+<li>Histogramme du nombre d’animaux par espèce</li>
+<li>Courbe de la quantité totale de nourriture consommée par jour</li>
+<li>Diagramme en barres du nombre d’interventions vétérinaires par mois</li>
+</ol>
+<hr />
+<h2 id="4-mini-site-web">🌐 4. Mini-site Web</h2>
+<p>Vous créerez une petite <strong>application Web</strong> permettant :</p>
+<ol>
+<li>Pages données :</li>
+<li>Liste des animaux (avec filtre : espèce ou enclos)</li>
+<li>Fiche détaillée d'un animal</li>
+<li>Liste des interventions</li>
+<li>
+<p>Liste des nourrissages</p>
+</li>
+<li>
+<p>Pages statistiques pour :</p>
+</li>
+<li>les chiffres clés (nombre d’animaux, espèces…)</li>
+<li>
+<p>les graphiques Matplotlib générés par Python</p>
+</li>
+<li>
+<p>Intégration des graphiques Matplotlib
+Les images seront générées par Python puis affichées dans la page HTML via :
+    <div class="highlight"><span class="filename">HTML</span><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/static/stats/especes.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Répartition par espèce&quot;</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Structure de base conseillée</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>├── app.py
+├── templates
+    ├── index.html
+    ├── animaux.html
+    ├── stats.html
+├── static
+    ├── css
+    ├── stats
+        ├── another.js
+        ├── nourriture.png
+        └── interventions.png
+</code></pre></div>
+</li>
+</ol>
+<hr />
+<h2 id="5-rendu-attendu">📝 5. Rendu attendu</h2>
+<ul>
+<li>schéma relationnel</li>
+<li>Scripts SQL de création des tables</li>
+<li>Fichier de données (INSERT ou CSV)</li>
+<li>Script Python complet</li>
+<li>Graphiques Matplotlib enregistrés et intégrés dans les pages</li>
+<li>Mini-site Web fonctionnel</li>
+<li>README expliquant le fonctionnement de l’application
+ </li>
+</ul>
+<h2 id="6-fichiers-csv">🐾 6. Fichiers CSV</h2>
+<div class="admonition abstract">
+<p class="admonition-title">📄 especes.csv <a href='CSV\especes.csv'><img src='\term/images/download.png'></a></p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    id,nom,famille,regime_alimentaire
+    1,Lion,Félin,Carnivore
+    2,Zèbre,Équidés,Herbivore
+    3,Perroquet,Psittacidés,Omnivore
+    4,Pingouin,Sphéniscidés,Piscivore
+    5,Tortue,Cheloniidae,Herbivore
+</code></pre></div>
+</div>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">📄 enclos.csv <a href='CSV\enclos.csv'><img src='\term/images/download.png'></a></p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    id,nom,superficie,biome
+    1,Savane,2500,Savane africaine
+    2,Marais,1800,Zone humide
+    3,Volière,600,Tropical
+    4,Glacier,2000,Climat froid
+</code></pre></div>
+</div>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">📄 animaux.csv <a href='CSV\animaux.csv'><img src='\term/images/download.png'></a></p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    id,nom,espece_id,sexe,date_naissance,poids,enclos_id
+    1,Simba,1,M,2018-05-12,190,1
+    2,Nala,1,F,2019-07-03,175,1
+    3,Rayure,2,M,2020-03-22,320,1
+    4,Bambou,5,F,2015-06-15,80,2
+    5,Paco,3,M,2021-02-10,1.2,3
+    6,Lola,3,F,2022-09-01,0.9,3
+    7,Glagla,4,M,2017-11-30,35,4
+    8,Frimas,4,F,2018-12-10,33,4
+    9,Carapace,5,M,2010-04-05,95,2
+    10,Galipette,3,F,2021-05-18,1.1,3
+</code></pre></div>
+</div>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">📄 nourrissages.csv <a href='CSV\nourrissages.csv'><img src='\term/images/download.png'></a></p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    id,animal_id,date,type_nourriture,quantite
+    1,1,2024-11-01,Viande rouge,6
+    2,2,2024-11-01,Viande rouge,5
+    3,3,2024-11-01,Foin,8
+    4,5,2024-11-01,Graines,0.2
+    5,6,2024-11-01,Graines,0.15
+    6,7,2024-11-01,Poisson,1
+    7,8,2024-11-01,Poisson,1.1
+    8,4,2024-11-01,Légumes,1.5
+    9,9,2024-11-01,Légumes,1.2
+    10,1,2024-11-02,Viande rouge,6.3
+    11,7,2024-11-02,Poisson,1
+    12,5,2024-11-02,Graines,0.25
+</code></pre></div>
+</div>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">📄 interventions.csv <a href='CSV\interventions.csv'><img src='\term/images/download.png'></a></p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    id,animal_id,date,motif,compte_rendu
+    1,1,2024-10-10,Contrôle annuel,RAS
+    2,2,2024-10-12,Blessure patte soignée,Antibiotiques 5 jours
+    3,5,2024-09-20,Perte de plumes,Ajout vitamines
+    4,7,2024-08-15,Problème respiration,Début traitement
+    5,9,2024-07-01,Contrôle carapace,RAS
+</code></pre></div>
+</div>
+<hr />
 
 
 

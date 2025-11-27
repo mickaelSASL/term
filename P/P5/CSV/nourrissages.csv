@@ -1,0 +1,13 @@
+id,animal_id,date,type_nourriture,quantite
+1,1,2024-11-01,Viande rouge,6
+2,2,2024-11-01,Viande rouge,5
+3,3,2024-11-01,Foin,8
+4,5,2024-11-01,Graines,0.2
+5,6,2024-11-01,Graines,0.15
+6,7,2024-11-01,Poisson,1
+7,8,2024-11-01,Poisson,1.1
+8,4,2024-11-01,Légumes,1.5
+9,9,2024-11-01,Légumes,1.2
+10,1,2024-11-02,Viande rouge,6.3
+11,7,2024-11-02,Poisson,1
+12,5,2024-11-02,Graines,0.25
