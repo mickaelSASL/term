@@ -32,7 +32,8 @@ ________________________________________
 ### Travail demandé
 
 Vous créerez :
-1. les **tables** avec clés primaires et étrangères
+
+1. les **tables** avec clés primaires et étrangères 
 2. un **jeu de données** cohérent (ou import depuis CSV fourni)
 3. un **fichier .sql** comprenant les requêtes demandées
 
