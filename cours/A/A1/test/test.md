@@ -6,7 +6,7 @@
 
 
 ```py
- --8<-- "snip/test.yaml"
+ --8<-- "Algo_arbres.py"
 ```
 
 --8<-- "snip/test.yaml"

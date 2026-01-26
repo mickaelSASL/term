@@ -7,7 +7,8 @@
 <a href="https://sasl56-my.sharepoint.com/:w:/g/personal/mickael_kerviche_sa-sl_fr/EYQEiqmpy_1DkA-6xyvJJfIBZWt4Hzdmw3rqHqIkHZoVOQ?e=SV6fm4" target="_blank">Fiche de révision<img src="https://c1-word-view-15.cdn.office.net/wv/resources/1033/FavIcon_Word.ico"></a>
 
 
-[Implémentation en Python](Algo_arbres.py)
+[Documentation module Binarytree](https://pypi.org/project/binarytree/)
+
 
 
 ===! "Algo à compléter"
