@@ -9,6 +9,9 @@
 
 [Documentation module Binarytree](https://pypi.org/project/binarytree/)
 
+| ```python
+|       pip install binarytree backports.tarfile --user
+| ```
 
 
 ===! "Algo à compléter"
