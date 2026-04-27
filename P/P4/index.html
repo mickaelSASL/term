@@ -3477,7 +3477,7 @@
 <p><img src="https://files.realpython.com/media/Build-a-Pac-Man-Maze-Solver-in-Python_Watermarked.c2e79a85fc99.jpg" alt="donnees" width="75%"></p>
 <p><em><center>Le but du projet est résoudre des labyrinthes générés aléatoirement. Les labyrinthes peuvent être vus comme des graphes.</center></em></p>
 <hr />
-<h2 class="titre">Propriétes des labyrinthes</h2>
+<h2 id="proprietes-des-labyrinthes">Propriétes des labyrinthes</h2>
 <p>Nous nous intéresserons seulement à des labyrinthes rectangulaires composés de n lignes et m colonnes sur une grille régulière composée de n×m cellules. Chaque cellules comportant 4 côtés dont chacun peut être ouvert ou fermé (présence d'un mur).</p>
 <p><center>
   <img src="./labyrinthe/labyrinthe_1.png" alt="labyrinthe">
@@ -3512,19 +3512,19 @@
 </tbody>
 </table>
 </blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Montrer que pour un labyrinthe rectangulaire de n lignes et m colonnes le nombre maximal de murs internes fermés est : <span class="arithmatex">\(2 n m - n - m\)</span></p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Montrer que pour un labyrinthe rectangulaire de n lignes et m colonnes le nombre maximal de murs internes fermés est : <span class="arithmatex">\(2nm - n - m\)</span></p>
 </div>
-<h2 id="creation-dun-labyrinthe"><span class='titre'>Création d'un labyrinthe</span></h2>
+<h2 id="creation-dun-labyrinthe">Création d'un labyrinthe</h2>
 <p>La création d'un labyrinthe suit les étapes suivantes: </p>
 <ol>
 <li>Générer un graphe G représentant une grille de taille m*n  </li>
-<li>Construire un <b>arbre couvrant</b> A de ce graphe  </li>
+<li>Construire un <strong>arbre couvrant</strong> A de ce graphe  </li>
 <li>Dessiner le labyrinthe en traçant un mur entre les sommets directement liés dans G et non dans A  </li>
 </ol>
 <hr />
-<h3 id="1-generer-une-grille-de-taille-m-n"><span class='titre'>1. Générer une grille de taille m * n</span></h3>
+<h3 id="1-generer-une-grille-de-taille-m-n">1. Générer une grille de taille m * n</h3>
 <p>Un labyrinthe, composé de longueur × largeur cases numérotées par des couples (i, j), est représenté par un graphe (non orienté) dont les sommets sont étiquetés par des couples (i, j). Lorsqu’une case (i0, j0) communique avec une autre case voisine (i1, j1), alors il existe une arête entre les sommets (i0, j0) et (i1, j1) du graphe. Deux cases (ou sommets) sont particuliers, ce sont l’entrée (0,0) et la sortie du labyrinthe.<br />
 Soit le labyrinthe suivant :</p>
 <h4 id="presentation-de-la-structure-de-donnees-representant-la-geometrie-dun-labyrinthe">Présentation de la structure de données représentant la géométrie d'un labyrinthe</h4>
@@ -3543,40 +3543,42 @@ est représenté par la matrice Python suivante :</p>
 <center><img src="./labyrinthe/labyrinthe_6.png" width="250"></center></p>
 <p>Description des éléments de la liste représentant <code>une_case = [False, False, True, True]</code>:  </p>
 <ul>
-<li>Indice 1 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>en haut</b> de la case est présent.</li>
-<li>Indice 2 : valeur <code>False</code> : booléen qui indique ici la <b>présence</b> d'un mur <b>à droite</b> de la case est présent.</li>
-<li>Indice 3 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>en bas</b> de la case est présent.</li>
-<li>Indice 4 : valeur <code>True</code> : booléen qui indique ici l'<b>absence</b> de mur <b>à gauche</b> de la case est présent.</li>
+<li>Indice 1 : valeur <code>False</code> : booléen qui indique ici la <strong>présence</strong> d'un mur <strong>en haut</strong> de la case est présent.</li>
+<li>Indice 2 : valeur <code>False</code> : booléen qui indique ici la <strong>présence</strong> d'un mur <strong>à droite</strong> de la case est présent.</li>
+<li>Indice 3 : valeur <code>True</code> : booléen qui indique ici l'<strong>absence</strong> de mur <strong>en bas</strong> de la case est présent.</li>
+<li>Indice 4 : valeur <code>True</code> : booléen qui indique ici l'<strong>absence</strong> de mur <strong>à gauche</strong> de la case est présent.</li>
 </ul>
 <hr />
-<h3 id="2-construire-un-arbre-couvrant-a-de-ce-graphe">2. Construire un <b>arbre couvrant</b> A de ce graphe</h3>
+<h3 id="2-construire-un-arbre-couvrant-a-de-ce-graphe">2. Construire un <strong>arbre couvrant</strong> A de ce graphe</h3>
 <h4 id="quest-ce-quun-arbre-couvrant">Qu'est ce qu'un arbre couvrant ?</h4>
-<p>Un <b>arbre</b> est un graphe à la fois connexe et sans cycle. Un <b>arbre couvrant</b> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
+<p>Un <strong>arbre</strong> est un graphe à la fois connexe et sans cycle. Un <strong>arbre couvrant</strong> d'un graphe est un arbre inclus dans ce graphe et qui connecte tous les sommets du graphe.
 <center><img src="./labyrinthe/labyrinthe_7.png" width="200"></center></p>
 <p>En plaçant un sommet sur chaque cellule de notre labyrinthe, et en reliant deux sommets par une arête si leurs cellules sont séparées par une porte, il devient possible de dessiner un arbre à partir de n'importe quel labyrinthe.  </p>
 <p>Sur notre graphe, un arête est donc un passage dans notre labyrinthe.</p>
 <p><center><img src="./labyrinthe/labyrinthe_8.png" width="200"></center></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p>Représenter l'arbre du graphe ci-dessus avec en étiquette les coordonnées de chaque noeud.</p>
 </div>
 <h4 id="constuire-larbre-binaire">constuire l'arbre binaire</h4>
-<p>De nombreux algorithmes existent répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.</p>
-<p><center>
-<img src="./labyrinthe/labyrinthe_9.gif" width="200"></p>
+<p>De nombreux algorithmes existent pour répartir toutes ces portes de manière à ce que toutes les cellules soient accessibles et qu'il n'existe qu'un unique chemin entre l'entrée et la sortie, dont le parcours en profondeur et l'algorithme de Kruskal. Chaque algorithme est différent et produit des labyrinthes visuellement différents.</p>
+<p><center><img src="./labyrinthe/labyrinthe_9.gif" width="200"></center></p>
 <p>L'algorithme du parcours en profondeur (ou "recursive backtracker" en anglais) commence sur une cellule aléatoire dans le labyrinthe.
 Il suffit ensuite de se diriger dans une direction aléatoire et de casse le mur face à soi, tout en marquant la cellule précédente comme visitée.
 Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la position précédente : c'est le backtracking.</p>
-<p></center></p>
+
 <hr />
 <h2 id="cahier-des-charges">Cahier des charges :</h2>
-<p>Le modèle de représentation afin de modéliser des labyrinthes rectangulaires est une classe <code>Labyrinthe</code> qui contiendra les <i>méthodes</i> et les <i>attributs</i> suivants :</p>
+<p>Le modèle de représentation afin de modéliser des labyrinthes rectangulaires est une classe <code>Labyrinthe</code> qui contiendra les <em>méthodes</em> et les <em>attributs</em> suivants :</p>
 <ul>
-<li>un <b>constructeur</b> : <code>__init__(self, largeur, hauteur)</code>  </li>
+<li>un <strong>constructeur</strong> : <code>__init__(self, largeur, hauteur)</code>  </li>
 <li>des <strong>attributs</strong> :  <code>self.largeur</code>, le nombre de colonnes de la grille et <code>self.hauteur</code>, le nombre de lignes définis dans le constructeur</li>
 <li>un <strong>attribut</strong> :  <code>self.grille</code> représentant les cellules du labyrinthe.  </li>
 </ul>
-<p>Écrire la méthode solution de la classe Labyrinthe (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="./labyrinthe.py" target="_blank">labyrinthe.py</a>.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Écrire la méthode <code>solution</code> de la classe <code>Labyrinthe</code> (un parcours en profondeur) renvoyant un chemin permettant de se rendre d’une cellule de départ à une cellule d’arrivée. Vous testerez votre code dans le fichier <a href="./labyrinthe.py" target="_blank">labyrinthe.py</a>.</p>
+</div>
 <hr />
 <h2 id="le-code-du-programme">Le code du programme :</h2>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span><span class="p">:</span>
@@ -3598,7 +3600,182 @@ Lorsque plus aucune direction n'est disponible, l'algorithme "remonte" à la pos
 <span class="sd">        (depart_ligne, depart_colonne) à la cellule (arrivee_ligne, arrivee_colonne).</span>
 <span class="sd">        Exemple de retour : [&#39;n&#39;, &#39;e&#39;, &#39;e&#39;, &#39;s&#39;, &#39;o&#39;]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
+
+
+    <span class="k">def</span> <span class="nf">generation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nombre_cellules</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span>
+        <span class="n">zones_cellules</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">nombre_cellules</span><span class="p">))</span>
+        <span class="c1"># Les cellules sont numérotées en ligne, avec les numéros 0 à </span>
+        <span class="c1"># largeur-1 sur la première ligne, largeur à 2*largeur-1 sur la</span>
+        <span class="c1"># deuxième ... jusqu&#39;à hauteur*largeur-1 en bas à droite</span>
+        <span class="n">murs_modifiables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nombre_cellules</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">))</span>
+        <span class="c1"># Tous les murs bas et droits sont modifiables sont ceux en bas ou à </span>
+        <span class="c1"># droite du labyrinthe. Ils sont numérotés en commençant par les murs</span>
+        <span class="c1"># verticaux dans le même ordre que les cellules. Les murs numéro 0 à</span>
+        <span class="c1"># self.largeur*self.hauteur-self.hauteur-1 sont les murs verticaux, et </span>
+        <span class="c1"># ceux allant de self.largeur*self.hauteur-self.hauteur à </span>
+        <span class="c1"># 2*self.largeur*self.hauteur-self.largeur-self.hauteur-1 les horizontaux.</span>
+        <span class="n">indice_premier_non_modifiable</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">murs_modifiables</span><span class="p">)</span>
+        <span class="c1"># Lorsqu&#39;un mur est choisi, on le met à la fin du tableau pour ne</span>
+        <span class="c1"># pas le rechoisir. Ce serait plus simple de le supprimer de la liste</span>
+        <span class="c1"># mais plus couteux car la suppression est en O(n).</span>
+        <span class="n">modifications</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">modifications</span> <span class="o">&lt;</span> <span class="n">nombre_cellules</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">indice_mur</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">indice_premier_non_modifiable</span><span class="p">)</span>
+            <span class="n">mur_candidat</span> <span class="o">=</span> <span class="n">murs_modifiables</span><span class="p">[</span><span class="n">indice_mur</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">modifier_mur</span><span class="p">(</span><span class="n">mur_candidat</span><span class="p">,</span> <span class="n">zones_cellules</span><span class="p">):</span>
+                <span class="n">modifications</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">indice_premier_non_modifiable</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">murs_modifiables</span><span class="p">[</span><span class="n">indice_mur</span><span class="p">],</span> <span class="n">murs_modifiables</span><span class="p">[</span><span class="n">indice_premier_non_modifiable</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">murs_modifiables</span><span class="p">[</span><span class="n">indice_premier_non_modifiable</span><span class="p">],</span> <span class="n">murs_modifiables</span><span class="p">[</span><span class="n">indice_mur</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">fusionner_zones</span><span class="p">(</span><span class="n">zones_cellules</span><span class="p">,</span> <span class="n">indice_cellule1</span><span class="p">,</span> <span class="n">indice_cellule2</span><span class="p">):</span>
+       <span class="n">zone1</span> <span class="o">=</span> <span class="n">zones_cellules</span><span class="p">[</span><span class="n">indice_cellule1</span><span class="p">]</span>
+       <span class="n">zone2</span> <span class="o">=</span> <span class="n">zones_cellules</span><span class="p">[</span><span class="n">indice_cellule2</span><span class="p">]</span>
+       <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zones_cellules</span><span class="p">)):</span>
+           <span class="k">if</span> <span class="n">zones_cellules</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">zone2</span><span class="p">:</span>
+               <span class="n">zones_cellules</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">zone1</span>       
+
+    <span class="k">def</span> <span class="nf">modifier_mur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mur_candidat</span><span class="p">,</span> <span class="n">zones_cellules</span><span class="p">):</span>
+        <span class="c1"># Le mur sépare cellule1 et cellule2</span>
+        <span class="n">mur_vertical</span> <span class="o">=</span> <span class="p">(</span><span class="n">mur_candidat</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mur_vertical</span><span class="p">:</span>
+            <span class="n">ligne_cellule1</span> <span class="o">=</span> <span class="n">mur_candidat</span><span class="o">//</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">colonne_cellule1</span> <span class="o">=</span> <span class="n">mur_candidat</span><span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">indice_cellule1</span> <span class="o">=</span> <span class="n">ligne_cellule1</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">+</span> <span class="n">colonne_cellule1</span>
+            <span class="n">indice_cellule2</span> <span class="o">=</span> <span class="n">indice_cellule1</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ligne_cellule1</span> <span class="o">=</span> <span class="p">(</span><span class="n">mur_candidat</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">))</span><span class="o">//</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span>
+            <span class="n">colonne_cellule1</span> <span class="o">=</span> <span class="p">(</span><span class="n">mur_candidat</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">))</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span>
+            <span class="n">indice_cellule1</span> <span class="o">=</span> <span class="n">mur_candidat</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">)</span>
+            <span class="n">indice_cellule2</span> <span class="o">=</span> <span class="n">indice_cellule1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span>
+        <span class="k">if</span> <span class="n">zones_cellules</span><span class="p">[</span><span class="n">indice_cellule1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">zones_cellules</span><span class="p">[</span><span class="n">indice_cellule2</span><span class="p">]:</span>  
+            <span class="n">Labyrinthe</span><span class="o">.</span><span class="n">fusionner_zones</span><span class="p">(</span><span class="n">zones_cellules</span><span class="p">,</span> <span class="n">indice_cellule1</span><span class="p">,</span> <span class="n">indice_cellule2</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">mur_vertical</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">grille</span><span class="p">[</span><span class="n">ligne_cellule1</span><span class="p">][</span><span class="n">colonne_cellule1</span><span class="p">]</span><span class="o">.</span><span class="n">mur_droit</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">grille</span><span class="p">[</span><span class="n">ligne_cellule1</span><span class="p">][</span><span class="n">colonne_cellule1</span><span class="p">]</span><span class="o">.</span><span class="n">mur_bas</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>   <span class="c1"># les deux cellules sont déjà dans la même zone, on ne supprime pas le mur</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">class</span> <span class="nc">GfxHMI</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">=</span> <span class="n">largeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maze</span> <span class="o">=</span> <span class="n">Labyrinthe</span><span class="p">(</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>  
+        <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                                  <span class="n">borderwidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;ivory&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dessine_labyrinthe</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">porte</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">porte_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">porte_colonne</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tresor_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tresor_colonne</span> <span class="o">=</span> <span class="n">hauteur</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">largeur</span><span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tresor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">((</span><span class="n">largeur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">hauteur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-1&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">placement</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">TOP</span><span class="p">)</span>
+        <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Entrée&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">souris_entree</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Trésor&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">souris_tresor</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Solution&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">solution</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_entree</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_tresor</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_du_chemin</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># conserve la variable tracé pour pouvoir effacer le chemin</span>
+
+    <span class="k">def</span> <span class="nf">dessine_cellule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">cellule</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">cellule</span><span class="o">.</span><span class="n">mur_droit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">((</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cellule</span><span class="o">.</span><span class="n">mur_bas</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">j</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">dessine_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dessine_cellule</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">maze</span><span class="o">.</span><span class="n">grille</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">placement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="n">colonne</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="o">//</span><span class="n">COTE_CASE</span>
+        <span class="n">ligne</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">y</span><span class="o">//</span><span class="n">COTE_CASE</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">placer_entree</span><span class="p">:</span>
+            <span class="n">objet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">porte</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">porte_ligne</span> <span class="o">=</span> <span class="n">ligne</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">porte_colonne</span> <span class="o">=</span> <span class="n">colonne</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">objet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tresor</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tresor_ligne</span> <span class="o">=</span> <span class="n">ligne</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tresor_colonne</span> <span class="o">=</span> <span class="n">colonne</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">coords</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span> <span class="n">colonne</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">ligne</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">colonne</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">ligne</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">souris_entree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_entree</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_tresor</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">souris_tresor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_entree</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placer_tresor</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">tracer_chemin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depart_ligne</span><span class="p">,</span> <span class="n">depart_colonne</span><span class="p">,</span> <span class="n">chemin</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">depart_colonne</span><span class="o">*</span><span class="n">COTE_CASE</span> <span class="o">+</span> <span class="n">COTE_CASE</span><span class="o">//</span><span class="mi">2</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">depart_ligne</span><span class="o">*</span><span class="n">COTE_CASE</span> <span class="o">+</span> <span class="n">COTE_CASE</span><span class="o">//</span><span class="mi">2</span>
+        <span class="n">coordonnees_chemin</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="n">chemin</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
+                <span class="n">y</span> <span class="o">-=</span> <span class="n">COTE_CASE</span>
+            <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+                <span class="n">y</span> <span class="o">+=</span> <span class="n">COTE_CASE</span>
+            <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">+=</span> <span class="n">COTE_CASE</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">-=</span> <span class="n">COTE_CASE</span>   
+            <span class="n">coordonnees_chemin</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trace_du_chemin</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_du_chemin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="o">*</span><span class="n">coordonnees_chemin</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">chemin_solution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maze</span><span class="o">.</span><span class="n">solution</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">porte_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">porte_colonne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tresor_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tresor_colonne</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tracer_chemin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">porte_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">porte_colonne</span><span class="p">,</span> <span class="n">chemin_solution</span><span class="p">)</span>
+
+
+
+    <span class="k">class</span> <span class="nc">Affichage</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labyrinthe</span><span class="p">):</span>
+            <span class="n">largeur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labyrinthe</span><span class="o">.</span><span class="n">grille</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">hauteur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labyrinthe</span><span class="o">.</span><span class="n">grille</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">maze</span> <span class="o">=</span> <span class="n">labyrinthe</span>
+            <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>    
+            <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                                    <span class="n">borderwidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;ivory&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dessine_labyrinthe</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">porte</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">porte_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">porte_colonne</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tresor_ligne</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tresor_colonne</span> <span class="o">=</span> <span class="n">hauteur</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">largeur</span><span class="o">-</span><span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tresor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">((</span><span class="n">largeur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">hauteur</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">TOP</span><span class="p">)</span>
+
+
+        <span class="k">def</span> <span class="nf">dessine_cellule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">cellule</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cellule</span><span class="o">.</span><span class="n">mur_droit</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">((</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cellule</span><span class="o">.</span><span class="n">mur_bas</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">j</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">dessine_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canevas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="o">*</span><span class="n">COTE_CASE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">dessine_cellule</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">maze</span><span class="o">.</span><span class="n">grille</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+
+
+
+
+    <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">GfxHMI</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>        
 </code></pre></div>
+<hr />
+<h2 id="exemples-dexecution">Exemples d'exécution :</h2>
 <iframe src="https://trinket.io/embed/python/e25159be66?outputOnly=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 <iframe src="https://trinket.io/embed/python/e27dfa9f4d?outputOnly=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
