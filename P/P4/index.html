@@ -3523,7 +3523,7 @@
 <p class="admonition-title">Question</p>
 <p>4.Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?</p>
 </div>
-<h2 id="ppartie-b-programmation-dynamique">PPartie B : Programmation dynamique</h2>
+<h2 id="partie-b-programmation-dynamique">Partie B : Programmation dynamique</h2>
 <p>Considérons deux chaînes X et Y de longueurs respectives m et n.</p>
 <p>Soit PLSS la fonction qui prend en argument deux chaînes <code>X, Y</code> et qui renvoie la PLSS de X et Y.</p>
 <p>Par exemple <code>PLSS("ABCBDAB", "BDAB")</code> est égale à <code>BDAB</code> (voir l’exemple du début de l’exercice).</p>
@@ -3550,7 +3550,7 @@
 <p>Cette approche a toutefois un inconvénient : certains des cas de figure sont étudiés plusieurs fois…</p>
 <p>Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (chaîne1, chaîne2) associe la longueur de la PLSS. Ce dictionnaire sera une variable « globale » qui pourra donc être lue et modifiée par chacun des appels récursifs.</p>
 <p><img src="./img/PLSS.png"></p>
-<p>!!!Note:
+<p>!!! Note:
     Remarque : on pourrait aussi comparer les premiers caractères de la chaîne au lieu des derniers</p>
 <p>On fournit le pseudo code incomplet suivant :</p>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    mémoire est un dictionnaire vide

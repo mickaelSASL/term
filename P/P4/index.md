@@ -41,7 +41,7 @@ ___
     4.Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?
 
 
-## PPartie B : Programmation dynamique
+## Partie B : Programmation dynamique
 
 Considérons deux chaînes X et Y de longueurs respectives m et n.
 
@@ -91,7 +91,7 @@ Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (ch
 <img src="./img/PLSS.png">
 
 
-!!!Note:
+!!! Note:
     Remarque : on pourrait aussi comparer les premiers caractères de la chaîne au lieu des derniers
 
 
