@@ -3,7 +3,7 @@ hide:
     - toc
 ---    
 
-# **P4: Plus longue sous-séquence**  
+# **Plus longue sous-séquence**  
 
 On cherche dans ce TP à calculer la plus longue sous-séquence (PLSS) de deux chaînes de caractères. Par cela on entend la plus longue chaîne de caractères que l’on peut obtenir à partir des deux chaînes en supprimant certains de leurs caractères (pas obligatoirement les mêmes).
 
@@ -29,16 +29,16 @@ Il y en a donc 16 différentes (y compris la vide).
 ___
 
 !!! question  
-    1. Lister toutes les sous-séquences de la seconde chaîne BCB.
+    1.Lister toutes les sous-séquences de la seconde chaîne BCB.
 
 !!! question  
-    2. Quelle est la sous-séquence de longueur maximale ?
+    2.Quelle est la sous-séquence de longueur maximale ?
 
 !!! question  
-    3. Combien de sous-séquences compte une chaîne de caractères tous différents ? On ne demande pas de justification exacte mais l’on pourra s’appuyer sur les tableaux.
+    3.Combien de sous-séquences compte une chaîne de caractères tous différents ? On ne demande pas de justification exacte mais l’on pourra s’appuyer sur les tableaux.
 
 !!! question  
-    4. Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?
+    4.Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?
 
 
 ## PPartie B : Programmation dynamique
@@ -119,11 +119,11 @@ On fournit le pseudo code incomplet suivant :
 
 
 !!! question  
-    1. Compléter cet algorithme.
+    1.Compléter cet algorithme.
 
 
 !!! question  
-    2. Coder cet algorithme en python.  
+    2.Coder cet algorithme en python.  
     On pourra effectuer les tests suivants :
     
     | X = …         | Y = …         | PLSS(X, Y) = … |
