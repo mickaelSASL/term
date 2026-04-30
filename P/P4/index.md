@@ -91,7 +91,7 @@ Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (ch
 <img src="./img/PLSS.png">
 
 
-!!! Note:
+!!! note:
     Remarque : on pourrait aussi comparer les premiers caractères de la chaîne au lieu des derniers
 
 
