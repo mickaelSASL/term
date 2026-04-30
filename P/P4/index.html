@@ -3475,11 +3475,13 @@
 
 <h1 id="plus-longue-sous-sequence"><strong>Plus longue sous-séquence</strong></h1>
 <p>On cherche dans ce TP à calculer la plus longue sous-séquence (PLSS) de deux chaînes de caractères. Par cela on entend la plus longue chaîne de caractères que l’on peut obtenir à partir des deux chaînes en supprimant certains de leurs caractères (pas obligatoirement les mêmes).</p>
-<p>Notez bien que :</p>
+<div class="admonition danger">
+<p class="admonition-title">Notez bien que :</p>
 <ul>
 <li>l’on peut supprimer des caractères mais que l’on ne change pas l’ordre des caractères restants</li>
 <li>la longueur de la PLSS de deux chaînes est unique mais il peut exister plusieurs chaînes de cette longueur</li>
 </ul>
+</div>
 <p>Par exemple, pour les chaînes ABCBDAB et BDCABA, la longueur maximale des PLSS est 4 et l’une d’entre elles est BDAB. En effet :</p>
 <p>A<b>B</b>CB<b>DAB</b> &rarr; BDAB et <b>BD</b>C<b>AB</b>A &rarr; BDAB</p>
 <h2 id="partie-a-approche-force-brute">Partie A : Approche « Force-Brute »</h2>
@@ -3507,6 +3509,10 @@
 </table>
 <p>Il y en a donc 16 différentes (y compris la vide).</p>
 <hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les questions suivantes portent sur la chaine `BCB </p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>1.Lister toutes les sous-séquences de la seconde chaîne BCB.</p>
@@ -3517,7 +3523,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>3.Combien de sous-séquences compte une chaîne de caractères tous différents ? On ne demande pas de justification exacte mais l’on pourra s’appuyer sur les tableaux.</p>
+<p>3.Combien de sous-séquences compte une chaîne de caractères tous différents ? `<em>On ne demande pas de justification exacte mais on s'appuiera sur les tableaux.</em></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -3535,8 +3541,10 @@
 <p>Remarque : on rappelle qu’en python, <code>X[-1]</code> est le dernier caractère d’une chaîne et l’appel <code>X[:-1]</code> renvoie la chaîne <code>X</code> privée de son dernier caractère</p>
 <p>Les deux derniers caractères ne correspondent pas (<code>X[-1] != Y[-1]</code>) :</p>
 <p>Dans ce cas il faut étudier deux sous-problèmes :</p>
-<p>celui dans lequel on a ôté le dernier caractère de <code>X</code> sans changer <code>Y</code></p>
-<p>celui dans lequel on a ôté le dernier caractère de <code>Y</code> sans changer <code>X</code></p>
+<ul>
+<li>celui dans lequel on a ôté le dernier caractère de <code>X</code> sans changer <code>Y</code></li>
+<li>celui dans lequel on a ôté le dernier caractère de <code>Y</code> sans changer <code>X</code></li>
+</ul>
 <p>On retient le meilleur des deux cas en comparant les longueurs des résultats.</p>
 <p>On a donc par exemple :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">sol_x</span> <span class="o">=</span> <span class="n">PLSS</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span><span class="s2">&quot;CF&quot;</span><span class="p">)</span>

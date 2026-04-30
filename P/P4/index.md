@@ -7,10 +7,9 @@ hide:
 
 On cherche dans ce TP à calculer la plus longue sous-séquence (PLSS) de deux chaînes de caractères. Par cela on entend la plus longue chaîne de caractères que l’on peut obtenir à partir des deux chaînes en supprimant certains de leurs caractères (pas obligatoirement les mêmes).
 
-Notez bien que :
-
-* l’on peut supprimer des caractères mais que l’on ne change pas l’ordre des caractères restants
-* la longueur de la PLSS de deux chaînes est unique mais il peut exister plusieurs chaînes de cette longueur
+!!! danger "Notez bien que :"
+    * on peut supprimer des caractères mais que l’on ne change pas l’ordre des caractères restants
+    * la longueur de la PLSS de deux chaînes est unique mais il peut exister plusieurs chaînes de cette longueur
 
 Par exemple, pour les chaînes ABCBDAB et BDCABA, la longueur maximale des PLSS est 4 et l’une d’entre elles est BDAB. En effet :
 
@@ -28,6 +27,9 @@ Considérons les chaînes BACB et BCB. Les sous séquences de la première chaî
 Il y en a donc 16 différentes (y compris la vide).
 ___
 
+!!! note
+    Les questions suivantes portent sur la chaine `BCB 
+
 !!! question  
     1.Lister toutes les sous-séquences de la seconde chaîne BCB.
 
@@ -35,9 +37,9 @@ ___
     2.Quelle est la sous-séquence de longueur maximale ?
 
 !!! question  
-    3.Combien de sous-séquences compte une chaîne de caractères tous différents ? On ne demande pas de justification exacte mais l’on pourra s’appuyer sur les tableaux.
+    3.Combien de sous-séquences compte une chaîne de caractères tous différents ? `*On ne demande pas de justification exacte mais on s'appuiera sur les tableaux.*
 
-!!! question  
+!!! question
     4.Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?
 
 
@@ -65,9 +67,8 @@ Les deux derniers caractères ne correspondent pas (`X[-1] != Y[-1]`) :
 
 Dans ce cas il faut étudier deux sous-problèmes :
 
-celui dans lequel on a ôté le dernier caractère de `X` sans changer `Y`
-
-celui dans lequel on a ôté le dernier caractère de `Y` sans changer `X`
+* celui dans lequel on a ôté le dernier caractère de `X` sans changer `Y`
+* celui dans lequel on a ôté le dernier caractère de `Y` sans changer `X`
 
 On retient le meilleur des deux cas en comparant les longueurs des résultats.
 
@@ -129,6 +130,6 @@ On fournit le pseudo code incomplet suivant :
     | X = …         | Y = …         | PLSS(X, Y) = … |
     |:-------------:|:-------------:|:--------------:|
     | ABCBDAB       | BDCABA        | BDAB           |
-    | ∅             |  BDCABA       | ∅              |
+    | ∅             | BDCABA        | ∅              |
     | ABCBDABCBDAB  | BDCABA        | BDCBA          |
     | ABCBDABCBDAB  | ABCBDABCBDAB  | ABCBDABCBDAB   |
