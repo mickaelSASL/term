@@ -3550,8 +3550,10 @@
 <p>Cette approche a toutefois un inconvénient : certains des cas de figure sont étudiés plusieurs fois…</p>
 <p>Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (chaîne1, chaîne2) associe la longueur de la PLSS. Ce dictionnaire sera une variable « globale » qui pourra donc être lue et modifiée par chacun des appels récursifs.</p>
 <p><img src="./img/PLSS.png"></p>
-<p>!!! note:
-    Remarque : on pourrait aussi comparer les premiers caractères de la chaîne au lieu des derniers</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remarque : on pourrait aussi comparer les premiers caractères de la chaîne au lieu des derniers</p>
+</div>
 <p>On fournit le pseudo code incomplet suivant :</p>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>    mémoire est un dictionnaire vide
 
