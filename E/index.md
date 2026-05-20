@@ -21,4 +21,6 @@ fetch("https://kxs.fr/sujets/terminale-ecrit")
 
     document.getElementById("result").innerHTML = article.outerHTML;
   })
-  .catch(
+  .catch(err => console.error(err));
+</script>
+
