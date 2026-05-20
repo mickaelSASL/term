@@ -31,7 +31,7 @@ hide:
 > -  <!--LP2 : Récursivité-->✔️ [LP2 : Récursivité](LP/LP2)
 > -  <!--LP3 : Modularité-->✔️ [LP3 : Modularité ](LP/LP3)
 > -  LP4 : Paradigmes de programmation   
-> -  <!--LP5 : Mise au point des programmes. Gestion des bugs-->✔️ [LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
+> -  ✏️ <!--LP5 : Mise au point des programmes. Gestion des bugs-->✔️ [LP5 : Mise au point des programmes. Gestion des bugs](LP/LP5/)
 
 
 ## Algorithmique
@@ -39,7 +39,7 @@ hide:
 > -  <!--A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche-->✔️ [A1 : Algorithmes sur les arbres binaires et sur les arbres binaires de recherche](A/A1/)  
 > -  <!--A2 : Algorithmes sur les graphes-->✔️ [A2 : Algorithmes sur les graphes](A/A2/)  
 > -  <!--A3 : Méthode « diviser pour régner »-->✔️ [A3 : Méthode « diviser pour régner »](A/A3/)   
-> -  A4 : Programmation dynamique   
-> -  <!--A5 : Recherche textuelle. : Boyer Moore-->✔️ [A5 : Recherche textuelle. : Boyer Moore](A/A5/)  
+> -  ✏️ A4 : Programmation dynamique   
+> -  ✏️ <!--A5 : Recherche textuelle. : Boyer Moore-->✔️ [A5 : Recherche textuelle. : Boyer Moore](A/A5/)  
 
 ✔️ : Chapitres étudiés

@@ -303,6 +303,24 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../E/" class="md-tabs__link">
+          
+  
+  Sujets écrits
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -3439,6 +3457,72 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sujets écrits
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sujets écrits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    **Annales**
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3475,17 +3559,21 @@
 
 <h1 id="plus-longue-sous-sequence"><strong>Plus longue sous-séquence</strong></h1>
 <p>On cherche dans ce TP à calculer la plus longue sous-séquence (PLSS) de deux chaînes de caractères. Par cela on entend la plus longue chaîne de caractères que l’on peut obtenir à partir des deux chaînes en supprimant certains de leurs caractères (pas obligatoirement les mêmes).</p>
-<div class="admonition danger">
+<div class="admonition warning">
 <p class="admonition-title">Notez bien que :</p>
 <ul>
-<li>l’on peut supprimer des caractères mais que l’on ne change pas l’ordre des caractères restants</li>
+<li>on peut supprimer des caractères mais que l’on ne change pas l’ordre des caractères restants</li>
 <li>la longueur de la PLSS de deux chaînes est unique mais il peut exister plusieurs chaînes de cette longueur</li>
 </ul>
 </div>
-<p>Par exemple, pour les chaînes ABCBDAB et BDCABA, la longueur maximale des PLSS est 4 et l’une d’entre elles est BDAB. En effet :</p>
-<p>A<b>B</b>CB<b>DAB</b> &rarr; BDAB et <b>BD</b>C<b>AB</b>A &rarr; BDAB</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Par exemple, pour les chaînes ABCBDAB et BDCABA, la longueur maximale des PLSS est 4 et l’une d’entre elles est BDAB.
+A<b>B</b>CB<b>DAB</b> &rarr; BDAB et <b>BD</b>C<b>AB</b>A &rarr; BDAB</p>
+</div>
 <h2 id="partie-a-approche-force-brute">Partie A : Approche « Force-Brute »</h2>
-<p>L’approche « Force Brute » consiste à énumérer toutes les sous-séquences de chacune des deux chaînes et à les comparer entre elles.</p>
+<p>L’approche « Force Brute » consiste à énumérer toutes les sous-séquences de chacune des deux chaînes et à les comparer entre elles.
+Parmis toutes les possibilités, nous identifions la plus longue sous-séquence (ou une des plus longue si il en existe plusieurs de la même taille) commune aux deux chaines.</p>
 <p>Considérons les chaînes BACB et BCB. Les sous séquences de la première chaîne sont :</p>
 <table>
 <thead>
@@ -3500,9 +3588,9 @@
 <tbody>
 <tr>
 <td style="text-align: center;">∅</td>
-<td style="text-align: center;">B A<br><br>C B<br><br><br></td>
-<td style="text-align: center;">BA BC<br><br>BB AC<br><br>AB CB<br></td>
-<td style="text-align: center;">BAC BAB<br><br>BCB ACB</td>
+<td style="text-align: center;">B<br>A<br>C<br>B<br><br></td>
+<td style="text-align: center;">BA<br>BC<br>BB<br>AC<br>AB<br>CB</td>
+<td style="text-align: center;">BAC<br>BAB<br>BCB<br>ACB</td>
 <td style="text-align: center;">BACB</td>
 </tr>
 </tbody>
@@ -3510,9 +3598,7 @@
 <p>Il y en a donc 16 différentes (y compris la vide).</p>
 <hr />
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Les questions suivantes portent sur la chaine `BCB </p>
-</div>
+<p class="admonition-title">Les questions suivantes portent sur la chaine <code>BCB</code></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>1.Lister toutes les sous-séquences de la seconde chaîne BCB.</p>
@@ -3529,22 +3615,30 @@
 <p class="admonition-title">Question</p>
 <p>4.Pourquoi une telle méthode est-elle infaisable en pratique lorsque les chaînes de caractères sont de grande taille ?</p>
 </div>
+</div>
 <h2 id="partie-b-programmation-dynamique">Partie B : Programmation dynamique</h2>
 <p>Considérons deux chaînes X et Y de longueurs respectives m et n.</p>
 <p>Soit PLSS la fonction qui prend en argument deux chaînes <code>X, Y</code> et qui renvoie la PLSS de X et Y.</p>
-<p>Par exemple <code>PLSS("ABCBDAB", "BDAB")</code> est égale à <code>BDAB</code> (voir l’exemple du début de l’exercice).</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p><code>PLSS("ABCBDAB", "BDAB")</code> est égale à <code>BDAB</code> 
+<em>(voir l’exemple du début de l’exercice).</em></p>
+</div>
 <p>La résolution du problème à l’aide de la programmation dynamique envisage deux cas de figures :</p>
-<p>Le dernier caractère des deux chaînes est le même <code>(X[-1] == Y[-1])</code> :</p>
+<ul>
+<li>Le dernier caractère des deux chaînes est le même <code>(X[-1] == Y[-1])</code> :</li>
+</ul>
 <p>Dans ce cas, comme les derniers caractères coïncident, on peut étudier les sous chaînes sans ce dernier caractère et ajouter le dernier caractère au résultat.</p>
 <p>La PLSS est égale à : <code>PLSS(X[:-1], Y[:-1]) + PLSS[-1]</code></p>
 <p>On a donc par exemple : <code>PLSS("ABCD","CFD") = PLSS("ABC","CF") + X[-1]</code></p>
 <p>Remarque : on rappelle qu’en python, <code>X[-1]</code> est le dernier caractère d’une chaîne et l’appel <code>X[:-1]</code> renvoie la chaîne <code>X</code> privée de son dernier caractère</p>
-<p>Les deux derniers caractères ne correspondent pas (<code>X[-1] != Y[-1]</code>) :</p>
-<p>Dans ce cas il faut étudier deux sous-problèmes :</p>
 <ul>
-<li>celui dans lequel on a ôté le dernier caractère de <code>X</code> sans changer <code>Y</code></li>
-<li>celui dans lequel on a ôté le dernier caractère de <code>Y</code> sans changer <code>X</code></li>
+<li>Les deux derniers caractères ne correspondent pas (<code>X[-1] != Y[-1]</code>) :</li>
 </ul>
+<p>Dans ce cas il faut étudier deux sous-problèmes :</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>* celui dans lequel on a ôté le dernier caractère de `X` sans changer `Y`
+* celui dans lequel on a ôté le dernier caractère de `Y` sans changer `X`
+</code></pre></div>
 <p>On retient le meilleur des deux cas en comparant les longueurs des résultats.</p>
 <p>On a donc par exemple :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">sol_x</span> <span class="o">=</span> <span class="n">PLSS</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span><span class="s2">&quot;CF&quot;</span><span class="p">)</span>
@@ -3556,7 +3650,7 @@
 </code></pre></div>
 <p>Les appels récursifs ont un cas de base qui est atteint lorsque l’une des deux chaînes est de longueur 0. Dans ce cas la longueur de la PLSS vaut 0.</p>
 <p>Cette approche a toutefois un inconvénient : certains des cas de figure sont étudiés plusieurs fois…</p>
-<p>Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (chaîne1, chaîne2) associe la longueur de la PLSS. Ce dictionnaire sera une variable « globale » qui pourra donc être lue et modifiée par chacun des appels récursifs.</p>
+<p>Afin de pallier à ce soucis on crée un dictionnaire M qui à chaque couple (chaîne1, chaîne2) associe la PLSS. Ce dictionnaire sera une variable « globale » qui pourra donc être lue et modifiée par chacun des appels récursifs.</p>
 <p><img src="./img/PLSS.png"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
