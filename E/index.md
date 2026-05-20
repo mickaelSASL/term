@@ -8,15 +8,25 @@ hide:
 
 <a href="https://kxs.fr/sujets/terminale-ecrit" target="_blank">sujets</a>
 
-<iframe src="https://kxs.fr/sujets/terminale-ecrit" width="100%" height="600px"></iframe>
 
-
-<div id="contenu"></div>
+<div id="result"></div>
 
 <script>
-fetch("https://kxs.fr/sujets/terminale-ecrit")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("contenu").innerHTML = data;
+const url = "https://kxs.fr/sujets/terminale-ecrit";
+const proxy = "https://thingproxy.freeboard.io/fetch/";
+
+fetch(proxy + url)
+  .then(res => res.text())
+  .then(html => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+
+    const article = doc.querySelector("main article h1");
+
+    document.getElementById("result").innerHTML =
+      article ? article.outerHTML : "Introuvable";
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById("result").innerText = "Erreur réseau";
   });
 </script>
