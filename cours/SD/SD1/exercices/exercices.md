@@ -53,13 +53,5 @@
     ```
 
 === "🧩 Corrigé Q4"
-    ```python
-    def demain(ma_date):    
-        setJour(getJour(ma_date)+1)
-    ```
-
-    
-## 4. Représenter un type de données
-
-![](pile crêpes.png)
-![](pile_graph.png)
+    ![](pile crêpes.png)
+    ![](pile_graph.png)
